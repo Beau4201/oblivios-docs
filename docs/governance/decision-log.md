@@ -1,4 +1,4 @@
-# FreeholdOS Decision Log
+# ObliviOS Decision Log
 
 This record preserves product and security decisions that constrain later
 implementation. A decision changes only through a new entry that names the

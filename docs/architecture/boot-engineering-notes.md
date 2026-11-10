@@ -1,7 +1,7 @@
 # Boot picture engineering notes
 
 Short, actionable lessons from authoring the boot picture of ADR-152, for the
-next change to `branding/boot` in `freeholdos-platform`. The design and the
+next change to `branding/boot` in `oblivios-platform`. The design and the
 renderer constraints are in
 `2026-10-11-boot-picture-design.md`;
 the evidence rows are `BOOT-*` in the validation matrix.

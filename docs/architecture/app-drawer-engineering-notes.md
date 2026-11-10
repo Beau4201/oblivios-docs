@@ -5,7 +5,7 @@ System group). Decisions are in the decision log (ADR-141, ADR-142), the design
 in the spec,
 validation rows `DRW-*` in `validation-matrix.md`,
 and the patches with their provenance in `launcher/app-drawer` of
-`freeholdos-platform`. This document keeps only what a future change in this
+`oblivios-platform`. This document keeps only what a future change in this
 area must not rediscover. State and open work: `status-app-surfaces.md`.
 
 ## What the type-check does not see

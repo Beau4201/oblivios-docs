@@ -1,7 +1,7 @@
 # Grab detection engineering notes
 
 Short, actionable lessons from authoring and reviewing the grab detection patches of ADR-169, for the next
-change to `physical/grab-detection` in `freeholdos-platform`. The design is
+change to `physical/grab-detection` in `oblivios-platform`. The design is
 `2026-10-15-grab-detection-design.md`; the evidence rows
 are `GRB-*` in the validation matrix. Claims are labelled `[verified-in-source]`,
 `[measured]` or `[assumption]`.

@@ -1,13 +1,13 @@
-# FreeholdOS Supply Chain, Signing, Update, and Incident Controls
+# ObliviOS Supply Chain, Signing, Update, and Incident Controls
 
 ## Purpose and status
 
-This policy defines the controls required before FreeholdOS produces any signed
-release artifact. It applies to the GrapheneOS-derived platform, FreeholdOS code,
+This policy defines the controls required before ObliviOS produces any signed
+release artifact. It applies to the GrapheneOS-derived platform, ObliviOS code,
 host tools, Pixel inputs, release metadata, OTA delivery, factory images, and
 recovery images.
 
-FreeholdOS is in Phase 0. This document authorizes neither a source sync, key
+ObliviOS is in Phase 0. This document authorizes neither a source sync, key
 creation, signing ceremony, OTA service, nor release. Those operations begin
 only after their applicable Phase 1 plan, evidence, and owner approval.
 
@@ -41,7 +41,7 @@ falls back to an unsigned or unverified path.
 
 | Stage | Required record and control | Automation | Human approval |
 | --- | --- | --- | --- |
-| 1. Select | A locked FreeholdOS manifest revision, exact upstream tag/commit, FreeholdOS patch revisions, device target, and approved channel. Moving branches are forbidden. | Validate revision format and allow-list. | Source custodian confirms the selected security baseline. |
+| 1. Select | A locked ObliviOS manifest revision, exact upstream tag/commit, ObliviOS patch revisions, device target, and approved channel. Moving branches are forbidden. | Validate revision format and allow-list. | Source custodian confirms the selected security baseline. |
 | 2. Acquire | Fetch from recorded primary origins; verify the GrapheneOS tag/signature, manifest commit, source identities, and required Pixel input hashes/terms. | Fetch, hash, signature, and manifest comparison. | Source custodian resolves any mismatch. |
 | 3. Prepare | Produce a source lockfile containing every repository revision, prebuilt/tool origin and hash, build configuration, patch set, and excluded-secret check. | Generate lockfile and scan for prohibited paths. | Build operator attests to the isolated input. |
 | 4. Build | Use an ephemeral isolated worker with a pinned, versioned host image and pinned build tools. The worker has no production signing key. | Build, collect logs, generate SBOM and unsigned artifact hashes. | Build operator attests to successful completion. |
@@ -56,7 +56,7 @@ Every candidate retains an immutable provenance record containing:
 
 - candidate ID, channel, build target, build start/end times, and worker image
   digest;
-- FreeholdOS manifest revision, upstream tag and manifest commit, every source and
+- ObliviOS manifest revision, upstream tag and manifest commit, every source and
   prebuilt revision/hash, and the applied patch-set revision;
 - build configuration digest, tool versions, command entrypoint identifier,
   unsigned artifact hashes, SBOM digest, and reproducibility comparison result;
@@ -163,7 +163,7 @@ channel, affected device, symptom, safe next step, and support/disclosure route
 without requesting sensitive user data in a public channel.
 
 The factory-image fallback is a separately signed, device-compatible artifact
-with documented installation and relocking guidance. It verifies the FreeholdOS
+with documented installation and relocking guidance. It verifies the ObliviOS
 release key and preserves the verified-boot chain. It is not a means to unlock
 or bypass boot verification; relocking occurs only after release-key validation.
 
@@ -171,7 +171,7 @@ or bypass boot verification; relocking occurs only after release-key validation.
 
 ### Intake and classification
 
-Before public beta, FreeholdOS must operate a monitored public disclosure channel
+Before public beta, ObliviOS must operate a monitored public disclosure channel
 with an assigned owner, acknowledgement process, protected evidence intake, and
 published scope. Do not publish an email address, web form, or security contact
 until monitoring and response ownership are live.

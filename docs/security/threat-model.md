@@ -1,8 +1,8 @@
-# FreeholdOS Threat Model
+# ObliviOS Threat Model
 
 ## Scope and objectives
 
-This model covers FreeholdOS-owned additions, its GrapheneOS-derived base, release
+This model covers ObliviOS-owned additions, its GrapheneOS-derived base, release
 operations, and supported Pixel devices. It does not claim to defeat a fully
 compromised hardware root of trust, unknown vulnerabilities, or network-level
 denial of service. Its objectives are confidentiality of user data and keys,
@@ -14,10 +14,10 @@ functions, isolation between apps and Worlds, and accountable remediation.
 | Asset | Required property |
 | --- | --- |
 | User data and decryption keys | Never exposed to an untrusted app, service, model, or operator. |
-| Authentication secrets | Hardware-backed where supported and never exported by FreeholdOS. |
-| App and World isolation | No access across boundaries without an explicit Android/FreeholdOS sharing path. |
+| Authentication secrets | Hardware-backed where supported and never exported by ObliviOS. |
+| App and World isolation | No access across boundaries without an explicit Android/ObliviOS sharing path. |
 | Network policy | Only typed, authorized policy operations mutate it; every mutation is auditable. |
-| Signed update trust | Only FreeholdOS-authorized verified artifacts install; downgrade attacks are rejected. |
+| Signed update trust | Only ObliviOS-authorized verified artifacts install; downgrade attacks are rejected. |
 | Recovery authority | Restores a trusted state without weakening verified boot or disclosing protected data. |
 | Guardian audit records | Minimized, access-controlled, and integrity-protected within the device model. |
 | AI broker authority | Limited to validated typed requests; an untrusted prompt gains no capability. |
@@ -29,10 +29,10 @@ flowchart TB
   HW[Pixel hardware and hardware-backed keys] --> BOOT[Verified boot]
   BOOT --> BASE[GrapheneOS-derived Android base]
   BASE --> APPS[Untrusted Android applications]
-  BASE --> CORE[FreeholdOS least-privilege services]
-  CORE --> UI[FreeholdOS SystemUI and Settings]
+  BASE --> CORE[ObliviOS least-privilege services]
+  CORE --> UI[ObliviOS SystemUI and Settings]
   CORE --> AI[Optional local AI broker]
-  BUILD[Source, build, and signing environment] --> OTA[Signed FreeholdOS update metadata and artifacts]
+  BUILD[Source, build, and signing environment] --> OTA[Signed ObliviOS update metadata and artifacts]
   OTA --> BASE
   RECOVERY[Recovery environment] --> BOOT
 ```
@@ -51,7 +51,7 @@ hardware-backed verified-boot keys are high-trust assets.
 | network attacker | Observes, manipulates, or blocks traffic. | TLS, certificate validation, signed updates. | TLS or update signature failure. | Reject connection/artifact and use trusted recovery path. | Availability can be denied. |
 | stolen device | Attempts offline access or coercive use. | Encryption, hardware keys, lockscreen, auto-reboot, profiles. | Failed unlock patterns and configured alerts. | Lock/reboot per user policy. | An unlocked current session remains exposed. |
 | Co-located adversary with legitimate access | Views, or compels an unlock of, the owner's own device (partner, family member, employer) and inspects location-sharing state. | Location Anchor's no-persisted-history design: no on/off event is ever written down, so there is nothing to find. | N/A by design — only the current toggle state is observable; there is no history to detect. | N/A — there is no past record to recover or protect. | The status-bar icon (drawn from an interchangeable glyph set) is visible to this adversary if they view the unlocked screen while anchoring is active; the glyph set raises the bar against a casual glance, not against a repeat or attentive observer who already knows it. |
-| Coercive adversary compelling unlock | Physically or legally forces the owner to unlock the device on demand (border search, robbery, an abusive partner) and inspects whatever is shown. | Duress Unlock: a second, separately-credentialed, fully isolated decoy profile that a distinct PIN routes directly into at the primary lockscreen, with the real profile force-stopped and never shown. | N/A by design — a decoy unlock is, from every observable signal, a normal unlock. | N/A — there is no real-profile state exposed to recover from; the owner simply unlocks normally with the real credential at the next opportunity. | A sufficiently informed adversary who already suspects FreeholdOS ships this feature could demand proof the shown profile is the only one, or examine the OS image offline for the dual-credential-check code path; timing side-channels between a wrong PIN, a decoy-match PIN, and a real-match PIN are a residual risk pending constant-time implementation. |
+| Coercive adversary compelling unlock | Physically or legally forces the owner to unlock the device on demand (border search, robbery, an abusive partner) and inspects whatever is shown. | Duress Unlock: a second, separately-credentialed, fully isolated decoy profile that a distinct PIN routes directly into at the primary lockscreen, with the real profile force-stopped and never shown. | N/A by design — a decoy unlock is, from every observable signal, a normal unlock. | N/A — there is no real-profile state exposed to recover from; the owner simply unlocks normally with the real credential at the next opportunity. | A sufficiently informed adversary who already suspects ObliviOS ships this feature could demand proof the shown profile is the only one, or examine the OS image offline for the dual-credential-check code path; timing side-channels between a wrong PIN, a decoy-match PIN, and a real-match PIN are a residual risk pending constant-time implementation. |
 | Physical attacker | Uses ports, boot mode, firmware downgrade, or hardware access. | Locked bootloader, verified boot, rollback protection, USB policy. | Boot failure or rollback rejection. | Refuse untrusted boot and restore signed system. | Sophisticated hardware attacks can exceed OS controls. |
 | Compromised build worker | Alters source, dependency, or artifact. | Pinned manifest, isolated builds, provenance, reproducibility, offline signing. | Hash/provenance mismatch. | Quarantine, rebuild, rotate exposed credentials. | Coordinated source/reviewer/signing compromise is high impact. |
 | Compromised update server | Substitutes, stales, or withholds updates. | Signed metadata, rollback protection, mirrors, staged channels. | Signature/version/availability anomaly. | Reject, pause, publish advisory, use factory image. | Availability can be reduced. |
@@ -107,7 +107,7 @@ hardware-backed verified-boot keys are high-trust assets.
 
 The controls below are specified in
 [`docs/release/supply-chain-and-signing.md`](../release/supply-chain-and-signing.md).
-They apply before a signed FreeholdOS artifact exists and remain in force for every
+They apply before a signed ObliviOS artifact exists and remain in force for every
 channel.
 
 | Abuse case | Attack path | Required mitigation and detection | Recovery and validation evidence |
@@ -121,6 +121,6 @@ channel.
 
 ## Security review rule
 
-No privileged FreeholdOS component enters implementation until its caller,
+No privileged ObliviOS component enters implementation until its caller,
 permissions, data minimization, audit event, error behaviour, and test method
 appear in `docs/security/capability-boundaries.md`.

@@ -63,7 +63,7 @@ chasing an unreliable headless-emulator input path.
 
 ## Squashing the decoy patch series (2026-09-25, ADR-098)
 
-The `freeholdos-platform/credential/duress-unlock-decoy` package went from
+The `oblivios-platform/credential/duress-unlock-decoy` package went from
 107 patches to 13 (`frameworks-base` 93 → 10, Settings 10 → 2, Multiuser
 4 → 1). The old → new map and the verification tree hashes live in that
 package's `SOURCE.md`; this note records the method and what to watch for
@@ -71,7 +71,7 @@ if the series is squashed or re-exported again.
 
 Method, in order:
 
-1. Seed a disposable local repo (`freeholdos-platform/.worktrees/squash-*`)
+1. Seed a disposable local repo (`oblivios-platform/.worktrees/squash-*`)
    from the real base with a read-only `git archive` over SSH. Do not touch
    the build server's live tree.
 2. `git am --3way` the existing package patches (for `frameworks-base`, the

@@ -1,6 +1,6 @@
 #!/bin/bash
 # SPDX-License-Identifier: Apache-2.0
-# Fails when a package FreeholdOS requires is missing from a real device
+# Fails when a package ObliviOS requires is missing from a real device
 # build. A clean build exit proves nothing here: ADR-047 (OFFICIAL_BUILD
 # packages) and Guardian's privapp allowlist on lynx (2026-09-28, a module
 # name left over from the AegisOS rename) both shipped from green builds.
@@ -15,14 +15,14 @@ REQUIRED=(
   Auditor.apk
   PdfViewerGOS.apk
   GuardianApp.apk
-  privapp-permissions-org.freeholdos.guardian.xml
+  privapp-permissions-org.oblivios.guardian.xml
   AirPodsApp.apk
-  privapp-permissions-org.freeholdos.airpods.xml
-  hidden-api-whitelisted-app-org.freeholdos.airpods.xml
-  default-permissions-org.freeholdos.airpods.xml
+  privapp-permissions-org.oblivios.airpods.xml
+  hidden-api-whitelisted-app-org.oblivios.airpods.xml
+  default-permissions-org.oblivios.airpods.xml
   DataMapApp.apk
-  privapp-permissions-org.freeholdos.datamap.xml
-  hidden-api-whitelisted-app-org.freeholdos.datamap.xml
+  privapp-permissions-org.oblivios.datamap.xml
+  hidden-api-whitelisted-app-org.oblivios.datamap.xml
   datamap/classifier.tsv
   datamap/ipmap.bin
 )
@@ -56,8 +56,8 @@ if [[ "$BUILD_TYPE" == "user" ]]; then
     AirPodsDebugHarness.apk
     AirPodsProbeNoPerm.apk
     AirPodsProbeBtPriv.apk
-    privapp-permissions-org.freeholdos.airpods.debugharness.xml
-    hidden-api-whitelisted-app-org.freeholdos.airpods.debugharness.xml
+    privapp-permissions-org.oblivios.airpods.debugharness.xml
+    hidden-api-whitelisted-app-org.oblivios.airpods.debugharness.xml
   )
 fi
 

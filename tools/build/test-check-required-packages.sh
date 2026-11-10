@@ -14,16 +14,16 @@ mkproduct() { # $1 = dir, $2 = build type, $3 = "with-harness" | "xml-only" | "n
   echo "ro.build.type=$2" > "$1/system/build.prop"
   {
     for n in Updater.apk Seedvault.apk Auditor.apk PdfViewerGOS.apk GuardianApp.apk \
-      privapp-permissions-org.freeholdos.guardian.xml AirPodsApp.apk \
-      privapp-permissions-org.freeholdos.airpods.xml \
-      hidden-api-whitelisted-app-org.freeholdos.airpods.xml \
-      default-permissions-org.freeholdos.airpods.xml; do
+      privapp-permissions-org.oblivios.guardian.xml AirPodsApp.apk \
+      privapp-permissions-org.oblivios.airpods.xml \
+      hidden-api-whitelisted-app-org.oblivios.airpods.xml \
+      default-permissions-org.oblivios.airpods.xml; do
       echo "1 /system/x/$n"
     done
     if [[ "${4:-}" != "no-datamap" ]]; then
       echo "1 /system/priv-app/DataMapApp/DataMapApp.apk"
-      echo "1 /system/etc/permissions/privapp-permissions-org.freeholdos.datamap.xml"
-      echo "1 /system/etc/sysconfig/hidden-api-whitelisted-app-org.freeholdos.datamap.xml"
+      echo "1 /system/etc/permissions/privapp-permissions-org.oblivios.datamap.xml"
+      echo "1 /system/etc/sysconfig/hidden-api-whitelisted-app-org.oblivios.datamap.xml"
       echo "1 /system/etc/datamap/classifier.tsv"
       echo "1 /system/etc/datamap/ipmap.bin"
     fi
@@ -31,7 +31,7 @@ mkproduct() { # $1 = dir, $2 = build type, $3 = "with-harness" | "xml-only" | "n
       echo "1 /system/priv-app/AirPodsDebugHarness/AirPodsDebugHarness.apk"
     fi
     if [[ "$3" == "xml-only" ]]; then
-      echo "1 /system/etc/sysconfig/hidden-api-whitelisted-app-org.freeholdos.airpods.debugharness.xml"
+      echo "1 /system/etc/sysconfig/hidden-api-whitelisted-app-org.oblivios.airpods.debugharness.xml"
     fi
   } > "$1/installed-files.txt"
   if [[ "${4:-}" != "no-datamap" ]]; then
@@ -93,15 +93,15 @@ mkdir -p "$T/nb"; cp "$T/u1/installed-files.txt" "$T/nb/"; expect "missing build
 
 # The Data Map (ADR-157): the app, its two system files and the classifier must all be there.
 mkproduct "$T/nd" userdebug no-harness no-datamap; expect "a product without the Data Map is refused" 1 "$T/nd"
-for n in DataMapApp.apk privapp-permissions-org.freeholdos.datamap.xml \
-  hidden-api-whitelisted-app-org.freeholdos.datamap.xml datamap/classifier.tsv; do
+for n in DataMapApp.apk privapp-permissions-org.oblivios.datamap.xml \
+  hidden-api-whitelisted-app-org.oblivios.datamap.xml datamap/classifier.tsv; do
   grep -q "MISSING: $n" "$T/out" || { echo "FAIL: $n not reported missing"; cat "$T/out"; exit 1; }
 done
 # only the classifier under datamap/ counts: a classifier.tsv elsewhere does not
 mkproduct "$T/wp" userdebug no-harness no-datamap
 { echo "1 /system/priv-app/DataMapApp/DataMapApp.apk"
-  echo "1 /system/etc/permissions/privapp-permissions-org.freeholdos.datamap.xml"
-  echo "1 /system/etc/sysconfig/hidden-api-whitelisted-app-org.freeholdos.datamap.xml"
+  echo "1 /system/etc/permissions/privapp-permissions-org.oblivios.datamap.xml"
+  echo "1 /system/etc/sysconfig/hidden-api-whitelisted-app-org.oblivios.datamap.xml"
   echo "1 /system/etc/other/classifier.tsv"; } >> "$T/wp/installed-files.txt"
 expect "a classifier outside datamap/ does not count" 1 "$T/wp"
 grep -q "MISSING: datamap/classifier.tsv" "$T/out" || { echo "FAIL: wrong path accepted"; cat "$T/out"; exit 1; }

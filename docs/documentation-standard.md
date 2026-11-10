@@ -16,7 +16,7 @@ home, and a changed fact is changed in every record that states it.
 | Work that is still open | `docs/superpowers/plans/`. Delete the plan when the work is done and move any residue to the status record of the area or an ADR. |
 | A device incident or audit | `docs/devices/<device>-<topic>-<incident\|audit>.md`: summary, cause, fix, evidence |
 | A build or release record | `build-log.md` |
-| Product intent and requirements | `freeholdos-product-compass.md`, `requirements.md` |
+| Product intent and requirements | `oblivios-product-compass.md`, `requirements.md` |
 
 ## Not allowed
 

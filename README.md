@@ -1,9 +1,9 @@
-# freeholdos-docs
+# oblivios-docs
 
-Published documents of the FreeholdOS project: the decision log, the threat model, the capability
+Published documents of the ObliviOS project: the decision log, the threat model, the capability
 boundaries, the device support policy, the licensing and branding review, the supply-chain and signing
-design, and the engineering notes of the areas whose patches are published in `freeholdos-platform` and
-`freeholdos-services`.
+design, and the engineering notes of the areas whose patches are published in `oblivios-platform` and
+`oblivios-services`.
 
 ## Stage
 
@@ -26,5 +26,5 @@ not published. The scripts are licensed Apache-2.0, see `tools/LICENSE`.
 
 ## Licence
 
-The documents are licensed CC-BY-4.0, see `LICENSE`. The name FreeholdOS and its logo are not licensed.
-FreeholdOS is based on GrapheneOS; it is not affiliated with or endorsed by the GrapheneOS project.
+The documents are licensed CC-BY-4.0, see `LICENSE`. The name ObliviOS and its logo are not licensed.
+ObliviOS is based on GrapheneOS; it is not affiliated with or endorsed by the GrapheneOS project.
