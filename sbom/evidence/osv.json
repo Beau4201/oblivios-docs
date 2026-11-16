@@ -1,0 +1,113 @@
+{
+ "source": "https://api.osv.dev/v1/querybatch",
+ "queried": "2026-11-16",
+ "queried_packages": 582,
+ "unresolved_pages": [],
+ "vulnerable": {
+  "bincode@2.0.1": [
+   "RUSTSEC-2025-0141"
+  ],
+  "crypto-bigint@0.5.5": [
+   "RUSTSEC-2026-0387"
+  ],
+  "ctutils@0.4.2": [
+   "RUSTSEC-2026-0385"
+  ],
+  "libsqlite3-sys@0.37.0": [
+   "RUSTSEC-2026-0459"
+  ],
+  "paste@1.0.15": [
+   "RUSTSEC-2024-0436"
+  ],
+  "rsa@0.9.10": [
+   "RUSTSEC-2023-0071"
+  ],
+  "rustix@1.1.4": [
+   "RUSTSEC-2026-0486"
+  ],
+  "tokio@1.53.1": [
+   "RUSTSEC-2026-0386"
+  ]
+ },
+ "details": {
+  "RUSTSEC-2023-0071": {
+   "summary": "Marvin Attack: potential key recovery through timing sidechannels",
+   "aliases": [
+    "CVE-2023-49092",
+    "GHSA-4grx-2x9w-596c",
+    "GHSA-c38w-74pg-36hr"
+   ],
+   "published": "2023-11-22T12:00:00Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "0.10.0"
+   ]
+  },
+  "RUSTSEC-2024-0436": {
+   "summary": "paste - no longer maintained",
+   "aliases": [],
+   "published": "2024-10-07T12:00:00Z",
+   "withdrawn": null,
+   "fixed_in": []
+  },
+  "RUSTSEC-2025-0141": {
+   "summary": "Bincode is unmaintained",
+   "aliases": [],
+   "published": "2025-12-16T12:00:00Z",
+   "withdrawn": null,
+   "fixed_in": []
+  },
+  "RUSTSEC-2026-0385": {
+   "summary": "Non-constant-time mask generation and `u128` comparisons",
+   "aliases": [],
+   "published": "2026-10-23T12:00:00Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "0.4.4"
+   ]
+  },
+  "RUSTSEC-2026-0386": {
+   "summary": "`AsyncFd::new` and related constructors violate I/O safety",
+   "aliases": [],
+   "published": "2026-10-13T12:00:00Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "1.51.6",
+    "1.53.3"
+   ]
+  },
+  "RUSTSEC-2026-0387": {
+   "summary": "Multiple timing variability issues in operations intended to be constant-time",
+   "aliases": [],
+   "published": "2026-10-23T12:00:00Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "0.7.6"
+   ]
+  },
+  "RUSTSEC-2026-0459": {
+   "summary": "`libsqlite3-sys` via C SQLite CVE-2026-119375",
+   "aliases": [
+    "CVE-2026-119375",
+    "GHSA-72w2-rjgg-q729",
+    "RUSTSEC-2026-0502"
+   ],
+   "published": "2026-10-30T12:00:00Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "0.39.0"
+   ]
+  },
+  "RUSTSEC-2026-0486": {
+   "summary": "xattr functions mark unwritten bytes as initialized when given a zero-length buffer",
+   "aliases": [
+    "GHSA-jh2m-fhpj-3vr7"
+   ],
+   "published": "2026-10-27T12:00:00Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "1.1.6"
+   ]
+  }
+ }
+}

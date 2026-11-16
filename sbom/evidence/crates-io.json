@@ -1,0 +1,5243 @@
+{
+ "source": "https://crates.io/api/v1/crates/{name}/{version}",
+ "packages": {
+  "adler2@2.0.1": {
+   "license": "0BSD OR MIT OR Apache-2.0",
+   "checksum": "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa",
+   "yanked": false,
+   "crate_size": 13366,
+   "created_at": "2025-06-09T22:31:53.608434Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "aead@0.5.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d122413f284cf2d62fb1b7db97e02edb8cda96d769b16e443a4f6195e35662b0",
+   "yanked": false,
+   "crate_size": 15509,
+   "created_at": "2023-04-02T15:42:58.294718Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "aes@0.9.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "35f0f96ce78e38c3dc6d8948aa8163d06385be74000f3c7a95bf1eef35d3ea32",
+   "yanked": false,
+   "crate_size": 112408,
+   "created_at": "2026-08-28T14:49:06.194127Z",
+   "rust_version": "1.89",
+   "retrieved": "2026-11-16"
+  },
+  "ahash@0.8.12": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "5a15f179cd60c4584b8a8c596927aadc462e27f2ca70c04e0071964a73ba7a75",
+   "yanked": false,
+   "crate_size": 43413,
+   "created_at": "2025-05-08T05:05:32.999746Z",
+   "rust_version": "1.60.0",
+   "retrieved": "2026-11-16"
+  },
+  "aho-corasick@1.1.5": {
+   "license": "Unlicense OR MIT",
+   "checksum": "c982642fa9e8606056828ee9a8505737230110bb1099153c79efe865c59d12ba",
+   "yanked": false,
+   "crate_size": 184315,
+   "created_at": "2026-08-03T11:44:11.111398Z",
+   "rust_version": "1.60.0",
+   "retrieved": "2026-11-16"
+  },
+  "allocator-api2@0.2.21": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "683d7910e743518b0e34f1186f92494becacb047c7b6bf616c96772180fef923",
+   "yanked": false,
+   "crate_size": 63622,
+   "created_at": "2024-12-01T14:49:16.555989Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "amplify@4.9.0": {
+   "license": "MIT",
+   "checksum": "3f7fb4ac7c881e54a8e7015e399b6112a2a5bc958b6c89ac510840ff20273b31",
+   "yanked": false,
+   "crate_size": 41410,
+   "created_at": "2025-05-19T20:02:54.180886Z",
+   "rust_version": "1.75.0",
+   "retrieved": "2026-11-16"
+  },
+  "amplify_derive@4.0.1": {
+   "license": "Apache-2.0",
+   "checksum": "2a6309e6b8d89b36b9f959b7a8fa093583b94922a0f6438a24fb08936de4d428",
+   "yanked": false,
+   "crate_size": 39539,
+   "created_at": "2024-08-01T21:26:34.706554Z",
+   "rust_version": "1.66.0",
+   "retrieved": "2026-11-16"
+  },
+  "amplify_num@0.5.4": {
+   "license": "Apache-2.0",
+   "checksum": "afed304556696656d2d71495e1e5f2c4b524a3fb6eb0f2f3778ffc482a40b8a8",
+   "yanked": false,
+   "crate_size": 31562,
+   "created_at": "2026-05-14T17:12:53.608344Z",
+   "rust_version": "1.61.0",
+   "retrieved": "2026-11-16"
+  },
+  "amplify_syn@2.0.1": {
+   "license": "Apache-2.0",
+   "checksum": "7736fb8d473c0d83098b5bac44df6a561e20470375cd8bcae30516dc889fd62a",
+   "yanked": false,
+   "crate_size": 19566,
+   "created_at": "2023-05-01T10:55:37.655270Z",
+   "rust_version": "1.60.0",
+   "retrieved": "2026-11-16"
+  },
+  "android_system_properties@0.1.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ae221649c9976a6f6c56ae1facf410f3ddb33cc661c4b7b61020a912d4237fbc",
+   "yanked": false,
+   "crate_size": 5625,
+   "created_at": "2026-08-05T13:44:27.717073Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "anyhow@1.0.104": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "330a5ed07fa54e4702c9d6c4174f74427fc0ef6e214bbd677ae50a5099946470",
+   "yanked": false,
+   "crate_size": 48819,
+   "created_at": "2026-07-18T20:59:37.656167Z",
+   "rust_version": "1.68",
+   "retrieved": "2026-11-16"
+  },
+  "argon2@0.5.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3c3610892ee6e0cbce8ae2700349fcf8f98adb0dbfbee85aec3c9179d29cc072",
+   "yanked": false,
+   "crate_size": 28795,
+   "created_at": "2024-01-20T19:21:51.661198Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "arrayvec@0.7.8": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d3fb67a6e08acf24fdeccbac2cb6ac4305825bd1f117462e0e6f2f193345ad56",
+   "yanked": false,
+   "crate_size": 33260,
+   "created_at": "2026-07-02T12:44:35.487269Z",
+   "rust_version": "1.51",
+   "retrieved": "2026-11-16"
+  },
+  "arti-client@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "aafcbc506657d886b27ef2d8e06a99edd9014b28130c798a3013935b46983097",
+   "yanked": false,
+   "crate_size": 123640,
+   "created_at": "2026-09-02T09:36:53.069009Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "ascii@1.1.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "d92bec98840b8f03a5ff5413de5293bfcd8bf96467cf5452609f939ec6f5de16",
+   "yanked": false,
+   "crate_size": 36075,
+   "created_at": "2022-09-18T13:04:12.231348Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "asn1-rs-derive@0.6.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3109e49b1e4909e9db6515a30c633684d68cdeaa252f215214cb4fa1a5bfee2c",
+   "yanked": false,
+   "crate_size": 11337,
+   "created_at": "2025-01-16T16:52:21.067659Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "asn1-rs-impl@0.2.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "7b18050c2cd6fe86c3a76584ef5e0baf286d038cda203eb6223df2cc413565f7",
+   "yanked": false,
+   "crate_size": 2261,
+   "created_at": "2024-02-23T08:38:59.472174Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "asn1-rs@0.7.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b7f43a50ac4fdca5df8e885c21b835997f0a1cdee65494a6847694a98652d9d8",
+   "yanked": false,
+   "crate_size": 93179,
+   "created_at": "2026-05-18T09:47:40.580276Z",
+   "rust_version": "1.68",
+   "retrieved": "2026-11-16"
+  },
+  "assert_matches@1.5.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "9b34d609dfbaf33d6889b2b7106d3ca345eacad44200913df5ba02bfd31d2ba9",
+   "yanked": false,
+   "crate_size": 7761,
+   "created_at": "2021-02-05T04:16:48.301552Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "async-compression@0.4.19": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "06575e6a9673580f52661c92107baabffbf41e2141373441cbcdc47cb733003c",
+   "yanked": false,
+   "crate_size": 112164,
+   "created_at": "2025-02-27T14:09:26.081800Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "async-trait@0.1.92": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "82f6aeea286b8eb4dd3431a1be1b59d290ace00f5bfd8e2a159bc2a05e2c1667",
+   "yanked": false,
+   "crate_size": 32039,
+   "created_at": "2026-08-08T07:10:35.376083Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "async_executors@0.7.0": {
+   "license": "Unlicense",
+   "checksum": "a982d2f86de6137cc05c9db9a915a19886c97911f9790d04f174cede74be01a5",
+   "yanked": false,
+   "crate_size": 36636,
+   "created_at": "2023-07-22T13:38:39.184223Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "asynchronous-codec@0.7.0": {
+   "license": "MIT",
+   "checksum": "a860072022177f903e59730004fb5dc13db9275b79bb2aef7ba8ce831956c233",
+   "yanked": false,
+   "crate_size": 14271,
+   "created_at": "2023-10-11T16:03:12.245241Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "atomic@0.5.3": {
+   "license": "Apache-2.0/MIT",
+   "checksum": "c59bdb34bc650a32731b31bd8f0829cc15d24a708ee31559e0bb34f2bc320cba",
+   "yanked": false,
+   "crate_size": 12801,
+   "created_at": "2023-05-15T15:18:16.649398Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "atomic@0.6.1": {
+   "license": "Apache-2.0/MIT",
+   "checksum": "a89cbf775b137e9b968e67227ef7f775587cde3fd31b0d8599dbd0f598a48340",
+   "yanked": false,
+   "crate_size": 15243,
+   "created_at": "2025-06-20T07:00:18.336083Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "autocfg@1.5.1": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "f2032f911046de80f0a198e0901378627c33f59ea0ac00e363d481118bd70a53",
+   "yanked": false,
+   "crate_size": 18911,
+   "created_at": "2026-05-22T11:03:04.576867Z",
+   "rust_version": "1.0",
+   "retrieved": "2026-11-16"
+  },
+  "aws-lc-rs@1.18.1": {
+   "license": "ISC AND (Apache-2.0 OR ISC)",
+   "checksum": "b281d307588d634de920874890732659e2e7672f72b5e10e81badc1a8a83621e",
+   "yanked": false,
+   "crate_size": 249534,
+   "created_at": "2026-09-01T20:08:57.927841Z",
+   "rust_version": "1.71.0",
+   "retrieved": "2026-11-16"
+  },
+  "aws-lc-sys@0.45.0": {
+   "license": "ISC AND (Apache-2.0 OR ISC) AND Apache-2.0 AND MIT AND BSD-3-Clause AND (Apache-2.0 OR ISC OR MIT) AND (Apache-2.0 OR ISC OR MIT-0)",
+   "checksum": "9bff6c3b54fad79a2e60b8102caf565819711497c1f5f092f49508e2f5c31b27",
+   "yanked": false,
+   "crate_size": 9725710,
+   "created_at": "2026-09-01T13:00:11.051728Z",
+   "rust_version": "1.71.0",
+   "retrieved": "2026-11-16"
+  },
+  "base16ct@0.2.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "4c7f02d4ea65f2c1853089ffd8d2787bdbc63de2f0d29dedbcf8ccdfa0ccd4cf",
+   "yanked": false,
+   "crate_size": 10240,
+   "created_at": "2023-02-26T17:06:02.943914Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "base64@0.22.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6",
+   "yanked": false,
+   "crate_size": 81597,
+   "created_at": "2024-04-30T23:16:40.343739Z",
+   "rust_version": "1.48.0",
+   "retrieved": "2026-11-16"
+  },
+  "base64@0.23.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ac07cdecf99051d9a5238b80f35af32cdeba5b336e55d957b318b50137e18da5",
+   "yanked": false,
+   "crate_size": 93605,
+   "created_at": "2026-08-04T12:34:31.976297Z",
+   "rust_version": "1.71.0",
+   "retrieved": "2026-11-16"
+  },
+  "base64ct@1.8.3": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "2af50177e190e07a26ab74f8b1efbfe2ef87da2116221318cb1c2e82baf7de06",
+   "yanked": false,
+   "crate_size": 32227,
+   "created_at": "2026-01-12T04:41:30.672776Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "bbqueue@0.5.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "fd3baa8859d1a4c7411039a75c0599a4640ef1c9a8fc811e4325b00e6cfe0a55",
+   "yanked": false,
+   "crate_size": 14310,
+   "created_at": "2021-12-17T14:20:21.478013Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "bincode@2.0.1": {
+   "license": "MIT",
+   "checksum": "36eaf5d7b090263e8150820482d5d93cd964a81e4019913c972f4edcc6edb740",
+   "yanked": false,
+   "crate_size": 70469,
+   "created_at": "2025-03-10T18:28:08.334006Z",
+   "rust_version": "1.85.0",
+   "retrieved": "2026-11-16"
+  },
+  "bitflags@1.3.2": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a",
+   "yanked": false,
+   "crate_size": 23021,
+   "created_at": "2021-08-16T04:16:02.683020Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "bitflags@2.13.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b588b76d00fde79687d7646a9b5bdf3cc0f655e0bbd080335a95d7e96f3587da",
+   "yanked": false,
+   "crate_size": 51395,
+   "created_at": "2026-07-15T20:36:19.695060Z",
+   "rust_version": "1.56.0",
+   "retrieved": "2026-11-16"
+  },
+  "bitvec@1.1.1": {
+   "license": "MIT",
+   "checksum": "ddcec3d12c579d40898fe0a9a358a803c23e9c52ca3c425707f81c9436211837",
+   "yanked": false,
+   "crate_size": 225850,
+   "created_at": "2026-06-18T19:47:24.730968Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "blake2@0.10.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "46502ad458c9a52b69d4d4d32775c788b7a1b85e8bc9d482d92250fc0e3f8efe",
+   "yanked": false,
+   "crate_size": 47234,
+   "created_at": "2022-12-16T20:38:42.298223Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "blanket@0.3.0": {
+   "license": "MIT",
+   "checksum": "e0b121a9fe0df916e362fb3271088d071159cdf11db0e4182d02152850756eff",
+   "yanked": false,
+   "crate_size": 15928,
+   "created_at": "2023-06-19T09:49:06.695690Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "block-buffer@0.10.4": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3078c7629b62d3f0439517fa394996acacc5cbc91c5a20d8c658e77abd503a71",
+   "yanked": false,
+   "crate_size": 10538,
+   "created_at": "2023-03-09T02:08:25.969182Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "block-buffer@0.12.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d2f6c7dbe95a6ed67ad9f18e57daf93a2f034c524b99fd2b76d18fdfeb6660aa",
+   "yanked": false,
+   "crate_size": 15902,
+   "created_at": "2026-06-11T15:40:05.682576Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "bs58@0.5.1": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "bf88ba1141d185c399bee5288d850d63b8369520c1eafc32a0430b5b6c287bf4",
+   "yanked": false,
+   "crate_size": 28483,
+   "created_at": "2024-03-19T12:50:23.529199Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "bstr@1.13.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6bb31b46c14244e20ee9984b11bf5c992b91fb6939fea616e3512c8baecdbe5f",
+   "yanked": false,
+   "crate_size": 356631,
+   "created_at": "2026-08-10T11:12:08.883439Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "bumpalo@3.20.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "72f5acc6cb2ba439de613abc23857ec3d78374d8ed5ac84e9d11336e87da8649",
+   "yanked": false,
+   "crate_size": 98671,
+   "created_at": "2026-05-22T14:59:11.132139Z",
+   "rust_version": "1.71.1",
+   "retrieved": "2026-11-16"
+  },
+  "by_address@1.2.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "64fa3c856b712db6612c019f14756e64e4bcea13337a6b33b696333a9eaa2d06",
+   "yanked": false,
+   "crate_size": 8437,
+   "created_at": "2024-03-27T19:10:33.275879Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "bytemuck@1.25.2": {
+   "license": "Zlib OR Apache-2.0 OR MIT",
+   "checksum": "95832e849adfb21180ccb6826a99da14e5d266ae5c2e668e1602cf234f153797",
+   "yanked": false,
+   "crate_size": 54075,
+   "created_at": "2026-07-19T19:36:16.239554Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "byteorder@1.5.0": {
+   "license": "Unlicense OR MIT",
+   "checksum": "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b",
+   "yanked": false,
+   "crate_size": 23288,
+   "created_at": "2023-10-06T00:45:57.877036Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "bytes@1.12.1": {
+   "license": "MIT",
+   "checksum": "fc652a48c352aef3ea3aed32080501cf3ef6ed5da78602a020c991775b0aff04",
+   "yanked": false,
+   "crate_size": 75667,
+   "created_at": "2026-07-08T10:01:28.616466Z",
+   "rust_version": "1.57",
+   "retrieved": "2026-11-16"
+  },
+  "cached@0.59.0": {
+   "license": "MIT",
+   "checksum": "53b6f5d101f0f6322c8646a45b7c581a673e476329040d97565815c2461dd0c4",
+   "yanked": false,
+   "crate_size": 76985,
+   "created_at": "2026-03-22T16:16:38.902436Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "cached_proc_macro@0.27.0": {
+   "license": "MIT",
+   "checksum": "8ebcf9c75f17a17d55d11afc98e46167d4790a263f428891b8705ab2f793eca3",
+   "yanked": false,
+   "crate_size": 11895,
+   "created_at": "2026-03-22T16:16:31.462788Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "cached_proc_macro_types@0.1.1": {
+   "license": "MIT",
+   "checksum": "ade8366b8bd5ba243f0a58f036cc0ca8a2f069cff1a2351ef1cac6b083e16fc0",
+   "yanked": false,
+   "crate_size": 1813,
+   "created_at": "2024-01-22T22:13:59.668482Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "caret@0.10.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "23a6f83e57018d15e7615a6f8e5e2c6b6b0226e24a1c562cd705f855a2bc751a",
+   "yanked": false,
+   "crate_size": 3909,
+   "created_at": "2026-08-03T21:05:51.011703Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "cc@1.4.5": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "005ec2760ca554fae18df7a11195552ec576cd665632a881bc011d5bb2fd4d80",
+   "yanked": false,
+   "crate_size": 101464,
+   "created_at": "2026-09-04T09:28:57.146598Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "cesu8@1.1.0": {
+   "license": "Apache-2.0/MIT",
+   "checksum": "6d43a04d8753f35258c91f8ec639f792891f748a1edbd759cf1dcea3382ad83c",
+   "yanked": false,
+   "crate_size": 10555,
+   "created_at": "2016-05-15T12:20:41.086989Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "cfg-if@1.0.4": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
+   "yanked": false,
+   "crate_size": 9360,
+   "created_at": "2025-10-15T08:12:46.455816Z",
+   "rust_version": "1.32",
+   "retrieved": "2026-11-16"
+  },
+  "cfg-if@1.0.5": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600",
+   "yanked": false,
+   "crate_size": 9578,
+   "created_at": "2026-09-16T17:36:11.278420Z",
+   "rust_version": "1.32",
+   "retrieved": "2026-11-16"
+  },
+  "cfg_aliases@0.2.2": {
+   "license": "MIT",
+   "checksum": "f079e83a288787bcd14a6aea84cee5c87a67c5a3e660c30f557a3d24761b3527",
+   "yanked": false,
+   "crate_size": 6527,
+   "created_at": "2026-07-16T14:57:16.699789Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "chacha20@0.10.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "65c35e4b699c7e15ccbe7ee35c005e4fc0a278d22238a2857e6ce2dadeda1b06",
+   "yanked": false,
+   "crate_size": 38197,
+   "created_at": "2026-08-27T17:51:13.045493Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "chacha20@0.9.1": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "c3613f74bd2eac03dad61bd53dbe620703d4371614fe0bc3b9f04dd36fe4e818",
+   "yanked": false,
+   "crate_size": 23424,
+   "created_at": "2023-04-01T20:12:19.932795Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "chacha20poly1305@0.10.1": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "10cd79432192d1c0f4e1a0fef9527696cc039165d729fb41b3f4f4f354c2dc35",
+   "yanked": false,
+   "crate_size": 68485,
+   "created_at": "2022-08-10T03:37:43.851637Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "chrono@0.4.45": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1aa79e62e7697b8e29b513a68abacf485adcd1fe8284a4316c5ae868e6633327",
+   "yanked": false,
+   "crate_size": 240866,
+   "created_at": "2026-06-04T12:16:42.063037Z",
+   "rust_version": "1.62.0",
+   "retrieved": "2026-11-16"
+  },
+  "cipher@0.4.4": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "773f3b9af64447d2ce9850330c473515014aa235e6a783b02db81ff39e4a3dad",
+   "yanked": false,
+   "crate_size": 19073,
+   "created_at": "2023-03-09T00:11:40.449460Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "cipher@0.5.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e8cf2a2c93cd704877c0858356ed03480ff301ee950b43f1cbe4573b088bfa6c",
+   "yanked": false,
+   "crate_size": 28177,
+   "created_at": "2026-05-19T16:06:33.576545Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "cmake@0.1.58": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c0f78a02292a74a88ac736019ab962ece0bc380e3f977bf72e376c5d78ff0678",
+   "yanked": false,
+   "crate_size": 20474,
+   "created_at": "2026-03-26T17:58:29.356302Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "cmov@0.5.4": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "0c9ea0ac24bc397ab3c98583a3c9ba74fa56b09a4449bbe172b9b1ddb016027a",
+   "yanked": false,
+   "crate_size": 27367,
+   "created_at": "2026-05-28T19:07:33.005301Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "coarsetime@0.1.37": {
+   "license": "BSD-2-Clause",
+   "checksum": "e58eb270476aa4fc7843849f8a35063e8743b4dbcdf6dd0f8ea0886980c204c2",
+   "yanked": false,
+   "crate_size": 11116,
+   "created_at": "2026-01-10T08:27:14.739479Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "colored@3.1.1": {
+   "license": "MPL-2.0",
+   "checksum": "faf9468729b8cbcea668e36183cb69d317348c2e08e994829fb56ebfdfbaac34",
+   "yanked": false,
+   "crate_size": 36216,
+   "created_at": "2026-01-16T16:13:51.893178Z",
+   "rust_version": "1.80",
+   "retrieved": "2026-11-16"
+  },
+  "combine@4.6.9": {
+   "license": "MIT",
+   "checksum": "4356eba6976435498d05a311ee9fc486da3bc81c200d3f0d7dd9703b41913f92",
+   "yanked": false,
+   "crate_size": 109439,
+   "created_at": "2026-10-15T13:17:58.967822Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "const-oid@0.10.2": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "a6ef517f0926dd24a1582492c791b6a4818a4d94e789a334894aa15b0d12f55c",
+   "yanked": false,
+   "crate_size": 61449,
+   "created_at": "2026-01-07T23:11:57.242553Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "const-oid@0.9.6": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "c2459377285ad874054d797f3ccebf984978aa39129f6eafde5cdc8315b612f8",
+   "yanked": false,
+   "crate_size": 45382,
+   "created_at": "2023-12-15T00:13:20.730670Z",
+   "rust_version": "1.57",
+   "retrieved": "2026-11-16"
+  },
+  "convert_case@0.10.0": {
+   "license": "MIT",
+   "checksum": "633458d4ef8c78b72454de2d54fd6ab2e60f9e02be22f3c6104cdc8a4e0fceb9",
+   "yanked": false,
+   "crate_size": 24083,
+   "created_at": "2025-11-23T12:24:56.780847Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "cookie-factory@0.3.3": {
+   "license": "MIT",
+   "checksum": "9885fa71e26b8ab7855e2ec7cae6e9b380edff76cd052e07c683a0319d51b3a2",
+   "yanked": false,
+   "crate_size": 19084,
+   "created_at": "2024-03-21T20:34:06.291708Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "core-foundation-sys@0.8.7": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b",
+   "yanked": false,
+   "crate_size": 37712,
+   "created_at": "2024-08-11T00:48:27.870880Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "core-foundation@0.10.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b2a6cd9ae233e7f62ba4e9353e81a88df7fc8a5987b8d445b4d90c879bd156f6",
+   "yanked": false,
+   "crate_size": 28886,
+   "created_at": "2025-05-26T12:40:41.787847Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "cpubits@0.1.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "15b85f9c39137c3a891689859392b1bd49812121d0d61c9caf00d46ed5ce06ae",
+   "yanked": false,
+   "crate_size": 10261,
+   "created_at": "2026-04-28T16:39:27.507941Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "cpufeatures@0.2.17": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "59ed5838eebb26a2bb2e58f6d5b5316989ae9d08bab10e0e6d103e656d1b0280",
+   "yanked": false,
+   "crate_size": 13466,
+   "created_at": "2025-01-25T01:35:46.131569Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "cpufeatures@0.3.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "5ca28b0ae3115b884660db4118d803791fd6756b6e88f39c0f3f7859060d7566",
+   "yanked": false,
+   "crate_size": 14272,
+   "created_at": "2026-08-26T18:39:59.636708Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "crc32fast@1.5.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "8498c871161e1742aaa9d52551b2d6ebdd4c3d45a3be423e3728f33b955be550",
+   "yanked": false,
+   "crate_size": 47893,
+   "created_at": "2026-08-22T18:49:22.203015Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "crossbeam-queue@0.3.14": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "03e8bd762f7479489c70ed6c768ddca99d7296857de437a68dcb2a94365b3fae",
+   "yanked": false,
+   "crate_size": 18730,
+   "created_at": "2026-09-05T17:46:34.288577Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "crossbeam-utils@0.8.23": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "a31eee39dddec8330830986fcd7625edb5a24ec90ea038215273bbc3adb08ac6",
+   "yanked": false,
+   "crate_size": 47174,
+   "created_at": "2026-09-05T17:46:14.665751Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "crypto-bigint@0.5.5": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "0dc92fb57ca44df6db8059111ab3af99a63d5d0f8375d9972e319a379c6bab76",
+   "yanked": false,
+   "crate_size": 83384,
+   "created_at": "2023-11-18T22:56:54.639626Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "crypto-common@0.1.7": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "78c8292055d1c1df0cce5d180393dc8cce0abec0a7102adb6c7b1eef6016d60a",
+   "yanked": false,
+   "crate_size": 9619,
+   "created_at": "2025-11-12T14:20:00.210277Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "crypto-common@0.2.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ce6e4c961d6cd6c9a86db418387425e8bdeaf05b3c8bc1411e6dca4c252f1453",
+   "yanked": false,
+   "crate_size": 15449,
+   "created_at": "2026-05-19T16:01:22.304187Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "ctr@0.10.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "baaca1c4b237092596f64d571e9db6ce4109c4ef9742e27590f1709594461f21",
+   "yanked": false,
+   "crate_size": 20379,
+   "created_at": "2026-05-20T12:25:38.239223Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "ctutils@0.4.2": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "7d5515a3834141de9eafb9717ad39eea8247b5674e6066c404e8c4b365d2a29e",
+   "yanked": false,
+   "crate_size": 32739,
+   "created_at": "2026-04-02T20:44:34.184153Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "curve25519-dalek-derive@0.1.1": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "f46882e17999c6cc590af592290432be3bce0428cb0d5f8b6715e4dc7b383eb3",
+   "yanked": false,
+   "crate_size": 11723,
+   "created_at": "2023-10-31T17:58:09.620431Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "curve25519-dalek@4.1.3": {
+   "license": "BSD-3-Clause",
+   "checksum": "97fb8b7c4503de7d6ae7b42ab72a5a59857b4c937ec27a3d4539dba95b5ab2be",
+   "yanked": false,
+   "crate_size": 306017,
+   "created_at": "2024-06-18T19:20:35.007627Z",
+   "rust_version": "1.60.0",
+   "retrieved": "2026-11-16"
+  },
+  "darling@0.14.4": {
+   "license": "MIT",
+   "checksum": "7b750cb3417fd1b327431a470f388520309479ab0bf5e323505daf0290cd3850",
+   "yanked": false,
+   "crate_size": 25168,
+   "created_at": "2023-03-09T21:04:40.607848Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "darling@0.20.11": {
+   "license": "MIT",
+   "checksum": "fc7f46116c46ff9ab3eb1597a45688b6715c6e628b5c133e288e709a29bcb4ee",
+   "yanked": false,
+   "crate_size": 37614,
+   "created_at": "2025-03-28T20:05:16.077464Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "darling@0.21.3": {
+   "license": "MIT",
+   "checksum": "9cdf337090841a411e2a7f3deb9187445851f91b309c0c0a29e05f74a00a48c0",
+   "yanked": false,
+   "crate_size": 41398,
+   "created_at": "2025-08-22T15:40:48.056865Z",
+   "rust_version": "1.56.0",
+   "retrieved": "2026-11-16"
+  },
+  "darling@0.24.1": {
+   "license": "MIT",
+   "checksum": "ed17f5901b6630b993ca003def43f2f8ef4014fc13b047b57aad617ff32bc2ec",
+   "yanked": false,
+   "crate_size": 51607,
+   "created_at": "2026-08-20T15:12:01.702411Z",
+   "rust_version": "1.88.0",
+   "retrieved": "2026-11-16"
+  },
+  "darling_core@0.14.4": {
+   "license": "MIT",
+   "checksum": "109c1ca6e6b7f82cc233a97004ea8ed7ca123a9af07a8230878fcfda9b158bf0",
+   "yanked": false,
+   "crate_size": 57485,
+   "created_at": "2023-03-09T21:04:00.423002Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "darling_core@0.20.11": {
+   "license": "MIT",
+   "checksum": "0d00b9596d185e565c2207a0b01f8bd1a135483d02d9b7b0a54b11da8d53412e",
+   "yanked": false,
+   "crate_size": 68006,
+   "created_at": "2025-03-28T20:05:00.260571Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "darling_core@0.21.3": {
+   "license": "MIT",
+   "checksum": "1247195ecd7e3c85f83c8d2a366e4210d588e802133e1e355180a9870b517ea4",
+   "yanked": false,
+   "crate_size": 74471,
+   "created_at": "2025-08-22T15:40:32.129542Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "darling_core@0.24.1": {
+   "license": "MIT",
+   "checksum": "6837e2cf7485aaae18f86181d2f0e9a7ed297a025e220aeabf63fdebd3a2ddff",
+   "yanked": false,
+   "crate_size": 83947,
+   "created_at": "2026-08-20T15:11:43.129462Z",
+   "rust_version": "1.88.0",
+   "retrieved": "2026-11-16"
+  },
+  "darling_macro@0.14.4": {
+   "license": "MIT",
+   "checksum": "a4aab4dbc9f7611d8b55048a3a16d2d010c2c8334e46304b40ac1cc14bf3b48e",
+   "yanked": false,
+   "crate_size": 1896,
+   "created_at": "2023-03-09T21:04:19.620722Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "darling_macro@0.20.11": {
+   "license": "MIT",
+   "checksum": "fc34b93ccb385b40dc71c6fceac4b2ad23662c7eeb248cf10d529b7e055b6ead",
+   "yanked": false,
+   "crate_size": 2532,
+   "created_at": "2025-03-28T20:05:07.944299Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "darling_macro@0.21.3": {
+   "license": "MIT",
+   "checksum": "d38308df82d1080de0afee5d069fa14b0326a88c14f15c5ccda35b4a6c414c81",
+   "yanked": false,
+   "crate_size": 2535,
+   "created_at": "2025-08-22T15:40:39.563614Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "darling_macro@0.24.1": {
+   "license": "MIT",
+   "checksum": "2ac7135c3ef02b2f7833bbeb1be5ba7f966dcde8a87c6b87f65a778d71a02785",
+   "yanked": false,
+   "crate_size": 2481,
+   "created_at": "2026-08-20T15:11:50.704280Z",
+   "rust_version": "1.88.0",
+   "retrieved": "2026-11-16"
+  },
+  "data-encoding@2.11.1": {
+   "license": "MIT",
+   "checksum": "4583a4551df46e2792f82ceeac45e850d2e2d5debba0b91f102385cda5b11f06",
+   "yanked": false,
+   "crate_size": 22651,
+   "created_at": "2026-08-03T10:39:52.996245Z",
+   "rust_version": "1.48",
+   "retrieved": "2026-11-16"
+  },
+  "defmt-macros@1.1.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "bad9c72e7ca2137e0dc3813245a0d282fd6daad32fd800af018306a9169b5fe8",
+   "yanked": false,
+   "crate_size": 27937,
+   "created_at": "2026-07-03T14:14:21.833924Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "defmt-parser@1.0.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "10d60334b3b2e7c9d91ef8150abfb6fa4c1c39ebbcf4a81c2e346aad939fee3e",
+   "yanked": false,
+   "crate_size": 10881,
+   "created_at": "2025-04-01T14:32:40.061093Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "defmt@0.3.100": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f0963443817029b2024136fc4dd07a5107eb8f977eaf18fcd1fdeb11306b64ad",
+   "yanked": false,
+   "crate_size": 6189,
+   "created_at": "2025-04-01T14:47:45.854940Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "defmt@1.1.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e2953bfe4f93bbd20cc71198842756f77d161884c99ebbabc41d80231ded88d1",
+   "yanked": false,
+   "crate_size": 34207,
+   "created_at": "2026-07-03T14:14:30.344251Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "der-parser@10.0.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "07da5016415d5a3c4dd39b11ed26f915f52fc4e0dc197d87908bc916e51bc1a6",
+   "yanked": false,
+   "crate_size": 66186,
+   "created_at": "2025-01-21T09:43:38.524624Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "der@0.7.10": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "e7c1832837b905bbfb5101e07cc24c8deddf52f93225eee6ead5f4d63d53ddcb",
+   "yanked": false,
+   "crate_size": 90111,
+   "created_at": "2025-04-18T14:53:09.810695Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "deranged@0.5.8": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7cd812cc2bc1d69d4764bd80df88b4317eaef9e773c75226407d9bc0876b211c",
+   "yanked": false,
+   "crate_size": 26885,
+   "created_at": "2026-02-21T21:37:43.676837Z",
+   "rust_version": "1.85.0",
+   "retrieved": "2026-11-16"
+  },
+  "derive-deftly-macros@1.11.5": {
+   "license": "MIT",
+   "checksum": "ba91f619216e76a5eb2515783f7ec2e271938b51aadac592f4930517f4626863",
+   "yanked": false,
+   "crate_size": 135326,
+   "created_at": "2026-07-27T18:00:59.983518Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "derive-deftly@1.11.5": {
+   "license": "MIT",
+   "checksum": "98e02cd118058400797c74550dca132b57cf2e6af0e9ea0672a83eb186fd655e",
+   "yanked": false,
+   "crate_size": 111186,
+   "created_at": "2026-07-27T18:01:18.639068Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "derive_builder_core_fork_arti@0.11.2": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "24c1b715c79be6328caa9a5e1a387a196ea503740f0722ec3dd8f67a9e72314d",
+   "yanked": false,
+   "crate_size": 31064,
+   "created_at": "2022-05-06T12:25:24.170289Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "derive_builder_fork_arti@0.11.2": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "c3eae24d595f4d0ecc90a9a5a6d11c2bd8dafe2375ec4a1ec63250e5ade7d228",
+   "yanked": false,
+   "crate_size": 35894,
+   "created_at": "2022-05-06T12:29:09.248015Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "derive_builder_macro_fork_arti@0.11.2": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "69887769a2489cd946bf782eb2b1bb2cb7bc88551440c94a765d4f040c08ebf3",
+   "yanked": false,
+   "crate_size": 6446,
+   "created_at": "2022-05-06T12:28:44.487558Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "derive_more-impl@2.1.1": {
+   "license": "MIT",
+   "checksum": "799a97264921d8623a957f6c3b9011f3b5492f557bbb7a5a19b7fa6d06ba8dcb",
+   "yanked": false,
+   "crate_size": 99094,
+   "created_at": "2025-12-22T09:13:41.301481Z",
+   "rust_version": "1.81.0",
+   "retrieved": "2026-11-16"
+  },
+  "derive_more@2.1.1": {
+   "license": "MIT",
+   "checksum": "d751e9e49156b02b44f9c1815bcb94b984cdcc4396ecc32521c739452808b134",
+   "yanked": false,
+   "crate_size": 88632,
+   "created_at": "2025-12-22T09:13:44.198298Z",
+   "rust_version": "1.81.0",
+   "retrieved": "2026-11-16"
+  },
+  "digest@0.10.7": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9ed9a281f7bc9b7576e61468ba615a66a5c8cfdff42420a70aa82701a3b1e292",
+   "yanked": false,
+   "crate_size": 19557,
+   "created_at": "2023-05-19T17:11:30.893794Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "digest@0.11.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f1dd6dbb5841937940781866fa1281a1ff7bd3bf827091440879f9994983d5c2",
+   "yanked": false,
+   "crate_size": 28955,
+   "created_at": "2026-05-03T12:54:48.023505Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "directories@6.0.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "16f5094c54661b38d03bd7e50df373292118db60b585c08a411c6d840017fe7d",
+   "yanked": false,
+   "crate_size": 17842,
+   "created_at": "2025-01-12T17:19:05.177535Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "dirs-sys@0.5.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e01a3366d27ee9890022452ee61b2b63a67e6f13f58900b651ff5665f0bb1fab",
+   "yanked": false,
+   "crate_size": 10157,
+   "created_at": "2025-01-11T22:10:02.119353Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "dirs@6.0.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c3e8aa94d75141228480295a7d0e7feb620b1a5ad9f12bc40be62411e38cce4e",
+   "yanked": false,
+   "crate_size": 14190,
+   "created_at": "2025-01-12T17:19:23.581020Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "displaydoc@0.2.7": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c6232dd377dcc64799954cbd3a9bb882e9cdc1308ccd87b1c098f1fb2eaf82a8",
+   "yanked": false,
+   "crate_size": 21343,
+   "created_at": "2026-07-28T13:58:21.461609Z",
+   "rust_version": "1.71.0",
+   "retrieved": "2026-11-16"
+  },
+  "dns-message-parser@0.9.0": {
+   "license": "BSD-3-Clause",
+   "checksum": "2b7668abb61ae38907f7f6b9fa6396818448b2bc566e1a869c1631d70724e3f9",
+   "yanked": false,
+   "crate_size": 66802,
+   "created_at": "2025-08-29T13:32:38.751890Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "downcast-rs@2.0.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "117240f60069e65410b3ae1bb213295bd828f707b5bec6596a1afc8793ce0cbc",
+   "yanked": false,
+   "crate_size": 12730,
+   "created_at": "2025-09-01T20:32:31.465521Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "dunce@1.0.5": {
+   "license": "CC0-1.0 OR MIT-0 OR Apache-2.0",
+   "checksum": "92773504d58c093f6de2459af4af33faa518c13451eb8f2b5698ed3d36e7c813",
+   "yanked": false,
+   "crate_size": 8244,
+   "created_at": "2024-08-04T01:36:46.487482Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "dyn-clone@1.0.20": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d0881ea181b1df73ff77ffaaf9c7544ecc11e82fba9b5f27b262a3c73a332555",
+   "yanked": false,
+   "crate_size": 13134,
+   "created_at": "2025-07-27T19:29:46.625527Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "ecdsa@0.16.9": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "ee27f32b5c5292967d2d4a9d7f1e0b0aed2c15daded5a60300e4abb9d8020bca",
+   "yanked": false,
+   "crate_size": 31406,
+   "created_at": "2023-11-16T15:55:48.150910Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "ed25519-dalek@2.2.0": {
+   "license": "BSD-3-Clause",
+   "checksum": "70e796c081cee67dc755e1a36a0a172b897fab85fc3f6bc48307991f64e4eca9",
+   "yanked": false,
+   "crate_size": 98034,
+   "created_at": "2025-07-09T16:24:38.881019Z",
+   "rust_version": "1.81",
+   "retrieved": "2026-11-16"
+  },
+  "ed25519@2.2.3": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "115531babc129696a58c64a4fef0a8bf9e9698629fb97e9e40767d235cfbcd53",
+   "yanked": false,
+   "crate_size": 17802,
+   "created_at": "2023-10-15T19:12:57.917968Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "educe@0.4.23": {
+   "license": "MIT",
+   "checksum": "0f0042ff8246a363dbe77d2ceedb073339e85a804b9a47636c6e016a9a32c05f",
+   "yanked": false,
+   "crate_size": 44244,
+   "created_at": "2023-09-09T13:12:54.496758Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "either@1.18.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "252afb9ae5eaa683babdc6a068b3f5726eb19e05070c731f9b2a23a7c3e8ed34",
+   "yanked": false,
+   "crate_size": 22357,
+   "created_at": "2026-08-20T19:36:48.266137Z",
+   "rust_version": "1.63.0",
+   "retrieved": "2026-11-16"
+  },
+  "elliptic-curve@0.13.8": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "b5e6043086bf7973472e0c7dff2142ea0b680d30e18d9cc40f267efbf222bd47",
+   "yanked": false,
+   "crate_size": 63198,
+   "created_at": "2023-11-19T18:33:33.012946Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "enum-ordinalize@3.1.15": {
+   "license": "MIT",
+   "checksum": "1bf1fa3f06bbff1ea5b1a9c7b14aa992a39657db60a2759457328d7e058f49ee",
+   "yanked": false,
+   "crate_size": 5783,
+   "created_at": "2023-10-01T04:53:03.499907Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "enum_dispatch@0.3.13": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "aa18ce2bc66555b3218614519ac839ddb759a7d6720732f979ef8d13be147ecd",
+   "yanked": false,
+   "crate_size": 29876,
+   "created_at": "2024-03-28T16:25:44.789544Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "enumset@1.1.14": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "ccc5801fd11762e24d1e420d01d2ac518f2a2ca4329d4fbb6639f2412b6204e0",
+   "yanked": false,
+   "crate_size": 26458,
+   "created_at": "2026-07-20T14:18:57.717381Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "enumset_derive@0.15.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "4bd536557b58c682b217b8fb199afdff47cd3eff260623f19e77074eb073d63a",
+   "yanked": false,
+   "crate_size": 17951,
+   "created_at": "2026-05-07T02:09:58.762591Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "equivalent@1.0.2": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f",
+   "yanked": false,
+   "crate_size": 7419,
+   "created_at": "2025-02-14T22:14:18.212755Z",
+   "rust_version": "1.6",
+   "retrieved": "2026-11-16"
+  },
+  "errno@0.3.14": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb",
+   "yanked": false,
+   "crate_size": 12002,
+   "created_at": "2025-09-09T04:35:15.362504Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "event-listener@5.4.2": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "5a23add41df1562121a9393cb065eab5146a1242410f23a644851e90cfd669d2",
+   "yanked": false,
+   "crate_size": 35131,
+   "created_at": "2026-07-27T11:31:20.582548Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "extend@1.2.0": {
+   "license": "MIT",
+   "checksum": "311a6d2f1f9d60bff73d2c78a0af97ed27f79672f15c238192a5bbb64db56d00",
+   "yanked": false,
+   "crate_size": 10581,
+   "created_at": "2023-03-18T20:13:19.230021Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "fallible-iterator@0.3.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "2acce4a10f12dc2fb14a218589d4f1f62ef011b2d0cc4b3cb1bba8e94da14649",
+   "yanked": false,
+   "crate_size": 19639,
+   "created_at": "2023-05-22T23:12:37.497125Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "fallible-streaming-iterator@0.1.9": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "7360491ce676a36bf9bb3c56c1aa791658183a54d2744120f27285738d90465a",
+   "yanked": false,
+   "crate_size": 9249,
+   "created_at": "2018-05-02T20:02:49.746627Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "fastrand@2.5.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "da7c62ceae207dd37ea5b845da6a0696c799f85e97da1ab5b7910be3c1c80223",
+   "yanked": false,
+   "crate_size": 20782,
+   "created_at": "2026-07-19T12:40:53.683020Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "ff@0.13.1": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "c0b50bfb653653f9ca9095b427bed08ab8d75a137839d9ad64eb11810d5b6393",
+   "yanked": false,
+   "crate_size": 18607,
+   "created_at": "2025-03-09T22:16:54.081723Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "fiat-crypto@0.2.9": {
+   "license": "MIT OR Apache-2.0 OR BSD-1-Clause",
+   "checksum": "28dea519a9695b9977216879a3ebfddf92f1c08c05d984f8996aecd6ecdc811d",
+   "yanked": false,
+   "crate_size": 495390,
+   "created_at": "2024-05-12T22:29:28.840311Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "figment@0.10.19": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "8cb01cd46b0cf372153850f4c6c272d9cbea2da513e07538405148f95bd789f3",
+   "yanked": false,
+   "crate_size": 70111,
+   "created_at": "2024-05-17T02:54:57.543501Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "filetime@0.2.29": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "5c287a33c7f0a620c38e641e7f60827713987b3c0f26e8ddc9462cc69cf75759",
+   "yanked": false,
+   "crate_size": 16977,
+   "created_at": "2026-05-12T22:38:22.994500Z",
+   "rust_version": "1.75.0",
+   "retrieved": "2026-11-16"
+  },
+  "find-msvc-tools@0.1.12": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3e0f1c7c3a72c66fd80abe965175f7523475c0489a87d3ff9d6e8c87d87a9d2d",
+   "yanked": false,
+   "crate_size": 31570,
+   "created_at": "2026-09-04T09:28:52.840002Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "flate2@1.1.10": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6e634e2e0ebac1ee034020da1ca582e17ffe4e0f5e985823721e168928136dcb",
+   "yanked": false,
+   "crate_size": 80244,
+   "created_at": "2026-08-28T04:35:22.192325Z",
+   "rust_version": "1.67.0",
+   "retrieved": "2026-11-16"
+  },
+  "fluid-let@1.0.0": {
+   "license": "MIT",
+   "checksum": "749cff877dc1af878a0b31a41dd221a753634401ea0ef2f87b62d3171522485a",
+   "yanked": false,
+   "crate_size": 9036,
+   "created_at": "2021-10-12T12:48:50.861607Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "fnv@1.0.7": {
+   "license": "Apache-2.0 / MIT",
+   "checksum": "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1",
+   "yanked": false,
+   "crate_size": 11266,
+   "created_at": "2020-05-14T16:06:29.223002Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "foldhash@0.1.5": {
+   "license": "Zlib",
+   "checksum": "d9c4f5dac5e15c24eb999c26181a6ca40b39fe946cbe4c263c7209467bc83af2",
+   "yanked": false,
+   "crate_size": 21901,
+   "created_at": "2025-03-15T20:10:19.156505Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "foldhash@0.2.0": {
+   "license": "Zlib",
+   "checksum": "77ce24cb58228fbb8aa041425bb1050850ac19177686ea6e0f41a70416f56fdb",
+   "yanked": false,
+   "crate_size": 23329,
+   "created_at": "2025-08-23T19:14:01.103482Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "foreign-types-shared@0.1.1": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b",
+   "yanked": false,
+   "crate_size": 5672,
+   "created_at": "2017-11-28T23:16:45.760735Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "foreign-types@0.3.2": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1",
+   "yanked": false,
+   "crate_size": 7504,
+   "created_at": "2017-11-28T23:17:39.115409Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "form_urlencoded@1.2.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "cb4cb245038516f5f85277875cdaa4f7d2c9a0fa0468de06ed190163b1581fcf",
+   "yanked": false,
+   "crate_size": 9347,
+   "created_at": "2025-08-21T08:47:43.939560Z",
+   "rust_version": "1.51",
+   "retrieved": "2026-11-16"
+  },
+  "fs-mistrust@0.15.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9b2c81a5a0e7d67644309a15694eb7f414a4d6556c64c1ece1e5969aa609c8a9",
+   "yanked": false,
+   "crate_size": 51645,
+   "created_at": "2026-08-03T21:05:57.733169Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "fs_extra@1.3.0": {
+   "license": "MIT",
+   "checksum": "42703706b716c37f96a77aea830392ad231f44c9e9a67872fa5548707e11b11c",
+   "yanked": false,
+   "crate_size": 31298,
+   "created_at": "2023-02-03T17:59:27.093041Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "fslock-guard@0.8.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d10ce5036d49f8add4a11d08bc1b1afb0e3cefdd88778ab87fb4202d47b765e1",
+   "yanked": false,
+   "crate_size": 11989,
+   "created_at": "2026-09-02T09:16:45.471486Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "funty@2.0.0": {
+   "license": "MIT",
+   "checksum": "e6d5a32815ae3f33302d95fdcb2ce17862f8c65363dcfd29360480ba1001fc9c",
+   "yanked": false,
+   "crate_size": 13160,
+   "created_at": "2021-11-28T08:56:54.503319Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "futures-channel@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b1f9e3d69d39e4862ffed03ed071a76f9a13ba1d9109d355b0f0aa6b15e393c4",
+   "yanked": false,
+   "crate_size": 33165,
+   "created_at": "2026-08-11T12:13:10.334104Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "futures-core@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "92d699e522242e69e3003b94ecc1f960f3a5e015aa7c5d7486e65ad01dd94f5e",
+   "yanked": false,
+   "crate_size": 14692,
+   "created_at": "2026-08-11T12:13:01.547638Z",
+   "rust_version": "1.36",
+   "retrieved": "2026-11-16"
+  },
+  "futures-executor@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "031b47cf1a3c6cc8bc2fc76cd437f521619387907d469316e7c0bc278f1f5432",
+   "yanked": false,
+   "crate_size": 18560,
+   "created_at": "2026-08-11T12:13:23.714779Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "futures-io@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "53c0fa8157de1303bfffdaa1cc2a673bfffb60102f76b0ef4441659124373fed",
+   "yanked": false,
+   "crate_size": 9189,
+   "created_at": "2026-08-11T12:13:03.992711Z",
+   "rust_version": "1.36",
+   "retrieved": "2026-11-16"
+  },
+  "futures-macro@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9fb9654ba8355388abeb8dcb4fc62f511300867002afc858860463bdd9fe0c44",
+   "yanked": false,
+   "crate_size": 11926,
+   "created_at": "2026-08-11T12:13:14.842510Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "futures-rustls@0.26.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "a8f2f12607f92c69b12ed746fabf9ca4f5c482cba46679c1a75b874ed7c26adb",
+   "yanked": false,
+   "crate_size": 22849,
+   "created_at": "2024-03-22T17:23:24.427354Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "futures-sink@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1944426bf7d03f1d14f708785e4b33efd750b36d48a157b836b3efc15ede8e1d",
+   "yanked": false,
+   "crate_size": 8107,
+   "created_at": "2026-08-11T12:13:06.160611Z",
+   "rust_version": "1.36",
+   "retrieved": "2026-11-16"
+  },
+  "futures-task@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "cd417de3d1d015fc3bfd2b1ea46dfc7bab72ef86f1cc7cc9c78e728b34a6d1fd",
+   "yanked": false,
+   "crate_size": 11376,
+   "created_at": "2026-08-11T12:13:07.886026Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "futures-util@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "0d50a92467f8ba5dd6e3ee5d4bd04d73ab2e4e1c44474a0674821dfce14b79bc",
+   "yanked": false,
+   "crate_size": 169782,
+   "created_at": "2026-08-11T12:13:19.272525Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "futures@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9a31d2a3fbaaeb2af2368bbdd904aa8e812d3c04a1ee10d3171f52d556e5d0a3",
+   "yanked": false,
+   "crate_size": 61966,
+   "created_at": "2026-08-11T12:13:28.064590Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "generic-array@0.14.7": {
+   "license": "MIT",
+   "checksum": "85649ca51fd72272d7821adaf274ad91c288277713d9c18820d8499a7ff69e9a",
+   "yanked": false,
+   "crate_size": 15950,
+   "created_at": "2023-03-28T00:01:29.542246Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "getrandom@0.2.17": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ff2abc00be7fca6ebc474524697ae276ad847ad0a6b3faa4bcb027e9a4614ad0",
+   "yanked": false,
+   "crate_size": 40780,
+   "created_at": "2026-01-11T21:09:53.669788Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "getrandom@0.3.4": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "899def5c37c4fd7b2664648c28120ecec138e4d395b459e5ca34f9cce2dd77fd",
+   "yanked": false,
+   "crate_size": 50932,
+   "created_at": "2025-10-14T17:47:36.464125Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "getrandom@0.4.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "300e883d756b2e4ec94e02791f39b04b522276138852cfc41d9fb7e904106099",
+   "yanked": false,
+   "crate_size": 52437,
+   "created_at": "2026-06-17T18:01:59.979552Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "getset@0.1.7": {
+   "license": "MIT",
+   "checksum": "6cf442baaabe4213ce7d1239afc26c039180b6456da2cededa316ae2c8a77a77",
+   "yanked": false,
+   "crate_size": 10514,
+   "created_at": "2026-06-10T23:05:33.518121Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "glob-match@0.2.1": {
+   "license": "MIT",
+   "checksum": "9985c9503b412198aa4197559e9a318524ebc4519c229bfa05a535828c950b9d",
+   "yanked": false,
+   "crate_size": 13599,
+   "created_at": "2023-02-07T05:39:01.158623Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "group@0.13.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "f0f9ef7462f7c099f518d754361858f86d8a07af53ba9af0fe635bbccb151a63",
+   "yanked": false,
+   "crate_size": 16526,
+   "created_at": "2022-12-06T02:02:57.906653Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "hash32@0.3.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "47d60b12902ba28e2730cd37e95b8c9223af2808df9e902d4df49588d1470606",
+   "yanked": false,
+   "crate_size": 10273,
+   "created_at": "2022-08-09T13:44:28.945620Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "hashbrown@0.12.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "8a9ee70c43aaf417c914396645a0fa852624801b24ebb7ae78fe8272889ac888",
+   "yanked": false,
+   "crate_size": 102968,
+   "created_at": "2022-07-17T11:20:38.243573Z",
+   "rust_version": "1.56.0",
+   "retrieved": "2026-11-16"
+  },
+  "hashbrown@0.15.5": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9229cfe53dfd69f0609a49f65461bd93001ea1ef889cd5529dd176593f5338a1",
+   "yanked": false,
+   "crate_size": 140908,
+   "created_at": "2025-08-07T23:58:32.116553Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "hashbrown@0.16.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100",
+   "yanked": false,
+   "crate_size": 147785,
+   "created_at": "2025-11-20T16:47:18.741054Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "hashbrown@0.17.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a",
+   "yanked": false,
+   "crate_size": 155512,
+   "created_at": "2026-05-09T04:35:04.251Z",
+   "rust_version": "1.85.0",
+   "retrieved": "2026-11-16"
+  },
+  "hashlink@0.11.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "824e001ac4f3012dd16a264bec811403a67ca9deb6c102fc5049b32c4574b35f",
+   "yanked": false,
+   "crate_size": 32204,
+   "created_at": "2026-06-05T13:47:52.916383Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "heapless@0.9.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "25ba4bd83f9415b58b4ed8dc5714c76e626a105be4646c02630ad730ad3b5aa4",
+   "yanked": false,
+   "crate_size": 132517,
+   "created_at": "2026-04-30T21:21:52.310678Z",
+   "rust_version": "1.87",
+   "retrieved": "2026-11-16"
+  },
+  "heck@0.5.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
+   "yanked": false,
+   "crate_size": 11517,
+   "created_at": "2024-03-12T22:42:23.303234Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "hex@0.4.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70",
+   "yanked": false,
+   "crate_size": 13299,
+   "created_at": "2021-03-03T10:48:58.682837Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "hkdf@0.12.4": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7b5f8eb2ad728638ea2c7d47a21db23b7b58a72ed6a38256b8a1849f15fbbdf7",
+   "yanked": false,
+   "crate_size": 171163,
+   "created_at": "2023-12-13T13:35:31.185347Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "hmac@0.12.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6c49c37c09c17a53d937dfbb742eb3a961d65a994e6bcdcf37e7399d0cc8ab5e",
+   "yanked": false,
+   "crate_size": 42657,
+   "created_at": "2022-02-17T10:50:37.938406Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "hostname-validator@1.1.1": {
+   "license": "MIT",
+   "checksum": "f558a64ac9af88b5ba400d99b579451af0d39c6d360980045b91aac966d705e2",
+   "yanked": false,
+   "crate_size": 2377,
+   "created_at": "2022-03-26T15:57:32.809698Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "http@1.5.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "918d3568bebf352712bc2ef3d46a8bcf1a75b373be6539de198e9105cbbf9ce0",
+   "yanked": false,
+   "crate_size": 111161,
+   "created_at": "2026-07-29T14:57:21.755258Z",
+   "rust_version": "1.57.0",
+   "retrieved": "2026-11-16"
+  },
+  "httparse@1.10.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6dbf3de79e51f3d586ab4cb9d5c3e2c14aa28ed23d180cf89b4df0454a69cc87",
+   "yanked": false,
+   "crate_size": 45190,
+   "created_at": "2025-03-03T14:44:09.975762Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "httpdate@1.0.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "df3b46402a9d5adb4c86a0cf463f42e19994e3ee891101b1841f30a545cb49a9",
+   "yanked": false,
+   "crate_size": 10639,
+   "created_at": "2023-08-13T10:55:54.391658Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "humantime-serde@1.1.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "57a3db5ea5923d99402c94e9feb261dc5ee9b4efa158b0315f788cf549cc200c",
+   "yanked": false,
+   "crate_size": 7886,
+   "created_at": "2022-03-11T20:10:58.643233Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "humantime@2.4.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "15cdd26707701c53297e2fa6afb323d55fbc1d0810c3aec078ae3ef0424c3c15",
+   "yanked": false,
+   "crate_size": 23251,
+   "created_at": "2026-07-02T11:38:57.566374Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "hybrid-array@0.4.15": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "27f864f10dfb56725ce5ce5472bc52252c8f93a4ab86327122cebf62c5f59a17",
+   "yanked": false,
+   "crate_size": 36801,
+   "created_at": "2026-09-08T18:21:39.618460Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "iana-time-zone-haiku@0.1.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f31827a206f56af32e590ba56d5d2d085f558508192593743f16b2306495269f",
+   "yanked": false,
+   "crate_size": 7185,
+   "created_at": "2023-05-12T08:43:45.406909Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "iana-time-zone@0.1.65": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e31bc9ad994ba00e440a8aa5c9ef0ec67d5cb5e5cb0cc7f8b744a35b389cc470",
+   "yanked": false,
+   "crate_size": 34079,
+   "created_at": "2026-01-28T08:40:52.528531Z",
+   "rust_version": "1.62.0",
+   "retrieved": "2026-11-16"
+  },
+  "icu_collections@2.3.0": {
+   "license": "Unicode-3.0",
+   "checksum": "fa68d21081c4a05d5a901a1c62add574c77048b6a1c67be3b50ce0b60d4ca513",
+   "yanked": false,
+   "crate_size": 87970,
+   "created_at": "2026-08-13T23:28:40.279341Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "icu_locale_core@2.3.0": {
+   "license": "Unicode-3.0",
+   "checksum": "d56e28588da92eee5c3201a6eff33fabdd49b62269c8938d4ff050ce4d900deb",
+   "yanked": false,
+   "crate_size": 80250,
+   "created_at": "2026-08-13T23:28:12.641726Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "icu_normalizer@2.3.0": {
+   "license": "Unicode-3.0",
+   "checksum": "12f9cf5f235641ed274641dd81c3f28d870e276763d0797aeeab72317b1c646f",
+   "yanked": false,
+   "crate_size": 530595,
+   "created_at": "2026-08-13T23:28:56.931089Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "icu_normalizer_data@2.3.0": {
+   "license": "Unicode-3.0",
+   "checksum": "1563da1ed3e0b3bf3d74c9b85917ac9c56464d2f57242270c09c9e752f8021a0",
+   "yanked": false,
+   "crate_size": 67215,
+   "created_at": "2026-08-13T23:28:53.835366Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "icu_properties@2.3.0": {
+   "license": "Unicode-3.0",
+   "checksum": "7e7ca276ad3145661a65914e6daf131ca5120cd3dcee8f8f3214b8875184a148",
+   "yanked": false,
+   "crate_size": 102637,
+   "created_at": "2026-08-13T23:28:46.255153Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "icu_properties_data@2.3.0": {
+   "license": "Unicode-3.0",
+   "checksum": "e590f038c1464a96894fd6d10127e90a8be4509f56ff7ecef851b15cee0b7caa",
+   "yanked": false,
+   "crate_size": 169152,
+   "created_at": "2026-08-13T23:28:42.576523Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "icu_provider@2.3.1": {
+   "license": "Unicode-3.0",
+   "checksum": "d27bbb9d3abbefac45d55f647c9de1d44aafcd1186eb91879afef17c396c3e73",
+   "yanked": false,
+   "crate_size": 52447,
+   "created_at": "2026-08-20T23:25:32.095205Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "ident_case@1.0.1": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "b9e0384b61958566e926dc50660321d12159025e767c18e043daf26b70104c39",
+   "yanked": false,
+   "crate_size": 3492,
+   "created_at": "2019-03-18T20:07:20.426691Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "idna@1.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3b0875f23caa03898994f6ddc501886a45c7d3d62d04d2d90788d47be1b1e4de",
+   "yanked": false,
+   "crate_size": 148747,
+   "created_at": "2025-08-21T08:48:20.326736Z",
+   "rust_version": "1.57",
+   "retrieved": "2026-11-16"
+  },
+  "idna_adapter@1.2.2": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "cb68373c0d6620ef8105e855e7745e18b0d00d3bdb07fb532e434244cdb9a714",
+   "yanked": false,
+   "crate_size": 10444,
+   "created_at": "2026-04-27T17:45:54.838641Z",
+   "rust_version": "1.86",
+   "retrieved": "2026-11-16"
+  },
+  "imara-diff@0.2.0": {
+   "license": "Apache-2.0",
+   "checksum": "2f01d462f766df78ab820dd06f5eb700233c51f0f4c2e846520eaf4ba6aa5c5c",
+   "yanked": false,
+   "crate_size": 163149,
+   "created_at": "2025-06-14T18:29:26.570299Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "indexmap@1.9.3": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "bd070e393353796e801d209ad339e89596eb4c8d430d18ede6a1cced8fafbd99",
+   "yanked": false,
+   "crate_size": 54653,
+   "created_at": "2023-03-24T23:54:22.153441Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "indexmap@2.14.2": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "cc4e190f5d26ca7051642629da2c52fc03bde85a03197c99408dcd291734c855",
+   "yanked": false,
+   "crate_size": 103014,
+   "created_at": "2026-09-05T01:53:48.019655Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "inotify-sys@0.1.8": {
+   "license": "ISC",
+   "checksum": "c033f80b2c113cdf91ab7a33faa9cbc014726dcad99880c8609af2a370edf37d",
+   "yanked": false,
+   "crate_size": 8411,
+   "created_at": "2026-07-07T14:33:29.124505Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "inotify@0.11.5": {
+   "license": "ISC",
+   "checksum": "4cc00ea907cab49550b7da656f80ebb97be1b997d931fbcd28d39734e17ce592",
+   "yanked": false,
+   "crate_size": 30349,
+   "created_at": "2026-08-14T17:36:29.705861Z",
+   "rust_version": "1.70",
+   "retrieved": "2026-11-16"
+  },
+  "inout@0.1.4": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "879f10e63c20629ecabbb64a8010319738c66a5cd0c29b02d63d272b03751d01",
+   "yanked": false,
+   "crate_size": 11280,
+   "created_at": "2025-02-21T09:30:09.032605Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "inout@0.2.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "4250ce6452e92010fdf7268ccc5d14faa80bb12fc741938534c58f16804e03c7",
+   "yanked": false,
+   "crate_size": 12547,
+   "created_at": "2025-12-27T20:57:59.655598Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "inventory@0.3.24": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "a4f0c30c76f2f4ccee3fe55a2435f691ca00c0e4bd87abe4f4a851b1d4dac39b",
+   "yanked": false,
+   "crate_size": 16226,
+   "created_at": "2026-03-30T23:14:21.008253Z",
+   "rust_version": "1.68",
+   "retrieved": "2026-11-16"
+  },
+  "ipnet@2.12.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "791930b43c0d5973160d90a8f3894509f2b273430f5c5c73b668636d0287c5c0",
+   "yanked": false,
+   "crate_size": 30804,
+   "created_at": "2026-09-06T05:45:08.121491Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "iprange@0.6.7": {
+   "license": "MIT",
+   "checksum": "37209be0ad225457e63814401415e748e2453a5297f9b637338f5fb8afa4ec00",
+   "yanked": false,
+   "crate_size": 34510,
+   "created_at": "2022-01-17T11:54:07.804267Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "itertools@0.15.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "8b4baf93f58d4425749ca49a51c50ebab072c5df6994d08fed93541c331481dc",
+   "yanked": false,
+   "crate_size": 164131,
+   "created_at": "2026-06-16T15:09:28.880416Z",
+   "rust_version": "1.63.0",
+   "retrieved": "2026-11-16"
+  },
+  "itoa@1.0.18": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+   "yanked": false,
+   "crate_size": 15935,
+   "created_at": "2026-03-20T00:12:37.043881Z",
+   "rust_version": "1.68",
+   "retrieved": "2026-11-16"
+  },
+  "jiff-core@0.1.0": {
+   "license": "Unlicense OR MIT",
+   "checksum": "7feca88439efe53da3754500c1851dedf3cb36c524dd5cf8225cc0794de95d09",
+   "yanked": false,
+   "crate_size": 127943,
+   "created_at": "2026-07-19T01:53:21.627419Z",
+   "rust_version": "1.70",
+   "retrieved": "2026-11-16"
+  },
+  "jiff-static@0.2.35": {
+   "license": "Unlicense OR MIT",
+   "checksum": "3a69dcb3a21cfb32ce1cd056169337ca284af0766dd766e7878819b251a49204",
+   "yanked": false,
+   "crate_size": 7996,
+   "created_at": "2026-07-25T23:45:30.962090Z",
+   "rust_version": "1.70",
+   "retrieved": "2026-11-16"
+  },
+  "jiff-tzdb-platform@0.1.3": {
+   "license": "Unlicense OR MIT",
+   "checksum": "875a5a69ac2bab1a891711cf5eccbec1ce0341ea805560dcd90b7a2e925132e8",
+   "yanked": false,
+   "crate_size": 3179,
+   "created_at": "2025-03-23T00:40:18.397031Z",
+   "rust_version": "1.70",
+   "retrieved": "2026-11-16"
+  },
+  "jiff-tzdb@0.1.8": {
+   "license": "Unlicense OR MIT",
+   "checksum": "142bd39932ad231f10513df9ab62661fead8719872150b7ad02a2df79f4e141e",
+   "yanked": false,
+   "crate_size": 62066,
+   "created_at": "2026-07-09T01:22:38.861508Z",
+   "rust_version": "1.70",
+   "retrieved": "2026-11-16"
+  },
+  "jiff@0.2.35": {
+   "license": "Unlicense OR MIT",
+   "checksum": "668b7183bd07af9a4885f5c35b0cc5c83c4607a913c16b7e17291832910d2dcc",
+   "yanked": false,
+   "crate_size": 676554,
+   "created_at": "2026-07-25T23:45:35.679348Z",
+   "rust_version": "1.70",
+   "retrieved": "2026-11-16"
+  },
+  "jni-sys-macros@0.4.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "38c0b942f458fe50cdac086d2f946512305e5631e720728f2a61aabcd47a6264",
+   "yanked": false,
+   "crate_size": 3301,
+   "created_at": "2026-01-09T00:23:44.614075Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "jni-sys@0.3.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "41a652e1f9b6e0275df1f15b32661cf0d4b78d4d87ddec5e0c3c20f097433258",
+   "yanked": false,
+   "crate_size": 11570,
+   "created_at": "2026-03-22T16:30:17.889789Z",
+   "rust_version": "1.77.0",
+   "retrieved": "2026-11-16"
+  },
+  "jni-sys@0.4.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c6377a88cb3910bee9b0fa88d4f42e1d2da8e79915598f65fb0c7ee14c878af2",
+   "yanked": false,
+   "crate_size": 13249,
+   "created_at": "2026-01-09T00:33:31.392921Z",
+   "rust_version": "1.76.0",
+   "retrieved": "2026-11-16"
+  },
+  "jni@0.21.1": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "1a87aa2bb7d2af34197c04845522473242e1aa17c12f4935d5856491a7fb8c97",
+   "yanked": false,
+   "crate_size": 105028,
+   "created_at": "2023-03-15T14:59:48.461767Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "jobserver@0.1.35": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1c00acbd29eabad4a2392fa0e921c874934dbbf4194312ad20f04a0ed67a3cb3",
+   "yanked": false,
+   "crate_size": 28890,
+   "created_at": "2026-07-06T01:43:15.155394Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "js-sys@0.3.105": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ce57d20d1ea864ce2ac172ab472d409214f4fd359f0b2a2775abdf522e2af99e",
+   "yanked": false,
+   "crate_size": 113002,
+   "created_at": "2026-09-04T23:58:12.292107Z",
+   "rust_version": "1.77",
+   "retrieved": "2026-11-16"
+  },
+  "keccak@0.1.6": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "cb26cec98cce3a3d96cbb7bced3c4b16e3d13f27ec56dbd62cbc8f39cfb9d653",
+   "yanked": false,
+   "crate_size": 13529,
+   "created_at": "2026-02-13T17:56:37.644814Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "keccak@0.2.2": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "d8f198d1db720e4940b5a493201d199d9f24f568f8f746bd13706243a2f71598",
+   "yanked": false,
+   "crate_size": 16975,
+   "created_at": "2026-08-21T12:55:13.628790Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "kqueue-sys@1.1.2": {
+   "license": "MIT",
+   "checksum": "07293a4e297ac234359b510362495713f75ea345d5307140414f20c69ffeb087",
+   "yanked": false,
+   "crate_size": 8796,
+   "created_at": "2026-05-14T08:11:34.035502Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "kqueue@1.2.1": {
+   "license": "MIT",
+   "checksum": "8d763e5b24120b4ddf50de6c92308156765aabfbbccebf401da7cff2d70a41ea",
+   "yanked": false,
+   "crate_size": 31254,
+   "created_at": "2026-08-04T14:04:27.587775Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "lazy_static@1.5.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe",
+   "yanked": false,
+   "crate_size": 14025,
+   "created_at": "2024-06-21T22:48:42.440092Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "libc@0.2.189": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2",
+   "yanked": false,
+   "crate_size": 851502,
+   "created_at": "2026-07-21T21:33:28.018110Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "libc@0.2.191": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a",
+   "yanked": false,
+   "crate_size": 855401,
+   "created_at": "2026-10-16T22:56:46.041660Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "libm@0.2.16": {
+   "license": "MIT",
+   "checksum": "b6d2cec3eae94f9f509c767b45932f1ada8350c4bdb85af2fcab4a3c14807981",
+   "yanked": false,
+   "crate_size": 164243,
+   "created_at": "2026-01-24T03:14:21.229132Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "libredox@0.1.23": {
+   "license": "MIT",
+   "checksum": "8d8f1ea3f21fd3405dcaf6c9b5c1630af9afc422d9073ea39c5f6d6c772e08ed",
+   "yanked": false,
+   "crate_size": 10541,
+   "created_at": "2026-09-01T16:28:56.798096Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "libsqlite3-sys@0.37.0": {
+   "license": "MIT",
+   "checksum": "b1f111c8c41e7c61a49cd34e44c7619462967221a6443b0ec299e0ac30cfb9b1",
+   "yanked": false,
+   "crate_size": 5295554,
+   "created_at": "2026-03-15T10:35:25.809035Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "linux-raw-sys@0.12.1": {
+   "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+   "checksum": "32a66949e030da00e8c7d4434b251670a91556f4144941d37452769c25d58a53",
+   "yanked": false,
+   "crate_size": 3006116,
+   "created_at": "2025-12-23T00:00:07.059646Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "litemap@0.8.3": {
+   "license": "Unicode-3.0",
+   "checksum": "47d9d19d1d6efa0109d2f65ff4c85cddd50bd572e5a00127ab10987290bcefae",
+   "yanked": false,
+   "crate_size": 35045,
+   "created_at": "2026-08-13T23:27:57.524692Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "lock_api@0.4.14": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "224399e74b87b5f3557511d98dff8b14089b3dadafcab6bb93eab67d3aace965",
+   "yanked": false,
+   "crate_size": 29249,
+   "created_at": "2025-10-03T23:33:12.850087Z",
+   "rust_version": "1.71.0",
+   "retrieved": "2026-11-16"
+  },
+  "log@0.4.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6",
+   "yanked": false,
+   "crate_size": 53395,
+   "created_at": "2026-08-22T11:44:27.941626Z",
+   "rust_version": "1.71.0",
+   "retrieved": "2026-11-16"
+  },
+  "lzma-sys@0.1.20": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "5fda04ab3764e6cde78b9974eec4f779acaba7c4e84b36eca3cf77c581b85d27",
+   "yanked": false,
+   "crate_size": 760045,
+   "created_at": "2022-10-31T15:18:35.015053Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "managed@0.8.0": {
+   "license": "0BSD",
+   "checksum": "0ca88d725a0a943b096803bd34e73a4437208b6077654cc4ecb2947a5f91618d",
+   "yanked": false,
+   "crate_size": 14199,
+   "created_at": "2020-07-04T01:57:33.321019Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "matchers@0.2.0": {
+   "license": "MIT",
+   "checksum": "d1525a2a28c7f4fa0fc98bb91ae755d1e2d1505079e05539e35bc876b5d65ae9",
+   "yanked": false,
+   "crate_size": 7075,
+   "created_at": "2024-07-01T22:20:07.033866Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "memchr@2.8.3": {
+   "license": "Unlicense OR MIT",
+   "checksum": "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98",
+   "yanked": false,
+   "crate_size": 99165,
+   "created_at": "2026-07-08T00:49:54.408285Z",
+   "rust_version": "1.61",
+   "retrieved": "2026-11-16"
+  },
+  "memmap2@0.9.11": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d1219ed1b7f229ee7104d281dd01d6802fe28bb6e95d292942c4daacdeb798c0",
+   "yanked": false,
+   "crate_size": 35116,
+   "created_at": "2026-06-22T16:04:03.992829Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "merlin@3.0.0": {
+   "license": "MIT",
+   "checksum": "58c38e2799fc0978b65dfff8023ec7843e2330bb462f19198840b34b6582397d",
+   "yanked": false,
+   "crate_size": 10964,
+   "created_at": "2021-01-28T20:43:26.299029Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "minimal-lexical@0.2.1": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a",
+   "yanked": false,
+   "crate_size": 94841,
+   "created_at": "2021-10-04T10:48:13.942306Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "miniz_oxide@0.9.1": {
+   "license": "MIT OR Zlib OR Apache-2.0",
+   "checksum": "b63fbc4a50860e98e7b2aa7804ded1db5cbc3aff9193adaff57a6931bf7c4b4c",
+   "yanked": false,
+   "crate_size": 70519,
+   "created_at": "2026-03-13T00:19:26.378812Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "mio@1.2.3": {
+   "license": "MIT",
+   "checksum": "4b18443e9c262bfe8fa82f51666e2642c53393f7e5c27b3e1aeab922cff5b9d8",
+   "yanked": false,
+   "crate_size": 110455,
+   "created_at": "2026-09-02T13:22:12.206563Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "native-tls@0.2.18": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "465500e14ea162429d264d44189adc38b199b62b1c21eea9f69e4b73cb03bbf2",
+   "yanked": false,
+   "crate_size": 29967,
+   "created_at": "2026-02-18T17:46:54.517554Z",
+   "rust_version": "1.80",
+   "retrieved": "2026-11-16"
+  },
+  "nix@0.31.3": {
+   "license": "MIT",
+   "checksum": "cf20d2fde8ff38632c426f1165ed7436270b44f199fc55284c38276f9db47c3d",
+   "yanked": false,
+   "crate_size": 347476,
+   "created_at": "2026-05-11T07:01:18.650221Z",
+   "rust_version": "1.69",
+   "retrieved": "2026-11-16"
+  },
+  "nom@7.1.3": {
+   "license": "MIT",
+   "checksum": "d273983c5a657a70a3e8f2a01329822f3b8c8172b73826411a55751e404a0a4a",
+   "yanked": false,
+   "crate_size": 117570,
+   "created_at": "2023-01-15T21:06:03.248351Z",
+   "rust_version": "1.48",
+   "retrieved": "2026-11-16"
+  },
+  "nonany@0.3.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f6b8866ec53810a9a4b3d434a29801e78c707430a9ae11c2db4b8b62bb9675a0",
+   "yanked": false,
+   "crate_size": 13676,
+   "created_at": "2024-10-09T20:08:26.475671Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "notify-types@2.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "42b8cfee0e339a0337359f3c88165702ac6e600dc01c0cc9579a92d62b08477a",
+   "yanked": false,
+   "crate_size": 22796,
+   "created_at": "2026-01-25T08:26:47.781875Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "notify@8.2.0": {
+   "license": "CC0-1.0",
+   "checksum": "4d3d07927151ff8575b7087f245456e549fea62edf0ec4e565a5ee50c8402bc3",
+   "yanked": false,
+   "crate_size": 39067,
+   "created_at": "2025-08-03T14:54:41.092775Z",
+   "rust_version": "1.77",
+   "retrieved": "2026-11-16"
+  },
+  "ntapi@0.4.3": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "c3b335231dfd352ffb0f8017f3b6027a4917f7df785ea2143d8af2adc66980ae",
+   "yanked": false,
+   "crate_size": 127190,
+   "created_at": "2026-02-10T12:59:29.080382Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "nu-ansi-term@0.50.3": {
+   "license": "MIT",
+   "checksum": "7957b9740744892f114936ab4a57b3f487491bbeafaf8083688b16841a4240e5",
+   "yanked": false,
+   "crate_size": 29597,
+   "created_at": "2025-10-10T17:34:18.972478Z",
+   "rust_version": "1.62.1",
+   "retrieved": "2026-11-16"
+  },
+  "num-bigint-dig@0.8.6": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "e661dda6640fad38e827a6d4a310ff4763082116fe217f279885c97f511bb0b7",
+   "yanked": false,
+   "crate_size": 126196,
+   "created_at": "2025-11-12T14:16:01.001387Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "num-bigint@0.4.8": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c89e69e7e0f03bea5ef08013795c25018e101932225a656383bd384495ecc367",
+   "yanked": false,
+   "crate_size": 109961,
+   "created_at": "2026-07-05T01:20:47.603095Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "num-conv@0.2.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "521739c6d2bac4aa25192232afe6841231376b2b26d4d9fae5ecf8ca5772e441",
+   "yanked": false,
+   "crate_size": 7441,
+   "created_at": "2026-05-18T18:35:52.284847Z",
+   "rust_version": "1.57.0",
+   "retrieved": "2026-11-16"
+  },
+  "num-integer@0.1.47": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7ce2d95d4b3734dc35aa2f45e1aa22cd416814592a4f9d9205e11affd5b8e10b",
+   "yanked": false,
+   "crate_size": 23502,
+   "created_at": "2026-08-12T00:11:57.840357Z",
+   "rust_version": "1.31",
+   "retrieved": "2026-11-16"
+  },
+  "num-iter@0.1.46": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c92800bd69a1eac91786bcfe9da64a897eb72911b8dc3095decbd07429e8048b",
+   "yanked": false,
+   "crate_size": 10763,
+   "created_at": "2026-07-07T19:51:46.163752Z",
+   "rust_version": "1.31",
+   "retrieved": "2026-11-16"
+  },
+  "num-traits@0.2.19": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841",
+   "yanked": false,
+   "crate_size": 51631,
+   "created_at": "2024-05-03T21:27:39.856244Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "num_enum@0.7.6": {
+   "license": "BSD-3-Clause OR MIT OR Apache-2.0",
+   "checksum": "5d0bca838442ec211fa11de3a8b0e0e8f3a4522575b5c4c06ed722e005036f26",
+   "yanked": false,
+   "crate_size": 21741,
+   "created_at": "2026-03-15T21:29:40.865699Z",
+   "rust_version": "1.70.0",
+   "retrieved": "2026-11-16"
+  },
+  "num_enum_derive@0.7.6": {
+   "license": "BSD-3-Clause OR MIT OR Apache-2.0",
+   "checksum": "680998035259dcfcafe653688bf2aa6d3e2dc05e98be6ab46afb089dc84f1df8",
+   "yanked": false,
+   "crate_size": 18789,
+   "created_at": "2026-03-15T21:29:38.220565Z",
+   "rust_version": "1.70.0",
+   "retrieved": "2026-11-16"
+  },
+  "num_threads@0.1.7": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "5c7398b9c8b70908f6371f47ed36737907c87c52af34c268fed0bf0ceb92ead9",
+   "yanked": false,
+   "crate_size": 7455,
+   "created_at": "2024-02-15T02:51:38.770784Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "objc2-core-foundation@0.3.2": {
+   "license": "Zlib OR Apache-2.0 OR MIT",
+   "checksum": "2a180dd8642fa45cdb7dd721cd4c11b1cadd4929ce112ebd8b9f5803cc79d536",
+   "yanked": false,
+   "crate_size": 180804,
+   "created_at": "2025-10-04T15:46:51.264986Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "objc2-io-kit@0.3.2": {
+   "license": "Zlib OR Apache-2.0 OR MIT",
+   "checksum": "33fafba39597d6dc1fb709123dfa8289d39406734be322956a69f0931c73bb15",
+   "yanked": false,
+   "crate_size": 262569,
+   "created_at": "2025-10-04T16:26:32.185070Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "once_cell@1.21.4": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+   "yanked": false,
+   "crate_size": 35010,
+   "created_at": "2026-03-12T10:59:52.512992Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "oneshot-fused-workaround@0.7.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "56892f7dcba21c5eb4181b8de221620855805891ee55ef960aad7cac3b5d88b2",
+   "yanked": false,
+   "crate_size": 3759,
+   "created_at": "2026-08-03T21:05:12.444713Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "opaque-debug@0.3.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c08d65885ee38876c4f86fa503fb49d7b507c2b62552df7c70b2fce627e06381",
+   "yanked": false,
+   "crate_size": 7066,
+   "created_at": "2024-03-01T12:08:32.543535Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "openssl-macros@0.1.1": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c",
+   "yanked": false,
+   "crate_size": 5601,
+   "created_at": "2023-04-01T13:58:02.902200Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "openssl-probe@0.2.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7c87def4c32ab89d880effc9e097653c8da5d6ef28e6b539d313baaacfbafcbe",
+   "yanked": false,
+   "crate_size": 9155,
+   "created_at": "2026-01-20T19:53:29.225766Z",
+   "rust_version": "1.60.0",
+   "retrieved": "2026-11-16"
+  },
+  "openssl-src@300.6.1+3.6.3": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "46eb8fb9fb3b61ce1c0f8a026c4c1a0714d3a9e138e7fbde78753ce2babc3846",
+   "yanked": false,
+   "crate_size": 7195821,
+   "created_at": "2026-06-09T14:26:26.688753Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "openssl-sys@0.9.117": {
+   "license": "MIT",
+   "checksum": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695",
+   "yanked": false,
+   "crate_size": 76045,
+   "created_at": "2026-06-12T18:11:16.432719Z",
+   "rust_version": "1.80.0",
+   "retrieved": "2026-11-16"
+  },
+  "openssl@0.10.81": {
+   "license": "Apache-2.0",
+   "checksum": "77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45",
+   "yanked": false,
+   "crate_size": 311187,
+   "created_at": "2026-06-12T18:11:18.530903Z",
+   "rust_version": "1.80.0",
+   "retrieved": "2026-11-16"
+  },
+  "option-ext@0.2.0": {
+   "license": "MPL-2.0",
+   "checksum": "04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d",
+   "yanked": false,
+   "crate_size": 7345,
+   "created_at": "2023-01-11T19:28:05.598091Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "ordered-float@2.10.1": {
+   "license": "MIT",
+   "checksum": "68f19d67e5a2795c94e73e0bb1cc1a7edeb2e28efd39e2e1c9b7a40c1108b11c",
+   "yanked": false,
+   "crate_size": 16029,
+   "created_at": "2023-10-10T22:48:35.933980Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "os_str_bytes@6.6.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e2355d85b9a3786f481747ced0e0ff2ba35213a1f9bd406ed906554d7af805a1",
+   "yanked": false,
+   "crate_size": 27643,
+   "created_at": "2023-10-14T20:57:50.233852Z",
+   "rust_version": "1.61.0",
+   "retrieved": "2026-11-16"
+  },
+  "p256@0.13.2": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "c9863ad85fa8f4460f9c48cb909d38a0d689dba1f6f6988a5e3e0d31071bcd4b",
+   "yanked": false,
+   "crate_size": 63434,
+   "created_at": "2023-04-15T20:53:22.070799Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "p384@0.13.1": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "fe42f1670a52a47d448f14b6a5c61dd78fce51856e68edaa38f7ae3a46b8d6b6",
+   "yanked": false,
+   "crate_size": 193022,
+   "created_at": "2025-02-07T01:25:30.110736Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "p521@0.13.3": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "0fc9e2161f1f215afdfce23677034ae137bbd45016a880c2eb3ba8eb95f085b2",
+   "yanked": false,
+   "crate_size": 138499,
+   "created_at": "2023-11-11T17:06:38.807363Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "parking@2.2.1": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "f38d5652c16fde515bb1ecef450ab0f6a219d619a7274976324d5e377f7dceba",
+   "yanked": false,
+   "crate_size": 10685,
+   "created_at": "2024-09-07T17:39:03.956479Z",
+   "rust_version": "1.51",
+   "retrieved": "2026-11-16"
+  },
+  "parking_lot@0.12.5": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "93857453250e3077bd71ff98b6a65ea6621a19bb0f559a85248955ac12c45a1a",
+   "yanked": false,
+   "crate_size": 46735,
+   "created_at": "2025-10-03T23:34:14.078935Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "parking_lot_core@0.9.12": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "2621685985a2ebf1c516881c026032ac7deafcda1a2c9b7850dc81e3dfcb64c1",
+   "yanked": false,
+   "crate_size": 34110,
+   "created_at": "2025-10-03T23:33:43.164426Z",
+   "rust_version": "1.71.0",
+   "retrieved": "2026-11-16"
+  },
+  "password-hash@0.5.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "346f04948ba92c43e8469c1ee6736c7563d71012b17d40745260fe106aac2166",
+   "yanked": false,
+   "crate_size": 26884,
+   "created_at": "2023-03-04T23:21:39.806293Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "paste@1.0.15": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a",
+   "yanked": false,
+   "crate_size": 18374,
+   "created_at": "2024-05-07T01:50:22.784771Z",
+   "rust_version": "1.31",
+   "retrieved": "2026-11-16"
+  },
+  "pem-rfc7468@0.7.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "88b39c9bfcfc231068454382784bb460aae594343fb030d46e9f50a645418412",
+   "yanked": false,
+   "crate_size": 24159,
+   "created_at": "2023-02-26T21:47:10.921213Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "percent-encoding@2.3.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9b4f627cb1b25917193a259e49bdad08f671f8d9708acfd5fe0a8c1455d87220",
+   "yanked": false,
+   "crate_size": 11583,
+   "created_at": "2025-08-21T08:46:50.131801Z",
+   "rust_version": "1.51",
+   "retrieved": "2026-11-16"
+  },
+  "phf@0.14.0": {
+   "license": "MIT",
+   "checksum": "010378780309880b08997fae13be7834dba947d36393bd372f2b1556deb2a2f6",
+   "yanked": false,
+   "crate_size": 27393,
+   "created_at": "2026-06-21T00:37:50.027327Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "phf_generator@0.14.0": {
+   "license": "MIT",
+   "checksum": "aeb62e0959d5a1bebc965f4d15d9e2b7cea002b6b0f5ba8cde6cc26738467100",
+   "yanked": false,
+   "crate_size": 20446,
+   "created_at": "2026-06-21T00:37:27.827587Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "phf_macros@0.14.0": {
+   "license": "MIT",
+   "checksum": "5fa8d0ca26d424d27630da600c6624696e7dec8bf7b3b492b383c5dc49e5e085",
+   "yanked": false,
+   "crate_size": 23963,
+   "created_at": "2026-06-21T00:37:40.436223Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "phf_shared@0.14.0": {
+   "license": "MIT",
+   "checksum": "c6fd9027e2d9319be6349febd1db4e8d02aa544921200c9b777720ac34a3aa89",
+   "yanked": false,
+   "crate_size": 20291,
+   "created_at": "2026-06-21T00:37:12.234879Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "pin-project-internal@1.1.13": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "c96395f0a926bc13b1c17622aaddda1ecb55d49c8f1bf9777e4d877800a43f8b",
+   "yanked": false,
+   "crate_size": 29331,
+   "created_at": "2026-05-13T18:32:07.416866Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "pin-project-lite@0.2.17": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd",
+   "yanked": false,
+   "crate_size": 31034,
+   "created_at": "2026-02-27T15:19:08.132543Z",
+   "rust_version": "1.37",
+   "retrieved": "2026-11-16"
+  },
+  "pin-project@1.1.13": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "2466b2336ed02bcdca6b294417127b90ec92038d1d5c4fbeac971a922e0e0924",
+   "yanked": false,
+   "crate_size": 56345,
+   "created_at": "2026-05-13T18:32:09.030433Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "pkcs1@0.7.5": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "c8ffb9f10fa047879315e6625af03c164b16962a5368d724ed16323b68ace47f",
+   "yanked": false,
+   "crate_size": 35790,
+   "created_at": "2023-04-24T19:00:40.063744Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "pkcs8@0.10.2": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "f950b2377845cebe5cf8b5165cb3cc1a5e0fa5cfa3e1f7f55707d8fd82e0a7b7",
+   "yanked": false,
+   "crate_size": 26360,
+   "created_at": "2023-04-05T00:01:55.909808Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "pkg-config@0.3.34": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+   "yanked": false,
+   "crate_size": 21370,
+   "created_at": "2026-08-14T08:27:51.724149Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "poly1305@0.8.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "8159bd90725d2df49889a078b54f4f79e87f1f8a8444194cdca81d38f5393abf",
+   "yanked": false,
+   "crate_size": 32633,
+   "created_at": "2022-07-31T18:21:15.565372Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "polyval@0.7.3": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "f0fa31d631f2b2cb2a544d0aa321ce847a94764d701ca2becc411138b93d49cd",
+   "yanked": false,
+   "crate_size": 26284,
+   "created_at": "2026-07-17T01:30:41.569470Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "portable-atomic-util@0.2.8": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "10ab3eb7f3becc3a1cbc4f2c6f20267996cfc1a6467a873763411b136a122715",
+   "yanked": false,
+   "crate_size": 53874,
+   "created_at": "2026-09-04T14:36:47.702530Z",
+   "rust_version": "1.36",
+   "retrieved": "2026-11-16"
+  },
+  "portable-atomic@1.15.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "05c8b63e8d9609db387f0324918f81d68fe27748f084ef092fb35954d0539a85",
+   "yanked": false,
+   "crate_size": 202705,
+   "created_at": "2026-08-09T17:31:27.814296Z",
+   "rust_version": "1.34",
+   "retrieved": "2026-11-16"
+  },
+  "postage@0.5.0": {
+   "license": "MIT",
+   "checksum": "af3fb618632874fb76937c2361a7f22afd393c982a2165595407edc75b06d3c1",
+   "yanked": false,
+   "crate_size": 431521,
+   "created_at": "2022-04-14T20:44:00.067283Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "potential_utf@0.1.6": {
+   "license": "Unicode-3.0",
+   "checksum": "d83eb9bc6d8e5cf568e7a1101d60ee05e81ed50ea106026f3d18deeb046d7661",
+   "yanked": false,
+   "crate_size": 10420,
+   "created_at": "2026-08-13T23:28:14.578806Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "powerfmt@0.2.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "439ee305def115ba05938db6eb1644ff94165c5ab5e9420d1c1bcedbba909391",
+   "yanked": false,
+   "crate_size": 15165,
+   "created_at": "2023-10-13T22:04:23.598335Z",
+   "rust_version": "1.67.0",
+   "retrieved": "2026-11-16"
+  },
+  "ppv-lite86@0.2.21": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "85eae3c4ed2f50dcfe72643da4befc30deadb458a9b590d720cde2f2b1e97da9",
+   "yanked": false,
+   "crate_size": 22522,
+   "created_at": "2025-03-09T20:01:40.419162Z",
+   "rust_version": "1.61",
+   "retrieved": "2026-11-16"
+  },
+  "primeorder@0.13.6": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "353e1ca18966c16d9deb1c69278edbc5f194139612772bd9537af60ac231e1e6",
+   "yanked": false,
+   "crate_size": 21296,
+   "created_at": "2023-11-16T02:38:26.379230Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "priority-queue@2.7.0": {
+   "license": "LGPL-3.0-or-later OR MPL-2.0",
+   "checksum": "93980406f12d9f8140ed5abe7155acb10bb1e69ea55c88960b9c2f117445ef96",
+   "yanked": false,
+   "crate_size": 51641,
+   "created_at": "2025-09-27T17:19:40.866604Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "proc-macro-crate@3.5.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e67ba7e9b2b56446f1d419b1d807906278ffa1a658a8a5d8a39dcb1f5a78614f",
+   "yanked": false,
+   "crate_size": 12709,
+   "created_at": "2026-03-04T11:12:33.029865Z",
+   "rust_version": "1.82.0",
+   "retrieved": "2026-11-16"
+  },
+  "proc-macro2@1.0.107": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+   "yanked": false,
+   "crate_size": 59588,
+   "created_at": "2026-07-19T00:18:25.189787Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "psl-types@2.0.11": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "33cb294fe86a74cbcf50d4445b37da762029549ebeea341421c7c70370f86cac",
+   "yanked": false,
+   "crate_size": 7959,
+   "created_at": "2022-08-10T10:56:17.310651Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "psl@2.1.244": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "bc3ac0c25b0c40554a755e56dfe268855c53f391bbb7922a1c1fe59b73b163a9",
+   "yanked": false,
+   "crate_size": 207917,
+   "created_at": "2026-10-21T04:03:34.559384Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "pwd-grp@1.0.2": {
+   "license": "MIT",
+   "checksum": "0e2023f41b5fcb7c30eb5300a5733edfaa9e0e0d502d51b586f65633fd39e40c",
+   "yanked": false,
+   "crate_size": 45295,
+   "created_at": "2025-11-05T11:08:28.520959Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "quote@1.0.47": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+   "yanked": false,
+   "crate_size": 31622,
+   "created_at": "2026-07-19T00:16:57.083778Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "r-efi@5.3.0": {
+   "license": "MIT OR Apache-2.0 OR LGPL-2.1-or-later",
+   "checksum": "69cdb34c158ceb288df11e18b4bd39de994f6657d83847bdffdbd7f346754b0f",
+   "yanked": false,
+   "crate_size": 64532,
+   "created_at": "2025-06-17T09:12:38.227277Z",
+   "rust_version": "1.68",
+   "retrieved": "2026-11-16"
+  },
+  "r-efi@6.0.0": {
+   "license": "MIT OR Apache-2.0 OR LGPL-2.1-or-later",
+   "checksum": "f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf",
+   "yanked": false,
+   "crate_size": 65303,
+   "created_at": "2026-02-03T09:53:46.251122Z",
+   "rust_version": "1.68",
+   "retrieved": "2026-11-16"
+  },
+  "radium@0.7.0": {
+   "license": "MIT",
+   "checksum": "dc33ff2d4973d518d823d61aa239014831e521c75da58e3df4840d3f47749d09",
+   "yanked": false,
+   "crate_size": 10906,
+   "created_at": "2021-11-10T20:29:10.529846Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "rand@0.10.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c7f5fa3a058cd35567ef9bfa5e75732bee0f9e4c55fa90477bef2dfcdbc4be80",
+   "yanked": false,
+   "crate_size": 104493,
+   "created_at": "2026-07-02T09:01:38.792937Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "rand@0.8.8": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e058c7de0b26af77780c769414d6257830bb240f3c38477dbc2c16e5f54d6d4c",
+   "yanked": false,
+   "crate_size": 84217,
+   "created_at": "2026-08-25T07:45:50.786344Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "rand_chacha@0.10.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3e6af7f3e25ded52c41df4e0b1af2d047e45896c2f3281792ed68a1c243daedb",
+   "yanked": false,
+   "crate_size": 19763,
+   "created_at": "2026-02-02T08:15:02.537641Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "rand_chacha@0.3.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88",
+   "yanked": false,
+   "crate_size": 15251,
+   "created_at": "2021-06-09T19:46:38.636012Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "rand_core@0.10.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "63b8176103e19a2643978565ca18b50549f6101881c443590420e4dc998a3c69",
+   "yanked": false,
+   "crate_size": 22833,
+   "created_at": "2026-04-13T15:26:43.049921Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "rand_core@0.6.4": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c",
+   "yanked": false,
+   "crate_size": 22666,
+   "created_at": "2022-09-15T13:23:44.548230Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "rand_jitter@0.6.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3fdcd80e68f0a8f9ca5ec7cfd02fd5fbb8fbe6ef4e9b90ea2f48bb929b74f88e",
+   "yanked": false,
+   "crate_size": 19538,
+   "created_at": "2026-05-16T12:53:42.708080Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "rangemap@1.8.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "a611d15b50743feb4c76b7d03edcb0e64f399c26961e4efe6975bc398be6aa3d",
+   "yanked": false,
+   "crate_size": 62327,
+   "created_at": "2026-08-14T02:30:08.296445Z",
+   "rust_version": "1.81.0",
+   "retrieved": "2026-11-16"
+  },
+  "rdrand@0.9.0": {
+   "license": "ISC",
+   "checksum": "84448986e59427c795b929d8dbe12d176275c7d0887ee48098c35b7206f51bae",
+   "yanked": false,
+   "crate_size": 17179,
+   "created_at": "2026-05-15T10:48:51.539994Z",
+   "rust_version": "1.86.0",
+   "retrieved": "2026-11-16"
+  },
+  "redox_syscall@0.5.18": {
+   "license": "MIT",
+   "checksum": "ed2bf2547551a7053d6fdfafda3f938979645c44812fbfcda098faae3f1a362d",
+   "yanked": false,
+   "crate_size": 30747,
+   "created_at": "2025-10-04T14:57:04.747959Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "redox_users@0.5.2": {
+   "license": "MIT",
+   "checksum": "a4e608c6638b9c18977b00b475ac1f28d14e84b27d8d42f70e0bf1e3dec127ac",
+   "yanked": false,
+   "crate_size": 17280,
+   "created_at": "2025-07-31T15:00:26.808829Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "ref-cast-impl@1.0.27": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "92ecd8964f8453721699a1ed72037b0db49ce2f5a5138486ee89bed6f67cdf3a",
+   "yanked": false,
+   "crate_size": 10194,
+   "created_at": "2026-08-19T04:27:24.118760Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "ref-cast@1.0.27": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7e440fb4e4b4147295338efb76001ab9e4efc0e5839df2c47fc5ac2381d365c3",
+   "yanked": false,
+   "crate_size": 15335,
+   "created_at": "2026-08-19T04:27:28.040119Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "regex-automata@0.4.18": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ad8553b9b26413251cbf30e620595c7a41b3887f03da04579c0e6b0d6a06b4b2",
+   "yanked": false,
+   "crate_size": 628707,
+   "created_at": "2026-08-04T13:10:37.385020Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "regex-syntax@0.8.11": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4",
+   "yanked": false,
+   "crate_size": 359055,
+   "created_at": "2026-06-09T15:00:25.566550Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "regex@1.13.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f020237b6c8eed93db2e2cb53c00c60a8e1bc73da7d073199a1180401450218d",
+   "yanked": false,
+   "crate_size": 157118,
+   "created_at": "2026-07-15T20:19:35.162139Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "reseeding_rng@0.10.7": {
+   "license": "Apache-2.0",
+   "checksum": "ecfc8e855ab517235426ec1290bfb0745e73fa478b29619eb66a2a81be9d8716",
+   "yanked": false,
+   "crate_size": 12842,
+   "created_at": "2026-06-25T00:53:41.370767Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "retry-error@0.13.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d350ad359aca3414f7261cdcc763e37ccc9fa56fe40ca30a9758c28a295bcad0",
+   "yanked": false,
+   "crate_size": 11413,
+   "created_at": "2026-08-03T21:06:03.865434Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "rfc6979@0.4.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "f8dd2a808d456c4a54e300a23e9f5a67e122c3024119acbfd73e3bf664491cb2",
+   "yanked": false,
+   "crate_size": 9140,
+   "created_at": "2023-02-28T20:35:07.181292Z",
+   "rust_version": "1.61",
+   "retrieved": "2026-11-16"
+  },
+  "ring@0.17.14": {
+   "license": "Apache-2.0 AND ISC",
+   "checksum": "a4689e6c2294d81e88dc6261c768b63bc4fcdb852be6d1352498b114f61383b7",
+   "yanked": false,
+   "crate_size": 1502610,
+   "created_at": "2025-03-11T19:42:03.889273Z",
+   "rust_version": "1.66.0",
+   "retrieved": "2026-11-16"
+  },
+  "rsa@0.9.10": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b8573f03f5883dcaebdfcf4725caa1ecb9c15b2ef50c43a07b816e06799bb12d",
+   "yanked": false,
+   "crate_size": 86417,
+   "created_at": "2026-01-06T15:00:37.002313Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "rsqlite-vfs@0.1.1": {
+   "license": "MIT",
+   "checksum": "c51c9ae4df8a7fba42103df5c621fa3c37eccf3a3c650879e90fc48b11cc192c",
+   "yanked": false,
+   "crate_size": 20095,
+   "created_at": "2026-05-19T11:43:51.897601Z",
+   "rust_version": "1.81.0",
+   "retrieved": "2026-11-16"
+  },
+  "rusqlite@0.39.0": {
+   "license": "MIT",
+   "checksum": "a0d2b0146dd9661bf67bb107c0bb2a55064d556eeb3fc314151b957f313bcd4e",
+   "yanked": false,
+   "crate_size": 175688,
+   "created_at": "2026-03-15T10:36:10.995524Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "rustc_version@0.4.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "cfcb3a22ef46e85b45de6ee7e79d063319ebb6594faafcf1c225ea92ab6e9b92",
+   "yanked": false,
+   "crate_size": 12245,
+   "created_at": "2024-08-28T09:21:22.033328Z",
+   "rust_version": "1.32",
+   "retrieved": "2026-11-16"
+  },
+  "rusticata-macros@4.1.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "faf0c4a6ece9950b9abdb62b1cfcf2a68b3b67a10ba445b3bb85be2a293d0632",
+   "yanked": false,
+   "crate_size": 11746,
+   "created_at": "2022-02-07T10:59:17.467859Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "rustix@1.1.4": {
+   "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+   "checksum": "b6fe4565b9518b83ef4f91bb47ce29620ca828bd32cb7e408f0062e9930ba190",
+   "yanked": false,
+   "crate_size": 425241,
+   "created_at": "2026-02-22T16:22:51.655697Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "rustls-pki-types@1.15.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "2f4925028c7eb5d1fcdaf196971378ed9d2c1c4efc7dc5d011256f76c99c0a96",
+   "yanked": false,
+   "crate_size": 39322,
+   "created_at": "2026-07-23T09:56:11.191923Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "rustls-webpki@0.103.16": {
+   "license": "ISC",
+   "checksum": "4443b1b6d39d7c663139942cc4558262562d2c84123bb6282ef177009ca8b281",
+   "yanked": false,
+   "crate_size": 89984,
+   "created_at": "2026-10-20T08:58:28.008618Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "rustls@0.23.46": {
+   "license": "Apache-2.0 OR ISC OR MIT",
+   "checksum": "48e13bd8c0e9365c43cfa5c9e8f9ad49d3c8444926c9aac819e0e4dc503c8fdf",
+   "yanked": false,
+   "crate_size": 386227,
+   "created_at": "2026-10-14T09:54:15.075873Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "rustversion@1.0.23": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f",
+   "yanked": false,
+   "crate_size": 21013,
+   "created_at": "2026-07-07T02:10:26.015429Z",
+   "rust_version": "1.31",
+   "retrieved": "2026-11-16"
+  },
+  "safelog@0.9.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "73ef1d6e273fc8ce5cc1376cf498c06d23b786e80e4a7679a643bb0a838b0029",
+   "yanked": false,
+   "crate_size": 15326,
+   "created_at": "2026-08-03T21:06:01.080858Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "same-file@1.0.6": {
+   "license": "Unlicense/MIT",
+   "checksum": "93fc1dc3aaa9bfed95e02e6eadabb4baf7e3078b0bd1b4d7b6b0b68378900502",
+   "yanked": false,
+   "crate_size": 10183,
+   "created_at": "2020-01-11T17:02:30.960838Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "sanitize-filename@0.6.0": {
+   "license": "MIT",
+   "checksum": "bc984f4f9ceb736a7bb755c3e3bd17dc56370af2600c9780dcc48c66453da34d",
+   "yanked": false,
+   "crate_size": 4819,
+   "created_at": "2024-11-07T14:30:31.333813Z",
+   "rust_version": "1.70.0",
+   "retrieved": "2026-11-16"
+  },
+  "saturating-time@0.4.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "802bdbfcca9a239cb46eeaaedea507e37bb13ba1a673762d2e2ef7a9dac63144",
+   "yanked": false,
+   "crate_size": 10330,
+   "created_at": "2026-04-11T18:27:03.508691Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "schannel@0.1.29": {
+   "license": "MIT",
+   "checksum": "91c1b7e4904c873ef0710c1f407dde2e6287de2bebc1bbbf7d430bb7cbffd939",
+   "yanked": false,
+   "crate_size": 34352,
+   "created_at": "2026-03-10T09:17:10.165757Z",
+   "rust_version": "1.71.0",
+   "retrieved": "2026-11-16"
+  },
+  "schemars@0.9.0": {
+   "license": "MIT",
+   "checksum": "4cd191f9397d57d581cddd31014772520aa448f65ef991055d7f61582c65165f",
+   "yanked": false,
+   "crate_size": 80032,
+   "created_at": "2025-05-26T19:46:52.671598Z",
+   "rust_version": "1.74",
+   "retrieved": "2026-11-16"
+  },
+  "schemars@1.2.2": {
+   "license": "MIT",
+   "checksum": "687274d293b6cdc6e73e0fee520bf2049650090d7164f87672d212a3c530cf4a",
+   "yanked": false,
+   "crate_size": 94320,
+   "created_at": "2026-07-27T14:35:28.246709Z",
+   "rust_version": "1.74",
+   "retrieved": "2026-11-16"
+  },
+  "scopeguard@1.2.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "94143f37725109f92c262ed2cf5e59bce7498c01bcc1502d7b9afe439a4e9f49",
+   "yanked": false,
+   "crate_size": 11619,
+   "created_at": "2023-07-17T13:47:53.232324Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "sec1@0.7.3": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "d3e97a565f76233a6003f9f5c54be1d9c5bdfa3eccfb189469f11ec4901c47dc",
+   "yanked": false,
+   "crate_size": 17979,
+   "created_at": "2023-07-16T23:37:20.031224Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "security-framework-sys@2.17.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6ce2691df843ecc5d231c0b14ece2acc3efb62c0a398c7e1d875f3983ce020e3",
+   "yanked": false,
+   "crate_size": 21078,
+   "created_at": "2026-02-20T00:27:26.362406Z",
+   "rust_version": "1.70",
+   "retrieved": "2026-11-16"
+  },
+  "security-framework@3.7.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b7f4bc775c73d9a02cde8bf7b2ec4c9d12743edf609006c7facc23998404cd1d",
+   "yanked": false,
+   "crate_size": 89115,
+   "created_at": "2026-02-20T00:28:54.024219Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "semver@1.0.28": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "8a7852d02fc848982e0c167ef163aaff9cd91dc640ba85e263cb1ce46fae51cd",
+   "yanked": false,
+   "crate_size": 33064,
+   "created_at": "2026-04-04T00:25:14.379075Z",
+   "rust_version": "1.68",
+   "retrieved": "2026-11-16"
+  },
+  "serde-value@0.7.0": {
+   "license": "MIT",
+   "checksum": "f3a1a3341211875ef120e117ea7fd5228530ae7e7036a779fdc9117be6b3282c",
+   "yanked": false,
+   "crate_size": 10249,
+   "created_at": "2020-07-17T18:20:27.889805Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "serde@1.0.229": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba",
+   "yanked": false,
+   "crate_size": 83669,
+   "created_at": "2026-07-18T23:05:13.266456Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "serde_core@1.0.229": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48",
+   "yanked": false,
+   "crate_size": 63100,
+   "created_at": "2026-07-18T23:05:10.896830Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "serde_derive@1.0.229": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348",
+   "yanked": false,
+   "crate_size": 59864,
+   "created_at": "2026-07-18T23:05:07.504375Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "serde_ignored@0.1.14": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "115dffd5f3853e06e746965a20dcbae6ee747ae30b543d91b0e089668bb07798",
+   "yanked": false,
+   "crate_size": 13078,
+   "created_at": "2025-09-14T15:55:10.876866Z",
+   "rust_version": "1.61",
+   "retrieved": "2026-11-16"
+  },
+  "serde_json@1.0.151": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c841b55ecdae098c80dcae9cf767f6f8a0c2cdb3416bbef72181df4d0fe73f14",
+   "yanked": false,
+   "crate_size": 156556,
+   "created_at": "2026-07-20T05:54:44.078083Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "serde_json@1.0.154": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e7e9cc8b1b85264074fbcc02a88680c4096b1e47df8f739dceb03bf482f04bd6",
+   "yanked": false,
+   "crate_size": 158079,
+   "created_at": "2026-10-11T15:31:46.076577Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "serde_spanned@0.6.9": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "bf41e0cfaf7226dca15e8197172c295a782857fcb97fad1808a166870dee75a3",
+   "yanked": false,
+   "crate_size": 10210,
+   "created_at": "2025-06-06T15:03:03.118150Z",
+   "rust_version": "1.66",
+   "retrieved": "2026-11-16"
+  },
+  "serde_spanned@1.1.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6662b5879511e06e8999a8a235d848113e942c9124f211511b16466ee2995f26",
+   "yanked": false,
+   "crate_size": 11025,
+   "created_at": "2026-03-31T19:06:07.042176Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "serde_with@3.23.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "935177bb8c0cd8ca1a4e6d1a2ac8988bea69cab4f9d3a31311e012ad27868ea4",
+   "yanked": false,
+   "crate_size": 210788,
+   "created_at": "2026-09-07T23:03:03.817937Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "serde_with_macros@3.23.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1d607aa01a3cb0ad757d6fd216136910db3c97b102fe686585689615a02dbcdc",
+   "yanked": false,
+   "crate_size": 38080,
+   "created_at": "2026-09-07T23:02:58.516992Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "sha1@0.10.7": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "a978451301f4db1d02937a4ab3ccce137717b81826e79b7d49ffe3244a13c3b8",
+   "yanked": false,
+   "crate_size": 14582,
+   "created_at": "2026-07-10T14:30:11.575923Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "sha2@0.10.9": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "a7507d819769d01a365ab707794a4084392c824f54a7a6a7862f8c3d0892b283",
+   "yanked": false,
+   "crate_size": 29271,
+   "created_at": "2025-04-30T14:38:09.894118Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "sha3@0.10.9": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "77fd7028345d415a4034cf8777cd4f8ab1851274233b45f84e3d955502d93874",
+   "yanked": false,
+   "crate_size": 859930,
+   "created_at": "2026-04-19T16:47:09.142031Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "sha3@0.12.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "bc9bad02c26382724b2d2692c6f179285e4b54eeecd7968f52a50059c3c11759",
+   "yanked": false,
+   "crate_size": 196953,
+   "created_at": "2026-05-15T18:32:15.852781Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "sharded-slab@0.1.7": {
+   "license": "MIT",
+   "checksum": "f40ca3c46823713e0d4209592e8d6e826aa57e928f09752619fc696c499637f6",
+   "yanked": false,
+   "crate_size": 58227,
+   "created_at": "2023-10-04T19:37:55.401239Z",
+   "rust_version": "1.42.0",
+   "retrieved": "2026-11-16"
+  },
+  "shellexpand@3.1.2": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "32824fab5e16e6c4d86dc1ba84489390419a39f97699852b66480bb87d297ed8",
+   "yanked": false,
+   "crate_size": 26161,
+   "created_at": "2026-02-23T16:32:02.531452Z",
+   "rust_version": "1.31",
+   "retrieved": "2026-11-16"
+  },
+  "shlex@2.0.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+   "yanked": false,
+   "crate_size": 19332,
+   "created_at": "2026-05-17T18:56:12.775983Z",
+   "rust_version": "1.46.0",
+   "retrieved": "2026-11-16"
+  },
+  "signal-hook-registry@1.4.8": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c4db69cba1110affc0e9f7bcd48bbf87b3f4fc7c61fc9155afd4c469eb3d6c1b",
+   "yanked": false,
+   "crate_size": 21668,
+   "created_at": "2025-12-25T17:35:43.742246Z",
+   "rust_version": "1.26",
+   "retrieved": "2026-11-16"
+  },
+  "signature@2.2.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "77549399552de45a898a580c1b41d445bf730df867cc44e6c0233bbc4b8329de",
+   "yanked": false,
+   "crate_size": 15531,
+   "created_at": "2023-11-12T20:49:39.435224Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "simd-adler32@0.3.10": {
+   "license": "MIT",
+   "checksum": "3a219298ac11a56ea9a6d2120044824d6f01aeb034955e7af7bc16858527deea",
+   "yanked": false,
+   "crate_size": 18760,
+   "created_at": "2026-07-14T17:42:45.047242Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "simple_logger@5.2.0": {
+   "license": "MIT",
+   "checksum": "c7038d0e96661bf9ce647e1a6f6ef6d6f3663f66d9bf741abf14ba4876071c17",
+   "yanked": false,
+   "crate_size": 12225,
+   "created_at": "2026-02-18T02:58:32.838086Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "siphasher@1.0.3": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "8ee5873ec9cce0195efcb7a4e9507a04cd49aec9c83d0389df45b1ef7ba2e649",
+   "yanked": false,
+   "crate_size": 11643,
+   "created_at": "2026-05-03T20:58:08.152539Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "slab@0.4.12": {
+   "license": "MIT",
+   "checksum": "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5",
+   "yanked": false,
+   "crate_size": 19080,
+   "created_at": "2026-01-31T12:59:22.609198Z",
+   "rust_version": "1.51",
+   "retrieved": "2026-11-16"
+  },
+  "slotmap-careful@0.8.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ba7bcbd01d9b495f4509e74f660ebaf3315219b2f8a81753667ee7d6d8a199ac",
+   "yanked": false,
+   "crate_size": 13250,
+   "created_at": "2026-08-03T21:05:19.595148Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "slotmap@1.1.1": {
+   "license": "Zlib",
+   "checksum": "bdd58c3c93c3d278ca835519292445cb4b0d4dc59ccfdf7ceadaab3f8aeb4038",
+   "yanked": false,
+   "crate_size": 61862,
+   "created_at": "2025-12-06T12:30:22.308199Z",
+   "rust_version": "1.58.0",
+   "retrieved": "2026-11-16"
+  },
+  "smallvec@1.16.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b9be42f50aa861c555654aa3a37f52f4b1074bacf4e48fe0ef7fa584e80f1f0f",
+   "yanked": false,
+   "crate_size": 32647,
+   "created_at": "2026-09-01T15:26:29.894397Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "smoltcp@0.13.1": {
+   "license": "0BSD",
+   "checksum": "5f73d40463bba65efc9adc6370b56df76d563cc46e2482bba58351b4afb7535e",
+   "yanked": false,
+   "crate_size": 361249,
+   "created_at": "2026-04-30T22:36:03.252462Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "socket2@0.6.5": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c3d1e2c7f27f8d4cb10542a02c49005dbd6e93095799d6f3be745fae9f8fedd4",
+   "yanked": false,
+   "crate_size": 60031,
+   "created_at": "2026-07-13T19:45:58.436336Z",
+   "rust_version": "1.70",
+   "retrieved": "2026-11-16"
+  },
+  "spin@0.9.9": {
+   "license": "MIT",
+   "checksum": "3763264f6b73151db08c50ff20d7d8a0b8796e021cdea7ceedad07b80155fa0e",
+   "yanked": false,
+   "crate_size": 39817,
+   "created_at": "2026-07-13T19:44:05.786736Z",
+   "rust_version": "1.38",
+   "retrieved": "2026-11-16"
+  },
+  "spki@0.7.3": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "d91ed6c858b01f942cd56b37a94b3e0a1798290327d1236e4d9cf4eaca44d29d",
+   "yanked": false,
+   "crate_size": 16409,
+   "created_at": "2023-11-28T19:35:46.555229Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "sponge-cursor@0.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3a0219bd7d979d58245a4f41f695e1ac9f8befdffadd7f61f1bae9e39abc6620",
+   "yanked": false,
+   "crate_size": 11522,
+   "created_at": "2026-05-08T18:45:52.325458Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "sqlite-wasm-rs@0.5.5": {
+   "license": "MIT",
+   "checksum": "dc3efc0da82635d7e1ced0053bbbfa8c7ab9645d0bf36ceb4f7127bb85315d75",
+   "yanked": false,
+   "crate_size": 5954429,
+   "created_at": "2026-05-25T03:02:48.070140Z",
+   "rust_version": "1.81.0",
+   "retrieved": "2026-11-16"
+  },
+  "ssh-cipher-fork-arti@0.2.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "125c5795103fc93fced42d123c8044180afc55469caa1ab56487c3c5543c898d",
+   "yanked": false,
+   "crate_size": 13060,
+   "created_at": "2026-03-16T14:28:11.964429Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "ssh-encoding-fork-arti@0.2.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "e0cf03c3a7ea88451ff83a129a79451fd9891d44fc76c25e916a11848b81814c",
+   "yanked": false,
+   "crate_size": 15141,
+   "created_at": "2026-03-16T14:28:09.486347Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "ssh-key-fork-arti@0.6.7": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "433782176b73ea7907763dc314c4a17438a231864d4aa683ba47c07c1cf0a388",
+   "yanked": false,
+   "crate_size": 119843,
+   "created_at": "2026-03-16T14:28:14.389236Z",
+   "rust_version": "1.65",
+   "retrieved": "2026-11-16"
+  },
+  "stable_deref_trait@1.2.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6ce2be8dc25455e1f91df71bfa12ad37d7af1092ae736f3a6cd0e37bc7810596",
+   "yanked": false,
+   "crate_size": 8186,
+   "created_at": "2025-10-09T05:24:54.643083Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "static_assertions@1.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f",
+   "yanked": false,
+   "crate_size": 18480,
+   "created_at": "2019-11-03T17:02:11.618786Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "strsim@0.10.0": {
+   "license": "MIT",
+   "checksum": "73473c0e59e6d5812c5dfe2a064a6444949f089e20eec9a2e5506596494e4623",
+   "yanked": false,
+   "crate_size": 11355,
+   "created_at": "2020-01-31T14:44:04.258484Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "strsim@0.11.1": {
+   "license": "MIT",
+   "checksum": "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f",
+   "yanked": false,
+   "crate_size": 14266,
+   "created_at": "2024-04-02T22:18:09.406790Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "strum@0.28.0": {
+   "license": "MIT",
+   "checksum": "9628de9b8791db39ceda2b119bbe13134770b56c138ec1d3af810d045c04f9bd",
+   "yanked": false,
+   "crate_size": 8550,
+   "created_at": "2026-02-22T15:46:16.247520Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "strum_macros@0.28.0": {
+   "license": "MIT",
+   "checksum": "ab85eea0270ee17587ed4156089e10b9e6880ee688791d45a905f5b1ca36f664",
+   "yanked": false,
+   "crate_size": 30964,
+   "created_at": "2026-02-22T15:46:01.148831Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "subtle@2.6.1": {
+   "license": "BSD-3-Clause",
+   "checksum": "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292",
+   "yanked": false,
+   "crate_size": 14562,
+   "created_at": "2024-06-24T17:25:24.458503Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "syn@1.0.109": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "72b64191b275b66ffe2469e8af2c1cfe3bafa67b529ead792a6d0160888b4237",
+   "yanked": false,
+   "crate_size": 237611,
+   "created_at": "2023-02-24T09:58:43.791097Z",
+   "rust_version": "1.31",
+   "retrieved": "2026-11-16"
+  },
+  "syn@2.0.119": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+   "yanked": false,
+   "crate_size": 307407,
+   "created_at": "2026-07-15T00:23:48.828241Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "syn@3.0.5": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "12df2e0110f65b775f769bb17ef989067a1d931b2eb822bd4346631eeada89f9",
+   "yanked": false,
+   "crate_size": 313222,
+   "created_at": "2026-09-04T19:32:02.940768Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "syn@3.0.9": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b",
+   "yanked": false,
+   "crate_size": 313970,
+   "created_at": "2026-10-12T15:04:09.212573Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "sync_wrapper@1.0.2": {
+   "license": "Apache-2.0",
+   "checksum": "0bf256ce5efdfa370213c1dabab5935a12e49f2c58d15e9eac2870d3b4f27263",
+   "yanked": false,
+   "crate_size": 6958,
+   "created_at": "2024-11-20T16:29:59.416129Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "synstructure@0.13.2": {
+   "license": "MIT",
+   "checksum": "728a70f3dbaf5bab7f0c4b1ac8d7ae5ea60a4b5549c8a5914361c99147a709d2",
+   "yanked": false,
+   "crate_size": 18950,
+   "created_at": "2025-04-30T16:37:46.407388Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "sysinfo@0.38.4": {
+   "license": "MIT",
+   "checksum": "92ab6a2f8bfe508deb3c6406578252e491d299cbbf3bc0529ecc3313aee4a52f",
+   "yanked": false,
+   "crate_size": 234134,
+   "created_at": "2026-03-09T16:17:12.674286Z",
+   "rust_version": "1.88",
+   "retrieved": "2026-11-16"
+  },
+  "tap@1.0.1": {
+   "license": "MIT",
+   "checksum": "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369",
+   "yanked": false,
+   "crate_size": 11316,
+   "created_at": "2021-02-13T02:43:25.525644Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "tempfile@3.27.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "32497e9a4c7b38532efcdebeef879707aa9f794296a4f0244f6f69e9bc8574bd",
+   "yanked": false,
+   "crate_size": 44780,
+   "created_at": "2026-03-11T00:20:04.812840Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "thiserror-impl@1.0.69": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "4fee6c4efc90059e10f81e6d42c60a18f76588c3d74cb83a0b242a2b6c7504c1",
+   "yanked": false,
+   "crate_size": 18365,
+   "created_at": "2024-11-10T06:24:04.631987Z",
+   "rust_version": "1.61",
+   "retrieved": "2026-11-16"
+  },
+  "thiserror-impl@2.0.20": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "bc04cd3e1236dd4a98afca4569f2deb3f120e5422a4023be2cb683f8486292af",
+   "yanked": false,
+   "crate_size": 21436,
+   "created_at": "2026-08-08T06:22:19.469295Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "thiserror@1.0.69": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b6aaf5339b578ea85b50e080feb250a3e8ae8cfcdff9a461c9ec2904bc923f52",
+   "yanked": false,
+   "crate_size": 22198,
+   "created_at": "2024-11-10T06:24:10.762680Z",
+   "rust_version": "1.61",
+   "retrieved": "2026-11-16"
+  },
+  "thiserror@2.0.20": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ec86235f5fcc2a73650310756d2ac5b138a5780bbbdfae3eeccec992c435ba4f",
+   "yanked": false,
+   "crate_size": 28969,
+   "created_at": "2026-08-08T06:22:23.795550Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "thread_local@1.1.10": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1ad99c4c6d32803332c548b1af0540b357b3f5fc0be8f6c6bfe8b2e6ae784070",
+   "yanked": false,
+   "crate_size": 16361,
+   "created_at": "2026-07-10T21:20:29.158200Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "time-core@0.1.9": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9e1c906769ad99c88eaa54e728060edef082f8e358ff32030cb7c7d315e81109",
+   "yanked": false,
+   "crate_size": 10320,
+   "created_at": "2026-06-12T08:14:02.976372Z",
+   "rust_version": "1.88.0",
+   "retrieved": "2026-11-16"
+  },
+  "time-macros@0.2.32": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7e689342a48d2ea927c87ea50cabf8594854bf940e9310208848d680d668ed85",
+   "yanked": false,
+   "crate_size": 33664,
+   "created_at": "2026-07-20T08:27:37.909264Z",
+   "rust_version": "1.88.0",
+   "retrieved": "2026-11-16"
+  },
+  "time@0.3.55": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "cdb87b95ec50ddfa440816d227a17b2ccbdda963a316a727fda0fc4334f7d134",
+   "yanked": false,
+   "crate_size": 279955,
+   "created_at": "2026-08-01T08:08:34.139758Z",
+   "rust_version": "1.88.0",
+   "retrieved": "2026-11-16"
+  },
+  "tinystr@0.8.4": {
+   "license": "Unicode-3.0",
+   "checksum": "b1e27c91459209c2986af3dcf603a5a74a4368754ce37414f59acc971167f643",
+   "yanked": false,
+   "crate_size": 25003,
+   "created_at": "2026-08-13T23:28:07.485828Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "tinyvec@1.13.2": {
+   "license": "Zlib OR Apache-2.0 OR MIT",
+   "checksum": "4cf0ded5c4e56918d8f8a339e1bb67d038d3bc6d144ac407904015ba2e4cde9b",
+   "yanked": false,
+   "crate_size": 60587,
+   "created_at": "2026-09-04T02:29:11.255172Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "tinyvec_macros@0.1.1": {
+   "license": "MIT OR Apache-2.0 OR Zlib",
+   "checksum": "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20",
+   "yanked": false,
+   "crate_size": 5865,
+   "created_at": "2023-02-02T23:03:04.651564Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "tokio-macros@2.7.2": {
+   "license": "MIT",
+   "checksum": "78773a2a397f451582ce068015985c33193cf6dea8b74d2a639fe457b2f07b0e",
+   "yanked": false,
+   "crate_size": 16081,
+   "created_at": "2026-07-29T13:15:27.042096Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "tokio-tun@0.15.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b2688a909b49d133bf55f2e29271fb3a81ff1e1a0b99c366da9ffd9af69b933a",
+   "yanked": false,
+   "crate_size": 17388,
+   "created_at": "2026-01-31T14:07:20.420842Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "tokio-util@0.7.19": {
+   "license": "MIT",
+   "checksum": "494815d09bf52b5548659851081238f0ca39ff638363907596da739561c62c52",
+   "yanked": false,
+   "crate_size": 147245,
+   "created_at": "2026-07-21T12:10:46.915710Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "tokio@1.53.1": {
+   "license": "MIT",
+   "checksum": "202caea871b69668250d242070849eb495be178ed697a3e98aebce5bc81a0bed",
+   "yanked": false,
+   "crate_size": 920101,
+   "created_at": "2026-07-20T17:06:09.996426Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "toml@0.8.23": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "dc1beb996b9d83529a9e75c17a1686767d148d70663143c7854d8b4a09ced362",
+   "yanked": false,
+   "crate_size": 36050,
+   "created_at": "2025-06-06T15:03:09.398690Z",
+   "rust_version": "1.66",
+   "retrieved": "2026-11-16"
+  },
+  "toml@1.1.5+spec-1.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "12c0ba9680044b4ce98d391a62094047eada0d64860b80166c39f4a6b5640785",
+   "yanked": false,
+   "crate_size": 55950,
+   "created_at": "2026-09-02T13:52:08.284086Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "toml_datetime@0.6.11": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "22cddaf88f4fbc13c51aebbf5f8eceb5c7c5a9da2ac40a13519eb5b0a0e8f11c",
+   "yanked": false,
+   "crate_size": 16125,
+   "created_at": "2025-06-06T14:48:37.162628Z",
+   "rust_version": "1.66",
+   "retrieved": "2026-11-16"
+  },
+  "toml_datetime@1.1.1+spec-1.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3165f65f62e28e0115a00b2ebdd37eb6f3b641855f9d636d3cd4103767159ad7",
+   "yanked": false,
+   "crate_size": 17982,
+   "created_at": "2026-03-31T19:06:07.594537Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "toml_edit@0.22.27": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "41fe8c660ae4257887cf66394862d21dbca4a6ddd26f04a3560410406a2f819a",
+   "yanked": false,
+   "crate_size": 78602,
+   "created_at": "2025-06-06T15:03:06.510450Z",
+   "rust_version": "1.66",
+   "retrieved": "2026-11-16"
+  },
+  "toml_edit@0.25.13+spec-1.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6975367e4d2ef766d86af01ffad14b622fecc8d4357a998fbc4deb6e9bacaf9b",
+   "yanked": false,
+   "crate_size": 68589,
+   "created_at": "2026-07-14T13:09:48.650874Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "toml_parser@1.1.3+spec-1.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1d38ac1cf9b95face32296c0a3ede1fdc270627c9d9c02a7274dd6d960dc4d56",
+   "yanked": false,
+   "crate_size": 35888,
+   "created_at": "2026-07-27T14:53:02.089853Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "toml_write@0.1.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "5d99f8c9a7727884afe522e9bd5edbfc91a3312b36a77b5fb8926e4c31a41801",
+   "yanked": false,
+   "crate_size": 15660,
+   "created_at": "2025-06-06T15:03:03.571556Z",
+   "rust_version": "1.66",
+   "retrieved": "2026-11-16"
+  },
+  "toml_writer@1.1.2+spec-1.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7d56353a2a665ad0f41a421187180aab746c8c325620617ad883a99a1cbe66d2",
+   "yanked": false,
+   "crate_size": 18968,
+   "created_at": "2026-07-14T13:09:46.208101Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "tor-async-utils@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "31d9f28de36ed7646f0f03835ce2e306e2c5df8a1784a2cac27bd549cdc07599",
+   "yanked": false,
+   "crate_size": 58649,
+   "created_at": "2026-09-02T09:18:26.627039Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-basic-utils@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1a2bd42110ae0faea1d446b35899aa5c3591cd31a94b593aa9264f00baba41da",
+   "yanked": false,
+   "crate_size": 49419,
+   "created_at": "2026-09-02T09:17:01.123388Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-bytes@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "73de2ba54a125c27a440616f2d806a171bcb4e30013de166c7dc0a79bde44ab4",
+   "yanked": false,
+   "crate_size": 32622,
+   "created_at": "2026-09-02T09:19:45.799227Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-cell@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "118f2b6a56605bedd077003ee5678fda215965d550dd0aef21ce8e10dd082750",
+   "yanked": false,
+   "crate_size": 108483,
+   "created_at": "2026-09-02T09:21:01.564211Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-cert@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b2cec6ae3abafc382e126a26e74f000bffbbf2c9b1a8c9ec26bb84463f0120b4",
+   "yanked": false,
+   "crate_size": 30896,
+   "created_at": "2026-09-02T09:20:09.486057Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-chanmgr@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6cef673b170f10790ff81d2f190e0a8150e5c9683c2c8f4c09652a6954c0e5ab",
+   "yanked": false,
+   "crate_size": 110136,
+   "created_at": "2026-09-02T09:25:32.517781Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-checkable@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d3872a5bda49647ad4c4a822c58774995ad3acd02327f1cabe6cfc019d714535",
+   "yanked": false,
+   "crate_size": 23312,
+   "created_at": "2026-09-02T09:20:00.303393Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-circmgr@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "2cf1eb6c2e3184c9e51c746df81f1a890ba7b663ac418debe2dac3756d840c8a",
+   "yanked": false,
+   "crate_size": 163717,
+   "created_at": "2026-09-02T09:29:09.156006Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-config-path@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "cbed06099bacbdbb1d91cfff1032863896d6097c33eece067ab20756e4a6fa2b",
+   "yanked": false,
+   "crate_size": 26824,
+   "created_at": "2026-09-02T09:18:49.443615Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-config@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "dd8ca5684100c9223590c11685f3f39c4e4c0037c65daddc26927b3ae4cc893d",
+   "yanked": false,
+   "crate_size": 119955,
+   "created_at": "2026-09-02T09:18:40.704083Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-consdiff@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9760d0051159a257b1d0065615ad6bc023da4e178d41ff5640222a29852de848",
+   "yanked": false,
+   "crate_size": 47865,
+   "created_at": "2026-09-02T09:22:23.674919Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-dirclient@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "403a79a0d00de6c78f15773a284e790459cff6983449e8578490e6b5dfb2afcd",
+   "yanked": false,
+   "crate_size": 61605,
+   "created_at": "2026-09-02T09:29:23.701510Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-dircommon@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "dd5cd2a4f641ecb007cc50914bb1b46128de0975aba08baa56497c8e03c71c71",
+   "yanked": false,
+   "crate_size": 59524,
+   "created_at": "2026-09-02T09:25:51.943232Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-dirmgr@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "805da4e947311285ce0782ab129df318701c2c08046c316086cb6bb3eb7a463e",
+   "yanked": false,
+   "crate_size": 161524,
+   "created_at": "2026-09-02T09:33:49.156782Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-error@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "08f29e906f9f333a6e32e32afac9fb6712ac340191eb3292295b3337682b2dad",
+   "yanked": false,
+   "crate_size": 30682,
+   "created_at": "2026-09-02T09:17:09.761008Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-general-addr@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7b45ecd95dbf79070f9e477e1d84b22e47f03b2ab2f853abe31887daa9090cf0",
+   "yanked": false,
+   "crate_size": 8694,
+   "created_at": "2026-09-02T09:17:13.533109Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-geoip-db@0.1.0-pre2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "5baacfe724d837c0da5558fe5e544b0c99181001606b9eb066e4fd98a9b77952",
+   "yanked": false,
+   "crate_size": 1495121,
+   "created_at": "2026-04-16T19:31:49.324635Z",
+   "rust_version": "1.89",
+   "retrieved": "2026-11-16"
+  },
+  "tor-geoip@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "44edc23691fc20335a864ab721993735258ccd38125100dbd9fc94cd4ae35384",
+   "yanked": false,
+   "crate_size": 18179,
+   "created_at": "2026-09-02T09:17:18.061666Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-guardmgr@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3e84beedbf276ce4ea170206b38ca01c995dbf1b9f678e9708f50e2e71dbfef4",
+   "yanked": false,
+   "crate_size": 141175,
+   "created_at": "2026-09-02T09:28:56.077499Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-hsclient@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3eba66be03b5eb899185e5b4416d8893fdb09a97b33db9e450042f06e2550f0e",
+   "yanked": false,
+   "crate_size": 91040,
+   "created_at": "2026-09-02T09:35:49.115028Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-hscrypto@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "118ff6a69bfa111b6e8d087ffb107ea9cbcd5d4469295cd7ada1b3cf19ba5a0f",
+   "yanked": false,
+   "crate_size": 59038,
+   "created_at": "2026-09-02T09:20:31.935958Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-key-forge@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1861b5eebab93515a0ab2401540f3d5a9fb376f1b1535d5793dcd697fb19f928",
+   "yanked": false,
+   "crate_size": 30380,
+   "created_at": "2026-09-02T09:20:19.054431Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-keymgr@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b3088a573dadebb34acacb30d686751e2a94d12ccf9d6647946ab6c6b4ad5a0e",
+   "yanked": false,
+   "crate_size": 109647,
+   "created_at": "2026-09-02T09:21:25.448387Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-linkspec@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6d8d3a2aaf3bb67110218b9ff1718cd7d6c7e62226e2fee1a18efa6aa19ff07c",
+   "yanked": false,
+   "crate_size": 63682,
+   "created_at": "2026-09-02T09:20:50.329915Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-llcrypto@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "4fee81755528eb34f8352ca6987d5f5c66ebba6af2e4618da4b527f17b0e912e",
+   "yanked": false,
+   "crate_size": 57177,
+   "created_at": "2026-09-02T09:17:39.593613Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-log-ratelim@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "2f8696c8ea9090059d91eea287628b5df0b3b4fba433179d893e348857857544",
+   "yanked": false,
+   "crate_size": 33079,
+   "created_at": "2026-09-02T09:19:11.667575Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-memquota-cost@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "86d6f7e1d842e6272e414e1f866dc688306b788d368df42e47c4995e040c679c",
+   "yanked": false,
+   "crate_size": 10867,
+   "created_at": "2026-09-02T09:17:26.065739Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-memquota@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "03786604757846a5f936285eef397e3fc0ed455893dc5012ceafdf455ada0d8d",
+   "yanked": false,
+   "crate_size": 89205,
+   "created_at": "2026-09-02T09:19:32.636198Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-netdir@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9d3b84edfe732b77fb1420347902c06d92a1e6992e378ad19da6bdadcb8cd798",
+   "yanked": false,
+   "crate_size": 95080,
+   "created_at": "2026-09-02T09:22:33.021490Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-netdoc@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "5b6abd7aaeb2bdbb3fbf760aab9aaa4e8e1a0f8b84d93a834df5a16882faa31e",
+   "yanked": false,
+   "crate_size": 480540,
+   "created_at": "2026-09-02T09:22:08.963839Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-persist@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e6f2a41d13a685e181361cfc3bdf25d319b96b56f5806594b6b8ed760d0099ed",
+   "yanked": false,
+   "crate_size": 63626,
+   "created_at": "2026-09-02T09:21:12.447300Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-proto@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "0ddf767335ae2e255025536d48384b92c6b4b8557e5b345be600e7ca2de1c880",
+   "yanked": false,
+   "crate_size": 558048,
+   "created_at": "2026-09-02T09:21:51.783118Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-protover@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "cab080a7551561bd56c0c2e3578b7114f0853700b96e43613fabc1fe06e5d885",
+   "yanked": false,
+   "crate_size": 28807,
+   "created_at": "2026-09-02T09:19:54.865428Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-ptmgr@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "523678f0839a2429386518d5e1c5b26cfaac77b1cbf44a8d8f5b14377e2025a7",
+   "yanked": false,
+   "crate_size": 59967,
+   "created_at": "2026-09-02T09:25:44.982003Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-relay-selection@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "07a5c22b7cfd59c40e38d4e111906793c0d65cf881e31efe3a83cac42887b1c9",
+   "yanked": false,
+   "crate_size": 47127,
+   "created_at": "2026-09-02T09:22:40.317635Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-rtcompat@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "542f4e13054bbba8d764ee24178fd889f77afb59dca7c6ae0a370604118c20b6",
+   "yanked": false,
+   "crate_size": 90543,
+   "created_at": "2026-09-02T09:17:58.626501Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-rtmock@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "04cb78b3a39634e46c1bc795f62fca17b4d8a9404fead18750592a03216e1da3",
+   "yanked": false,
+   "crate_size": 74342,
+   "created_at": "2026-09-02T09:18:15.008960Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-socksproto@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "2f96e25e5d36b4aff59af40ec86f7ebb227a32b2f726ef1bc8cccf927f8fb31a",
+   "yanked": false,
+   "crate_size": 36935,
+   "created_at": "2026-09-02T09:20:38.688603Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tor-units@0.46.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9a562c031f6c1f9d22f7bbcfbe715840d0e2cfe5e59d1296cc26000c17130555",
+   "yanked": false,
+   "crate_size": 32964,
+   "created_at": "2026-09-02T09:19:38.474640Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "tracing-attributes@0.1.31": {
+   "license": "MIT",
+   "checksum": "7490cfa5ec963746568740651ac6781f701c9c5ea257c58e057f3ba8cf69e8da",
+   "yanked": false,
+   "crate_size": 39733,
+   "created_at": "2025-11-26T11:23:01.809940Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "tracing-core@0.1.36": {
+   "license": "MIT",
+   "checksum": "db97caf9d906fbde555dd62fa95ddba9eecfd14cb388e4f491a66d74cd5fb79a",
+   "yanked": false,
+   "crate_size": 63967,
+   "created_at": "2025-12-18T14:13:04.171045Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "tracing-log@0.2.0": {
+   "license": "MIT",
+   "checksum": "ee855f1f400bd0e5c02d150ae5de3840039a3f54b025156404e34c23c03f47c3",
+   "yanked": false,
+   "crate_size": 17561,
+   "created_at": "2023-10-25T17:01:37.024993Z",
+   "rust_version": "1.56.0",
+   "retrieved": "2026-11-16"
+  },
+  "tracing-subscriber@0.3.23": {
+   "license": "MIT",
+   "checksum": "cb7f578e5945fb242538965c2d0b04418d38ec25c79d160cd279bf0731c8d319",
+   "yanked": false,
+   "crate_size": 213773,
+   "created_at": "2026-03-13T10:04:15.571048Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "tracing-test-macro@0.2.6": {
+   "license": "MIT",
+   "checksum": "ad06847b7afb65c7866a36664b75c40b895e318cea4f71299f013fb22965329d",
+   "yanked": false,
+   "crate_size": 8171,
+   "created_at": "2026-02-07T23:44:49.605932Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "tracing-test@0.2.6": {
+   "license": "MIT",
+   "checksum": "19a4c448db514d4f24c5ddb9f73f2ee71bfb24c526cf0c570ba142d1119e0051",
+   "yanked": false,
+   "crate_size": 11252,
+   "created_at": "2026-02-07T23:45:00.366375Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "tracing@0.1.44": {
+   "license": "MIT",
+   "checksum": "63e71662fa4b2a2c3a26f570f037eb95bb1f85397f3cd8076caed2f026a6d100",
+   "yanked": false,
+   "crate_size": 463135,
+   "created_at": "2025-12-18T14:26:12.360139Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "typed-index-collections@3.5.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "898160f1dfd383b4e92e17f0512a7d62f3c51c44937b23b6ffc3a1614a8eaccd",
+   "yanked": false,
+   "crate_size": 53115,
+   "created_at": "2026-01-18T07:52:32.627916Z",
+   "rust_version": "1.90.0",
+   "retrieved": "2026-11-16"
+  },
+  "typenum@1.20.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b6f5e870be6c3b371b77fe0ee0bafb859fa4964b4404c27de1d380043c4dda20",
+   "yanked": false,
+   "crate_size": 105479,
+   "created_at": "2026-05-29T16:00:41.793255Z",
+   "rust_version": "1.41.0",
+   "retrieved": "2026-11-16"
+  },
+  "uncased@0.9.10": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e1b88fcfe09e89d3866a5c11019378088af2d24c3fbd4f0543f96b479ec90697",
+   "yanked": false,
+   "crate_size": 10872,
+   "created_at": "2024-01-22T23:58:04.575341Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "unicode-ident@1.0.24": {
+   "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+   "checksum": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
+   "yanked": false,
+   "crate_size": 49298,
+   "created_at": "2026-02-16T02:46:44.304053Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "unicode-ident@1.0.27": {
+   "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+   "checksum": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563",
+   "yanked": false,
+   "crate_size": 48807,
+   "created_at": "2026-10-12T04:20:27.796258Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "unicode-segmentation@1.13.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c6f5d3c3b1bf09027a88a6bc961fc00497d651009560b5463668dc81b0fa87a8",
+   "yanked": false,
+   "crate_size": 112325,
+   "created_at": "2026-06-01T15:58:43.979474Z",
+   "rust_version": "1.85.0",
+   "retrieved": "2026-11-16"
+  },
+  "unicode-xid@0.2.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ebc1c04c71510c7f702b52b7c350734c9ff1295c464a03335b00bb84fc54f853",
+   "yanked": false,
+   "crate_size": 15744,
+   "created_at": "2024-09-19T15:55:24.420864Z",
+   "rust_version": "1.17",
+   "retrieved": "2026-11-16"
+  },
+  "universal-hash@0.5.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "fc1de2c688dc15305988b563c3854064043356019f97a4b46276fe734c4f07ea",
+   "yanked": false,
+   "crate_size": 9146,
+   "created_at": "2023-05-19T15:25:05.990069Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "universal-hash@0.6.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f4987bdc12753382e0bec4a65c50738ffaabc998b9cdd1f952fb5f39b0048a96",
+   "yanked": false,
+   "crate_size": 9478,
+   "created_at": "2026-02-27T16:05:55.037699Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "untrusted@0.9.0": {
+   "license": "ISC",
+   "checksum": "8ecb6da28b8a351d773b68d5825ac39017e680750f980f3a1a85cd8dd28a47c1",
+   "yanked": false,
+   "crate_size": 14447,
+   "created_at": "2021-07-13T22:13:26.650010Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "unty@0.0.4": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6d49784317cd0d1ee7ec5c716dd598ec5b4483ea832a2dced265471cc0f690ae",
+   "yanked": false,
+   "crate_size": 7200,
+   "created_at": "2025-03-07T08:06:25.562232Z",
+   "rust_version": "1.56.1",
+   "retrieved": "2026-11-16"
+  },
+  "url@2.5.8": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ff67a8a4397373c3ef660812acab3268222035010ab8680ec4215f38ba3d0eed",
+   "yanked": false,
+   "crate_size": 86512,
+   "created_at": "2026-01-05T22:14:31.414927Z",
+   "rust_version": "1.63",
+   "retrieved": "2026-11-16"
+  },
+  "utf8_iter@1.0.4": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "b6c140620e7ffbb22c2dee59cafe6084a59b5ffc27a8859a5f0d494b5d52b6be",
+   "yanked": false,
+   "crate_size": 10437,
+   "created_at": "2023-12-01T17:26:51.542538Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "valuable@0.1.1": {
+   "license": "MIT",
+   "checksum": "ba73ea9cf16a25df0c8caa16c51acb937d5712a8429db78a3ee29d5dcacd3a65",
+   "yanked": false,
+   "crate_size": 28679,
+   "created_at": "2025-01-17T00:46:34.256238Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "vcpkg@0.2.15": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+   "yanked": false,
+   "crate_size": 228735,
+   "created_at": "2021-06-19T16:35:46.573605Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "version_check@0.9.5": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a",
+   "yanked": false,
+   "crate_size": 15554,
+   "created_at": "2024-07-25T23:38:14.142737Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "visibility@0.1.1": {
+   "license": "Zlib OR MIT OR Apache-2.0",
+   "checksum": "d674d135b4a8c1d7e813e2f8d1c9a58308aee4a680323066025e53132218bd91",
+   "yanked": false,
+   "crate_size": 8119,
+   "created_at": "2024-08-13T12:40:03.774625Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "void@1.0.2": {
+   "license": "MIT",
+   "checksum": "6a02e4885ed3bc0f2de90ea6dd45ebcbb66dacffe03547fadbb0eeae2770887d",
+   "yanked": false,
+   "crate_size": 2356,
+   "created_at": "2016-04-18T07:21:21.674123Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "walkdir@2.5.0": {
+   "license": "Unlicense/MIT",
+   "checksum": "29790946404f91d9c5d06f9874efddea1dc06c5efe94541a7d6863108e3a5e4b",
+   "yanked": false,
+   "crate_size": 23951,
+   "created_at": "2024-03-01T17:55:09.221032Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "wasi@0.11.1+wasi-snapshot-preview1": {
+   "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+   "checksum": "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b",
+   "yanked": false,
+   "crate_size": 28477,
+   "created_at": "2025-06-10T14:23:45.376914Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "wasip2@1.0.4+wasi-0.2.12": {
+   "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+   "checksum": "b67efb37e106e55ce722a510d6b5f9c17f083e5fc79afc2badeb12cc313d9487",
+   "yanked": false,
+   "crate_size": 135311,
+   "created_at": "2026-06-12T17:42:43.116313Z",
+   "rust_version": "1.87.0",
+   "retrieved": "2026-11-16"
+  },
+  "wasix@0.13.2": {
+   "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+   "checksum": "ae86f02046da16a333a9129d31451423e1657737ecdafed4193838a5f54c5cfe",
+   "yanked": false,
+   "crate_size": 207107,
+   "created_at": "2026-06-09T12:18:17.332923Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "wasm-bindgen-macro-support@0.2.128": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "411e4887f0071ef2d2164a9d5fdf2d20efbef78fccd3a78b0c10a1dc5295e48a",
+   "yanked": false,
+   "crate_size": 118512,
+   "created_at": "2026-09-04T23:58:06.417383Z",
+   "rust_version": "1.77",
+   "retrieved": "2026-11-16"
+  },
+  "wasm-bindgen-macro@0.2.128": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "a690d511e3c1a8b3a55e33511e3c2c00c78415cd23650f32b808627f5696b9ed",
+   "yanked": false,
+   "crate_size": 9595,
+   "created_at": "2026-09-04T23:58:08.518928Z",
+   "rust_version": "1.77",
+   "retrieved": "2026-11-16"
+  },
+  "wasm-bindgen-shared@0.2.128": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "81941cd78d0c92026c33e5e01312845a4cb1e9af3407f9134b100dd03144103e",
+   "yanked": false,
+   "crate_size": 12994,
+   "created_at": "2026-09-04T23:58:03.129200Z",
+   "rust_version": "1.77",
+   "retrieved": "2026-11-16"
+  },
+  "wasm-bindgen@0.2.128": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "aecb87a33d3b0c5e3b7aa46336eaf486cffafbd281b195e4c8b80d50df2351bf",
+   "yanked": false,
+   "crate_size": 70345,
+   "created_at": "2026-09-04T23:58:10.332542Z",
+   "rust_version": "1.77",
+   "retrieved": "2026-11-16"
+  },
+  "weak-table@0.4.0": {
+   "license": "MIT",
+   "checksum": "5eba2ec791141b0bf4db542f6b038a8f9310cee33e076cb181245780b09a24ff",
+   "yanked": false,
+   "crate_size": 56117,
+   "created_at": "2026-08-04T14:13:16.901987Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "web-time-compat@0.2.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b6ab47578e1cd38415489592da29326341e272bd281f4ddbc0c10b654a425ad7",
+   "yanked": false,
+   "crate_size": 4921,
+   "created_at": "2026-08-03T21:05:15.128646Z",
+   "rust_version": "1.91",
+   "retrieved": "2026-11-16"
+  },
+  "web-time@1.1.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "5a6580f308b1fad9207618087a65c04e7a10bc77e02c8e84e9b00dd4b12fa0bb",
+   "yanked": false,
+   "crate_size": 18026,
+   "created_at": "2024-03-01T10:51:46.373917Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "winapi-i686-pc-windows-gnu@0.4.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6",
+   "yanked": false,
+   "crate_size": 2918815,
+   "created_at": "2018-01-18T00:55:38.910834Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "winapi-util@0.1.11": {
+   "license": "Unlicense OR MIT",
+   "checksum": "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22",
+   "yanked": false,
+   "crate_size": 13368,
+   "created_at": "2025-09-07T12:24:31.232695Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "winapi-x86_64-pc-windows-gnu@0.4.0": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f",
+   "yanked": false,
+   "crate_size": 2947998,
+   "created_at": "2018-01-18T00:55:12.008307Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "winapi@0.3.9": {
+   "license": "MIT/Apache-2.0",
+   "checksum": "5c839a674fcd7a98952e593242ea400abe93992746761e38641405d28b00f419",
+   "yanked": false,
+   "crate_size": 1200382,
+   "created_at": "2020-06-26T11:34:33.480855Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "windows-collections@0.3.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "23b2d95af1a8a14a3c7367e1ed4fc9c20e0a26e79551b1454d72583c97cc6610",
+   "yanked": false,
+   "crate_size": 13510,
+   "created_at": "2025-10-06T19:16:09.553894Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "windows-core@0.62.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b8e83a14d34d0623b51dce9581199302a221863196a1dde71a7663a4c2be9deb",
+   "yanked": false,
+   "crate_size": 36932,
+   "created_at": "2025-10-06T19:15:14.207850Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "windows-future@0.3.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e1d6f90251fe18a279739e78025bd6ddc52a7e22f921070ccdc67dde84c605cb",
+   "yanked": false,
+   "crate_size": 17944,
+   "created_at": "2025-10-06T19:15:33.355015Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "windows-implement@0.60.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "053e2e040ab57b9dc951b72c264860db7eb3b0200ba345b4e4c3b14f67855ddf",
+   "yanked": false,
+   "crate_size": 15325,
+   "created_at": "2025-10-06T19:13:31.467507Z",
+   "rust_version": "1.74",
+   "retrieved": "2026-11-16"
+  },
+  "windows-interface@0.59.3": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3f316c4a2570ba26bbec722032c4099d8c8bc095efccdc15688708623367e358",
+   "yanked": false,
+   "crate_size": 11809,
+   "created_at": "2025-10-06T19:14:18.053188Z",
+   "rust_version": "1.74",
+   "retrieved": "2026-11-16"
+  },
+  "windows-link@0.2.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f0805222e57f7521d6a62e36fa9163bc891acd422f971defe97d64e70d0a4fe5",
+   "yanked": false,
+   "crate_size": 6133,
+   "created_at": "2025-10-06T17:35:08.351469Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "windows-numerics@0.3.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "6e2e40844ac143cdb44aead537bbf727de9b044e107a0f1220392177d15b0f26",
+   "yanked": false,
+   "crate_size": 9772,
+   "created_at": "2025-10-06T19:17:19.909774Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "windows-result@0.4.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7781fa89eaf60850ac3d2da7af8e5242a5ea78d1a11c49bf2910bb5a73853eb5",
+   "yanked": false,
+   "crate_size": 13381,
+   "created_at": "2025-10-06T19:14:39.441465Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "windows-strings@0.5.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "7837d08f69c77cf6b07689544538e017c1bfcf57e34b4c0ff58e6c2cd3b37091",
+   "yanked": false,
+   "crate_size": 13966,
+   "created_at": "2025-10-06T19:15:01.410695Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "windows-sys@0.45.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "75283be5efb2831d37ea142365f009c02ec203cd29a3ebecbc093d52315b66d0",
+   "yanked": false,
+   "crate_size": 2568659,
+   "created_at": "2023-01-21T00:11:18.179668Z",
+   "rust_version": "1.48",
+   "retrieved": "2026-11-16"
+  },
+  "windows-sys@0.52.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "282be5f36a8ce781fad8c8ae18fa3f9beff57ec1b52cb3de0789201425d9a33d",
+   "yanked": false,
+   "crate_size": 2576877,
+   "created_at": "2023-11-15T18:55:55.748059Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows-sys@0.59.0": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1e38bc4d79ed67fd075bcc251a1c39b32a1776bbe92e5bef1f0bf1f8c531853b",
+   "yanked": false,
+   "crate_size": 2387323,
+   "created_at": "2024-07-30T15:26:17.224105Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows-sys@0.60.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "f2f500e4d28234f72040990ec9d39e3a6b950f9f22d3dba18416c35882612bcb",
+   "yanked": false,
+   "crate_size": 2518479,
+   "created_at": "2025-06-12T18:59:32.492403Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows-sys@0.61.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc",
+   "yanked": false,
+   "crate_size": 2517186,
+   "created_at": "2025-10-06T19:18:30.163595Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  },
+  "windows-targets@0.42.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "8e5180c00cd44c9b1c88adb3693291f1cd93605ded80c250a75d472756b4d071",
+   "yanked": false,
+   "crate_size": 5492,
+   "created_at": "2023-03-13T14:51:19.942044Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "windows-targets@0.52.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9b724f72796e036ab90c1021d4780d4d3d648aca59e491e6b98e725b84e99973",
+   "yanked": false,
+   "crate_size": 6403,
+   "created_at": "2024-07-03T19:44:18.100049Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows-targets@0.53.5": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "4945f9f551b88e0d65f3db0bc25c33b8acea4d9e41163edf90dcd0b19f9069f3",
+   "yanked": false,
+   "crate_size": 7126,
+   "created_at": "2025-10-06T19:18:45.726277Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows-threading@0.2.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "3949bd5b99cafdf1c7ca86b43ca564028dfe27d66958f2470940f73d86d75b37",
+   "yanked": false,
+   "crate_size": 9686,
+   "created_at": "2025-10-06T17:35:22.550255Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "windows@0.62.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "527fadee13e0c05939a6a05d5bd6eec6cd2e3dbd648b9f8e447c6518133d8580",
+   "yanked": false,
+   "crate_size": 9360572,
+   "created_at": "2025-10-06T19:19:49.704461Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "windows_aarch64_gnullvm@0.42.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "597a5118570b68bc08d8d59125332c54f1ba9d9adeedeef5b99b02ba2b0698f8",
+   "yanked": false,
+   "crate_size": 364071,
+   "created_at": "2023-03-13T14:50:12.575283Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "windows_aarch64_gnullvm@0.52.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "32a4622180e7a0ec044bb555404c800bc9fd9ec262ec147edd5989ccd0c02cd3",
+   "yanked": false,
+   "crate_size": 435718,
+   "created_at": "2024-07-03T19:43:36.557711Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows_aarch64_gnullvm@0.53.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "a9d8416fa8b42f5c947f8482c43e7d89e73a173cead56d044f6a56104a6d1b53",
+   "yanked": false,
+   "crate_size": 787748,
+   "created_at": "2025-10-06T17:33:29.033577Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows_aarch64_msvc@0.42.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "e08e8864a60f06ef0d0ff4ba04124db8b0fb3be5776a5cd47641e942e58c4d43",
+   "yanked": false,
+   "crate_size": 666981,
+   "created_at": "2023-03-13T14:48:58.290740Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "windows_aarch64_msvc@0.52.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "09ec2a7bb152e2252b53fa7803150007879548bc709c039df7627cabbd05d469",
+   "yanked": false,
+   "crate_size": 832615,
+   "created_at": "2024-07-03T19:43:40.566034Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows_aarch64_msvc@0.53.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "b9d782e804c2f632e395708e99a94275910eb9100b2114651e04744e9b125006",
+   "yanked": false,
+   "crate_size": 838009,
+   "created_at": "2025-10-06T17:33:33.380608Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows_i686_gnu@0.42.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "c61d927d8da41da96a81f029489353e68739737d3beca43145c8afec9a31a84f",
+   "yanked": false,
+   "crate_size": 736236,
+   "created_at": "2023-03-13T14:49:06.269717Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "windows_i686_gnu@0.52.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "8e9b5ad5ab802e97eb8e295ac6720e509ee4c243f69d781394014ebfe8bbfa0b",
+   "yanked": false,
+   "crate_size": 880402,
+   "created_at": "2024-07-03T19:43:46.438870Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows_i686_gnu@0.53.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "960e6da069d81e09becb0ca57a65220ddff016ff2d6af6a223cf372a506593a3",
+   "yanked": false,
+   "crate_size": 939775,
+   "created_at": "2025-10-06T17:33:40.576678Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows_i686_gnullvm@0.52.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "0eee52d38c090b3caa76c563b86c3a4bd71ef1a819287c19d586d7334ae8ed66",
+   "yanked": false,
+   "crate_size": 475940,
+   "created_at": "2024-07-03T19:43:50.092560Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows_i686_gnullvm@0.53.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "fa7359d10048f68ab8b09fa71c3daccfb0e9b559aed648a8f95469c27057180c",
+   "yanked": false,
+   "crate_size": 857396,
+   "created_at": "2025-10-06T17:33:44.926477Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows_i686_msvc@0.42.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "44d840b6ec649f480a41c8d80f9c65108b92d89345dd94027bfe06ac444d1060",
+   "yanked": false,
+   "crate_size": 724951,
+   "created_at": "2023-03-13T14:49:15.990501Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "windows_i686_msvc@0.52.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "240948bc05c5e7c6dabba28bf89d89ffce3e303022809e73deaefe4f6ec56c66",
+   "yanked": false,
+   "crate_size": 901163,
+   "created_at": "2024-07-03T19:43:54.897517Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows_i686_msvc@0.53.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "1e7ac75179f18232fe9c285163565a57ef8d3c89254a30685b57d83a38d326c2",
+   "yanked": false,
+   "crate_size": 907688,
+   "created_at": "2025-10-06T17:33:49.033999Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows_x86_64_gnu@0.42.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "8de912b8b8feb55c064867cf047dda097f92d51efad5b491dfb98f6bbb70cb36",
+   "yanked": false,
+   "crate_size": 699373,
+   "created_at": "2023-03-13T14:49:25.000985Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "windows_x86_64_gnu@0.52.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "147a5c80aabfbf0c7d901cb5895d1de30ef2907eb21fbbab29ca94c5b08b1a78",
+   "yanked": false,
+   "crate_size": 836363,
+   "created_at": "2024-07-03T19:43:58.189149Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows_x86_64_gnu@0.53.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9c3842cdd74a865a8066ab39c8a7a473c0778a3f29370b5fd6b4b9aa7df4a499",
+   "yanked": false,
+   "crate_size": 903712,
+   "created_at": "2025-10-06T17:33:55.996108Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows_x86_64_gnullvm@0.42.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "26d41b46a36d453748aedef1486d5c7a85db22e56aff34643984ea85514e94a3",
+   "yanked": false,
+   "crate_size": 364068,
+   "created_at": "2023-03-13T14:49:34.703711Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "windows_x86_64_gnullvm@0.52.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "24d5b23dc417412679681396f2b49f3de8c1473deb516bd34410872eff51ed0d",
+   "yanked": false,
+   "crate_size": 435707,
+   "created_at": "2024-07-03T19:44:03.184321Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows_x86_64_gnullvm@0.53.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "0ffa179e2d07eee8ad8f57493436566c7cc30ac536a3379fdf008f47f6bb7ae1",
+   "yanked": false,
+   "crate_size": 787739,
+   "created_at": "2025-10-06T17:34:01.241547Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "windows_x86_64_msvc@0.42.2": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "9aec5da331524158c6d1a4ac0ab1541149c0b9505fde06423b02f5ef0106b9f0",
+   "yanked": false,
+   "crate_size": 666936,
+   "created_at": "2023-03-13T14:49:45.189098Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "windows_x86_64_msvc@0.52.6": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec",
+   "yanked": false,
+   "crate_size": 832564,
+   "created_at": "2024-07-03T19:44:07.225369Z",
+   "rust_version": "1.56",
+   "retrieved": "2026-11-16"
+  },
+  "windows_x86_64_msvc@0.53.1": {
+   "license": "MIT OR Apache-2.0",
+   "checksum": "d6bbff5f0aada427a1e5a6da5f1f98158182f26556f345ac9e04d36d0ebed650",
+   "yanked": false,
+   "crate_size": 837950,
+   "created_at": "2025-10-06T17:34:07.266605Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "winnow@0.7.15": {
+   "license": "MIT",
+   "checksum": "df79d97927682d2fd8adb29682d1140b343be4ac0f08fd68b7765d9c059d3945",
+   "yanked": false,
+   "crate_size": 187092,
+   "created_at": "2026-03-05T19:00:42.033522Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "winnow@1.0.4": {
+   "license": "MIT",
+   "checksum": "23b97319f7b8343df12cc98938e5c3eb436064524c8d2b4e30a1d3a36eecdf81",
+   "yanked": false,
+   "crate_size": 188513,
+   "created_at": "2026-07-13T14:31:41.405838Z",
+   "rust_version": "1.65.0",
+   "retrieved": "2026-11-16"
+  },
+  "wit-bindgen@0.57.1": {
+   "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+   "checksum": "1ebf944e87a7c253233ad6766e082e3cd714b5d03812acc24c318f549614536e",
+   "yanked": false,
+   "crate_size": 71227,
+   "created_at": "2026-04-17T17:49:55.029832Z",
+   "rust_version": "1.85.0",
+   "retrieved": "2026-11-16"
+  },
+  "writeable@0.6.4": {
+   "license": "Unicode-3.0",
+   "checksum": "3ad82d2a33cdc9674dc7465672f271e096168fcdbe0f799d9e6db8c5892679dc",
+   "yanked": false,
+   "crate_size": 31222,
+   "created_at": "2026-08-13T23:28:09.637125Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "wyz@0.5.1": {
+   "license": "MIT",
+   "checksum": "05f360fc0b24296329c78fda852a1e9ae82de9cf7b27dae4b7f62f118f77b9ed",
+   "yanked": false,
+   "crate_size": 18790,
+   "created_at": "2022-11-16T04:53:04.577803Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "x25519-dalek@2.0.1": {
+   "license": "BSD-3-Clause",
+   "checksum": "c7e468321c81fb07fa7f4c636c3972b9100f0346e5b6a9f2bd0603a52f7ed277",
+   "yanked": false,
+   "crate_size": 87820,
+   "created_at": "2024-02-07T01:14:06.940048Z",
+   "rust_version": "1.60",
+   "retrieved": "2026-11-16"
+  },
+  "yoke-derive@0.8.2": {
+   "license": "Unicode-3.0",
+   "checksum": "de844c262c8848816172cef550288e7dc6c7b7814b4ee56b3e1553f275f1858e",
+   "yanked": false,
+   "crate_size": 15077,
+   "created_at": "2026-04-01T16:46:42.411874Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "yoke@0.8.3": {
+   "license": "Unicode-3.0",
+   "checksum": "709fe23a0424b6a435d82152b1bd3fdfb0833487d5fa90d05d42762a9891fef5",
+   "yanked": false,
+   "crate_size": 33132,
+   "created_at": "2026-06-03T20:59:17.678438Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "zerocopy-derive@0.8.57": {
+   "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+   "checksum": "146c01f5ab44258da43cf276c74a2763db2ff3969c9c652c3f2de07041d0b2bc",
+   "yanked": false,
+   "crate_size": 106175,
+   "created_at": "2026-09-08T21:38:57.303657Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "zerocopy-derive@0.8.63": {
+   "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+   "checksum": "863ad3ac83293fb4d740aedbfdc9240dd8d1a50c1099acd76ce80ce7c7230c7f",
+   "yanked": false,
+   "crate_size": 137261,
+   "created_at": "2026-10-13T20:01:58.185985Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "zerocopy@0.8.57": {
+   "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+   "checksum": "d35102a9f36d089ccae9e4c6802bc118be4487b80aaffc0ab4e0cf5ce92d2873",
+   "yanked": false,
+   "crate_size": 285690,
+   "created_at": "2026-09-08T21:40:04.359293Z",
+   "rust_version": "1.56.0",
+   "retrieved": "2026-11-16"
+  },
+  "zerocopy@0.8.63": {
+   "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+   "checksum": "e5fe1f8f1b06191a00962174c61aa5005e0bb391a6d80d07e24d115c01a92ed8",
+   "yanked": false,
+   "crate_size": 333272,
+   "created_at": "2026-10-13T20:03:04.207234Z",
+   "rust_version": "1.56.0",
+   "retrieved": "2026-11-16"
+  },
+  "zerofrom-derive@0.1.7": {
+   "license": "Unicode-3.0",
+   "checksum": "11532158c46691caf0f2593ea8358fed6bbf68a0315e80aae9bd41fbade684a1",
+   "yanked": false,
+   "crate_size": 8853,
+   "created_at": "2026-04-01T16:46:45.862563Z",
+   "rust_version": "1.71.1",
+   "retrieved": "2026-11-16"
+  },
+  "zerofrom@0.1.8": {
+   "license": "Unicode-3.0",
+   "checksum": "0ec05a11813ea801ff6d75110ad09cd0824ddba17dfe17128ea0d5f68e6c5272",
+   "yanked": false,
+   "crate_size": 6156,
+   "created_at": "2026-05-12T09:08:18.380489Z",
+   "rust_version": "1.71.1",
+   "retrieved": "2026-11-16"
+  },
+  "zeroize@1.9.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "e13c156562582aa81c60cb29407084cdb54c4164760106ab78e6c5b0858cf64e",
+   "yanked": false,
+   "crate_size": 24480,
+   "created_at": "2026-06-12T18:42:35.275395Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "zeroize@1.9.1": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879",
+   "yanked": false,
+   "crate_size": 25043,
+   "created_at": "2026-10-06T17:49:21.148259Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "zeroize_derive@1.5.0": {
+   "license": "Apache-2.0 OR MIT",
+   "checksum": "3c50655cbb0fe3fc43170059e702f1ce5e19b84cec58dc87b037a09935c2f328",
+   "yanked": false,
+   "crate_size": 12034,
+   "created_at": "2026-06-12T18:21:55.086967Z",
+   "rust_version": "1.85",
+   "retrieved": "2026-11-16"
+  },
+  "zerotrie@0.2.5": {
+   "license": "Unicode-3.0",
+   "checksum": "4ea269c3bd32f0a32c321907a2ae912ba6f4649bb0fc764a15627e99a7095a3f",
+   "yanked": false,
+   "crate_size": 84204,
+   "created_at": "2026-08-13T23:28:19.996564Z",
+   "rust_version": "1.82",
+   "retrieved": "2026-11-16"
+  },
+  "zerovec-derive@0.11.6": {
+   "license": "Unicode-3.0",
+   "checksum": "34df6fc39dbd26ddc9c10e6a2984476e13acce22e64e4487636ef494369225da",
+   "yanked": false,
+   "crate_size": 23102,
+   "created_at": "2026-08-20T23:25:28.777419Z",
+   "rust_version": null,
+   "retrieved": "2026-11-16"
+  },
+  "zerovec@0.11.8": {
+   "license": "Unicode-3.0",
+   "checksum": "bb0464e17806c1d976d5cba29399c7f08e516e279e2ba493f63123b5fca67dd8",
+   "yanked": false,
+   "crate_size": 130820,
+   "created_at": "2026-08-19T22:32:16.933982Z",
+   "rust_version": "1.83",
+   "retrieved": "2026-11-16"
+  },
+  "zlib-rs@0.6.7": {
+   "license": "Zlib",
+   "checksum": "34b31d188d9d685a4f9c7b46d6e36631b07058d2cfe190267adce54dc230bf12",
+   "yanked": false,
+   "crate_size": 215740,
+   "created_at": "2026-08-03T13:07:20.445034Z",
+   "rust_version": "1.75",
+   "retrieved": "2026-11-16"
+  },
+  "zmij@1.0.23": {
+   "license": "MIT",
+   "checksum": "29666d0abbfad1e3dc4dcf6144730dd3a3ab225bbbdac83319345b1b44ccfc1b",
+   "yanked": false,
+   "crate_size": 28612,
+   "created_at": "2026-07-13T12:58:53.705886Z",
+   "rust_version": "1.71",
+   "retrieved": "2026-11-16"
+  }
+ }
+}

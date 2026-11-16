@@ -1,0 +1,453 @@
+{
+ "manifest": "upstream-2026100600.xml",
+ "retrieved": "2026-11-16",
+ "projects": {
+  "build/make": {
+   "name": "platform_build",
+   "revision": "b0f697df8cc9519408ca0a404e918cd51bde0735",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {},
+   "modified_file_headers": {
+    "target/product/base_product.mk": "Apache-2.0",
+    "target/product/generic/Android.bp": "no header"
+   }
+  },
+  "build/release": {
+   "name": "platform_build_release",
+   "revision": "0d3e510c9a11b9376b9c155f3425a64182798c22",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {},
+   "modified_file_headers": {}
+  },
+  "frameworks/base": {
+   "name": "platform_frameworks_base",
+   "revision": "84183aff99be5e156dc0446a6fa2d4a7150f4bc3",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "NOTICE": {
+     "sha256": "cf4dd7cea5b6bcd2622ddd3529b3c74d16ba2b4db444575bc6f5c33f8a960530",
+     "size": 18182,
+     "kind": "Apache License 2.0 text"
+    },
+    "MODULE_LICENSE_APACHE2": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "size": 0,
+     "kind": "empty marker file"
+    }
+   },
+   "modified_file_headers": {
+    "cmds/bootanimation/BootAnimation.cpp": "Apache-2.0",
+    "core/api/system-current.txt": "no header",
+    "core/java/android/app/ActivityManagerInternal.java": "Apache-2.0",
+    "core/java/android/app/ActivityThread.java": "Apache-2.0",
+    "core/java/android/app/LoadedApk.java": "Apache-2.0",
+    "core/java/android/ext/settings/ExtSettings.java": "no header",
+    "core/java/android/net/INetdEventCallback.aidl": "Apache-2.0",
+    "core/java/android/os/IUserManager.aidl": "Apache-2.0",
+    "core/java/android/os/SystemProperties.java": "Apache-2.0",
+    "core/java/android/os/UserManager.java": "Apache-2.0",
+    "core/java/android/os/VibratorInfo.java": "Apache-2.0",
+    "core/java/android/provider/Settings.java": "Apache-2.0",
+    "core/java/com/android/internal/widget/ILockSettings.aidl": "Apache-2.0",
+    "core/java/com/android/internal/widget/LockPatternUtils.java": "Apache-2.0",
+    "core/res/AndroidManifest.xml": "Apache-2.0",
+    "core/res/assets/images/android-logo-mask.png": "binary",
+    "core/res/assets/images/android-logo-shine.png": "binary",
+    "core/res/res/values/config.xml": "Apache-2.0",
+    "core/res/res/values/config_ext.xml": "no header",
+    "core/res/res/values/strings.xml": "Apache-2.0",
+    "data/etc/com.android.settings.xml": "Apache-2.0",
+    "data/etc/privapp-permissions-platform.xml": "Apache-2.0",
+    "packages/PackageInstaller/src/com/android/packageinstaller/handheld/UninstallAlertDialogFragment.java": "Apache-2.0",
+    "packages/PackageInstaller/src/com/android/packageinstaller/television/UninstallAlertFragment.java": "Apache-2.0",
+    "packages/PackageInstaller/src/com/android/packageinstaller/v2/model/UninstallRepository.kt": "Apache-2.0",
+    "packages/SettingsLib/SegmentedButtonPreference/src/com/android/settingslib/widget/SegmentedButtonPreference.kt": "Apache-2.0",
+    "packages/SettingsLib/src/com/android/settingslib/Utils.java": "no header",
+    "packages/SettingsLib/src/com/android/settingslib/bluetooth/devicesettings/DeviceSettingContract.kt": "Apache-2.0",
+    "packages/SettingsLib/src/com/android/settingslib/bluetooth/devicesettings/data/repository/DeviceSettingRepository.kt": "Apache-2.0",
+    "packages/SettingsLib/src/com/android/settingslib/bluetooth/devicesettings/data/repository/DeviceSettingServiceConnection.kt": "Apache-2.0",
+    "packages/SettingsLib/src/com/android/settingslib/bluetooth/devicesettings/shared/model/DeviceSettingModel.kt": "Apache-2.0",
+    "packages/SettingsLib/src/com/android/settingslib/deviceinfo/StorageMeasurement.java": "Apache-2.0",
+    "packages/SettingsLib/tests/robotests/src/com/android/settingslib/bluetooth/devicesettings/data/repository/DeviceSettingRepositoryTest.kt": "Apache-2.0",
+    "packages/SettingsProvider/src/com/android/providers/settings/SettingsProvider.java": "Apache-2.0",
+    "packages/SystemUI/application/src/com/android/systemui/dagger/ReferenceGlobalRootComponent.kt": "absent upstream",
+    "packages/SystemUI/multivalentTests/src/com/android/keyguard/KeyguardSecurityContainerControllerTest.kt": "Apache-2.0",
+    "packages/SystemUI/multivalentTests/src/com/android/systemui/keyguard/ui/viewmodel/AlternateBouncerToGoneTransitionViewModelTest.kt": "Apache-2.0",
+    "packages/SystemUI/multivalentTests/src/com/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModelTest.kt": "Apache-2.0",
+    "packages/SystemUI/multivalentTests/src/com/android/systemui/qs/tiles/QuickAccessWalletTileTest.java": "Apache-2.0",
+    "packages/SystemUI/multivalentTests/src/com/android/systemui/user/data/repository/UserRepositoryImplTest.kt": "Apache-2.0",
+    "packages/SystemUI/res-keyguard/values/strings.xml": "Apache-2.0",
+    "packages/SystemUI/src/com/android/keyguard/KeyguardSecurityContainerController.java": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor.kt": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/bouncer/shared/model/BouncerMessageStrings.kt": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsDialogLite.java": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/keyguard/KeyguardUnlockAnimationController.kt": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/keyguard/KeyguardViewMediator.java": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/keyguard/ui/viewmodel/AlternateBouncerToGoneTransitionViewModel.kt": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel.kt": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/qs/tiles/QuickAccessWalletTile.java": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/statusbar/NotificationShadeDepthController.kt": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/statusbar/phone/KeyguardStatusBarView.java": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityControllerImpl.java": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/user/data/repository/UserIconProvider.kt": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/user/data/repository/UserRepositoryImpl.kt": "Apache-2.0",
+    "packages/SystemUI/tests/src/com/android/systemui/keyguard/KeyguardViewMediatorTest.java": "Apache-2.0",
+    "packages/SystemUI/tests/utils/src/com/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKosmos.kt": "Apache-2.0",
+    "services/backup/java/com/android/server/backup/UserBackupManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/EventLogTags.logtags": "no header",
+    "services/core/java/com/android/server/StorageManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/TelephonyRegistry.java": "Apache-2.0",
+    "services/core/java/com/android/server/am/ActivityManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/am/UserController.java": "Apache-2.0",
+    "services/core/java/com/android/server/am/UserState.java": "Apache-2.0",
+    "services/core/java/com/android/server/biometrics/sensors/AuthenticationClient.java": "Apache-2.0",
+    "services/core/java/com/android/server/biometrics/sensors/fingerprint/FingerprintUtils.java": "Apache-2.0",
+    "services/core/java/com/android/server/clipboard/ClipboardAccess.java": "no header",
+    "services/core/java/com/android/server/clipboard/ClipboardService.java": "Apache-2.0",
+    "services/core/java/com/android/server/connectivity/NetdEventListenerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/location/gnss/GnssListenerMultiplexer.java": "Apache-2.0",
+    "services/core/java/com/android/server/location/gnss/GnssManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/location/provider/LocationProviderManager.java": "Apache-2.0",
+    "services/core/java/com/android/server/locksettings/DuressPasswordHelper.java": "no header",
+    "services/core/java/com/android/server/locksettings/LockSettingsInternal.java": "Apache-2.0",
+    "services/core/java/com/android/server/locksettings/LockSettingsService.java": "Apache-2.0",
+    "services/core/java/com/android/server/locksettings/LockSettingsShellCommand.java": "Apache-2.0",
+    "services/core/java/com/android/server/locksettings/LockSettingsStorage.java": "Apache-2.0",
+    "services/core/java/com/android/server/locksettings/SyntheticPasswordManager.java": "Apache-2.0",
+    "services/core/java/com/android/server/notification/NotificationManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/pm/UserManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/pm/UserTypeFactory.java": "Apache-2.0",
+    "services/core/java/com/android/server/policy/LegacyGlobalActions.java": "Apache-2.0",
+    "services/core/java/com/android/server/policy/keyguard/KeyguardServiceDelegate.java": "no header",
+    "services/core/java/com/android/server/storage/StorageSessionController.java": "Apache-2.0",
+    "services/core/java/com/android/server/vibrator/VibratorManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/wm/ActivityTaskManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/wm/RootWindowContainer.java": "Apache-2.0",
+    "services/core/java/com/android/server/wm/WallpaperController.java": "Apache-2.0",
+    "services/core/java/com/android/server/wm/WindowManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/wm/WindowStateAnimator.java": "Apache-2.0",
+    "services/java/com/android/server/SystemServer.java": "Apache-2.0",
+    "services/tests/servicestests/src/com/android/server/am/UserControllerTest.java": "Apache-2.0",
+    "services/tests/servicestests/src/com/android/server/locksettings/FakeStorageManager.java": "Apache-2.0",
+    "services/tests/servicestests/src/com/android/server/locksettings/LockSettingsServiceTests.java": "Apache-2.0",
+    "services/tests/servicestests/src/com/android/server/locksettings/LockSettingsShellCommandTest.java": "Apache-2.0",
+    "services/tests/servicestests/src/com/android/server/pm/UserManagerServiceTest.java": "Apache-2.0",
+    "telephony/java/android/telephony/NetworkRegistrationInfo.java": "Apache-2.0",
+    "telephony/java/android/telephony/ServiceState.java": "Apache-2.0",
+    "telephony/java/android/telephony/TelephonyManager.java": "Apache-2.0"
+   }
+  },
+  "frameworks/native": {
+   "name": "platform_frameworks_native",
+   "revision": "1c83ac6ae533c74ecb0486369c0d2f9e79783b3d",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "NOTICE": {
+     "sha256": "5f28c11f8b1b3f97b9d42c74b85371ebf4127f241b799279bcecd69f7ee542dc",
+     "size": 17680,
+     "kind": "Apache License 2.0 text"
+    },
+    "MODULE_LICENSE_APACHE2": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "size": 0,
+     "kind": "empty marker file"
+    }
+   },
+   "modified_file_headers": {
+    "services/sensorservice/SensorDirectConnection.cpp": "Apache-2.0",
+    "services/sensorservice/SensorEventConnection.cpp": "Apache-2.0"
+   }
+  },
+  "packages/apps/Launcher3": {
+   "name": "platform_packages_apps_Launcher3",
+   "revision": "47accce386f2abdc84e87c05b5587be6e0b0854f",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {},
+   "modified_file_headers": {
+    "src/com/android/launcher3/AbstractFloatingView.java": "Apache-2.0",
+    "src/com/android/launcher3/BubbleTextView.java": "Apache-2.0",
+    "src/com/android/launcher3/allapps/AllAppsGridAdapter.java": "Apache-2.0",
+    "src/com/android/launcher3/allapps/AlphabeticalAppsList.java": "Apache-2.0",
+    "src/com/android/launcher3/allapps/BaseAllAppsAdapter.java": "Apache-2.0",
+    "src/com/android/launcher3/model/AllAppsList.java": "Apache-2.0",
+    "src/com/android/launcher3/model/LoaderTask.java": "Apache-2.0",
+    "tests/multivalentTests/src/com/android/launcher3/model/LoaderTaskTest.kt": "no header"
+   }
+  },
+  "packages/apps/Multiuser": {
+   "name": "platform/packages/apps/Multiuser",
+   "revision": "44f89da6503c7af07e70e0f6f0f2e2c7ea287c2f",
+   "remote": "https://android.googlesource.com",
+   "files": {
+    "NOTICE": {
+     "sha256": "c49b449bf4c9e0eb59aa05e3f30124bf7f6a4a39d52e9f0569f125b3d7505c5e",
+     "size": 10693,
+     "kind": "Apache License 2.0 text"
+    }
+   },
+   "modified_file_headers": {
+    "Widget/src/main/java/com/android/multiuser/widget/data/ImageRepository.kt": "Apache-2.0",
+    "Widget/src/main/java/com/android/multiuser/widget/data/UsersRepository.kt": "Apache-2.0"
+   }
+  },
+  "packages/apps/Settings": {
+   "name": "platform_packages_apps_Settings",
+   "revision": "e5c0d9dd672123864c3cfc7e5e763dfbf133bf8b",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "NOTICE": {
+     "sha256": "38751245389e1e23f73e6f5384b5cbe7fa972cc4410c5adc9c04b082a0b9561a",
+     "size": 10695,
+     "kind": "Apache License 2.0 text"
+    }
+   },
+   "modified_file_headers": {
+    "AndroidManifest.xml": "no header",
+    "res/values/strings.xml": "Apache-2.0",
+    "res/values/strings_ext.xml": "no header",
+    "res/xml/exploit_protection_settings.xml": "no header",
+    "res/xml/network_provider_internet.xml": "Apache-2.0",
+    "res/xml/safety_center_device_unlock_subpage.xml": "Apache-2.0",
+    "src/com/android/settings/MainClear.java": "Apache-2.0",
+    "src/com/android/settings/Utils.java": "Apache-2.0",
+    "src/com/android/settings/applications/specialaccess/deviceadmin/DeviceAdminAdd.java": "Apache-2.0",
+    "src/com/android/settings/bluetooth/BluetoothDetailsConfigurableFragment.kt": "Apache-2.0",
+    "src/com/android/settings/deviceinfo/StorageWizardMigrateConfirm.java": "Apache-2.0",
+    "src/com/android/settings/deviceinfo/StorageWizardMoveConfirm.java": "Apache-2.0",
+    "src/com/android/settings/deviceinfo/storage/NonCurrentUserController.java": "Apache-2.0",
+    "src/com/android/settings/deviceinfo/storage/StorageAsyncLoader.java": "Apache-2.0",
+    "src/com/android/settings/deviceinfo/storage/UserIconLoader.java": "Apache-2.0",
+    "src/com/android/settings/spa/app/appinfo/AppInfoSettings.kt": "Apache-2.0",
+    "src/com/android/settings/users/UserSettings.java": "Apache-2.0",
+    "src/com/android/settings/wifi/WifiConfigController2.java": "Apache-2.0",
+    "src/com/android/settings/wifi/WifiEntryPreference.java": "Apache-2.0",
+    "src/com/android/settings/wifi/WifiUtils.java": "Apache-2.0",
+    "src/com/android/settings/wifi/details2/WifiDetailPreferenceController2.java": "Apache-2.0"
+   }
+  },
+  "packages/apps/Updater": {
+   "name": "platform_packages_apps_Updater",
+   "revision": "52c34a55bd26f7856f9141d7e4237397084d6936",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "LICENSE": {
+     "sha256": "1bcf57d672a183379841f71d50157d4c9dbe76e912492917ddd12cbccf2c9064",
+     "size": 1097,
+     "kind": "MIT-style text"
+    }
+   },
+   "modified_file_headers": {
+    "res/values/config.xml": "no header"
+   }
+  },
+  "packages/inputmethods/LatinIME": {
+   "name": "platform_packages_inputmethods_LatinIME",
+   "revision": "856f017bb2c78d3a5cfa6c29e7f29ab86e1e3302",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "NOTICE": {
+     "sha256": "d04394c729fc9fda050d5733d8ee11663fb54fe54d94532de968cf85c1cc42fb",
+     "size": 10752,
+     "kind": "Apache License 2.0 text"
+    }
+   },
+   "modified_file_headers": {
+    "java/Android.bp": "Apache-2.0",
+    "java/res/drawable/btn_keyboard_key_functional_lxx_dark.xml": "Apache-2.0",
+    "java/res/drawable/btn_keyboard_key_functional_lxx_light.xml": "Apache-2.0",
+    "java/res/drawable/btn_keyboard_key_lxx_dark.xml": "Apache-2.0",
+    "java/res/drawable/btn_keyboard_key_lxx_light.xml": "Apache-2.0",
+    "java/res/drawable/btn_keyboard_key_popup_lxx_dark.xml": "Apache-2.0",
+    "java/res/drawable/btn_keyboard_key_popup_lxx_light.xml": "Apache-2.0",
+    "java/res/drawable/btn_keyboard_spacebar_lxx_dark.xml": "Apache-2.0",
+    "java/res/drawable/btn_keyboard_spacebar_lxx_light.xml": "Apache-2.0",
+    "java/res/drawable/btn_suggestion_lxx_dark.xml": "Apache-2.0",
+    "java/res/drawable/btn_suggestion_lxx_light.xml": "Apache-2.0",
+    "java/res/drawable/keyboard_key_feedback_lxx_dark.xml": "Apache-2.0",
+    "java/res/drawable/keyboard_key_feedback_lxx_light.xml": "Apache-2.0",
+    "java/res/layout/emoji_palettes_view.xml": "Apache-2.0",
+    "java/res/layout/suggestions_strip.xml": "Apache-2.0",
+    "java/res/values-land/config.xml": "Apache-2.0",
+    "java/res/values/colors.xml": "Apache-2.0",
+    "java/res/values/config.xml": "Apache-2.0",
+    "java/res/values/themes-lxx-dark.xml": "Apache-2.0",
+    "java/res/values/themes-lxx-light.xml": "Apache-2.0",
+    "java/res/values/themes-lxx.xml": "Apache-2.0",
+    "java/res/xml/key_styles_common.xml": "Apache-2.0",
+    "java/res/xml/key_styles_number.xml": "Apache-2.0",
+    "java/res/xml/method.xml": "Apache-2.0",
+    "java/src/com/android/inputmethod/keyboard/MainKeyboardView.java": "Apache-2.0",
+    "java/src/com/android/inputmethod/keyboard/MoreKeysKeyboardView.java": "Apache-2.0",
+    "java/src/com/android/inputmethod/latin/LatinIME.java": "Apache-2.0",
+    "java/src/com/android/inputmethod/latin/suggestions/SuggestionStripPasteController.java": "no header",
+    "java/src/com/android/inputmethod/latin/suggestions/SuggestionStripView.java": "Apache-2.0"
+   }
+  },
+  "packages/modules/Bluetooth": {
+   "name": "platform_packages_modules_Bluetooth",
+   "revision": "ff1b0197275bf47b415c3d6cbd518583fe7c5ebf",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "NOTICE": {
+     "sha256": "fcfd08d120e2558dded978b780df4404a221b94372f7d2aa407b7ada7c54ff07",
+     "size": 16650,
+     "kind": "Apache License 2.0 text"
+    },
+    "MODULE_LICENSE_APACHE2": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "size": 0,
+     "kind": "empty marker file"
+    }
+   },
+   "modified_file_headers": {
+    "android/app/AndroidManifest.xml": "no header",
+    "android/app/aidl/android/bluetooth/IBluetooth.aidl": "Apache-2.0",
+    "android/app/jni/com_android_bluetooth_btservice_AdapterService.cpp": "Apache-2.0",
+    "android/app/res/values/strings.xml": "Apache-2.0",
+    "android/app/src/com/android/bluetooth/btservice/ActiveDeviceManager.java": "Apache-2.0",
+    "android/app/src/com/android/bluetooth/btservice/AdapterNativeInterface.java": "Apache-2.0",
+    "android/app/src/com/android/bluetooth/btservice/AdapterService.java": "Apache-2.0",
+    "android/app/src/com/android/bluetooth/btservice/AdapterServiceBinder.java": "Apache-2.0",
+    "android/app/src/com/android/bluetooth/le_scan/ScanBinder.kt": "Apache-2.0",
+    "android/app/src/com/android/bluetooth/le_scan/ScanController.java": "Apache-2.0",
+    "android/app/tests/unit/src/com/android/bluetooth/btservice/AdapterServiceBinderTest.kt": "Apache-2.0",
+    "framework/api/system-current.txt": "no header",
+    "framework/java/android/bluetooth/BluetoothDevice.java": "Apache-2.0",
+    "system/btif/src/bluetooth.cc": "Apache-2.0",
+    "system/device/Android.bp": "Apache-2.0",
+    "system/include/hardware/bluetooth.h": "Apache-2.0",
+    "system/stack/include/hcidefs.h": "Apache-2.0",
+    "system/stack/l2cap/l2c_fcr.cc": "Apache-2.0",
+    "system/stack/sdp/sdp_server.cc": "Apache-2.0",
+    "system/stack/sdp/sdp_utils.cc": "Apache-2.0",
+    "system/stack/sdp/sdpint.h": "Apache-2.0",
+    "system/stack/test/sdp/stack_sdp_utils_test.cc": "Apache-2.0"
+   }
+  },
+  "packages/modules/Connectivity": {
+   "name": "platform_packages_modules_Connectivity",
+   "revision": "6ab5be47d49a3f93d424f195958dfaadec8a906c",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {},
+   "modified_file_headers": {
+    "bpf/progs/netd.c": "Apache-2.0",
+    "service/src/com/android/server/BpfNetMaps.java": "Apache-2.0",
+    "service/src/com/android/server/ConnectivityService.java": "Apache-2.0",
+    "service/src/com/android/server/connectivity/PermissionMonitor.java": "Apache-2.0"
+   }
+  },
+  "packages/modules/DnsResolver": {
+   "name": "platform_packages_modules_DnsResolver",
+   "revision": "215bd613910d77fbf58e55d4b8ec73f1a3713373",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "NOTICE": {
+     "sha256": "6c6843863d6b3ef7d8c5d41180645462fbe75b556bd31f823b764cd6ec63d1b9",
+     "size": 22146,
+     "kind": "Apache License 2.0 text"
+    }
+   },
+   "modified_file_headers": {
+    "Android.bp": "Apache-2.0",
+    "res_cache.cpp": "no header"
+   }
+  },
+  "packages/modules/Wifi": {
+   "name": "platform_packages_modules_Wifi",
+   "revision": "2d471d603662033998ccb9112e8f44f0dcef8fa0",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {},
+   "modified_file_headers": {
+    "service/java/com/android/server/wifi/ClientModeImpl.java": "Apache-2.0",
+    "service/java/com/android/server/wifi/WifiServiceImpl.java": "Apache-2.0",
+    "service/java/com/android/server/wifi/util/WifiPermissionsUtil.java": "Apache-2.0"
+   }
+  },
+  "packages/providers/MediaProvider": {
+   "name": "platform_packages_providers_MediaProvider",
+   "revision": "db0779586e2b1b4044d46a848b0f60a93a601ca5",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {},
+   "modified_file_headers": {
+    "src/com/android/providers/media/MediaProvider.java": "Apache-2.0"
+   }
+  },
+  "packages/services/Telephony": {
+   "name": "platform_packages_services_Telephony",
+   "revision": "7b08bec60533a9905f687b69be9ace7d346d0023",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {},
+   "modified_file_headers": {
+    "src/com/android/phone/PhoneInterfaceManager.java": "Apache-2.0"
+   }
+  },
+  "system/core": {
+   "name": "platform_system_core",
+   "revision": "322ff5129d865a5e8d958667e6c63ac943449493",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "MODULE_LICENSE_APACHE2": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "size": 0,
+     "kind": "empty marker file"
+    }
+   },
+   "modified_file_headers": {
+    "rootdir/init.rc": "no header"
+   }
+  },
+  "system/sepolicy": {
+   "name": "platform_system_sepolicy",
+   "revision": "5e359dcf9ae863a593e9055a85e1657c87c4cb18",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "NOTICE": {
+     "sha256": "b47111d28fd993d66e60fcfd547c07b66ace8d7039c75844fd800325128b7fa9",
+     "size": 1029,
+     "kind": "public domain statement"
+    },
+    "MODULE_LICENSE_PUBLIC_DOMAIN": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "size": 0,
+     "kind": "empty marker file"
+    }
+   },
+   "modified_file_headers": {
+    "build/soong/service_fuzzer_bindings.go": "Apache-2.0",
+    "contexts/file_contexts_test_data": "no header",
+    "private/domain.te": "no header",
+    "private/file.te": "no header",
+    "private/file_contexts": "no header",
+    "private/property.te": "no header",
+    "private/property_contexts": "no header",
+    "private/seapp_contexts": "no header",
+    "private/service.te": "no header",
+    "private/service_contexts": "no header",
+    "private/shell.te": "no header",
+    "private/system_app.te": "no header",
+    "private/system_server.te": "no header",
+    "private/traceur_app.te": "no header"
+   }
+  },
+  "vendor/adevtool": {
+   "name": "adevtool",
+   "revision": "17df3b79a73e67ad68387b35c7d41c85e1d8103c",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {
+    "LICENSE": {
+     "sha256": "0e57c9e350ae16854cf7692672d0fb898c21b3e54e74156dc282c1a1e9e3ba33",
+     "size": 1135,
+     "kind": "MIT-style text"
+    }
+   },
+   "modified_file_headers": {
+    "config/device/common/overlay-inclusion.yml": "no header",
+    "config/device/common/overlay-removal.yml": "no header",
+    "config/device/common/sysprop-exclusion.yml": "no header",
+    "config/device/common/sysprop-inclusion.yml": "no header",
+    "config/mk/google_devices/common/device-common.mk": "no header"
+   }
+  }
+ }
+}
