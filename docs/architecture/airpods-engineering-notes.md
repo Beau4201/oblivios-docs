@@ -61,6 +61,15 @@ a future change in this area must not rediscover. Status and open work:
   `com.android.settings.BLUETOOTH_DEVICE_DETAIL_SETTINGS` with the bundle
   `device_address` under `:settings:show_fragment_args`, as Settings' own
   `BluetoothKeyMissingReceiver` does `[verified-in-source]`.
+- **SystemUI asks the provider too, not only Settings.** A provider found through metadata key 25 is
+  also read by SystemUI's volume panel (setting id 1001, `DEVICE_SETTING_ID_ANC`) as uid 10150, through the
+  same SettingsLib repository. An unexported service refuses that bind with a `SecurityException`, which
+  SettingsLib did not catch (ADR-182). "Only Settings binds this" needs a check of every caller of the
+  shared repository, including the log of `stallion`'s SystemUI, not a check of Settings alone.
+- **A report that ear detection "does not act" may be an image without the code.** The owner's reports of
+  2026-10-20 matched ADR-172, and the proof was one string: the broadcast action of the receiver was absent
+  from the dex of the installed app, while the strings of the older receivers were present. Check the
+  installed artefact before reading the source for a cause.
 - **The pair ignores every listening mode write while neither pod is in an ear**
   (`AIR-192`). A report that a mode "does not take" starts with the ear state.
 - **A bounded new input type is `UnrecognisedMessage`, not an error**, when its
@@ -155,9 +164,8 @@ a future change in this area must not rediscover. Status and open work:
 - A component-less `AirPodsApp` made R8 remove every class (no entry points),
   so dexpreopt failed on a missing `classes.dex`. `dex_preopt` was disabled
   temporarily and had to be removed with the first manifest component.
-- `check-required-packages.sh` fails on a forbidden package such as
-  `GuardianLocationFixture.apk`, which the emulator product adds and which can
-  linger in `out-lynx` staging. Remove it with `m installclean` (staged product
+- `check-required-packages.sh` fails on a forbidden package (a test install that can
+  linger in `out-lynx` staging). Remove it with `m installclean` (staged product
   output only, not the compile cache), then rebuild.
 - `m -k` without a number is keep-going without limit, so one run collects every
   remaining failure.
@@ -253,9 +261,21 @@ a future change in this area must not rediscover. Status and open work:
   hands-free disconnect) is restored only after the link is known to be up
   (ADR-154, `AIR-200`). Read the order of the events in a `logcat` capture before
   fixing a "pauses by itself" report.
+- **The session opens before the audio profiles connect.** On `stallion` the first
+  frame came 537 ms after the session start and A2DP and HFP became active 0.2 to
+  0.3 s later. A route-away driven only by the ear count runs once, finds no active
+  device and leaves the app believing the route is gone, so pods that connect out of
+  the ears play (ADR-172, `AIR-201`). State kept by the app about a stack-side effect
+  is re-applied on the stack event that undoes it, not only on the app-side event
+  that caused it.
 - **The Bluetooth volume has no software ceiling on the phone.** With absolute
   volume the phone maps the music index linearly to AVRCP (index 12 of 25 is 61 of
   127) and applies no curve; `dumpsys audio` shows the behaviour as
   `DEVICE_VOLUME_BEHAVIOR_ABSOLUTE` and the safe media volume as disabled. A
   report that the maximum is soft is therefore about the pods or the source level,
   not about a phone setting.
+
+## The connection sheet and picture-in-picture (2026-11-02, `AIR-203`)
+
+- The sheet starts a translucent activity in a new task from a service. `ActivityStarter` sets `mUserLeaving` for every start without `FLAG_ACTIVITY_NO_USER_ACTION`, so the app below gets `onUserLeaveHint`; `TaskFragment.shouldAutoPip` skips auto-enter picture-in-picture when the resuming activity is translucent, so the auto-enter path is not the one a fullscreen video takes `[verified-in-source: frameworks/base/services/core/java/com/android/server/wm]`.
+- That a browser enters picture-in-picture on `onUserLeaveHint` is `[assumption]`. The sheet start now carries `FLAG_ACTIVITY_NO_USER_ACTION`; the device row is not run.

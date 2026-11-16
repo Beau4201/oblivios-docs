@@ -13,8 +13,7 @@ mkproduct() { # $1 = dir, $2 = build type, $3 = "with-harness" | "xml-only" | "n
   mkdir -p "$1/system"
   echo "ro.build.type=$2" > "$1/system/build.prop"
   {
-    for n in Updater.apk Seedvault.apk Auditor.apk PdfViewerGOS.apk GuardianApp.apk \
-      privapp-permissions-org.oblivios.guardian.xml AirPodsApp.apk \
+    for n in Updater.apk Seedvault.apk Auditor.apk PdfViewerGOS.apk AirPodsApp.apk \
       privapp-permissions-org.oblivios.airpods.xml \
       hidden-api-whitelisted-app-org.oblivios.airpods.xml \
       default-permissions-org.oblivios.airpods.xml; do
@@ -27,8 +26,34 @@ mkproduct() { # $1 = dir, $2 = build type, $3 = "with-harness" | "xml-only" | "n
       echo "1 /system/etc/datamap/classifier.tsv"
       echo "1 /system/etc/datamap/ipmap.bin"
     fi
+    if [[ "${4:-}" != "no-persona" ]]; then
+      echo "1 /product/etc/compartments/places.tsv"
+      echo "1 /product/etc/compartments/cells.tsv"
+      mkdir -p "$1/product/etc/compartments"
+      head -c 1000000 /dev/zero > "$1/product/etc/compartments/places.tsv"
+      head -c 5000000 /dev/zero > "$1/product/etc/compartments/cells.tsv"
+    fi
+    if [[ "${4:-}" != "no-passwords" ]]; then
+      echo "1 /product/app/PasswordsApp/PasswordsApp.apk"
+      echo "1 /product/app/PasswordsApp/lib/arm64/libvault_core.so"
+    fi
+    if [[ "${4:-}" != "no-exit" ]]; then
+      echo "1 /system/bin/exitd"
+      echo "1 /system/priv-app/ExitApp/ExitApp.apk"
+      echo "1 /system/etc/init/exit.rc"
+      echo "1 /system/etc/oblivios/exit-mask-list.tsv"
+      echo "1 /system/etc/permissions/privapp-permissions-org.oblivios.exit.xml"
+      echo "1 /system/etc/default-permissions/default-permissions-org.oblivios.exit.xml"
+    fi
     if [[ "$3" == "with-harness" ]]; then
       echo "1 /system/priv-app/AirPodsDebugHarness/AirPodsDebugHarness.apk"
+    fi
+    if [[ "$3" == "with-exitprobe" ]]; then
+      echo "1 /system/priv-app/ExitProbe/ExitProbe.apk"
+      echo "1 /system/etc/permissions/privapp-permissions-org.oblivios.exitprobe.xml"
+    fi
+    if [[ "$3" == "exitprobe-xml-only" ]]; then
+      echo "1 /system/etc/permissions/privapp-permissions-org.oblivios.exitprobe.xml"
     fi
     if [[ "$3" == "xml-only" ]]; then
       echo "1 /system/etc/sysconfig/hidden-api-whitelisted-app-org.oblivios.airpods.debugharness.xml"
@@ -37,6 +62,16 @@ mkproduct() { # $1 = dir, $2 = build type, $3 = "with-harness" | "xml-only" | "n
   if [[ "${4:-}" != "no-datamap" ]]; then
     ipmapfile "$1/system/etc/datamap/ipmap.bin" 20000000 none
   fi
+  if [[ "${4:-}" != "no-exit" ]]; then
+    exitfiles "$1"
+  fi
+}
+
+exitfiles() { # $1 = product dir: the three exit files the gate reads, in their good form
+  mkdir -p "$1/system/bin" "$1/system/etc/init" "$1/system/etc/oblivios"
+  { printf '\177ELF'; head -c 5999996 /dev/zero; } > "$1/system/bin/exitd"
+  printf 'service exitd /system/bin/exitd --x\n    class main\nservice exitd_route /system/bin/exitd --routes\n    class main\n' > "$1/system/etc/init/exit.rc"
+  { printf 'exit-mask-list\t1\n'; for i in $(seq 1 1000); do printf 'd%s.example\t%s\tN\n' "$i" "$i"; done; } > "$1/system/etc/oblivios/exit-mask-list.tsv"
 }
 
 ipmapfile() { # $1 = path, $2 = size in bytes, $3 = what is wrong with it (none, magic, version, reserved, city, asn, gap, trailing)
@@ -89,7 +124,23 @@ mkproduct "$T/u2" user with-harness;       expect "user with harness is refused"
 grep -q "FORBIDDEN: AirPodsDebugHarness.apk" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
 mkproduct "$T/u3" user xml-only;           expect "user with only the exemption file is refused" 1 "$T/u3"
 mkproduct "$T/ud2" userdebug xml-only;     expect "userdebug with the exemption file passes" 0 "$T/ud2"
+# The exit probe (ADR-184, NET-001b) rides PRODUCT_PACKAGES_DEBUG as the AirPods harness does.
+mkproduct "$T/ep1" userdebug with-exitprobe;  expect "userdebug with the exit probe passes" 0 "$T/ep1"
+mkproduct "$T/ep2" user with-exitprobe;       expect "user with the exit probe is refused" 1 "$T/ep2"
+grep -q "FORBIDDEN: ExitProbe.apk" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+grep -q "FORBIDDEN: privapp-permissions-org.oblivios.exitprobe.xml" "$T/out" || { echo "FAIL: allowlist not reported"; cat "$T/out"; exit 1; }
+mkproduct "$T/ep3" user exitprobe-xml-only;   expect "user with only the exit probe allowlist is refused" 1 "$T/ep3"
 mkdir -p "$T/nb"; cp "$T/u1/installed-files.txt" "$T/nb/"; expect "missing build.prop fails closed" 1 "$T/nb"
+
+# ADR-240: Guardian left the product. A tree that still builds any part of it is refused, in a user and in a userdebug image.
+for gn in "priv-app/GuardianApp/GuardianApp.apk" "app/GuardianLocationFixture/GuardianLocationFixture.apk" \
+  "etc/permissions/privapp-permissions-org.oblivios.guardian.xml"; do
+  for bt in user userdebug; do
+    mkproduct "$T/g-$bt" "$bt" no-harness; echo "1 /system/$gn" >> "$T/g-$bt/installed-files.txt"
+    expect "$bt image with ${gn##*/} is refused" 1 "$T/g-$bt"
+    grep -q "FORBIDDEN: ${gn##*/}" "$T/out" || { echo "FAIL: ${gn##*/} not reported"; cat "$T/out"; exit 1; }
+  done
+done
 
 # The Data Map (ADR-157): the app, its two system files and the classifier must all be there.
 mkproduct "$T/nd" userdebug no-harness no-datamap; expect "a product without the Data Map is refused" 1 "$T/nd"
@@ -140,4 +191,56 @@ for flaw in reserved city asn gap trailing; do
   expect "an ipmap with a broken header ($flaw) is refused" 1 "$T/f-$flaw"
   grep -q "ipmap.bin is not an ipmap file" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
 done
+# ADR-186: the exit service. The six names must be there, and the three files that the gate reads must be what they claim.
+mkproduct "$T/ne" userdebug no-harness no-exit;  expect "a product without the exit service is refused" 1 "$T/ne"
+for n in exitd ExitApp.apk exit.rc oblivios/exit-mask-list.tsv privapp-permissions-org.oblivios.exit.xml \
+  default-permissions-org.oblivios.exit.xml; do
+  grep -q "MISSING: $n" "$T/out" || { echo "FAIL: $n not reported missing"; cat "$T/out"; exit 1; }
+done
+# ADR-185: the Passwords app and its Rust core. A name proves a module was built; the core is the file that the app cannot start without.
+mkproduct "$T/np" userdebug no-harness no-passwords;  expect "a product without the Passwords app is refused" 1 "$T/np"
+for n in PasswordsApp.apk libvault_core.so; do
+  grep -q "MISSING: $n" "$T/out" || { echo "FAIL: $n not reported missing"; cat "$T/out"; exit 1; }
+done
+# ADR-208: the persona place data. Both names must be there, and a file under the floor is refused.
+mkproduct "$T/npd" userdebug no-harness no-persona;  expect "a product without the persona data is refused" 1 "$T/npd"
+for n in compartments/places.tsv compartments/cells.tsv; do
+  grep -q "MISSING: $n" "$T/out" || { echo "FAIL: $n not reported missing"; cat "$T/out"; exit 1; }
+done
+mkproduct "$T/pd1" userdebug no-harness; head -c 999999 /dev/zero > "$T/pd1/product/etc/compartments/places.tsv"
+expect "a places.tsv under 1000000 bytes is refused" 1 "$T/pd1"
+grep -q "places.tsv is too small" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+mkproduct "$T/pd2" userdebug no-harness; head -c 4999999 /dev/zero > "$T/pd2/product/etc/compartments/cells.tsv"
+expect "a cells.tsv under 5000000 bytes is refused" 1 "$T/pd2"
+grep -q "cells.tsv is too small" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+mkproduct "$T/pd3" userdebug no-harness; rm "$T/pd3/product/etc/compartments/cells.tsv"
+expect "a cells.tsv that is listed and not there is refused" 1 "$T/pd3"
+grep -q "cells.tsv is not in the product" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+mkproduct "$T/x1" userdebug no-harness;  expect "a product with the exit service passes" 0 "$T/x1"
+mkproduct "$T/x2" userdebug no-harness; rm "$T/x2/system/bin/exitd"
+expect "an exitd that is listed and not there is refused" 1 "$T/x2"
+grep -q "exitd is not in the product" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+mkproduct "$T/x3" userdebug no-harness; head -c 4999999 /dev/zero | { printf '\177ELF'; cat; } | head -c 4999999 > "$T/x3/system/bin/exitd"
+expect "an exitd under 5 MB is refused" 1 "$T/x3"
+mkproduct "$T/x3b" userdebug no-harness; head -c 5000000 "$T/x1/system/bin/exitd" > "$T/x3b/system/bin/exitd"
+expect "an exitd of exactly 5 MB passes" 0 "$T/x3b"
+mkproduct "$T/x4" userdebug no-harness; head -c 6000000 /dev/zero > "$T/x4/system/bin/exitd"
+expect "an exitd that is not an ELF file is refused" 1 "$T/x4"
+grep -q "exitd is not the daemon" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+mkproduct "$T/x5" userdebug no-harness; sed -i '/^service exitd_route /d' "$T/x5/system/etc/init/exit.rc"
+expect "an exit.rc without the route helper is refused" 1 "$T/x5"
+grep -q "exit.rc does not define" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+mkproduct "$T/x6" userdebug no-harness; sed -i '/^service exitd /d' "$T/x6/system/etc/init/exit.rc"
+expect "an exit.rc without the daemon is refused" 1 "$T/x6"
+mkproduct "$T/x7" userdebug no-harness; rm "$T/x7/system/etc/init/exit.rc"
+expect "an exit.rc that is listed and not there is refused" 1 "$T/x7"
+mkproduct "$T/x8" userdebug no-harness; sed -i '1s/.*/not a list/' "$T/x8/system/etc/oblivios/exit-mask-list.tsv"
+expect "a mask list without its header is refused" 1 "$T/x8"
+grep -q "exit-mask-list.tsv is not the mask list" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+mkproduct "$T/x9" userdebug no-harness; head -n 999 "$T/x1/system/etc/oblivios/exit-mask-list.tsv" > "$T/x9/system/etc/oblivios/exit-mask-list.tsv"
+expect "a mask list of 998 rows is refused" 1 "$T/x9"
+mkproduct "$T/xa" userdebug no-harness; head -n 1000 "$T/x1/system/etc/oblivios/exit-mask-list.tsv" > "$T/xa/system/etc/oblivios/exit-mask-list.tsv"
+expect "a mask list of 1000 lines passes" 0 "$T/xa"
+mkproduct "$T/xb" userdebug no-harness; rm "$T/xb/system/etc/oblivios/exit-mask-list.tsv"
+expect "a mask list that is listed and not there is refused" 1 "$T/xb"
 echo "all gate tests passed"

@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: Apache-2.0
 # Fails when a package ObliviOS requires is missing from a real device
 # build. A clean build exit proves nothing here: ADR-047 (OFFICIAL_BUILD
-# packages) and Guardian's privapp allowlist on lynx (2026-09-28, a module
-# name left over from the AegisOS rename) both shipped from green builds.
+# packages) was skipped in a green build, and so was a privapp allowlist
+# whose module name was left over from the AegisOS rename (2026-09-28).
 # Only the product dir's own installed-files*.txt count, never
 # obj/PACKAGING/ (the official-build rule of the project).
 set -o errexit -o nounset -o pipefail
@@ -14,8 +14,6 @@ REQUIRED=(
   Seedvault.apk
   Auditor.apk
   PdfViewerGOS.apk
-  GuardianApp.apk
-  privapp-permissions-org.oblivios.guardian.xml
   AirPodsApp.apk
   privapp-permissions-org.oblivios.airpods.xml
   hidden-api-whitelisted-app-org.oblivios.airpods.xml
@@ -25,6 +23,16 @@ REQUIRED=(
   hidden-api-whitelisted-app-org.oblivios.datamap.xml
   datamap/classifier.tsv
   datamap/ipmap.bin
+  exitd
+  ExitApp.apk
+  exit.rc
+  oblivios/exit-mask-list.tsv
+  privapp-permissions-org.oblivios.exit.xml
+  default-permissions-org.oblivios.exit.xml
+  PasswordsApp.apk
+  libvault_core.so
+  compartments/places.tsv
+  compartments/cells.tsv
 )
 
 shopt -s nullglob
@@ -34,12 +42,17 @@ if [[ ${#LISTS[@]} -eq 0 ]]; then
   exit 1
 fi
 
-# Test-only modules that must never reach a device image. `m <module>` for a
-# standalone test install still copies into the product staging dir, and the
-# next image build picks it up: GuardianLocationFixture shipped in lynx's
-# 2026-09-26 image this way (found 2026-09-28).
+# Modules that must never reach a device image. `m <module>` for a standalone
+# test install still copies into the product staging dir, and the next image
+# build picks it up: a test fixture shipped in lynx's 2026-09-26 image this way
+# (found 2026-09-28).
+# Guardian left the product (ADR-240) and the next update must remove it from
+# the phone, so a tree that still builds it fails here. These three names are the
+# only ones of Guardian that stay in the repositories.
 FORBIDDEN=(
+  GuardianApp.apk
   GuardianLocationFixture.apk
+  privapp-permissions-org.oblivios.guardian.xml
 )
 
 # The userdebug-only AirPods validation harness (ADR-120) rides PRODUCT_PACKAGES_DEBUG and
@@ -58,6 +71,9 @@ if [[ "$BUILD_TYPE" == "user" ]]; then
     AirPodsProbeBtPriv.apk
     privapp-permissions-org.oblivios.airpods.debugharness.xml
     hidden-api-whitelisted-app-org.oblivios.airpods.debugharness.xml
+    # The NET-001b probe of the exit service (ADR-184) rides PRODUCT_PACKAGES_DEBUG the same way.
+    ExitProbe.apk
+    privapp-permissions-org.oblivios.exitprobe.xml
   )
 fi
 
@@ -73,6 +89,22 @@ for name in "${FORBIDDEN[@]}"; do
   if grep -qE "/${name//./\\.}\$" "${LISTS[@]}"; then
     echo "FORBIDDEN: ${name}"
     bad=1
+  fi
+done
+# ADR-208: the persona place data is read, not only named. The policy service reads exactly /product/etc/compartments/places.tsv and
+# the Telephony app cells.tsv; an empty module, or one made from a cut-short download, still carries the name. The real files are
+# about 2 MB and 12 MB (data/SOURCES.md of privacy/compartments-profiles).
+for pair in places.tsv:1000000 cells.tsv:5000000; do
+  pname="${pair%%:*}"
+  pfile="$PRODUCT_OUT/product/etc/compartments/$pname"
+  if grep -qE "/compartments/${pname//./\\.}\$" "${LISTS[@]}"; then
+    if [[ ! -f "$pfile" ]]; then
+      echo "$pname is not in the product (product/etc/compartments/$pname)"
+      bad=1
+    elif (( $(stat -c %s "$pfile") < ${pair##*:} )); then
+      echo "$pname is too small ($(stat -c %s "$pfile") bytes; the real file is larger than ${pair##*:})"
+      bad=1
+    fi
   fi
 done
 # ADR-161: the address data is read, not only named. A name in installed-files proves that a module was built, not
@@ -109,6 +141,29 @@ if grep -qE '/datamap/ipmap\.bin$' "${LISTS[@]}"; then
       echo "ipmap.bin is not an ipmap file (magic DMIP, version 1, 13 sections that fill it, country, ASN, city and anchor parts present)"
       bad=1
     fi
+  fi
+fi
+# ADR-186: the exit service is read as well. A name proves that a module was built, not what it holds: the daemon must be an
+# ELF file of a size that holds the Tor client (the build script refuses anything under 5 MB), the init definition must define
+# both services, and the mask list must have its header and the thousands of rows it is made of.
+if grep -qE '/exitd$' "${LISTS[@]}"; then
+  EXITD="$PRODUCT_OUT/system/bin/exitd"
+  if [[ ! -f "$EXITD" ]]; then
+    echo "exitd is not in the product (system/bin/exitd)"; bad=1
+  elif (( $(stat -c %s "$EXITD") < 5000000 )) || [[ "$(head -c 4 "$EXITD" | od -An -c | tr -d ' ')" != '177ELF' ]]; then
+    echo "exitd is not the daemon (an ELF file of at least 5 MB)"; bad=1
+  fi
+fi
+if grep -qE '/exit\.rc$' "${LISTS[@]}"; then
+  RC="$PRODUCT_OUT/system/etc/init/exit.rc"
+  if [[ ! -f "$RC" ]] || ! grep -q '^service exitd ' "$RC" || ! grep -q '^service exitd_route ' "$RC"; then
+    echo "exit.rc does not define the services exitd and exitd_route (system/etc/init/exit.rc)"; bad=1
+  fi
+fi
+if grep -qE '/oblivios/exit-mask-list\.tsv$' "${LISTS[@]}"; then
+  LIST="$PRODUCT_OUT/system/etc/oblivios/exit-mask-list.tsv"
+  if [[ ! -f "$LIST" ]] || [[ "$(head -n 1 "$LIST")" != $'exit-mask-list\t1' ]] || (( $(wc -l < "$LIST") < 1000 )); then
+    echo "exit-mask-list.tsv is not the mask list (header 'exit-mask-list', version 1, at least 1000 rows)"; bad=1
   fi
 fi
 [[ $bad -eq 0 ]] || exit 1

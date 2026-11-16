@@ -121,6 +121,21 @@ and are functional keys.
   `settings put secure accessibility_enabled 0` turn it off `[measured]`. Prefer the
   Accessibility Menu service for node dumps and leave TalkBack to a checked, announced
   step with the owner.
+- A page for the autofill chips must be `https`: the Passwords app offers nothing on a plain `http` page by design
+  (`StructureParser` returns nothing for `plainHttp`, review P-03), and the log reads `Empty dataset` after every
+  fill request. A self-signed certificate served from the workstation through `adb reverse` works; Vanadium shows the
+  certificate warning once and the owner proceeds. The website of a login is a host without a port or a scheme, and a
+  name without a dot such as `localhost` has no registrable domain in the vault index, so the test login is for
+  `chip.localhost`, which Vanadium resolves to the loopback `[measured 2026-10-30, lynx 2026103001]`.
+- A sequence of keyboard actions is read from a screenshot per second taken while the owner works (`adb exec-out
+  screencap -p` in a loop), then reduced per frame to the focus border of the field, the chip pill and the strip. A
+  classification by colour needs one control per theme; a grid of strip and field crops is the check.
+- The platform treats an empty field as "show everything": `InlineFillUi.includeDataset` returns every dataset for an
+  empty filter text, and `Session` sends the filtered response to the keyboard on each value change `[verified-in-source]`.
+  It also stops filtering a field after a character was removed and then added, as a defence against a keyboard that
+  probes the datasets (`updateFilteringStateOnValueChangedLocked`). The chips use a null filter, so neither rule changes
+  what the keyboard sees; the offer after typing is the keyboard's own policy (ADR-191, ADR-207).
 - A generator that refuses to run twice leaves an untracked new file behind after a
   `git reset --hard`; the next run then refuses. Start each attempt from a fresh branch
   of the base commit.
+- `adb shell input tap` on the keyboard pages (2026-11-03, `lynx` `2026110203`): the page changes about a second after a tap, `uiautomator dump --windows` read right after a tap still lists the key labels of the previous page, and a tap sent before the page has changed lands on the old layout (taps on the position of the shift key, sent while the symbols page was still showing, left the characters `↑|` in the search field; the cause was not traced). Wait 1.5 s or more after each tap, read the screenshot of the page instead of the dump to know where you are, and leave the field empty afterwards. The key preview and the long-press panel of `e` show only while a swipe of 2.5 s on the key is held (`input swipe X Y X Y 2500` in the background, `screencap` after 1.0 to 1.4 s). Caps lock and one-tap shift have the same tone (white cap, teal arrow), so a screenshot cannot tell them apart.

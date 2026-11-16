@@ -50,6 +50,13 @@ found only on the device, each costing a build, a flash and an unlock.
   and fires every frame. A card closed before its first frame must not open
   again (a stale listener re-blurred the drawer).
 
+- **A view that draws themed icons needs data loaded with the theme flag.** Upstream draws unthemed icons in the
+  drawer and loads its `AppInfo` with the default lookup. After ADR-141 made the drawer themed, every view drew the
+  app's own colours until `verifyHighRes` reloaded the themed icon in the background, which showed as a flash when
+  the model thread was slow (ADR-183). A change that turns on a display flag must follow the data to where it is
+  loaded (`AllAppsList`, `LoaderTask`), not only the view that reads it. On an idle phone the delay is below one
+  frame and nothing shows, so a check needs a loaded phone.
+
 ## List mechanics that were checked and need no workaround
 
 - `ScrollableLayoutManager` caches the height of laid-out children, not of a

@@ -12,7 +12,8 @@ A2=$P/prebuilts/sdk/tools/linux/bin/aapt2
 JB=$P/prebuilts/jdk/jdk21/linux-x86/bin
 M=$P/prebuilts/sdk/current/androidx/m2repository/androidx
 AJ=$P/prebuilts/sdk/current/public/android.jar
-W=$(mktemp -d /tmp/latinime-tc.XXXXXX)
+# The scratch directory, not /tmp: the server's /tmp is a 241 MB volume of its own and the unpacked jars need about 40 MB.
+W=$(mktemp -d "${TMPDIR:-/tmp}/latinime-tc.XXXXXX")
 trap 'rm -rf "$W"' EXIT
 cd "$W" || exit 1
 
@@ -27,7 +28,8 @@ $A2 link -I $AJ --manifest "$SRC/AndroidManifest.xml" --min-sdk-version 24 --tar
 
 unzip -p $M/core/core/1.20.0-alpha01/core-1.20.0-alpha01.aar classes.jar > core.jar
 unzip -p $M/viewpager/viewpager/1.1.0-alpha02/viewpager-1.1.0-alpha02.aar classes.jar > viewpager.jar
-CP=$AJ:core.jar:viewpager.jar:$M/annotation/annotation-jvm/1.10.0/annotation-jvm-1.10.0.jar:$P/prebuilts/cmdline-tools/tools/lib/external/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
+unzip -p $M/autofill/autofill/1.4.0-alpha01/autofill-1.4.0-alpha01.aar classes.jar > autofill.jar
+CP=$AJ:core.jar:viewpager.jar:autofill.jar:$M/annotation/annotation-jvm/1.10.0/annotation-jvm-1.10.0.jar:$P/prebuilts/cmdline-tools/tools/lib/external/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
 # the shared code of the package (com.android.inputmethod.latin.common) sits next to the java dir
 find "$SRC/src" "$SRC/../common/src" gen -name '*.java' > files.txt
 mkdir out

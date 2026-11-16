@@ -47,6 +47,11 @@ A Binder transaction is about 1 MB. A snapshot of the Data Map is bounded in the
 - Merging a feature line into `main` that has moved on (the ADR-163 squash): use a temporary worktree of `main` and `git merge --no-ff`, then `git diff <branch> main -- datamap` must be empty.
 - A replay script of edits goes stale the moment the code is changed by hand; the two edit lists of the branch were removed, the patch and the sources are the record.
 
+## Switch defects found on the device (2026-10-13 and 2026-10-14)
+
+- Two Switches with one view id restored each other's value on a theme change; the interface review found it as a Critical defect and each Switch has its own id now.
+- A tap on a switch toggled twice (`MAP-036`): a constructor order made the Settings page set a switch before its listener existed. A page built again under a finger then lost a tap now and then, also when it was built again before its layout (captured with the touch log). Settings therefore moves its own controls in place instead of building the page again.
+
 ## The classifier data
 
 - Sources and licences: `datamap/classifier/SOURCES.md` in `oblivios-platform`. The tracker lists of Disconnect, DuckDuckGo and Ghostery are CC-BY-NC-SA-4.0 and cannot ship. The AdGuard companies database is CC-BY-SA-4.0 (built on whotracks.me, CC-BY-4.0); the classifier file therefore carries CC-BY-SA-4.0 and a NOTICE.
