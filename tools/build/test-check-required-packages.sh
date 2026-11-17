@@ -59,12 +59,22 @@ mkproduct() { # $1 = dir, $2 = build type, $3 = "with-harness" | "xml-only" | "n
       echo "1 /system/etc/sysconfig/hidden-api-whitelisted-app-org.oblivios.airpods.debugharness.xml"
     fi
   } > "$1/installed-files.txt"
+  updaterapk "$1/system/x/Updater.apk" "${UPDATER_URL-https://ota.test.example/}"
   if [[ "${4:-}" != "no-datamap" ]]; then
     ipmapfile "$1/system/etc/datamap/ipmap.bin" 20000000 none
   fi
   if [[ "${4:-}" != "no-exit" ]]; then
     exitfiles "$1"
   fi
+}
+
+updaterapk() { # $1 = path, $2 = the URL that the Updater's resources.arsc holds (empty: none); the gate reads that string
+  mkdir -p "$(dirname "$1")"
+  python3 -I - "$1" "$2" <<'PY'
+import sys, zipfile
+with zipfile.ZipFile(sys.argv[1], "w") as z:
+    z.writestr("resources.arsc", b"\x02\x00\x0c\x00junk" + sys.argv[2].encode() + b"\x00more")
+PY
 }
 
 exitfiles() { # $1 = product dir: the three exit files the gate reads, in their good form
@@ -131,6 +141,14 @@ grep -q "FORBIDDEN: ExitProbe.apk" "$T/out" || { echo "FAIL: wrong message"; cat
 grep -q "FORBIDDEN: privapp-permissions-org.oblivios.exitprobe.xml" "$T/out" || { echo "FAIL: allowlist not reported"; cat "$T/out"; exit 1; }
 mkproduct "$T/ep3" user exitprobe-xml-only;   expect "user with only the exit probe allowlist is refused" 1 "$T/ep3"
 mkdir -p "$T/nb"; cp "$T/u1/installed-files.txt" "$T/nb/"; expect "missing build.prop fails closed" 1 "$T/nb"
+
+# ADR-245: the Updater must point at the private OTA server, read from the built APK.
+UPDATER_URL='https://releases.grapheneos.org/' mkproduct "$T/up1" user no-harness; expect "an Updater with the upstream URL is refused" 1 "$T/up1"
+grep -q "upstream default or the placeholder" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+UPDATER_URL='https://ota.example.invalid/' mkproduct "$T/up2" user no-harness; expect "an Updater with the placeholder is refused" 1 "$T/up2"
+UPDATER_URL='' mkproduct "$T/up3" user no-harness; expect "an Updater with no URL is refused" 1 "$T/up3"
+grep -q "holds no https URL" "$T/out" || { echo "FAIL: wrong message"; cat "$T/out"; exit 1; }
+mkproduct "$T/up4" user no-harness; rm "$T/up4/system/x/Updater.apk"; expect "a listed Updater.apk that is not there is refused" 1 "$T/up4"
 
 # ADR-240: Guardian left the product. A tree that still builds any part of it is refused, in a user and in a userdebug image.
 for gn in "priv-app/GuardianApp/GuardianApp.apk" "app/GuardianLocationFixture/GuardianLocationFixture.apk" \

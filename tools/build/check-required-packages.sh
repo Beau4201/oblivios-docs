@@ -166,5 +166,22 @@ if grep -qE '/oblivios/exit-mask-list\.tsv$' "${LISTS[@]}"; then
     echo "exit-mask-list.tsv is not the mask list (header 'exit-mask-list', version 1, at least 1000 rows)"; bad=1
   fi
 fi
+# ADR-245: the Updater of the image must point at the private OTA server. The published patch carries a placeholder host and
+# set-updater-url.sh puts the real one in; a tree that skipped it, or one that still has the upstream default, builds a
+# phone that cannot update from the owner's server (or updates from someone else's). The URL is read from the built APK.
+UPDATER_REL="$(grep -hE '/Updater\.apk$' "${LISTS[@]}" | awk '{print $NF}' | head -n 1)"
+if [[ -n "$UPDATER_REL" ]]; then
+  UPDATER_APK="$PRODUCT_OUT/${UPDATER_REL#/}"
+  if [[ ! -f "$UPDATER_APK" ]]; then
+    echo "Updater.apk is not in the product ($UPDATER_REL)"; bad=1
+  else
+    URLS="$(unzip -p "$UPDATER_APK" resources.arsc 2>/dev/null | grep -a -o -E 'https://[A-Za-z0-9./-]+' | sort -u || true)"
+    if [[ -z "$URLS" ]]; then
+      echo "Updater.apk holds no https URL in resources.arsc"; bad=1
+    elif grep -qE 'releases\.grapheneos\.org|\.invalid/' <<<"$URLS"; then
+      echo "Updater.apk points at the upstream default or the placeholder, not the private OTA server: run set-updater-url.sh on the tree"; bad=1
+    fi
+  fi
+fi
 [[ $bad -eq 0 ]] || exit 1
 echo "all required packages present"
