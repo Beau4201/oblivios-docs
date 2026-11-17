@@ -837,8 +837,9 @@ validate against the official CycloneDX 1.6 and SPDX 2.3 JSON schemas (`--schema
   locked version; the crate sources were not read again.
 - Upstream: only the projects that the patches modify are listed, with their licence evidence. The other projects of the
   manifest are in `manifest/upstream-*.xml`.
-- The aggregated licence texts of the Rust crates are not generated. `ipmap.bin`, which the Data Map reads, is not in the
-  repositories; its sources are listed as `in-published-tree: false`.
+- The licence texts of the registry packages of both `Cargo.lock` files are in `THIRD-PARTY-LICENSES.txt` next to the two Rust
+  prebuilts in `oblivios-platform`; whether that is enough notice for each licence is not a legal opinion. `ipmap.bin`, which the
+  Data Map reads, is not in the repositories; its sources are listed as `in-published-tree: false`.
 - The reproducibility of the prebuilt binaries is stated by their records. It was not re-run here.
 - Vulnerabilities are those that OSV listed on the day named in `evidence/osv.json`; the assessments are in the records
   of the project where they exist.
