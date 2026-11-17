@@ -32,8 +32,11 @@ python3 oblivios-docs/tools/sbom/build-sbom.py --root . --docs oblivios-docs \
 
 The first command compares every file with its recorded SHA-256. The second rebuilds both documents from the same commits
 and the evidence files, compares them byte for byte, and fails on any fact that the files do not support. The documents
-validate against the official CycloneDX 1.6 and SPDX 2.3 JSON schemas (`--schemas DIR` with the schema files and
-`tools/sbom/validate-schema.mjs`, which needs ajv 8 for node).
+validate against the official CycloneDX 1.6 and SPDX 2.3 JSON schemas. `--schemas DIR` holds `bom-1.6.schema.json`,
+`spdx.schema.json` and `jsf-0.82.schema.json` from `schema/` of the tag `1.6` of `github.com/CycloneDX/specification`, and
+`spdx-schema.json` from `schemas/` of the branch `support/2.3` of `github.com/spdx/spdx-spec`.
+`tools/sbom/validate-schema.mjs` needs ajv 8 and ajv-formats for node, found in `NODEJS_LIB` (default `/usr/share/nodejs`);
+the run of 2026-11-17 used ajv 8.17.1 and ajv-formats 3.0.1 from npm.
 
 ## What the SBOM does not claim
 

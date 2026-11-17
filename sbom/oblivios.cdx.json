@@ -34218,7 +34218,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "cf676ccfb4db14cef95a446aff716c21b305e57e93c5c737392d96dfaa7199e6"
+     "content": "0b63c0bcc2bd03f6d5ec197375a8eb63a633c95f56fb6ede814a6af7ab3ba589"
     }
    ],
    "licenses": [
@@ -44062,7 +44062,7 @@
      "hashes": [
       {
        "alg": "SHA-256",
-       "content": "44dd9f8aa68211e60d5c4debbf55d4a5d49ca2397fc717db0804085f3e645498"
+       "content": "1bfe1eb6257036924f611001572128df0f318aed9d572b2d9f758ca1966f7e0b"
       }
      ],
      "name": "build-sbom.py",
