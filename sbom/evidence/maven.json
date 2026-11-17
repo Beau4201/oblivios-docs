@@ -1,6 +1,6 @@
 {
  "source": "https://repo1.maven.org/maven2/",
- "retrieved": "2026-11-16",
+ "retrieved": "2026-11-17",
  "artifacts": {
   "org.junit.jupiter:junit-jupiter:5.11.4": {
    "pom_sha256": "a862df11ee539982efcb141d9c0ade7037bba0265d0b589d5fb84db0d212f1d9",

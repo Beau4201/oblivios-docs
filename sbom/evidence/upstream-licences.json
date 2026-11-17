@@ -1,6 +1,6 @@
 {
  "manifest": "upstream-2026100600.xml",
- "retrieved": "2026-11-16",
+ "retrieved": "2026-11-17",
  "projects": {
   "build/make": {
    "name": "platform_build",
@@ -70,7 +70,7 @@
     "packages/SettingsLib/src/com/android/settingslib/deviceinfo/StorageMeasurement.java": "Apache-2.0",
     "packages/SettingsLib/tests/robotests/src/com/android/settingslib/bluetooth/devicesettings/data/repository/DeviceSettingRepositoryTest.kt": "Apache-2.0",
     "packages/SettingsProvider/src/com/android/providers/settings/SettingsProvider.java": "Apache-2.0",
-    "packages/SystemUI/application/src/com/android/systemui/dagger/ReferenceGlobalRootComponent.kt": "absent upstream",
+    "packages/SystemUI/application/src/com/android/systemui/dagger/ReferenceGlobalRootComponent.kt": "Apache-2.0",
     "packages/SystemUI/multivalentTests/src/com/android/keyguard/KeyguardSecurityContainerControllerTest.kt": "Apache-2.0",
     "packages/SystemUI/multivalentTests/src/com/android/systemui/keyguard/ui/viewmodel/AlternateBouncerToGoneTransitionViewModelTest.kt": "Apache-2.0",
     "packages/SystemUI/multivalentTests/src/com/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModelTest.kt": "Apache-2.0",

@@ -14,8 +14,8 @@ what they were built, and which third-party packages and data the code and the d
 ## Described state
 
 - `oblivios-manifest` `3ac74933d8060232f8dfb1a986db0628ff37a2fb`
-- `oblivios-platform` `694b57bc6324a3986aa55be2bbe17c97cd509704`
-- `oblivios-services` `1ec3f74e11af5d156979641b33551b01ad131d66`
+- `oblivios-platform` `21a1b43eebd48b498333db704725165d43fc1e5c`
+- `oblivios-services` `55853b79da280e1e5a31e25d863f5d6a5496bdf2`
 - `oblivios-docs` is a snapshot without history; its files are in `files.sha256` (this directory is left out).
 - Upstream baseline: manifest `2026100600`.
 

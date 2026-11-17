@@ -93,6 +93,17 @@ def modified_files(platform, patches):
     return sorted(mod - new)
 
 
+def rename_sources(platform, patches):
+    """{new path: path at the pinned revision} for every file that a patch renames: the file exists upstream under its
+    old name, so that is where its licence header is read."""
+    ren = {}
+    for p in patches:
+        text = (Path(platform) / p).read_text(encoding="utf-8", errors="replace")
+        for old, new in re.findall(r"(?m)^rename from (\S+)\nrename to (\S+)$", text):
+            ren[new] = ren.get(old, old)
+    return ren
+
+
 def raw_url(project, name):
     if project["fetch"].startswith("https://github.com/"):
         return f"https://raw.githubusercontent.com/{project['fetch'].split('github.com/')[1].rstrip('/')}/{project['name']}/{project['revision']}/{name}", False
@@ -114,8 +125,9 @@ def upstream(manifest_xml, platform, out):
                 files[name] = {"sha256": hashlib.sha256(data).hexdigest(), "size": len(data), "kind": classify(data)}
             time.sleep(DELAY)
         headers = {}
+        renamed = rename_sources(platform, patched[path])
         for name in modified_files(platform, patched[path]):
-            url, b64 = raw_url(p, name)
+            url, b64 = raw_url(p, renamed.get(name, name))
             data = get(url, b64, head=True)
             headers[name] = "absent upstream" if data is None else header_kind(data)
             time.sleep(DELAY / 2)
@@ -169,6 +181,11 @@ def self_test():
     assert header_kind(b"/* Licensed under the Apache License, Version 2.0 */") == "Apache-2.0"
     assert header_kind(b"package x;\n") == "no header" and header_kind(b"\x89PNG\0\0") == "binary"
     assert header_kind(b"# SPDX-License-Identifier: BSD-3-Clause\n") == "BSD-3-Clause"
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        (Path(d) / "a.patch").write_text("diff --git a/A.java b/A.kt\nsimilarity index 51%\nrename from A.java\nrename to A.kt\n")
+        (Path(d) / "b.patch").write_text("diff --git a/A.kt b/B.kt\nrename from A.kt\nrename to B.kt\n")
+        assert rename_sources(d, ["a.patch", "b.patch"]) == {"A.kt": "A.java", "B.kt": "A.java"}
     p = {"fetch": "https://github.com/GrapheneOS/", "name": "platform_x", "revision": "abc"}
     assert raw_url(p, "NOTICE") == ("https://raw.githubusercontent.com/GrapheneOS/platform_x/abc/NOTICE", False)
     p = {"fetch": "https://android.googlesource.com", "name": "platform/x", "revision": "abc"}

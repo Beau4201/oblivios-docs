@@ -1,17 +1,20 @@
 {
  "source": "https://api.osv.dev/v1/querybatch",
- "queried": "2026-11-16",
+ "queried": "2026-11-17",
  "queried_packages": 582,
  "unresolved_pages": [],
  "vulnerable": {
   "bincode@2.0.1": [
    "RUSTSEC-2025-0141"
   ],
+  "chrono@0.4.45": [
+   "RUSTSEC-2026-0543"
+  ],
   "crypto-bigint@0.5.5": [
    "RUSTSEC-2026-0387"
   ],
-  "ctutils@0.4.2": [
-   "RUSTSEC-2026-0385"
+  "humantime@2.4.0": [
+   "RUSTSEC-2026-0542"
   ],
   "libsqlite3-sys@0.37.0": [
    "RUSTSEC-2026-0459"
@@ -21,12 +24,6 @@
   ],
   "rsa@0.9.10": [
    "RUSTSEC-2023-0071"
-  ],
-  "rustix@1.1.4": [
-   "RUSTSEC-2026-0486"
-  ],
-  "tokio@1.53.1": [
-   "RUSTSEC-2026-0386"
   ]
  },
  "details": {
@@ -57,25 +54,6 @@
    "withdrawn": null,
    "fixed_in": []
   },
-  "RUSTSEC-2026-0385": {
-   "summary": "Non-constant-time mask generation and `u128` comparisons",
-   "aliases": [],
-   "published": "2026-10-23T12:00:00Z",
-   "withdrawn": null,
-   "fixed_in": [
-    "0.4.4"
-   ]
-  },
-  "RUSTSEC-2026-0386": {
-   "summary": "`AsyncFd::new` and related constructors violate I/O safety",
-   "aliases": [],
-   "published": "2026-10-13T12:00:00Z",
-   "withdrawn": null,
-   "fixed_in": [
-    "1.51.6",
-    "1.53.3"
-   ]
-  },
   "RUSTSEC-2026-0387": {
    "summary": "Multiple timing variability issues in operations intended to be constant-time",
    "aliases": [],
@@ -98,16 +76,19 @@
     "0.39.0"
    ]
   },
-  "RUSTSEC-2026-0486": {
-   "summary": "xattr functions mark unwritten bytes as initialized when given a zero-length buffer",
-   "aliases": [
-    "GHSA-jh2m-fhpj-3vr7"
-   ],
-   "published": "2026-10-27T12:00:00Z",
+  "RUSTSEC-2026-0542": {
+   "summary": "humantime is unmaintained",
+   "aliases": [],
+   "published": "2026-09-14T12:00:00Z",
    "withdrawn": null,
-   "fixed_in": [
-    "1.1.6"
-   ]
+   "fixed_in": []
+  },
+  "RUSTSEC-2026-0543": {
+   "summary": "chrono is unmaintained",
+   "aliases": [],
+   "published": "2026-09-14T12:00:00Z",
+   "withdrawn": null,
+   "fixed_in": []
   }
  }
 }
