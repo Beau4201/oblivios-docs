@@ -24,7 +24,6 @@ body {
   font: 400 clamp(16px, 1.2vw, 18px) / 1.65 var(--sans);
   position: relative;
   overflow-x: hidden;
-  min-width: 320px;
 }
 /* paper grain: one small file of the site itself */
 body::before {
