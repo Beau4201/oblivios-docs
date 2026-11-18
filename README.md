@@ -43,6 +43,7 @@ flowchart LR
 | [Licensing and branding review](docs/research/licensing-and-branding-review.md) | The licence inventory, the review gates, and the legal risk accepted per item in this stage. |
 | [Documentation standard](docs/documentation-standard.md) | Where each kind of fact lives. |
 | Engineering notes | What was learned building one area, for the next person: [AirPods](docs/architecture/airpods-engineering-notes.md), [app drawer](docs/architecture/app-drawer-engineering-notes.md), [boot](docs/architecture/boot-engineering-notes.md), [Data Map](docs/architecture/datamap-engineering-notes.md), [Duress Unlock](docs/architecture/duress-engineering-notes.md), [grab detection](docs/architecture/grab-detection-engineering-notes.md), [keyboard](docs/architecture/keyboard-engineering-notes.md). |
+| [`site/`](site/README.md) | The source of the website `oblivios.org`, built with Astro. |
 | [`sbom/`](sbom/README.md) | The software bill of materials of the four repositories. |
 | [`tools/`](tools/LICENSE) | The scripts that reproduce a documented check. |
 

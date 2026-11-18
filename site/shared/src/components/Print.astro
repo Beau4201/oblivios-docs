@@ -1,0 +1,37 @@
+---
+// One print placed from the definitions of Prints.astro: a misprint shadow (the same print in brick red, offset,
+// blended) under the print itself, which takes the gradient of the logo. `grad` is "g" for a single plate (canvas
+// 0 to 200) and "gw" for the chain (one canvas 0 to 1000, cut by `viewBox`). `plain` draws one flat colour and no
+// shadow. `move` shifts the print inside a larger viewBox.
+interface Props {
+  id: string;
+  label: string;
+  grad?: "g" | "gw";
+  viewBox?: string;
+  offset?: string;
+  plain?: boolean;
+  move?: string;
+}
+const { id, label, grad = "g", viewBox = "0 0 200 200", offset = "6 5", plain = false, move } = Astro.props;
+---
+<svg viewBox={viewBox} role="img" aria-label={label}>
+  {move ? (
+    <g transform={`translate(${move})`}>
+      {plain ? (
+        <use href={`#${id}`} class="pr-plain" filter="url(#ink)" />
+      ) : (
+        <>
+          <use href={`#${id}`} class="pr-shadow" transform={`translate(${offset})`} filter="url(#ink)" />
+          <use href={`#${id}`} fill={`url(#${grad})`} stroke={`url(#${grad})`} filter="url(#ink)" />
+        </>
+      )}
+    </g>
+  ) : plain ? (
+    <use href={`#${id}`} class="pr-plain" filter="url(#ink)" />
+  ) : (
+    <>
+      <use href={`#${id}`} class="pr-shadow" transform={`translate(${offset})`} filter="url(#ink)" />
+      <use href={`#${id}`} fill={`url(#${grad})`} stroke={`url(#${grad})`} filter="url(#ink)" />
+    </>
+  )}
+</svg>

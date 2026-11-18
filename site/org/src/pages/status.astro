@@ -1,0 +1,95 @@
+---
+import Page from "../layouts/Page.astro";
+import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import { areas } from "../lib/areas.mjs";
+import { decisions, sbom, fmt, longDate } from "../lib/records.mjs";
+import { sources } from "../lib/site.mjs";
+
+const gates = [
+  ["Derivative identity", "Do branding, naming and attribution clearly show that ObliviOS is a distinct product?"],
+  ["Source and notices", "Does the release inventory meet every source, notice and attribution duty?"],
+  ["Worldwide distribution", "Which distribution, privacy, export, cryptography and telecom rules apply?"],
+  ["Proprietary inputs", "May every Pixel, vendor and third-party binary be distributed?"],
+  ["Public operations", "Are support, disclosure, update and recovery processes live and accurately described?"],
+];
+const pct = (n, of) => (100 * n) / Math.max(of, 1);
+sources("status", [
+  "docs/devices/support-policy.md (device support policy)",
+  "docs/research/licensing-and-branding-review.md (licensing and branding review)",
+  "sbom/README.md",
+  "Decisions 171 and 244",
+  "Counts are read from the decision log when the page is built; the date is the newest entry of the log.",
+]);
+---
+<Page
+  title="Status: ObliviOS"
+  description="ObliviOS is source only: no images, no update service, and no supported device. Where each part stands in the decision log."
+  path="/status"
+  current="/status"
+>
+  <PageHeader crumb="Status" title="Status" lede="Where ObliviOS stands, and what is still open.">
+    <Print id="c4" label="A checklist" grad="gw" viewBox="600 40 200 200" />
+  </PageHeader>
+  <section class="band alt">
+    <div class="c lead">
+      <div>
+        <p class="big">ObliviOS is source only. There are no images, no update service and no supported device.</p>
+        <p class="facts"><span class="num">{decisions.total}</span> decisions are on record: {decisions.accepted} accepted, {decisions.proposed} proposed, {decisions.other} superseded, dropped or closed. The bill of materials lists <span class="num">{fmt(sbom.components)}</span> components and the SHA-256 of <span class="num">{fmt(sbom.files)}</span> files. All of this is as of {longDate(decisions.latest)}.</p>
+        <p class="fn"><b>Decision 171</b> defines this stage: source, records and a bill of materials, with no image, no update and no supported device.</p>
+      </div>
+      <Print id="c1" label="Three stacked layers" grad="gw" viewBox="0 40 200 200" />
+    </div>
+    <div class="c gap-top">
+      <dl class="kv">
+        <dt>What exists</dt><dd>Four repositories with the manifest, the platform patches, the services and the records.</dd>
+        <dt>Supported devices</dt><dd>None. A device counts as supported only after it passes the entry gate of the device support policy.</dd>
+        <dt>First engineering target</dt><dd>Pixel 7a (<code>lynx</code>). A target for engineering, not a promise of broad device support.</dd>
+        <dt>Upstream baseline</dt><dd>GrapheneOS manifest <code>{sbom.baseline}</code></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="band">
+    <div class="c">
+      <div class="prose">
+        <h2>The nine parts and where they stand</h2>
+        <p>The decision log gives every decision a status. <b>Accepted</b> means the decision is made. <b>Proposed</b> means it is written, often built, and not accepted yet. The bars count the decisions behind each part.</p>
+      </div>
+      <p class="key"><span><i class="ka"></i>Accepted</span><span><i class="kp"></i>Proposed</span><span>The rest are superseded, dropped or closed.</span></p>
+      <div class="bars">
+        {areas.map((a) => (
+          <div class="bar">
+            <b>{a.title}</b>
+            <svg class="t" viewBox="0 0 100 12" preserveAspectRatio="none" role="img" aria-label={`${a.acc} accepted, ${a.prop} proposed of ${a.n} decisions`}>
+              <rect class="trk" width="100" height="12" />
+              <rect class="ba" width={pct(a.acc, a.n).toFixed(1)} height="12" />
+              <rect class="bp" x={pct(a.acc, a.n).toFixed(1)} width={pct(a.prop, a.n).toFixed(1)} height="12" />
+            </svg>
+            <small>{a.acc} accepted · {a.prop} proposed · {a.n} decisions</small>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="band alt">
+    <div class="c">
+      <div class="prose">
+        <h2>The road to a public beta</h2>
+        <p>A public beta with binaries has to pass five gates. None is met, and none has to be at this stage, because it offers no binaries.</p>
+      </div>
+      <div class="steps">
+        {gates.map(([t, q]) => (
+          <div class="st">
+            <Print id="r" label="An open ring: not met" />
+            <h3>{t}</h3>
+            <p>{q}</p>
+          </div>
+        ))}
+      </div>
+      <div class="prose gap-top-lg">
+        <h2>What has not been reviewed</h2>
+        <p>The legal review of this stage was done by an AI agent, not by qualified counsel. I build ObliviOS alone and without a budget, so counsel was not available. I accepted each risk myself, item by item, in the licensing and branding review. Nothing there is a legal opinion.</p>
+      </div>
+    </div>
+  </section>
+</Page>

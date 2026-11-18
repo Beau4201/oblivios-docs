@@ -1,0 +1,71 @@
+---
+// The html shell of every page: head (title, description, canonical, Open Graph, icons, preloaded fonts), the print
+// definitions, skip link, header, main, footer. Nothing here loads from another origin or runs script; the optional
+// review layer is a flag of the review build only and never part of the production output.
+import "../styles/tokens.css";
+import "../styles/layout.css";
+import flex from "@fontsource-variable/roboto-flex/files/roboto-flex-latin-wght-normal.woff2?url";
+import serif from "@fontsource-variable/noto-serif/files/noto-serif-latin-wght-normal.woff2?url";
+import serifItalic from "@fontsource-variable/noto-serif/files/noto-serif-latin-wght-italic.woff2?url";
+import Prints from "./Prints.astro";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+
+interface Link {
+  label: string;
+  href: string;
+}
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  siteUrl: string;
+  pages: Link[];
+  footPages: Link[];
+  footAbout: Link[];
+  legal: string;
+  portal?: Link | null;
+  current?: string;
+  review?: boolean;
+}
+const { title, description, path, siteUrl, pages, footPages, footAbout, legal, portal = null, current, review = false } = Astro.props;
+const canonical = siteUrl + (path === "/" ? "/" : path);
+const image = siteUrl + "/social-preview.png";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#f3eee6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#181312" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ObliviOS" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:alt" content="The ObliviOS logo, a cloud with a server tower, printed in grey and brick red" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preload" href={flex} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={serif} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={serifItalic} as="font" type="font/woff2" crossorigin />
+    {review && <script src="/review.js" is:inline></script>}
+  </head>
+  <body>
+    <Prints />
+    <a class="skip" href="#main">Skip to the content</a>
+    <Header pages={pages} current={current} portal={portal} />
+    <main id="main"><slot /></main>
+    <Footer pages={footPages} about={footAbout} legal={legal} />
+  </body>
+</html>

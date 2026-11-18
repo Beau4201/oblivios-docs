@@ -1,0 +1,8 @@
+{
+  "_comment": "Page weight budget of oblivios.org, set before the build (W-5, spec 5.5 item 6). Raw bytes, no compression. Checked by scripts/check-build.mjs; the build fails when one is exceeded.",
+  "htmlKBPerPage": 60,
+  "cssKBTotal": 40,
+  "fontKBTotal": 130,
+  "scriptsKBTotal": 0,
+  "firstLoadKBPerPage": 350
+}

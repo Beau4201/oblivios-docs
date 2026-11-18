@@ -1,0 +1,107 @@
+---
+import Page from "../layouts/Page.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import { areas } from "../lib/areas.mjs";
+import { decisions, sbom, fmt, longDate } from "../lib/records.mjs";
+import { sources } from "../lib/site.mjs";
+
+const blurbs = {
+  compartments: "Each app gets its own compartment of device identity, so apps cannot recognise the phone or link to one another. Per app: Identified, Unlinked (the default) or Substituted. It does not hide your network address, the model, your installed apps or what you type.",
+  "network-exit": "Choose per app: Direct (the default), Tor, or your own WireGuard profile. An app set to an exit has no network while the exit is down. I run no relay.",
+  "live-data-map": "Shows which services your apps contact. A row in Settings exports that list to a file you choose.",
+  "duress-unlock": "A second finger unlocks a decoy user instead of you. The decoy has to match the ordinary unlock in time and in every animation. The threat model lists what it does not defeat.",
+  passwords: "The default password manager and autofill provider. Local only: no sync, no server, no account, no network permission. The only way out is an encrypted export file under its own passphrase.",
+  "grab-detection": "If the phone is pulled out of your hand while unlocked, it locks at once and arms the GrapheneOS auto-reboot timer for 60 seconds. A PIN unlock cancels it.",
+};
+const chain = [
+  { id: "c1", view: "0 40 200 200", label: "Three stacked layers", h: "Upstream", p: "A GrapheneOS manifest tag, copied byte for byte." },
+  { id: "c2", view: "200 40 200 200", label: "A stitched patch", h: "Patch", p: "Patch packages in oblivios-platform, on that baseline." },
+  { id: "c3", view: "400 40 200 200", label: "A bound book", h: "Decision", p: "The decision log names each patch set." },
+  { id: "c4", view: "600 40 200 200", label: "A checklist", h: "Bill of materials", p: "Every component, licence and file hash." },
+  { id: "c5", view: "800 40 200 200", label: "Two identical sheets", h: "You", p: "Rebuild it. The two must match byte for byte.", plain: true },
+];
+const asOf = decisions.latest;
+sources("index", [
+  "Decisions on record, accepted, proposed: counted from docs/governance/decision-log.md at build time",
+  "Components, hashed files, upstream projects and commits: read from sbom/ at build time",
+  "docs/devices/support-policy.md",
+  "Decisions 171 and 244",
+  "The sentence under the headline: README.md of oblivios-docs (what the repositories hold) and the stage line of ADR-171",
+]);
+---
+<Page
+  title="ObliviOS: Your device. Your rules."
+  description="A privacy-focused Android build based on GrapheneOS, published as source: patches, decisions, a threat model and a bill of materials you can check."
+  path="/"
+>
+  <section class="hero">
+    <div class="c">
+      <div>
+        <h1>Your device. <em>Your rules.</em></h1>
+        <p class="lede">ObliviOS is a privacy-focused Android build <b>based on GrapheneOS</b>, published as source: patches, decisions, a threat model and a bill of materials you can check. There is no image, no update and no supported device yet.</p>
+        <div class="cta"><a class="btn" href="/verify">Verify it yourself</a><a class="btn ghost" href="/what-it-does">What it does</a></div>
+      </div>
+      <figure class="plate" aria-hidden="true">
+        <div class="cl ghost"></div><div class="cl main"></div>
+        <div class="stamp">Source only<small>No images · {asOf}</small></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="c lead">
+      <div>
+        <p class="big">You cannot install ObliviOS yet. What exists is source: the patches on top of GrapheneOS, the written decisions behind them, and a bill of materials for every component.</p>
+        <p class="facts"><span class="num">{decisions.total}</span> decisions are on record, each with its status and the reason it could be reopened. The bill of materials lists <span class="num">{fmt(sbom.components)}</span> components and the SHA-256 of <span class="num">{fmt(sbom.files)}</span> files, in two formats: CycloneDX 1.6 and SPDX 2.3. The patches change <span class="num">{sbom.upstream}</span> upstream projects. Images on offer: <span class="num">none</span>.</p>
+        <p class="fn"><b>Decision 171</b> defines this stage: source, records and a bill of materials, with no image, no update and no supported device.</p>
+      </div>
+      <Print id="c3" label="A bound book with a ribbon" grad="gw" viewBox="0 0 200 270" move="-400 -30" />
+    </div>
+  </section>
+
+  <section class="band" id="what">
+    <div class="c">
+      <div class="sh"><h2>What it does</h2><p>Nine parts of the system. Each has a written decision behind it. The decision log says which are accepted and which are still only proposed.</p></div>
+      <div class="plates">
+        {areas.map((a) => (
+          <a class="pl" href={`/what-it-does#${a.id}`}>
+            <Print id={a.p} label={a.alt} />
+            <h3>{a.title}</h3>
+            {a.id === "app-drawer" ? <p>A redesigned app drawer, built and checked on the Pixel 7a (<code class="m">lynx</code>).</p>
+              : a.id === "keyboard" ? <p>An on-screen keyboard restyled for the system, with password suggestions in its suggestion strip.</p>
+              : a.id === "airpods" ? <p>Works with Apple AirPods on the Pixel 7a. <code class="m">airpods-core</code> speaks their accessory protocol and runs without an AOSP build.</p>
+              : <p>{blurbs[a.id]}</p>}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="verify">
+    <div class="c">
+      <div class="sh"><h2>Verify it</h2><p>You do not have to take any of this on trust. Five links, and you hold the last one.</p></div>
+      <div class="steps">
+        {chain.map((s) => (
+          <div class="st">
+            <Print id={s.id} label={s.label} grad="gw" viewBox={s.view} offset="5 4" plain={s.plain} />
+            <h3>{s.h}</h3>
+            <p>{s.id === "c2" ? <>Patch packages in <code class="m">oblivios-platform</code>, on that baseline.</> : s.p}</p>
+          </div>
+        ))}
+      </div>
+      <div class="how">
+        <div>
+          <p class="t">Four repositories hold the manifest, the platform patches, the services and the records. Clone them side by side at the commits named in <code>sbom/README.md</code>. The first command checks every file against its recorded SHA-256. The second rebuilds both bills of materials from the same commits and compares them byte for byte; it fails on any fact the files do not support.</p>
+          <p class="fn"><b>Decision 244</b> defines the bill of materials. It does not claim which Rust packages a given binary links, or a legal opinion on any licence.</p>
+        </div>
+<pre tabindex="0"><i># from the folder that holds the four repositories</i>
+sha256sum -c oblivios-docs/sbom/files.sha256
+
+python3 oblivios-docs/tools/sbom/build-sbom.py \
+    --root . --docs oblivios-docs \
+    --evidence oblivios-docs/sbom/evidence \
+    --check oblivios-docs/sbom</pre>
+      </div>
+    </div>
+  </section>
+</Page>

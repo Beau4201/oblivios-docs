@@ -46,6 +46,25 @@ def manifest_projects(xml_path):
     return out
 
 
+def npm_packages(lock):
+    """[(path, name, version, entry)] of the registry packages of a package-lock.json (lockfile version 3): every
+    `node_modules/` entry that is not a workspace link. The name is what follows the last `node_modules/` of the path."""
+    return [(p, p.rsplit("node_modules/", 1)[1], e["version"], e) for p, e in sorted(lock["packages"].items())
+            if "node_modules/" in p and not e.get("link")]
+
+
+def npm_resolve(packages, path, dep):
+    """The lockfile path that `dep` resolves to from the package at `path`: the nearest `node_modules/` up the tree."""
+    base = path
+    while True:
+        cand = f"{base}/node_modules/{dep}" if base else f"node_modules/{dep}"
+        if cand in packages:
+            return cand
+        if not base:
+            return None
+        base = base.rsplit("/node_modules/", 1)[0] if "/node_modules/" in base else ""
+
+
 def project_key(path):
     """packages/apps/Settings and the patch directory packages-apps-settings name the same project."""
     return path.lower().replace("/", "-")

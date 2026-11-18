@@ -1,0 +1,35 @@
+---
+// Sticky header: the light lockup (the dark one in the dark scheme), the main navigation, an optional button to the
+// other site, and a menu without script on narrow screens.
+interface Link {
+  label: string;
+  href: string;
+}
+interface Props {
+  pages: Link[];
+  current?: string;
+  portal?: Link | null;
+}
+const { pages, current, portal = null } = Astro.props;
+---
+<header class="hd">
+  <div class="c">
+    <a class="brand" href="/">
+      <picture>
+        <source srcset="/brand/lockup-dark.svg" media="(prefers-color-scheme: dark)" />
+        <img src="/brand/lockup-light.svg" alt="ObliviOS" width="138" height="40" />
+      </picture>
+    </a>
+    <nav aria-label="Main">
+      {pages.map((p) => <a href={p.href} aria-current={p.href === current ? "page" : undefined}>{p.label}</a>)}
+    </nav>
+    {portal && <a class="btn" href={portal.href}>{portal.label} <span aria-hidden="true">↗</span></a>}
+    <details class="menu">
+      <summary>Menu</summary>
+      <ul>
+        {pages.map((p) => <li><a href={p.href}>{p.label}</a></li>)}
+        {portal && <li><a href={portal.href}>{portal.label} ↗</a></li>}
+      </ul>
+    </details>
+  </div>
+</header>

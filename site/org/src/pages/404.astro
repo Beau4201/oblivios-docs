@@ -1,0 +1,16 @@
+---
+import Page from "../layouts/Page.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+---
+<Page title="Page not found: ObliviOS" description="This page does not exist." path="/404">
+  <section class="band">
+    <div class="c">
+      <div class="nf">
+        <Print id="q" label="A speech bubble with a question mark" />
+        <h1>Page not found</h1>
+        <p>That address does not lead anywhere on this site.</p>
+        <a class="btn" href="/">Back to the start</a>
+      </div>
+    </div>
+  </section>
+</Page>

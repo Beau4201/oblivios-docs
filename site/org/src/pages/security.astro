@@ -1,0 +1,45 @@
+---
+import Page from "../layouts/Page.astro";
+import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import { security } from "../lib/records.mjs";
+import { securityTxt } from "../lib/securitytxt.mjs";
+import { sources } from "../lib/site.mjs";
+
+sources("security", ["SECURITY.md", "security-contact.asc", "The contact, the key validity and the fingerprint are read from SECURITY.md when the page is built."]);
+const txt = securityTxt();
+---
+<Page
+  title="Security: ObliviOS"
+  description="How to report a vulnerability in ObliviOS, the PGP key and fingerprint, and what to expect."
+  path="/security"
+  current="/security"
+>
+  <PageHeader crumb="Security" title="Security" lede="How to report a vulnerability in the ObliviOS source, what to expect, and the key to encrypt to.">
+    <Print id="k" label="A key" />
+  </PageHeader>
+  <section class="band">
+    <div class="c">
+      <div class="prose">
+        <h2>Reporting a vulnerability</h2>
+        <p>Do not open a public issue for a vulnerability. Send the report by email to <a href={`mailto:${security.email}`}>{security.email}</a>, encrypted with the PGP key below if you can.</p>
+        <p>Please include what is affected (file, patch or package), how to reproduce the problem, and the impact you expect.</p>
+        <h2>The key</h2>
+        <div class="keycard">
+          <div class="kt">ObliviOS Security</div>
+          <div class="ks">ed25519, with a cv25519 encryption subkey · valid until {security.validUntil}</div>
+          <div class="kl">Fingerprint</div>
+          <div class="fp">{security.fingerprint[0]}<br />{security.fingerprint[1]}</div>
+          <p class="kf">Compare this fingerprint with the key before you encrypt to it. The public key is <a href="/security-contact.asc"><code>security-contact.asc</code></a>, in every repository.</p>
+        </div>
+        <h2>What to expect</h2>
+        <ul><li>I reply within 3 days.</li><li>I agree a disclosure date with you. There is no fixed time to a fix.</li><li>I credit you in the fix unless you ask me not to.</li><li>There is no bug bounty.</li></ul>
+        <h2>Scope</h2>
+        <p>In scope: the patches, services and scripts in the ObliviOS repositories. ObliviOS is source only, so there is no build, image or update service to report on. A weakness that exists in upstream GrapheneOS or AOSP is better reported to those projects. Tell me as well if my patches make it worse.</p>
+        <h2><code>security.txt</code></h2>
+        <p>The same contact is served as <a href="/.well-known/security.txt"><code>/.well-known/security.txt</code></a> (RFC 9116):</p>
+        <pre tabindex="0">{txt}</pre>
+      </div>
+    </div>
+  </section>
+</Page>

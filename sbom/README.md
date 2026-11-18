@@ -9,7 +9,7 @@ what they were built, and which third-party packages and data the code and the d
 | `oblivios.cdx.json` | CycloneDX 1.6, the full description |
 | `oblivios.spdx.json` | SPDX 2.3, the same components and relationships |
 | `files.sha256` | every file of the four repositories with its SHA-256, in `sha256sum -c` format |
-| `evidence/` | the registry and upstream answers the build read (crates.io, OSV, upstream licence files, Maven Central) |
+| `evidence/` | the registry and upstream answers the build read (crates.io, the npm registry, OSV, upstream licence files, Maven Central) |
 
 ## Described state
 
@@ -43,6 +43,10 @@ the run of 2026-11-17 used ajv 8.17.1 and ajv-formats 3.0.1 from npm.
 - Rust: `Cargo.lock` lists every package that any target, feature or dev/build configuration may resolve. The subset
   linked into a given binary has not been computed. Licence and checksum are those of the crates.io registry for each
   locked version; the crate sources were not read again.
+- npm: `site/package-lock.json` lists every package that builds the website `oblivios.org`. Licence and integrity are those of
+  the npm registry for each locked version; the package sources were not read again. The packages are build-time tools: the
+  static output holds the two font families of the `@fontsource-variable` packages and no script of any package, which
+  `site/org/scripts/check-build.mjs` checks; install scripts are off (`site/.npmrc`). `site/NOTICE` equals the npm components.
 - Upstream: only the projects that the patches modify are listed, with their licence evidence. The other projects of the
   manifest are in `manifest/upstream-*.xml`.
 - The licence texts of the registry packages of both `Cargo.lock` files are in `THIRD-PARTY-LICENSES.txt` next to the two Rust

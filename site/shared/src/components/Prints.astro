@@ -1,0 +1,63 @@
+---
+// The definitions of the nineteen prints, the two gradients and the one filter that gives every print the look
+// of the logo. Rendered once per page, hidden; Print.astro places a print with <use>.
+// p1 to p9: the nine parts. c1 to c5: the chain of verification. q, k, e, t: page headers. r: an open ring.
+---
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="200" y2="0"><stop class="gs-e" offset="0"/><stop class="gs-m" offset=".5"/><stop class="gs-e" offset="1"/></linearGradient>
+    <linearGradient id="gw" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0"><stop class="gs-e" offset="0"/><stop class="gs-m" offset=".5"/><stop class="gs-e" offset="1"/></linearGradient>
+    <filter id="ink" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="3.2" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="9" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  22 0 0 0 -6.1" result="holes"/>
+      <feComposite in="d" in2="holes" operator="in"/>
+    </filter>
+    <g id="p1"><path class="s" d="M64 92 V66 a36 36 0 0 1 72 0 V92" stroke-width="15"/><rect class="f" x="38" y="88" width="124" height="94" rx="16"/><circle class="pp" cx="100" cy="128" r="13"/><rect class="pp" x="94" y="132" width="12" height="30" rx="5"/></g>
+    <g id="p2"><rect class="s" x="92" y="22" width="76" height="138" rx="18" transform="rotate(9 130 91)" stroke-width="9"/><rect class="f" x="34" y="44" width="80" height="142" rx="18"/><rect class="pp" x="43" y="56" width="62" height="114" rx="9"/><rect class="f" x="62" y="104" width="24" height="20" rx="4"/><path class="s" d="M67 104 v-9 a7 7 0 0 1 14 0 v9" stroke-width="5"/></g>
+    <g id="p3"><path class="s" d="M100 60 L66 170 M100 60 L134 170 M78 128 H122 M87 98 H113" stroke-width="11"/><path class="s" d="M58 176 H142" stroke-width="12"/><circle class="f" cx="100" cy="50" r="12"/><path class="s" d="M72 28 A34 34 0 0 0 72 72 M128 28 A34 34 0 0 1 128 72 M54 12 A58 58 0 0 0 54 88 M146 12 A58 58 0 0 1 146 88" stroke-width="9"/></g>
+    <g id="p4"><rect class="f" x="14" y="43" width="28" height="30" rx="7"/><rect class="f" x="50" y="43" width="28" height="30" rx="7"/><rect class="f" x="86" y="43" width="28" height="30" rx="7"/><rect class="f" x="122" y="43" width="28" height="30" rx="7"/><rect class="f" x="158" y="43" width="28" height="30" rx="7"/><rect class="f" x="32" y="85" width="28" height="30" rx="7"/><rect class="f" x="68" y="85" width="28" height="30" rx="7"/><rect class="f" x="104" y="85" width="28" height="30" rx="7"/><rect class="f" x="140" y="85" width="28" height="30" rx="7"/><rect class="f" x="14" y="127" width="36" height="30" rx="7"/><rect class="f" x="58" y="127" width="84" height="30" rx="7"/><rect class="f" x="150" y="127" width="36" height="30" rx="7"/><path class="ps" d="M72 142 H128" stroke-width="4"/></g>
+    <g id="p5"><circle class="s" cx="100" cy="100" r="76" stroke-width="13"/><circle class="s" cx="100" cy="100" r="50" stroke-width="13"/><circle class="f" cx="100" cy="100" r="22"/></g>
+    <g id="p6"><circle class="f" cx="68" cy="68" r="30"/><rect class="f" x="56" y="84" width="24" height="86" rx="12"/><circle class="pp" cx="68" cy="64" r="11"/><circle class="pp" cx="68" cy="150" r="4.5"/><circle class="f" cx="132" cy="68" r="30"/><rect class="f" x="120" y="84" width="24" height="86" rx="12"/><circle class="pp" cx="132" cy="64" r="11"/><circle class="pp" cx="132" cy="150" r="4.5"/></g>
+    <g id="p7">
+      <rect class="s" x="24" y="24" width="152" height="152" rx="22" stroke-width="12"/>
+      <path class="s" d="M100 24 V176 M24 100 H176" stroke-width="10"/>
+      <circle class="f" cx="62" cy="62" r="19"/><rect class="f" x="121" y="45" width="34" height="34" rx="6"/>
+      <path class="f" d="M62 120 L82 154 H42 Z"/><rect class="f" x="119" y="126" width="38" height="26" rx="13"/>
+    </g>
+    <g id="p8">
+      <g transform="rotate(16 112 100)"><rect class="f" x="80" y="36" width="64" height="116" rx="14"/><rect class="pp" x="88" y="46" width="48" height="90" rx="7"/>
+        <rect class="f" x="104" y="80" width="16" height="14" rx="3"/><path class="s" d="M107 80 v-5 a5 5 0 0 1 10 0 v5" stroke-width="4"/></g>
+      <path class="s" d="M26 64 H58 M14 98 H52 M26 132 H58" stroke-width="9"/>
+    </g>
+    <g id="p9">
+      <rect class="s" x="24" y="24" width="152" height="152" rx="26" stroke-width="10"/>
+      <rect class="f" x="44" y="44" width="28" height="28" rx="8"/><rect class="f" x="86" y="44" width="28" height="28" rx="8"/><rect class="f" x="128" y="44" width="28" height="28" rx="8"/>
+      <rect class="f" x="44" y="86" width="28" height="28" rx="8"/><rect class="f" x="86" y="86" width="28" height="28" rx="8"/><rect class="f" x="128" y="86" width="28" height="28" rx="8"/>
+      <rect class="f" x="44" y="128" width="28" height="28" rx="8"/><rect class="f" x="86" y="128" width="28" height="28" rx="8"/><rect class="f" x="128" y="128" width="28" height="28" rx="8"/>
+    </g>
+    <g id="q">
+      <path class="f" d="M30 42 a22 22 0 0 1 22 -22 H148 a22 22 0 0 1 22 22 V106 a22 22 0 0 1 -22 22 H96 L58 170 V128 H52 a22 22 0 0 1 -22 -22 Z"/>
+      <path class="ps" d="M78 66 C78 44 122 44 122 68 C122 84 100 84 100 102" stroke-width="10"/><circle class="pp" cx="100" cy="118" r="6.5"/>
+    </g>
+    <g id="k">
+      <circle class="s" cx="62" cy="100" r="36" stroke-width="15"/><circle class="f" cx="62" cy="100" r="10"/>
+      <path class="s" d="M98 100 H182 M152 100 V132 M176 100 V124" stroke-width="14"/>
+    </g>
+    <g id="e">
+      <path class="s" d="M14 100 C50 46 150 46 186 100 C150 154 50 154 14 100 Z" stroke-width="11"/><circle class="f" cx="100" cy="100" r="24"/>
+      <path class="ps" d="M40 172 L160 28" stroke-width="28"/><path class="s" d="M40 172 L160 28" stroke-width="11"/>
+    </g>
+    <g id="r"><circle class="s" cx="100" cy="100" r="60" stroke-width="15"/></g>
+    <g id="t">
+      <path class="f" d="M30 34 a4 4 0 0 1 4 -4 H108 a10 10 0 0 1 7 3 L176 94 a14 14 0 0 1 0 20 L118 172 a14 14 0 0 1 -20 0 L33 107 a10 10 0 0 1 -3 -7 Z"/>
+      <circle class="pp" cx="66" cy="66" r="13"/><path class="ps" d="M92 98 L132 138" stroke-width="7"/><path class="ps" d="M110 80 L150 120" stroke-width="7"/>
+    </g>
+    <g id="c1"><rect class="f" x="40" y="78" width="120" height="32" rx="10"/><rect class="f" x="28" y="122" width="144" height="32" rx="10"/><rect class="f" x="14" y="166" width="172" height="32" rx="10"/></g>
+    <g id="c2"><rect class="f" x="240" y="70" width="120" height="120" rx="16"/><rect class="ps" x="254" y="84" width="92" height="92" rx="8" stroke-width="5" stroke-dasharray="9 10"/><path class="ps" d="M300 110 V150 M280 130 H320" stroke-width="7"/></g>
+    <g id="c3"><rect class="f" x="450" y="58" width="100" height="142" rx="10"/><path class="ps" d="M470 66 V192" stroke-width="5"/><path class="ps" d="M488 100 H536 M488 120 H522" stroke-width="6"/><path class="f" d="M522 198 v34 l-9 -10 -9 10 v-34 z"/></g>
+    <g id="c4"><rect class="f" x="650" y="56" width="100" height="150" rx="10"/><rect class="pp" x="666" y="76" width="14" height="14" rx="3"/><path class="ps" d="M692 83 H734" stroke-width="6"/><rect class="pp" x="666" y="106" width="14" height="14" rx="3"/><path class="ps" d="M692 113 H726" stroke-width="6"/><rect class="pp" x="666" y="136" width="14" height="14" rx="3"/><path class="ps" d="M692 143 H734" stroke-width="6"/><rect class="pp" x="666" y="166" width="14" height="14" rx="3"/><path class="ps" d="M692 173 H720" stroke-width="6"/></g>
+    <g id="c5"><rect class="f" x="818" y="82" width="58" height="108" rx="8"/><rect class="f" x="924" y="82" width="58" height="108" rx="8"/><path class="ps" d="M830 108 H864 M830 126 H864 M830 144 H852 M936 108 H970 M936 126 H970 M936 144 H958" stroke-width="5"/><path class="s" d="M890 126 H910 M890 146 H910" stroke-width="8"/></g>
+  </defs>
+</svg>

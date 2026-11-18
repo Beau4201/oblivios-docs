@@ -63,8 +63,32 @@ def record(v):
             "rust_version": v.get("rust_version")}
 
 
-def osv_queries(keys):
-    return [{"package": {"name": n, "ecosystem": "crates.io"}, "version": v} for n, v in keys]
+def osv_queries(keys, ecosystem="crates.io"):
+    return [{"package": {"name": n, "ecosystem": ecosystem}, "version": v} for n, v in keys]
+
+
+def osv_scan(keys, ecosystem, today):
+    """The OSV answer for the sorted [(name, version)] of one ecosystem, as the document written to osv*.json."""
+    vulnerable, unknown = {}, []
+    for start in range(0, len(keys), 500):
+        chunk = keys[start:start + 500]
+        res = request(OSV_BATCH, {"queries": osv_queries(chunk, ecosystem)})["results"]
+        if len(res) != len(chunk):
+            sys.exit("OSV answered a different number of results than queries")
+        for (n, v), r in zip(chunk, res):
+            if r.get("next_page_token"):
+                unknown.append(f"{n}@{v}")
+            if r.get("vulns"):
+                vulnerable[f"{n}@{v}"] = sorted(x["id"] for x in r["vulns"])
+    details = {}
+    for vid in sorted({i for ids in vulnerable.values() for i in ids}):
+        d = request(OSV_VULN.format(vid)) or {}
+        fixed = sorted({e["fixed"] for a in d.get("affected", []) for r in a.get("ranges", []) for e in r.get("events", [])
+                        if "fixed" in e})
+        details[vid] = {"summary": d.get("summary"), "aliases": sorted(d.get("aliases", [])), "published": d.get("published"),
+                        "withdrawn": d.get("withdrawn"), "fixed_in": fixed}
+    return {"source": OSV_BATCH, "queried": today, "queried_packages": len(keys), "unresolved_pages": unknown,
+            "vulnerable": dict(sorted(vulnerable.items())), "details": details}
 
 
 def main(services, out):
@@ -87,27 +111,9 @@ def main(services, out):
             print(f"  {i}/{len(todo)}", flush=True)
         time.sleep(DELAY)
     keys = sorted(want)
-    vulnerable, unknown = {}, []
-    for start in range(0, len(keys), 500):
-        chunk = keys[start:start + 500]
-        res = request(OSV_BATCH, {"queries": osv_queries(chunk)})["results"]
-        if len(res) != len(chunk):
-            sys.exit("OSV answered a different number of results than queries")
-        for (n, v), r in zip(chunk, res):
-            if r.get("next_page_token"):
-                unknown.append(f"{n}@{v}")
-            if r.get("vulns"):
-                vulnerable[f"{n}@{v}"] = sorted(x["id"] for x in r["vulns"])
-    details = {}
-    for vid in sorted({i for ids in vulnerable.values() for i in ids}):
-        d = request(OSV_VULN.format(vid)) or {}
-        fixed = sorted({e["fixed"] for a in d.get("affected", []) for r in a.get("ranges", []) for e in r.get("events", [])
-                        if "fixed" in e})
-        details[vid] = {"summary": d.get("summary"), "aliases": sorted(d.get("aliases", [])), "published": d.get("published"),
-                        "withdrawn": d.get("withdrawn"), "fixed_in": fixed}
-    (out / "osv.json").write_text(json.dumps(
-        {"source": OSV_BATCH, "queried": today, "queried_packages": len(keys), "unresolved_pages": unknown,
-         "vulnerable": dict(sorted(vulnerable.items())), "details": details}, indent=1) + "\n", encoding="utf-8")
+    osv = osv_scan(keys, "crates.io", today)
+    vulnerable, unknown = osv["vulnerable"], osv["unresolved_pages"]
+    (out / "osv.json").write_text(json.dumps(osv, indent=1) + "\n", encoding="utf-8")
     bad = [k for k, r in have.items() if "error" in r]
     mismatch = [f"{n}@{v}" for (n, v), c in want.items() if have.get(f"{n}@{v}", {}).get("checksum") != c]
     print(f"crates.io: {len(have)} records, {len(bad)} not found, {len(mismatch)} checksum mismatches")

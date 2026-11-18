@@ -1,0 +1,36 @@
+---
+import Page from "../layouts/Page.astro";
+import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import { sources } from "../lib/site.mjs";
+
+sources("trademark", ["docs/research/licensing-and-branding-review.md (licensing and branding review)", "README.md", "Fonts: the licence files of the two font packages in site/node_modules, served as /licenses.txt"]);
+---
+<Page
+  title="Trademark and attribution: ObliviOS"
+  description="ObliviOS is based on GrapheneOS and not affiliated with it. Licences of code, documents and the data the system uses."
+  path="/trademark"
+>
+  <PageHeader crumb="Trademark and attribution" title="Trademark and attribution" lede="ObliviOS is based on GrapheneOS and is not affiliated with it. The name and the logo are not licensed.">
+    <Print id="t" label="A tag" />
+  </PageHeader>
+  <section class="band">
+    <div class="c">
+      <div class="prose">
+        <h2>GrapheneOS</h2>
+        <p>ObliviOS is based on GrapheneOS. It is not an official GrapheneOS product, and it is not affiliated with or endorsed by the GrapheneOS project. It does not use the GrapheneOS name or logo to suggest otherwise.</p>
+        <h2>The name and the logo</h2>
+        <p>The name ObliviOS and its logo are not licensed. The project was named AegisOS, SovereignOS and FreeholdOS before ObliviOS; older records keep the names in use when they were written.</p>
+        <h2>Licences</h2>
+        <ul><li>Own code and scripts: Apache-2.0.</li><li>Each patch keeps the licence of the upstream file it changes. Where an upstream project has no licence file at its root, the licence is read from file headers.</li><li>Documents and site text: CC-BY-4.0.</li></ul>
+        <h2>Data and logos from others</h2>
+        <ul>
+          <li>The company classifier (AdGuard Companies DB) and the cell data (OpenCelliD) are CC BY-SA 4.0. EasyList and EasyPrivacy are taken under CC BY-SA. GeoNames and DB-IP Lite are CC BY 4.0. Each is a separate data file with its own row in the notice and the bill of materials.</li>
+          <li>The logos of companies shown in the Data Map and the Passwords app come from Simple Icons (CC0). They are trademarks of their owners and are used to name the company. The notice gives the route to ask for a removal.</li>
+          <li>The wordmark is set in Roboto Flex (SIL OFL 1.1), converted to outlines. This site serves Roboto Flex and Noto Serif, both SIL OFL 1.1, as font files for its text; their licence texts are at <a href="/licenses.txt"><code>/licenses.txt</code></a>.</li>
+        </ul>
+        <div class="callout"><h3>What this page is not</h3><p>It is not a legal opinion. An AI agent did the review behind it, not a lawyer, and I accepted each risk myself. The licensing and branding review lists them item by item.</p></div>
+      </div>
+    </div>
+  </section>
+</Page>

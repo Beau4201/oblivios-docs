@@ -1,0 +1,19 @@
+---
+// The band at the top of every inner page: breadcrumb, h1, one lede, and the print of the page.
+interface Props {
+  crumb: string;
+  title: string;
+  lede: string;
+}
+const { crumb, title, lede } = Astro.props;
+---
+<section class="ph">
+  <div class="c">
+    <div>
+      <p class="crumb"><a href="/">Home</a> / {crumb}</p>
+      <h1>{title}</h1>
+      <p class="lede">{lede}</p>
+    </div>
+    <slot />
+  </div>
+</section>

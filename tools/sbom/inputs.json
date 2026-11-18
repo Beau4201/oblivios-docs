@@ -48,6 +48,9 @@
     "RUSTSEC-2026-0387": {"assessed": true, "record": "services:exit-daemon/RISKS.md", "evidence": ["RUSTSEC-2026-0387", "in no dependency graph of any target"], "detail": "Assessed in exit-daemon/RISKS.md: crypto-bigint 0.5.5 is in Cargo.lock and in no dependency graph of any target, so it is not compiled into exitd; the fix needs another minor line (0.7.6)."},
     "RUSTSEC-2026-0459": {"assessed": true, "record": "services:exit-daemon/RISKS.md", "evidence": ["RUSTSEC-2026-0459", "accepted until an Arti release that uses `rusqlite` 0.41"], "detail": "Assessed in exit-daemon/RISKS.md: linked through rusqlite 0.39 of tor-dirmgr; the flaw needs a database and -wal file written by someone else; the fix needs rusqlite 0.41, which Arti 0.46 does not use. Not fixed; accepted."}
   },
+  "npm_licences": [
+    {"id": "zod-to-ts@1.2.0", "licence": "MIT", "record": "docs:docs/architecture/site-engineering-notes.md", "evidence": ["zod-to-ts", "901eb546213d344758178277346c83df776b3566895c507a82ee36447c6662ba", "MIT"]}
+  ],
   "prebuilts": [
     {"id": "exitd", "repo": "platform", "file": "privacy/exit/daemon/arm64/exitd", "record": "platform:privacy/exit/daemon/SOURCE.md", "source_repo": "services", "source_commit": "c9139fe", "source_dir": "exit-daemon", "lock": "exit-daemon/Cargo.lock", "licence": "Apache-2.0", "toolchain": "AOSP prebuilts/rust-toolchain 1.93.1, aarch64-linux-android, cargo build --release --locked --offline"},
     {"id": "libvault_core", "repo": "platform", "file": "passwords/core/arm64/libvault_core.so", "record": "platform:passwords/core/SOURCE.md", "source_repo": "services", "source_commit": "b5e73ab", "source_dir": "vault-core", "lock": "vault-core/Cargo.lock", "licence": "Apache-2.0", "toolchain": "AOSP prebuilts/rust-toolchain 1.93.1, aarch64-linux-android, cargo build --release --locked --offline"},

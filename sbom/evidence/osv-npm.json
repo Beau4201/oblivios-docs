@@ -1,0 +1,245 @@
+{
+ "source": "https://api.osv.dev/v1/querybatch",
+ "queried": "2026-11-18",
+ "queried_packages": 380,
+ "unresolved_pages": [],
+ "vulnerable": {
+  "astro@5.18.2": [
+   "GHSA-26w7-cxv4-gfx2",
+   "GHSA-2pvr-wf23-7pc7",
+   "GHSA-376h-93r7-7g6f",
+   "GHSA-4g3v-8h47-v7g6",
+   "GHSA-7pw4-f3q4-r2p2",
+   "GHSA-8hv8-536x-4wqp",
+   "GHSA-98hj-9722-w3j8",
+   "GHSA-f48w-9m4c-m7f5",
+   "GHSA-j687-52p2-xcff",
+   "GHSA-jrpj-wcv7-9fh9",
+   "GHSA-mh32-jxcr-mh9f",
+   "GHSA-r3h5-4585-7x3w",
+   "GHSA-xr5h-phrj-8vxv"
+  ],
+  "esbuild@0.27.7": [
+   "GHSA-g7r4-m6w7-qqqr"
+  ],
+  "picomatch@2.3.2": [
+   "GHSA-fc5q-39xc-vjpf"
+  ],
+  "picomatch@4.0.7": [
+   "GHSA-fc5q-39xc-vjpf"
+  ],
+  "sharp@0.34.5": [
+   "GHSA-f88m-g3jw-g9cj",
+   "GHSA-rgj7-g3m4-5g8c",
+   "GHSA-wq5f-xc86-pv6w"
+  ],
+  "zod@3.25.76": [
+   "GHSA-mrhx-c7xc-m3w5"
+  ]
+ },
+ "details": {
+  "GHSA-26w7-cxv4-gfx2": {
+   "summary": "Astro: Remote code execution through AVIF image optimization",
+   "aliases": [],
+   "published": "2026-09-08T21:26:16Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "7.2.8"
+   ]
+  },
+  "GHSA-2pvr-wf23-7pc7": {
+   "summary": "Astro: Host header SSRF in prerendered error page fetch",
+   "aliases": [
+    "CVE-2026-54299"
+   ],
+   "published": "2026-06-16T14:38:06Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "6.4.6"
+   ]
+  },
+  "GHSA-376h-93r7-7g6f": {
+   "summary": "Astro: Authorization bypass from missing path-segment boundary check when stripping the configured base",
+   "aliases": [
+    "CVE-2026-84376"
+   ],
+   "published": "2026-09-08T21:26:02Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "7.2.4"
+   ]
+  },
+  "GHSA-4g3v-8h47-v7g6": {
+   "summary": "Astro: Reflected XSS via unescaped View Transition animation properties",
+   "aliases": [
+    "CVE-2026-73422"
+   ],
+   "published": "2026-07-20T21:08:16Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "7.1.0"
+   ]
+  },
+  "GHSA-7pw4-f3q4-r2p2": {
+   "summary": "Astro: Cross-site scripting via unescaped transition:* directive values on hydrated islands",
+   "aliases": [
+    "CVE-2026-59727"
+   ],
+   "published": "2026-07-20T23:21:02Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "7.0.4"
+   ]
+  },
+  "GHSA-8hv8-536x-4wqp": {
+   "summary": "Astro: Reflected XSS via unescaped slot name",
+   "aliases": [
+    "CVE-2026-50146"
+   ],
+   "published": "2026-06-16T14:05:06Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "6.3.3"
+   ]
+  },
+  "GHSA-98hj-9722-w3j8": {
+   "summary": "Astro: Reflected/Stored XSS via unescaped <script>/<style> tag content in JSX/MDX rendering",
+   "aliases": [
+    "CVE-2026-114128"
+   ],
+   "published": "2026-10-22T16:30:26Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "7.3.2"
+   ]
+  },
+  "GHSA-f48w-9m4c-m7f5": {
+   "summary": "Astro: XSS via unescaped spread attribute names in renderHTMLElement (incomplete fix for CVE-2026-54298)",
+   "aliases": [
+    "CVE-2026-59729"
+   ],
+   "published": "2026-07-20T23:21:58Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "7.0.6"
+   ]
+  },
+  "GHSA-f88m-g3jw-g9cj": {
+   "summary": "sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591",
+   "aliases": [
+    "CVE-2026-114113"
+   ],
+   "published": "2026-07-21T22:07:17Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "0.35.0"
+   ]
+  },
+  "GHSA-fc5q-39xc-vjpf": {
+   "summary": "picomatch vulnerable to ReDoS through single-branch repeated extglobs",
+   "aliases": [
+    "CVE-2026-112366"
+   ],
+   "published": "2026-10-19T18:32:12Z",
+   "withdrawn": null,
+   "fixed_in": []
+  },
+  "GHSA-g7r4-m6w7-qqqr": {
+   "summary": "esbuild allows arbitrary file read when running the development server on Windows",
+   "aliases": [],
+   "published": "2026-06-12T20:08:53Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "0.28.1"
+   ]
+  },
+  "GHSA-j687-52p2-xcff": {
+   "summary": "Astro: XSS in define:vars via incomplete </script> tag sanitization",
+   "aliases": [
+    "CVE-2026-41067"
+   ],
+   "published": "2026-04-21T20:39:49Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "6.1.6"
+   ]
+  },
+  "GHSA-jrpj-wcv7-9fh9": {
+   "summary": "Astro: XSS via Unescaped Attribute Names in Spread Props",
+   "aliases": [
+    "CVE-2026-54298"
+   ],
+   "published": "2026-06-16T14:57:21Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "6.4.6"
+   ]
+  },
+  "GHSA-mh32-jxcr-mh9f": {
+   "summary": "Astro: XSS via attribute injection in dynamic tag names",
+   "aliases": [
+    "CVE-2026-126361"
+   ],
+   "published": "2026-11-13T18:39:54Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "7.4.5"
+   ]
+  },
+  "GHSA-mrhx-c7xc-m3w5": {
+   "summary": "Zod can exhaust memory while validating oversized constrained collections",
+   "aliases": [
+    "CVE-2023-54404"
+   ],
+   "published": "2026-10-01T18:32:46Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "4.6.6"
+   ]
+  },
+  "GHSA-r3h5-4585-7x3w": {
+   "summary": "Astro: Image endpoint in @astrojs/node can read files from a case-variant sibling of the output directory on case-sensitive filesystems",
+   "aliases": [
+    "CVE-2026-126364"
+   ],
+   "published": "2026-11-13T18:35:59Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "7.4.7"
+   ]
+  },
+  "GHSA-rgj7-g3m4-5g8c": {
+   "summary": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545",
+   "aliases": [
+    "CVE-2026-114112"
+   ],
+   "published": "2026-09-08T21:25:11Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "0.35.4"
+   ]
+  },
+  "GHSA-wq5f-xc86-pv6w": {
+   "summary": "sharp : Vulnerability in librsvg dependency CVE-2026-96889",
+   "aliases": [
+    "CVE-2026-114111"
+   ],
+   "published": "2026-10-06T13:43:57Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "0.35.5"
+   ]
+  },
+  "GHSA-xr5h-phrj-8vxv": {
+   "summary": "Astro: Server island encrypted parameters vulnerable to cross-component replay",
+   "aliases": [
+    "CVE-2026-45028"
+   ],
+   "published": "2026-05-13T01:36:39Z",
+   "withdrawn": null,
+   "fixed_in": [
+    "6.1.10"
+   ]
+  }
+ }
+}

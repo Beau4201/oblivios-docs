@@ -1,0 +1,507 @@
+/* The layout of the ObliviOS sites: reset, page frame, header, footer, page header band, prose, the print classes.
+   Every value is a token of tokens.css. No inline style and no data: URI: the pages are served under
+   `Content-Security-Policy: default-src 'self'`. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  background: var(--paper);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  color: var(--ink);
+  background: var(--paper);
+  font: 400 clamp(16px, 1.2vw, 18px) / 1.65 var(--sans);
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+/* paper grain: one small file of the site itself */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: var(--grain-blend);
+  z-index: 2;
+  background-image: url("/paper.svg");
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+:focus-visible {
+  outline: 2px solid var(--brick-text);
+  outline-offset: 3px;
+}
+.skip {
+  position: absolute;
+  left: var(--pad);
+  top: -100px;
+  z-index: 30;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 12px 18px;
+  border-radius: 2px;
+  font: 600 15px/1 var(--sans);
+}
+.skip:focus {
+  top: 12px;
+}
+.u {
+  background: linear-gradient(var(--brick), var(--brick)) 0 100% / 0 1.5px no-repeat;
+  padding-bottom: 3px;
+  transition: background-size 200ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .u:hover {
+    background-size: 100% 1.5px;
+  }
+}
+.c {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.band {
+  padding: var(--sec) 0;
+  --hole: var(--paper);
+}
+.alt {
+  background: var(--paper-2);
+  --hole: var(--paper-2);
+}
+.m {
+  font: 400 0.88em var(--mono);
+}
+.vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* the prints: one hidden svg of definitions per page, placed with <use> */
+.defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.f {
+  stroke: none;
+}
+.s {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.pp {
+  fill: var(--hole, var(--paper));
+  stroke: none;
+}
+.ps {
+  fill: none;
+  stroke: var(--hole, var(--paper));
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.gs-e {
+  stop-color: var(--print-edge);
+}
+.gs-m {
+  stop-color: var(--print-mid);
+}
+.pr-shadow {
+  fill: var(--print-shadow);
+  stroke: var(--print-shadow);
+  mix-blend-mode: var(--print-shadow-blend);
+  opacity: var(--print-shadow-opacity);
+}
+.pr-plain {
+  fill: var(--brick-text);
+  stroke: var(--brick-text);
+}
+
+/* header: sticky bar on the same container as the page */
+.hd {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--header-bg);
+  -webkit-backdrop-filter: saturate(1.2) blur(10px);
+  backdrop-filter: saturate(1.2) blur(10px);
+  box-shadow: 0 1px 0 var(--rule);
+}
+.hd .c {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  height: 72px;
+}
+.hd .brand img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.hd nav {
+  display: flex;
+  gap: clamp(18px, 2.6vw, 36px);
+  margin-left: auto;
+  font: 500 15px / 1 var(--sans);
+}
+.hd nav a {
+  color: var(--ink-2);
+  padding: 8px 0;
+  transition: color 160ms;
+}
+.hd nav a[aria-current] {
+  color: var(--ink);
+  box-shadow: 0 2px 0 var(--brick);
+  border-radius: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hd nav a:hover {
+    color: var(--ink);
+  }
+}
+.btn {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 13px 22px;
+  border-radius: 2px;
+  font: 600 15px / 1 var(--sans);
+  transition: transform 160ms var(--ease-out), background 160ms;
+  white-space: nowrap;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: var(--brick-text);
+    color: var(--paper);
+  }
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn.ghost:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+}
+.hd .btn {
+  padding: 11px 18px;
+}
+.menu {
+  display: none;
+  position: relative;
+}
+.menu summary {
+  list-style: none;
+  cursor: pointer;
+  font: 600 15px / 1 var(--sans);
+  padding: 11px 18px;
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+  border-radius: 2px;
+}
+.menu summary::-webkit-details-marker {
+  display: none;
+}
+.menu ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  background: var(--paper);
+  box-shadow: 0 0 0 1.5px var(--ink);
+  padding: 10px 22px;
+  list-style: none;
+  min-width: 230px;
+  display: grid;
+  font: 500 17px / 1 var(--sans);
+  z-index: 5;
+}
+.menu li a {
+  display: block;
+  padding: 13px 0;
+}
+@media (max-width: 860px) {
+  .hd nav,
+  .hd .c > .btn {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+/* footer in its own colour */
+.night {
+  background: var(--night);
+  color: var(--night-text);
+  padding: clamp(56px, 7vw, 88px) 0 40px;
+  position: relative;
+}
+.fg {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr 0.7fr;
+  gap: clamp(32px, 5vw, 64px);
+}
+.fg img {
+  height: 44px;
+  width: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.fg p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--night-dim);
+  max-width: 420px;
+}
+.fg p b {
+  color: var(--night-text);
+  font-weight: 600;
+}
+.fg h2 {
+  font: 600 15px / 1 var(--sans);
+  color: var(--brick-light);
+  margin-bottom: 18px;
+}
+.fg ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  font-size: 15.5px;
+}
+.fg ul a {
+  color: var(--night-text);
+  background: linear-gradient(var(--brick-light), var(--brick-light)) 0 100% / 0 1.5px no-repeat;
+  padding-bottom: 2px;
+  transition: background-size 200ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .fg ul a:hover {
+    background-size: 100% 1.5px;
+  }
+}
+.legal {
+  margin-top: clamp(40px, 5vw, 64px);
+  padding-top: 24px;
+  box-shadow: 0 -1px 0 rgba(217, 207, 201, 0.16);
+  font-size: 14px;
+  color: var(--night-dim);
+}
+@media (max-width: 860px) {
+  .fg {
+    grid-template-columns: 1fr 1fr;
+  }
+  .fg > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* page header band, with its own colour */
+.crumb {
+  font: 500 14px / 1 var(--sans);
+  color: var(--ink-2);
+  margin-bottom: 22px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .crumb a:hover {
+    color: var(--ink);
+  }
+}
+.ph {
+  padding: clamp(36px, 5.5vw, 80px) 0 clamp(44px, 6vw, 80px);
+  background: var(--paper-3);
+  --hole: var(--paper-3);
+}
+.ph .c {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
+}
+.ph h1 {
+  font: 600 clamp(38px, 5vw, 64px) / 1.04 var(--serif);
+  letter-spacing: -0.026em;
+}
+.ph .lede {
+  font: 400 clamp(17px, 1.5vw, 20px) / 1.65 var(--sans);
+  color: var(--ink-2);
+  max-width: 620px;
+  margin: 22px 0 0;
+}
+.ph svg {
+  display: block;
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+@media (max-width: 760px) {
+  .ph .c {
+    grid-template-columns: 1fr;
+  }
+  .ph svg {
+    max-width: 120px;
+    margin: 0;
+    order: -1;
+  }
+}
+
+/* text pages */
+.pagebody {
+  padding: clamp(56px, 7vw, 96px) 0 clamp(72px, 9vw, 120px);
+}
+.prose {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.prose h2 {
+  font: 600 clamp(26px, 2.6vw, 34px) / 1.15 var(--serif);
+  letter-spacing: -0.014em;
+  margin: clamp(44px, 5vw, 64px) 0 16px;
+}
+.prose h2:first-child {
+  margin-top: 0;
+}
+.prose h2 code {
+  background: none;
+  padding: 0;
+  font-size: 0.82em;
+  letter-spacing: 0;
+}
+.prose h3 {
+  font: 600 20px / 1.3 var(--serif);
+  margin: 30px 0 8px;
+}
+.prose p {
+  font: 400 clamp(17px, 1.3vw, 19px) / 1.72 var(--serif);
+  margin: 0 0 20px;
+}
+.prose ul,
+.prose ol {
+  margin: 0 0 22px;
+  padding-left: 1.3em;
+  font: 400 clamp(17px, 1.3vw, 19px) / 1.65 var(--serif);
+}
+.prose li {
+  margin: 8px 0;
+  padding-left: 4px;
+}
+.prose li::marker {
+  color: var(--brick-text);
+}
+.prose code,
+.kv code,
+.callout code {
+  font: 400 0.86em var(--mono);
+  background: var(--tint);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+.prose a,
+.callout a,
+.faq a,
+.kv a {
+  background: linear-gradient(var(--brick), var(--brick)) 0 100% / 100% 1.5px no-repeat;
+  padding-bottom: 1px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .prose a:hover,
+  .callout a:hover,
+  .faq a:hover,
+  .kv a:hover {
+    color: var(--brick-text);
+  }
+}
+.callout {
+  background: var(--paper-2);
+  padding: clamp(20px, 2.4vw, 30px) clamp(20px, 2.6vw, 34px);
+  border-radius: 2px;
+  margin: 32px 0;
+}
+.alt .callout {
+  background: var(--paper);
+}
+.callout h3 {
+  font: 600 19px / 1.3 var(--serif);
+  margin: 0 0 10px;
+}
+.callout p,
+.callout li {
+  font: 400 16.5px / 1.65 var(--sans);
+  color: var(--ink-2);
+  margin: 0 0 10px;
+}
+.callout ul {
+  padding-left: 1.2em;
+  margin: 0;
+}
+pre {
+  background: var(--pre-bg);
+  color: var(--pre-fg);
+  padding: clamp(18px, 2.2vw, 28px) clamp(16px, 2.4vw, 32px);
+  font: 400 clamp(13px, 1.15vw, 16px) / 2 var(--mono);
+  white-space: pre;
+  overflow-x: auto;
+  border-radius: 2px;
+}
+pre i {
+  color: var(--pre-dim);
+  font-style: normal;
+}
+.prose pre {
+  margin-bottom: 22px;
+}
+.fn {
+  font-size: 14.5px;
+  color: var(--ink-2);
+  margin-top: 20px;
+  max-width: 520px;
+}
+.fn b {
+  color: var(--brick-text);
+  font-weight: 600;
+}
+.num {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--brick-text);
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -19,6 +19,7 @@ it, a commit that is not in the repository, a licence that the policy cannot sat
 inputs rely on, a licence of a crate that differs from the registry's, a claim of a NOTICE or README that the files do
 not support (CLAIMS). With --schemas DIR both documents are validated against the official JSON schemas with ajv.
 """
+import base64
 import fnmatch
 import hashlib
 import json
@@ -42,10 +43,18 @@ ALLOWED = {  # licence terms the project accepts in a dependency (the policy of 
     "MIT", "Apache-2.0", "BSD-1-Clause", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Unicode-3.0", "Zlib", "0BSD", "CC0-1.0",
     "MIT-0", "Unlicense", "MPL-2.0", "LLVM-exception",
 }
-SPDX_KNOWN = ALLOWED | {"GPL-3.0-or-later", "CC-BY-SA-3.0", "CC-BY-SA-4.0", "CC-BY-4.0", "OFL-1.1", "PDDL-1.0", "EPL-2.0",
+# The npm packages of site/ also meet these: the two font families are OFL-1.1 (ADR-253, owner answer 4); the others are
+# permissive licences of build tools.
+NPM_ALLOWED = ALLOWED | {"OFL-1.1", "BlueOak-1.0.0", "Python-2.0"}
+SPDX_KNOWN = NPM_ALLOWED | {"GPL-3.0-or-later", "CC-BY-SA-3.0", "CC-BY-SA-4.0", "CC-BY-4.0", "OFL-1.1", "PDDL-1.0", "EPL-2.0",
                         "LGPL-3.0-or-later", "LGPL-2.1-or-later", "OpenSSL", "WITH", "AND", "OR"}
 CODE_REPOS = ["manifest", "platform", "services"]
 CLAIM_NOTES = []  # filled by check_claims
+# The files of site/ (ADR-253): its own work, Apache-2.0. A file that is none of these is not explained and fails the
+# build, so a font, a script or a text of another party cannot enter the site unnoticed (gate W-7).
+SITE_SUFFIXES = {".astro", ".mjs", ".js", ".css", ".json", ".md", ".svg", ".png", ".ico", ".webmanifest"}
+SITE_NAMES = {".gitignore", ".npmrc", ".nvmrc", "NOTICE"}
+SITE_UNBUILT = {"node_modules", "dist", ".build"}  # what a build inside a clone leaves; it is not a file of the publication
 
 
 # ----- licences -------------------------------------------------------------------------------------------------
@@ -59,8 +68,8 @@ def tokens(expr):
     return re.findall(r"\(|\)|[A-Za-z0-9.+-]+", expr)
 
 
-def satisfied(expr):
-    """Can the SPDX expression be met with ALLOWED terms only? OR < AND < WITH."""
+def satisfied(expr, allowed=ALLOWED):
+    """Can the SPDX expression be met with the allowed terms only? OR < AND < WITH."""
     toks = tokens(norm(expr))
     pos = 0
 
@@ -79,10 +88,10 @@ def satisfied(expr):
             if take() != ")":
                 raise ValueError("unbalanced")
             return v
-        ok = t in ALLOWED
+        ok = t in allowed
         if peek() == "WITH":
             take()
-            ok = ok and take() in ALLOWED
+            ok = ok and take() in allowed
         return ok
 
     def parse_and():
@@ -140,7 +149,8 @@ class Repo:
             self.commit = self.tree = None
             self.files = sorted(str(p.relative_to(path)) for p in self.path.rglob("*")
                                 if p.is_file() and not p.relative_to(path).parts[0] == "sbom"
-                                and not {".git", "__pycache__"} & set(p.parts))
+                                and not {".git", "__pycache__"} & set(p.parts)
+                                and not (p.relative_to(path).parts[0] == "site" and SITE_UNBUILT & set(p.relative_to(path).parts)))
         else:
             if common.git(path, "status", "--porcelain").strip():
                 raise SystemExit(f"{name}: the working tree is not clean; commit or stash first")
@@ -164,6 +174,10 @@ def utc(iso):
 
 def purl_cargo(name, version):
     return f"pkg:cargo/{name}@{version}"
+
+
+def purl_npm(name, version):
+    return f"pkg:npm/{name.replace('@', '%40', 1)}@{version}"
 
 
 def spdxid(ref):
@@ -197,7 +211,7 @@ class Ctx:
 def load_inputs(repos):
     inputs = json.loads((HERE / "inputs.json").read_text(encoding="utf-8"))
     problems = []
-    for coll in ("sources", "datafiles", "prebuilts", "advisories"):
+    for coll in ("sources", "datafiles", "npm_licences", "prebuilts", "advisories"):
         entries = [dict(v, id=k) for k, v in inputs[coll].items()] if coll == "advisories" else inputs[coll]
         for e in entries:
             ref = e["record"]
@@ -224,6 +238,8 @@ def build(root, docs, evidence):
     osv = json.loads((evidence / "osv.json").read_text(encoding="utf-8"))
     up_ev = json.loads((evidence / "upstream-licences.json").read_text(encoding="utf-8"))
     mvn = json.loads((evidence / "maven.json").read_text(encoding="utf-8"))
+    npm_ev = json.loads((evidence / "npm.json").read_text(encoding="utf-8"))["packages"]
+    osv_npm = json.loads((evidence / "osv-npm.json").read_text(encoding="utf-8"))
     ctx = Ctx()
     ctx.repos, ctx.inputs, ctx.problems = repos, inputs, problems
     ctx.comps, ctx.deps, ctx.vulns, ctx.claims, ctx.notes = {}, {}, [], [], []
@@ -262,6 +278,10 @@ def build(root, docs, evidence):
                 cover[(rn, f)] = ("patch", rn)
             elif rn == "manifest" and re.fullmatch(r"manifest/upstream-\d+\.xml", f):
                 cover[(rn, f)] = ("manifest-copy", f)
+            elif rn == "docs" and f.startswith("site/"):
+                cover[(rn, f)] = ("site", "site")
+                if Path(f).suffix not in SITE_SUFFIXES and Path(f).name not in SITE_NAMES:
+                    problems.append(f"docs:{f} is a file of site/ that no rule explains")
             else:
                 cover[(rn, f)] = ("own", rn)
     for d in datafiles:
@@ -287,7 +307,7 @@ def build(root, docs, evidence):
         if rn == "docs":
             comp["version"] = "snapshot"
             comp["licenses"] = [{"expression": "CC-BY-4.0 AND Apache-2.0"}]
-            prop(comp, "licence-note", "documents CC-BY-4.0; the scripts under tools/ Apache-2.0")
+            prop(comp, "licence-note", "documents CC-BY-4.0; the scripts under tools/ and the files of site/ Apache-2.0")
             prop(comp, "version-note", "a one-way snapshot without history; identified by the hash of its file list")
         else:
             comp["version"] = repo.commit
@@ -539,9 +559,9 @@ def build(root, docs, evidence):
         elif ev and ev["license"] != lic:
             problems.append(f"vault-core/SOURCE.md gives {lic!r} for {n} {v}, the registry gives {ev['license']!r}")
     # files of a foreign copyright or licence inside an `own` rule would be missing from the third-party components
-    code_ext = {".java", ".kt", ".rs", ".py", ".sh", ".xml", ".bp", ".mk", ".c", ".cpp", ".h", ".aidl", ".mjs", ".js", ".gradle", ".kts"}
+    code_ext = {".java", ".kt", ".rs", ".py", ".sh", ".xml", ".bp", ".mk", ".c", ".cpp", ".h", ".aidl", ".mjs", ".js", ".gradle", ".kts", ".astro", ".css"}
     for (rn, f), (cat, cid) in sorted(cover.items()):
-        if cat != "own" or rn == "docs" or Path(f).suffix not in code_ext:
+        if not (cat == "site" or (cat == "own" and rn != "docs")) or Path(f).suffix not in code_ext:
             continue
         head = repos[rn].text(f)[:2000]
         for m in re.finditer(r"Copyright\s*(?:\(c\)|\(C\)|©)?\s*(?:\d{4}(?:\s*[-,]\s*\d{4})*)?\s*,?\s*(?:by\s+)?([^\n\r*]{3,60})", head, re.I):
@@ -555,21 +575,82 @@ def build(root, docs, evidence):
     for r in psl:
         dep(r, "src:public-suffix-list")
         prop(ctx.comps[r], "embeds", "Public Suffix List data (MPL-2.0), data/rules.txt; see vault-core/SOURCE.md")
-    for key, ids in osv["vulnerable"].items():
-        for vid in ids:
-            d = osv["details"][vid]
-            adv = inputs["advisories"].get(vid)
-            fixed = ", ".join(d["fixed_in"]) or "none listed"
-            if adv:
-                detail = f"{adv['detail']} OSV of {osv['queried']}: fixed in {fixed}."
-            else:
-                detail = f"Not assessed by the project. Listed by OSV on {osv['queried']}; fixed in {fixed}."
-                ctx.notes.append(f"{vid} ({key}): {d['summary']}; fixed in {fixed}; no assessment in the project records")
-            ctx.vulns.append({"id": vid, "source": {"name": "OSV", "url": f"https://osv.dev/vulnerability/{vid}"},
-                              "description": d["summary"] or vid, "affects": [{"ref": f"crate:{key}"}],
-                              "analysis": {"state": "in_triage", "detail": detail}})
-    if osv["unresolved_pages"]:
-        problems.append(f"OSV left results unread: {osv['unresolved_pages']}")
+    # --- npm: the lockfile of site/, the registry evidence (ADR-253, W-7)
+    lock = json.loads(repos["docs"].text("site/package-lock.json"))
+    npm_pk = lock["packages"]
+    ctx.npm = {}  # (name, version) -> licence, the list that site/NOTICE must equal
+
+    def npm_ref(path):
+        return f"npm:{path.rsplit('node_modules/', 1)[1]}@{npm_pk[path]['version']}"
+
+    for path, name, version, e in common.npm_packages(lock):
+        ref = npm_ref(path)
+        if ref in ctx.comps:
+            continue
+        ev = npm_ev.get(f"{name}@{version}")
+        if not ev or "error" in ev:
+            problems.append(f"npm registry evidence for {name}@{version} is missing")
+            continue
+        if not e.get("integrity", "").startswith("sha512-"):
+            problems.append(f"{name}@{version}: package-lock.json states no SHA-512 integrity")
+            continue
+        if ev["integrity"] != e["integrity"]:
+            problems.append(f"{name}@{version}: the registry integrity differs from package-lock.json")
+        lic = ev["license"]
+        stated = next((o for o in inputs["npm_licences"] if o["id"] == f"{name}@{version}"), None) if not lic else None
+        if stated:  # the package.json states none; the LICENSE file of the package does (the record names its SHA-256)
+            lic = stated["licence"]
+        if not lic:
+            problems.append(f"{name}@{version}: the registry states no licence")
+            lic = "NOASSERTION"
+        elif not satisfied(lic, NPM_ALLOWED):
+            if not e.get("optional"):
+                problems.append(f"{name}@{version}: licence {lic!r} cannot be met with the allowed terms")
+            else:  # the native libvips of the image tool sharp: reachable only through optional dependencies, never in the output
+                ctx.notes.append(f"{name}@{version}: licence {lic!r} is outside the allowed terms; an optional package, not in the output")
+        comp = {"type": "library", "name": name, "version": version, "purl": purl_npm(name, version),
+                "hashes": [{"alg": "SHA-512", "content": base64.b64decode(e["integrity"][7:]).hex()}],
+                "licenses": licence_choice(lic) if lic != "NOASSERTION" else [{"license": {"name": "not stated"}}],
+                "externalReferences": [{"type": "distribution", "url": e["resolved"]}]}
+        if e.get("dev"):
+            comp["scope"] = "excluded"
+        elif e.get("optional"):
+            comp["scope"] = "optional"
+        prop(comp, "licence-as-declared" if not stated else "licence-basis", lic if not stated else
+             f"the registry states none; the LICENSE file of the package; see {stated['record']}")
+        if ev["deprecated"]:
+            prop(comp, "deprecated", ev["deprecated"])
+        prop(comp, "evidence-retrieved", ev["retrieved"])
+        add(ref, comp)
+        ctx.npm[(name, version)] = lic
+    for path, name, version, e in common.npm_packages(lock):
+        for d in sorted({**e.get("dependencies", {}), **e.get("optionalDependencies", {})}):
+            target = common.npm_resolve(npm_pk, path, d)
+            if target:
+                dep(npm_ref(path), npm_ref(target))
+            elif d not in e.get("optionalDependencies", {}):
+                problems.append(f"{name}@{version}: its dependency {d} is not in package-lock.json")
+    for w in npm_pk[""]["workspaces"]:  # what the two workspaces of site/ ask for; a link to the other workspace is not a package
+        for d in sorted({**npm_pk[w].get("dependencies", {}), **npm_pk[w].get("devDependencies", {})}):
+            target = common.npm_resolve(npm_pk, "", d)
+            if target and not npm_pk[target].get("link"):
+                dep("repo:docs", npm_ref(target))
+    for kind, doc in (("crate", osv), ("npm", osv_npm)):
+        for key, ids in doc["vulnerable"].items():
+            for vid in ids:
+                d = doc["details"][vid]
+                adv = inputs["advisories"].get(vid)
+                fixed = ", ".join(d["fixed_in"]) or "none listed"
+                if adv:
+                    detail = f"{adv['detail']} OSV of {doc['queried']}: fixed in {fixed}."
+                else:
+                    detail = f"Not assessed by the project. Listed by OSV on {doc['queried']}; fixed in {fixed}."
+                    ctx.notes.append(f"{vid} ({key}): {d['summary']}; fixed in {fixed}; no assessment in the project records")
+                ctx.vulns.append({"id": vid, "source": {"name": "OSV", "url": f"https://osv.dev/vulnerability/{vid}"},
+                                  "description": d["summary"] or vid, "affects": [{"ref": f"{kind}:{key}"}],
+                                  "analysis": {"state": "in_triage", "detail": detail}})
+        if doc["unresolved_pages"]:
+            problems.append(f"OSV left results unread: {doc['unresolved_pages']}")
 
     # --- prebuilt binaries
     for e in inputs["prebuilts"]:
@@ -663,8 +744,26 @@ def notice_row(path, s):
         tail = "; the patches modify no upstream file, they only create files (ObliviOS work, Apache-2.0)"
     return f"| {path:<32} | {lic:<24} | {root}{tail} |"
 
+def site_notice(npm):
+    """The text of site/NOTICE (gate B-6): one line per npm package of the lockfile, `name version licence`."""
+    head = ("# Third-party software of site/ (ADR-253)\n#\n"
+            "# The npm packages of package-lock.json that build the site: name, version, licence as the npm registry\n"
+            "# states it (zod-to-ts states none; its LICENSE file is MIT, see docs/architecture/site-engineering-notes.md).\n"
+            "# The list equals the npm components of sbom/oblivios.cdx.json; build-sbom.py fails when it does not.\n"
+            "# The static output holds the two font families of @fontsource-variable/roboto-flex and\n"
+            "# @fontsource-variable/noto-serif and no script of any package; the licence texts of the fonts are served at\n"
+            "# /licenses.txt. build-sbom.py --site-notice writes this file.\n")
+    return head + "".join(f"{n} {v} {lic}\n" for (n, v), lic in sorted(npm.items()))
+
+
 def check_claims(ctx, crate_refs, locks):
     repos, problems = ctx.repos, ctx.problems
+    try:
+        have = repos["docs"].text("site/NOTICE")
+    except OSError:
+        have = None
+    if have != site_notice(ctx.npm):
+        problems.append("claim: docs:site/NOTICE is missing or differs from the npm components; write it with --site-notice")
 
     def claim(repo, rel, pattern, expected, what):
         text = repos[repo].text(rel)
@@ -742,6 +841,7 @@ def cyclonedx(ctx, when, cover):
         {"aggregate": "complete", "assemblies": [f"repo:{n}" for n in sorted(ctx.repos)],
          "bom-ref": "composition:files"},
         {"aggregate": "complete", "assemblies": [r for r in refs if r.startswith("crate:")], "bom-ref": "composition:cargo-lock"},
+        {"aggregate": "complete", "assemblies": [r for r in refs if r.startswith("npm:")], "bom-ref": "composition:npm-lock"},
         {"aggregate": "incomplete", "assemblies": [r for r in refs if r.startswith("upstream:")], "bom-ref": "composition:upstream"}]
     out["vulnerabilities"] = sorted(ctx.vulns, key=lambda v: (v["id"], v["affects"][0]["ref"]))
     return out
@@ -806,7 +906,7 @@ what they were built, and which third-party packages and data the code and the d
 | `oblivios.cdx.json` | CycloneDX 1.6, the full description |
 | `oblivios.spdx.json` | SPDX 2.3, the same components and relationships |
 | `files.sha256` | every file of the four repositories with its SHA-256, in `sha256sum -c` format |
-| `evidence/` | the registry and upstream answers the build read (crates.io, OSV, upstream licence files, Maven Central) |
+| `evidence/` | the registry and upstream answers the build read (crates.io, the npm registry, OSV, upstream licence files, Maven Central) |
 
 ## Described state
 
@@ -838,6 +938,10 @@ the run of 2026-11-17 used ajv 8.17.1 and ajv-formats 3.0.1 from npm.
 - Rust: `Cargo.lock` lists every package that any target, feature or dev/build configuration may resolve. The subset
   linked into a given binary has not been computed. Licence and checksum are those of the crates.io registry for each
   locked version; the crate sources were not read again.
+- npm: `site/package-lock.json` lists every package that builds the website `oblivios.org`. Licence and integrity are those of
+  the npm registry for each locked version; the package sources were not read again. The packages are build-time tools: the
+  static output holds the two font families of the `@fontsource-variable` packages and no script of any package, which
+  `site/org/scripts/check-build.mjs` checks; install scripts are off (`site/.npmrc`). `site/NOTICE` equals the npm components.
 - Upstream: only the projects that the patches modify are listed, with their licence evidence. The other projects of the
   manifest are in `manifest/upstream-*.xml`.
 - The licence texts of the registry packages of both `Cargo.lock` files are in `THIRD-PARTY-LICENSES.txt` next to the two Rust
@@ -869,6 +973,7 @@ def main(argv):
     ap.add_argument("--schemas")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--notice", action="store_true", help="print the NOTICE rows of the patched projects and exit")
+    ap.add_argument("--site-notice", action="store_true", help="print the text of site/NOTICE and exit")
     a = ap.parse_args(argv)
     if not (a.out and a.root and a.docs):
         sys.exit(__doc__)
@@ -878,6 +983,9 @@ def main(argv):
         stats = ctx.upstream_stats
         print("modified", sum(s["modified"] for s in stats.values()), "created", sum(s["created"] for s in stats.values()))
         print("\n".join(notice_row(p, s) for p, s in sorted(stats.items())))
+        sys.exit(0)
+    if a.site_notice:
+        print(site_notice(ctx.npm), end="")
         sys.exit(0)
     cdx = cyclonedx(ctx, when, cover)
     sp = spdx(ctx, when, cdx)
@@ -911,6 +1019,7 @@ def main(argv):
 def self_test():
     assert norm("MIT/Apache-2.0") == "MIT OR Apache-2.0" and norm("Apache-2.0 / MIT") == "Apache-2.0 OR MIT"
     assert satisfied("MIT OR GPL-3.0-or-later") and not satisfied("GPL-3.0-or-later") and not satisfied("MIT AND GPL-3.0-or-later")
+    assert satisfied("OFL-1.1", NPM_ALLOWED) and not satisfied("OFL-1.1") and not satisfied("LGPL-3.0-or-later", NPM_ALLOWED)
     assert satisfied("(MIT OR Apache-2.0) AND Unicode-3.0") and satisfied("Apache-2.0 WITH LLVM-exception OR MIT")
     assert is_spdx_expression("MIT OR Apache-2.0") and not is_spdx_expression("Public domain")
     assert licence_choice("Public domain") == [{"license": {"name": "Public domain"}}]
@@ -928,6 +1037,14 @@ def self_test():
     assert mod == {"x"} and new == {"n"}
     assert uuid.uuid5(NS, "x") == uuid.uuid5(NS, "x")
     assert utc("2026-11-16T15:30:00+01:00") == "2026-11-16T14:30:00Z"
+    assert purl_npm("@a/b", "1.0.0") == "pkg:npm/%40a/b@1.0.0" and purl_npm("c", "2.0.0") == "pkg:npm/c@2.0.0"
+    pk = {"node_modules/a": {}, "node_modules/b": {}, "node_modules/a/node_modules/b": {}, "node_modules/@s/t": {}}
+    assert common.npm_resolve(pk, "node_modules/a", "b") == "node_modules/a/node_modules/b"
+    assert common.npm_resolve(pk, "node_modules/a/node_modules/b", "b") == "node_modules/a/node_modules/b"
+    assert common.npm_resolve(pk, "node_modules/b", "b") == "node_modules/b"
+    assert common.npm_resolve(pk, "node_modules/a", "@s/t") == "node_modules/@s/t" and common.npm_resolve(pk, "", "zz") is None
+    assert site_notice({("a", "1"): "MIT OR ISC"}).endswith("\na 1 MIT OR ISC\n")
+    assert base64.b64decode("AQI=").hex() == "0102"
     print("self-test: OK")
 
 

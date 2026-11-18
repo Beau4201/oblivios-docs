@@ -1,0 +1,26 @@
+---
+// Dark footer: attribution and non-affiliation on every page, two link lists, the licence line.
+interface Link {
+  label: string;
+  href: string;
+}
+interface Props {
+  pages: Link[];
+  about: Link[];
+  legal: string;
+}
+const { pages, about, legal } = Astro.props;
+---
+<footer class="night">
+  <div class="c">
+    <div class="fg">
+      <div>
+        <img src="/brand/lockup-dark.svg" alt="ObliviOS" width="152" height="44" />
+        <p><b>Based on GrapheneOS.</b> ObliviOS is not affiliated with or endorsed by the GrapheneOS project. The name and the logo are not licensed.</p>
+      </div>
+      <div><h2>Pages</h2><ul>{pages.map((p) => <li><a href={p.href}>{p.label}</a></li>)}</ul></div>
+      <div><h2>About</h2><ul>{about.map((p) => <li><a href={p.href}>{p.label}</a></li>)}</ul></div>
+    </div>
+    <p class="legal">{legal}</p>
+  </div>
+</footer>

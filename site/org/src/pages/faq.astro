@@ -1,0 +1,44 @@
+---
+import Page from "../layouts/Page.astro";
+import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import { sources } from "../lib/site.mjs";
+
+// [question, answer (trusted html), documents behind the answer (for the claim review, not shown)]
+const faq = [
+  ["What does “source only” mean?", "<p>ObliviOS publishes source, records and a bill of materials, and nothing else. There is no build, no image and no update service, and no device is supported.</p>", "Decision 171"],
+  ["Can I install it?", "<p>Not yet. There is no image to flash. A device counts as supported only with verified upstream device source, current firmware and driver coverage, a monthly update path, signed images and updates, locked-bootloader verification, recovery validation, and evidence for emergency and radio functions. A booting image alone is not support.</p>", "Device support policy"],
+  ["Is ObliviOS a fork of GrapheneOS?", "<p>It is a distribution based on GrapheneOS, with its own identity, signing, updates, release process and support policy. The manifest repository pins revisions copied byte for byte from a GrapheneOS manifest tag, and the platform repository holds patch packages on top of them.</p><p>It is not an official GrapheneOS product, and it is not affiliated with or endorsed by the GrapheneOS project.</p>", "README"],
+  ["Is it more private or more secure than GrapheneOS?", "<p>I do not claim that. It preserves the hardening it inherits by default and adds features above it. The threat model states what it does not claim to defeat: a fully compromised hardware root of trust, unknown vulnerabilities, or network-level denial of service.</p><p>A weakness that already exists in GrapheneOS or AOSP is better reported to those projects. Tell me as well if my patches make it worse.</p>", "Threat model · Security policy"],
+  ["Does it need an account, or send telemetry?", "<p>No. These are constraints I do not trade away: no ObliviOS account, no mandatory telemetry, no advertising identifier and no cloud dependency. Normal use of the phone does not depend on AI.</p>", "README"],
+  ["Does Compartments hide my identity?", "<p>No. It makes apps unable to recognise the phone or to link to one another. The network address, the phone model, the installed apps and what you type stay visible, and the page for each app says so.</p>", "Decisions 180 and 209"],
+  ["Why is Tor not the default for every app?", "<p>Because it was measured. Ten megabytes took 6.6 to 89 times as long as Direct, and a request started 11 to 18 times later. I refused that slowdown as a default. You can set any app to Tor, to your own WireGuard profile, or leave it on Direct.</p>", "Decision 178"],
+  ["What does Duress Unlock not defeat?", "<p>A sufficiently informed adversary who already suspects ObliviOS has the feature could demand proof that the shown profile is the only one, or examine the OS image offline for the code path. Timing differences between a wrong PIN, a decoy PIN and the real PIN are a residual risk. Publishing the source tells such an adversary the feature exists.</p>", "Threat model · Decision 171"],
+  ["Which devices will be supported?", "<p>None is supported today. The Pixel 7a (<code>lynx</code>) is the first engineering target. GrapheneOS lists it with May 2028 as the minimum support end, an upstream fact that I re-check before every public support statement.</p>", "Device support policy"],
+  ["Why do older records use other names?", "<p>The project was named AegisOS, SovereignOS and FreeholdOS before ObliviOS. The rename is decision 224. The decision log and the other records keep the names that were in use when they were written.</p>", "Decision 224"],
+  ["How do I report a security problem?", '<p>Do not open a public issue. Send an encrypted email as the <a href="/security">security page</a> describes. You get a first reply from me within 3 days.</p>', "Security policy"],
+];
+sources("faq", faq.map(([q, a, s]) => `${q}: ${a.replace(/<[^>]+>/g, "")} [${s}]`));
+---
+<Page
+  title="FAQ: ObliviOS"
+  description="What source only means, whether you can install ObliviOS, how it relates to GrapheneOS, and what its features do not claim."
+  path="/faq"
+  current="/faq"
+>
+  <PageHeader crumb="FAQ" title="Questions people ask first" lede="My answers to the questions people ask first, taken from the decision log and the threat model.">
+    <Print id="q" label="A speech bubble with a question mark" />
+  </PageHeader>
+  <section class="band alt">
+    <div class="c">
+      <div class="faq">
+        {faq.map(([q, a], i) => (
+          <details open={i === 0}>
+            <summary>{q}</summary>
+            <div class="a" set:html={a} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</Page>

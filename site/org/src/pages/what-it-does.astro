@@ -1,0 +1,39 @@
+---
+import Page from "../layouts/Page.astro";
+import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import { areas, text, adrRange } from "../lib/areas.mjs";
+import { sources } from "../lib/site.mjs";
+
+sources("what-it-does", [
+  "Decisions in the log: ADR-038, 106 to 244 as named in each part",
+  "docs/security/threat-model.md (threat model)",
+  "docs/governance/decision-log.md (decision log)",
+  "Counts are read from the decision log when the page is built.",
+]);
+---
+<Page
+  title="What it does: ObliviOS"
+  description="Nine parts of ObliviOS and where each stands in the decision log: Compartments, Network exit, Live Data Map, Duress Unlock, Passwords, Grab detection, App drawer, Keyboard and AirPods."
+  path="/what-it-does"
+  current="/what-it-does"
+>
+  <PageHeader crumb="What it does" title="What it does" lede="Nine parts of ObliviOS exist in the source today. For each one: what it does, what it does not claim, and where it stands in the decision log.">
+    <Print id="p7" label="Four cells with a different shape in each" />
+  </PageHeader>
+  <section class="band">
+    <div class="c">
+      {areas.map((a) => (
+        <article class="area" id={a.id}>
+          <Print id={a.p} label={a.alt} />
+          <div>
+            <h2>{a.title}</h2>
+            {text[a.id].paras.map((p) => <p set:html={p} />)}
+            {text[a.id].no && <div class="no"><b>What this does not claim.</b> {text[a.id].no}</div>}
+            <p class="logline">In the decision log: <b>{a.acc} accepted</b>{a.prop ? <>, <b>{a.prop} proposed</b></> : null}{a.oth ? `, ${a.oth} superseded or closed` : null}. {adrRange(a.adrs)}.</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</Page>

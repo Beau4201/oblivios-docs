@@ -1,0 +1,21 @@
+{
+  "name": "@oblivios/org-site",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "description": "The application of oblivios.org: eight pages and a 404 page, static output.",
+  "scripts": {
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/check-build.mjs",
+    "build:review": "REVIEW=1 ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "serve": "node scripts/serve.mjs",
+    "check": "node scripts/check-build.mjs"
+  },
+  "dependencies": {
+    "@oblivios/site-shared": "*",
+    "astro": "5.18.2"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.3"
+  }
+}

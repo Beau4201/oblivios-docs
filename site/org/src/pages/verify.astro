@@ -1,0 +1,90 @@
+---
+import Page from "../layouts/Page.astro";
+import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import { sbom } from "../lib/records.mjs";
+import { sources } from "../lib/site.mjs";
+
+const chain = [
+  { id: "c1", x: 0, label: "Three stacked layers", h: "Upstream", p: "A GrapheneOS manifest tag, copied byte for byte." },
+  { id: "c2", x: 200, label: "A stitched patch", h: "Patch", p: "Patch packages on that baseline." },
+  { id: "c3", x: 400, label: "A bound book", h: "Decision", p: "The decision log names each patch set." },
+  { id: "c4", x: 600, label: "A checklist", h: "Bill of materials", p: "Every component, licence and file hash." },
+  { id: "c5", x: 800, label: "Two identical sheets", h: "You", p: "Rebuild it. The two must match byte for byte." },
+];
+sources("verify", [
+  "sbom/README.md",
+  "README.md of oblivios-docs",
+  "docs/research/licensing-and-branding-review.md (licensing and branding review)",
+  "Decision 244",
+  "Commits and baseline: read from sbom/ at build time",
+]);
+---
+<Page
+  title="Verify it: ObliviOS"
+  description="How to check what the ObliviOS repositories contain: the SHA-256 of every file, and a deterministic rebuild of the bill of materials."
+  path="/verify"
+  current="/verify"
+>
+  <PageHeader crumb="Verify it" title="Verify it" lede="You do not have to take any of this on trust. Five links join GrapheneOS to what you can check on your own machine, and you hold the last one.">
+    <Print id="c5" label="Two identical sheets" grad="gw" viewBox="800 40 200 200" />
+  </PageHeader>
+  <section class="band alt">
+    <div class="c">
+      <h2 class="vh">The five links</h2>
+      <div class="steps flush">
+        {chain.map((s) => (
+          <div class="st">
+            <Print id={s.id} label={s.label} grad="gw" viewBox={`${s.x} 40 200 200`} />
+            <h3>{s.h}</h3>
+            <p>{s.p}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="c">
+      <div class="prose">
+        <h2>1. Upstream</h2>
+        <p><code>oblivios-manifest</code> holds the pinned GrapheneOS and AOSP revisions that the patches apply to, and how each baseline was chosen. They are copied byte for byte from a GrapheneOS manifest tag. The upstream baseline in the published bill of materials is manifest <code>{sbom.baseline}</code>.</p>
+        <h2>2. Patch</h2>
+        <p><code>oblivios-platform</code> holds the patch packages: ObliviOS added to GrapheneOS source. Each patch keeps the licence of the upstream file it changes, and the packages carry provenance records (<code>SOURCE.md</code>). Two Rust components are committed as prebuilt binaries, <code>exitd</code> and <code>libvault_core.so</code>, each with its source commit, toolchain, build command and SHA-256. <code>oblivios-services</code> holds the platform-independent logic and native daemons those binaries come from.</p>
+        <h2>3. Decision</h2>
+        <p>The decision log is one table in which one entry is one long line, about 660 KB in all. Do not open it whole. Find an entry by its number:</p>
+<pre tabindex="0"><i># find one entry</i>
+grep -n '^| ADR-214 ' docs/governance/decision-log.md</pre>
+        <p>The columns are ID, date, decision, status, rationale, consequences and the trigger that reopens it. A decision changes only through a new entry that names what it supersedes.</p>
+        <h2>4. Bill of materials</h2>
+        <p><code>sbom/</code> holds a CycloneDX 1.6 document and an SPDX 2.3 document, a SHA-256 for every file of the four repositories, and the registry and upstream evidence they were built from. It describes these commits:</p>
+        <ul>
+          <li><code>oblivios-manifest</code> <code>{sbom.commits.manifest}</code></li>
+          <li><code>oblivios-platform</code> <code>{sbom.commits.platform}</code></li>
+          <li><code>oblivios-services</code> <code>{sbom.commits.services}</code></li>
+        </ul>
+        <p><code>oblivios-docs</code> is a snapshot without history; its files are in <code>files.sha256</code>.</p>
+        <h2>5. You</h2>
+        <p>Clone the four repositories side by side at those commits. In the folder that holds them, run:</p>
+<pre tabindex="0"><i># 1. every file against its SHA-256</i>
+sha256sum -c oblivios-docs/sbom/files.sha256
+
+<i># 2. rebuild the documents and compare</i>
+python3 oblivios-docs/tools/sbom/build-sbom.py \
+    --root . --docs oblivios-docs \
+    --evidence oblivios-docs/sbom/evidence \
+    --check oblivios-docs/sbom</pre>
+        <p>The second command rebuilds both documents from the same commits and compares them byte for byte. It fails when a file, a hash, a commit, a licence or a claim of a NOTICE file is not supported. The documents validate against the official CycloneDX 1.6 and SPDX 2.3 schemas.</p>
+        <div class="callout">
+          <h3>What the bill of materials does not claim</h3>
+          <ul>
+            <li>Rust: <code>Cargo.lock</code> lists every package any configuration may resolve. Which subset a given binary links has not been computed.</li>
+            <li>Upstream: only the projects that the patches modify are listed, with their licence evidence.</li>
+            <li>The reproducibility of the prebuilt binaries is stated by their records. It was not re-run for the bill of materials.</li>
+            <li>Vulnerabilities are those that OSV listed on the day named in the evidence file.</li>
+            <li>No legal opinion: the licence of a component is what its publisher states.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Page>

@@ -1,0 +1,109 @@
+/* One set of tokens for every ObliviOS site: colour, type, spacing, motion. Light is the default;
+   the dark scheme follows the system (no toggle: a toggle needs script and storage, which the sites do not use). */
+
+@font-face {
+  font-family: "Roboto Flex Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: url("@fontsource-variable/roboto-flex/files/roboto-flex-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Noto Serif Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/noto-serif/files/noto-serif-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Noto Serif Variable";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/noto-serif/files/noto-serif-latin-wght-italic.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  color-scheme: light dark;
+
+  /* colour: the warm grey and brick red of the logo are the only accent */
+  --paper: #f3eee6;
+  --paper-2: #ebe3d8;
+  --paper-3: #e6d8cd;
+  --ink: #26211f;
+  --ink-2: #5b5250;
+  --brick: #a15f5f;
+  --brick-text: #8a4747;
+  --brick-soft: rgba(161, 95, 95, 0.38);
+  --night: #1d1816;
+  --night-2: #2a2321;
+  --night-text: #d9cfc9;
+  --night-dim: #a99d99;
+  --brick-light: #d0847c;
+  --rule: rgba(38, 33, 31, 0.1);
+  --tint: rgba(38, 33, 31, 0.07);
+  --track: rgba(38, 33, 31, 0.1);
+  --header-bg: rgba(243, 238, 230, 0.9);
+  --plate-ink: #2b2423;
+  --grain-blend: multiply;
+  --grain-opacity: 0.5;
+  --print-edge: rgb(101, 95, 95);
+  --print-mid: rgb(161, 95, 95);
+  --print-shadow: #a15f5f;
+  --print-shadow-blend: multiply;
+  --print-shadow-opacity: 0.85;
+  --chain-dot: rgba(91, 82, 80, 0.55);
+  --pre-bg: #26211f;
+  --pre-fg: #f3eee6;
+  --pre-dim: #a99d99;
+
+  /* type */
+  --serif: "Noto Serif Variable", Georgia, "Times New Roman", serif;
+  --sans: "Roboto Flex Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, "DejaVu Sans Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+
+  /* spacing and measure */
+  --max: 1160px;
+  --pad: clamp(20px, 4vw, 48px);
+  --sec: clamp(72px, 9vw, 128px);
+
+  /* motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #181312;
+    --paper-2: #211a18;
+    --paper-3: #2a201e;
+    --ink: #efe7df;
+    --ink-2: #b9aca6;
+    --brick: #d0625a;
+    --brick-text: #e39a92;
+    --brick-soft: rgba(208, 98, 90, 0.42);
+    --night: #0f0b0a;
+    --night-2: #1d1816;
+    --night-text: #d9cfc9;
+    --night-dim: #a99d99;
+    --brick-light: #d0847c;
+    --rule: rgba(239, 231, 223, 0.14);
+    --tint: rgba(239, 231, 223, 0.1);
+    --track: rgba(239, 231, 223, 0.14);
+    --header-bg: rgba(24, 19, 18, 0.9);
+    --plate-ink: #efe7df;
+    --grain-blend: screen;
+    --grain-opacity: 0.16;
+    --print-edge: rgb(170, 160, 156);
+    --print-mid: rgb(208, 98, 90);
+    --print-shadow: #8a3f3a;
+    --print-shadow-blend: screen;
+    --print-shadow-opacity: 0.7;
+    --chain-dot: rgba(185, 172, 166, 0.55);
+    --pre-bg: #0f0b0a;
+    --pre-fg: #efe7df;
+    --pre-dim: #a99d99;
+  }
+}
