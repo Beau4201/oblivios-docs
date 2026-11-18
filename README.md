@@ -49,7 +49,7 @@ flowchart LR
 
 ### Reading the decision log
 
-The decision log is a table of about 660 KB in which one entry is one long line, so do not open it whole. Find an entry by its
+The decision log is a table of about 750 KB in which one entry is one long line, so do not open it whole. Find an entry by its
 number with a pattern search such as `grep -n '^| ADR-214 ' docs/governance/decision-log.md`. The columns are ID, date, decision, status,
 rationale, consequences and review trigger. A decision changes only through a new entry that names what it supersedes.
 
