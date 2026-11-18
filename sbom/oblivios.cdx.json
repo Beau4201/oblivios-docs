@@ -47251,7 +47251,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "fb35e94a6030f8f26541b915a9af6826c691cb4c2b4c94300c2092d1f03ddef8"
+     "content": "f87d028aeaff662f7402c8f953d6ed18c6c5e072fb89687c768277f98167d57a"
     }
    ],
    "licenses": [
@@ -59863,7 +59863,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 7.2.8.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: the site sets passthroughImageService(), uses no astro:assets and never loads sharp, so no image is optimised. OSV of 2026-11-18: fixed in 7.2.8.",
     "state": "in_triage"
    },
    "description": "Astro: Remote code execution through AVIF image optimization",
@@ -59880,7 +59880,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 6.4.6.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: it concerns a running server; the output of the site is static and has no adapter. OSV of 2026-11-18: fixed in 6.4.6.",
     "state": "in_triage"
    },
    "description": "Astro: Host header SSRF in prerendered error page fetch",
@@ -59897,7 +59897,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 7.2.4.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: it concerns a running server stripping the configured base; no base is set and no server runs. OSV of 2026-11-18: fixed in 7.2.4.",
     "state": "in_triage"
    },
    "description": "Astro: Authorization bypass from missing path-segment boundary check when stripping the configured base",
@@ -59914,7 +59914,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 7.1.0.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: the site uses no ClientRouter and no transition: directive. OSV of 2026-11-18: fixed in 7.1.0.",
     "state": "in_triage"
    },
    "description": "Astro: Reflected XSS via unescaped View Transition animation properties",
@@ -59931,7 +59931,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 7.0.4.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: the site has no client: directive and no UI framework, so no island is hydrated. OSV of 2026-11-18: fixed in 7.0.4.",
     "state": "in_triage"
    },
    "description": "Astro: Cross-site scripting via unescaped transition:* directive values on hydrated islands",
@@ -59948,7 +59948,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 6.3.3.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: only default slots are used. OSV of 2026-11-18: fixed in 6.3.3.",
     "state": "in_triage"
    },
    "description": "Astro: Reflected XSS via unescaped slot name",
@@ -59965,7 +59965,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 7.3.2.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: neither the MDX nor the React integration is installed. OSV of 2026-11-18: fixed in 7.3.2.",
     "state": "in_triage"
    },
    "description": "Astro: Reflected/Stored XSS via unescaped <script>/<style> tag content in JSX/MDX rendering",
@@ -59982,7 +59982,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 7.0.6.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: no page or component spreads props. OSV of 2026-11-18: fixed in 7.0.6.",
     "state": "in_triage"
    },
    "description": "Astro: XSS via unescaped spread attribute names in renderHTMLElement (incomplete fix for CVE-2026-54298)",
@@ -59999,7 +59999,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 0.35.0.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: sharp is an optional dependency that the build never loads; the site processes no image. OSV of 2026-11-18: fixed in 0.35.0.",
     "state": "in_triage"
    },
    "description": "sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591",
@@ -60016,7 +60016,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in none listed.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: the patterns come from the configuration of the tools, never from input; no fixed version is listed; the worst case is a slow build. OSV of 2026-11-18: fixed in none listed.",
     "state": "in_triage"
    },
    "description": "picomatch vulnerable to ReDoS through single-branch repeated extglobs",
@@ -60033,7 +60033,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in none listed.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: the patterns come from the configuration of the tools, never from input; no fixed version is listed; the worst case is a slow build. OSV of 2026-11-18: fixed in none listed.",
     "state": "in_triage"
    },
    "description": "picomatch vulnerable to ReDoS through single-branch repeated extglobs",
@@ -60050,7 +60050,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 0.28.1.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: it concerns the development server on Windows; none runs and the workstation runs Linux. OSV of 2026-11-18: fixed in 0.28.1.",
     "state": "in_triage"
    },
    "description": "esbuild allows arbitrary file read when running the development server on Windows",
@@ -60067,7 +60067,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 6.1.6.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: define:vars is not used. OSV of 2026-11-18: fixed in 6.1.6.",
     "state": "in_triage"
    },
    "description": "Astro: XSS in define:vars via incomplete </script> tag sanitization",
@@ -60084,7 +60084,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 6.4.6.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: no page or component spreads props. OSV of 2026-11-18: fixed in 6.4.6.",
     "state": "in_triage"
    },
    "description": "Astro: XSS via Unescaped Attribute Names in Spread Props",
@@ -60101,7 +60101,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 7.4.5.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: no page or component uses a dynamic tag name. OSV of 2026-11-18: fixed in 7.4.5.",
     "state": "in_triage"
    },
    "description": "Astro: XSS via attribute injection in dynamic tag names",
@@ -60118,7 +60118,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 4.6.6.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: zod validates the configuration of Astro and the files of the site and receives no external input. OSV of 2026-11-18: fixed in 4.6.6.",
     "state": "in_triage"
    },
    "description": "Zod can exhaust memory while validating oversized constrained collections",
@@ -60135,7 +60135,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 7.4.7.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: the adapter @astrojs/node is not installed. OSV of 2026-11-18: fixed in 7.4.7.",
     "state": "in_triage"
    },
    "description": "Astro: Image endpoint in @astrojs/node can read files from a case-variant sibling of the output directory on case-sensitive filesystems",
@@ -60152,7 +60152,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 0.35.4.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: sharp is never loaded by the build; the site processes no image. OSV of 2026-11-18: fixed in 0.35.4.",
     "state": "in_triage"
    },
    "description": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545",
@@ -60169,7 +60169,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 0.35.5.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: sharp is never loaded by the build; the site processes no image. OSV of 2026-11-18: fixed in 0.35.5.",
     "state": "in_triage"
    },
    "description": "sharp : Vulnerability in librsvg dependency CVE-2026-96889",
@@ -60186,7 +60186,7 @@
     }
    ],
    "analysis": {
-    "detail": "Not assessed by the project. Listed by OSV on 2026-11-18; fixed in 6.1.10.",
+    "detail": "Assessed in docs/architecture/site-engineering-notes.md: the output is static and has no server islands. OSV of 2026-11-18: fixed in 6.1.10.",
     "state": "in_triage"
    },
    "description": "Astro: Server island encrypted parameters vulnerable to cross-component replay",

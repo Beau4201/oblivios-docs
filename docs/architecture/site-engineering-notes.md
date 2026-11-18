@@ -51,7 +51,35 @@ The SBOM build (`tools/sbom/build-sbom.py`, gate W-7) lists every registry packa
 - 380 registry packages were read; every integrity of the registry equals the one of the lockfile. The two workspaces of `site/` are not registry packages.
 - `zod-to-ts` 1.2.0 states no licence in the registry. The installed package ships a `LICENSE` file with the MIT text and `Copyright (c) 2021 Sachin Raja` (SHA-256 `901eb546213d344758178277346c83df776b3566895c507a82ee36447c6662ba`, read on 2026-11-18); the SBOM takes MIT from it (`npm_licences` in `tools/sbom/inputs.json`).
 - Fourteen packages are outside the allowed licence terms: ten `@img/sharp-libvips-*` (LGPL-3.0-or-later) and four `@img/sharp-*` platform packages (Apache-2.0 with LGPL-3.0-or-later, one also MIT). They are the native image libraries of `sharp`; the lockfile marks them optional, `astro.config.mjs` sets `passthroughImageService()` so the site optimises no image, and the output holds none of them. The build prints each as a note and does not fail on it.
-- OSV listed 19 advisories on 2026-11-18 for six locked versions (20 entries in the SBOM, because one advisory names two `picomatch` versions, 2.3.2 and 4.0.7): Astro 5.18.2 (13), `sharp` 0.34.5 (3), `esbuild` 0.27.7 (1) and `zod` 3.25.76 (1). The 13 of Astro are fixed only in Astro 6 and 7, which need Node 22 (ADR-253). None is assessed in the project records; the SBOM shows each as `in_triage`.
+- OSV listed 19 advisories on 2026-11-18 for six locked versions (20 entries in the SBOM, because one advisory names two `picomatch` versions, 2.3.2 and 4.0.7): Astro 5.18.2 (13), `sharp` 0.34.5 (3), `esbuild` 0.27.7 (1) and `zod` 3.25.76 (1). The 13 of Astro are fixed only in Astro 6 and 7, which need Node 22 (ADR-253). The next section assesses each of them; the SBOM still shows each as `in_triage`, with the assessment as its detail, as it does for the Rust advisories.
+
+## Assessment of the OSV advisories of the npm packages (2026-11-18)
+
+Each of the 19 advisories of the section above was read against what `site/` uses. The evidence is a search of every `.astro`, `.mjs`, `.js` and `.css` file of `site/` and the file `astro.config.mjs`: no `define:vars`, no `transition:` directive and no `ClientRouter`, no `client:` directive, no spread `{...}`, no named slot (three default `<slot />`), no dynamic tag name, no `astro:assets`, no `Astro.request`, no content collection or MDX; `@astrojs/node`, `@astrojs/mdx` and `@astrojs/react` are not in the lockfile; `set:html` appears twice, on strings written in the repository (`faq.astro`, `areas.mjs`). The output is static, has no adapter and no `base`, and Vercel serves the files. Everything the build reads is a file of the repository or of the snapshot. This is a reading of the use of each feature, not an audit of the Astro code.
+
+| Advisory | Package | Why it does not apply |
+| --- | --- | --- |
+| GHSA-26w7-cxv4-gfx2 | astro | AVIF image optimisation: `passthroughImageService()` is set, there is no `astro:assets`, and `sharp` is never loaded. |
+| GHSA-2pvr-wf23-7pc7 | astro | The prerendered error page of a running server: the output is static and has no adapter. |
+| GHSA-376h-93r7-7g6f | astro | Stripping the configured `base` in a running server: no `base` is set and no server runs. |
+| GHSA-4g3v-8h47-v7g6 | astro | View Transitions: no `ClientRouter` and no `transition:` directive. |
+| GHSA-7pw4-f3q4-r2p2 | astro | `transition:*` on hydrated islands: no `client:` directive and no UI framework. |
+| GHSA-8hv8-536x-4wqp | astro | A named slot: only default slots are used. |
+| GHSA-98hj-9722-w3j8 | astro | JSX and MDX rendering: neither integration is installed. |
+| GHSA-f48w-9m4c-m7f5 | astro | Spread attribute names: no spread props. |
+| GHSA-jrpj-wcv7-9fh9 | astro | Spread attribute names: no spread props. |
+| GHSA-j687-52p2-xcff | astro | `define:vars`: not used. |
+| GHSA-mh32-jxcr-mh9f | astro | Dynamic tag names: none. |
+| GHSA-r3h5-4585-7x3w | astro | The image endpoint of `@astrojs/node`: the adapter is not installed. |
+| GHSA-xr5h-phrj-8vxv | astro | Server islands: the output is static and has none. |
+| GHSA-g7r4-m6w7-qqqr | esbuild | The development server on Windows: no development server runs (`astro build` and `serve.mjs`) and the workstation runs Linux. |
+| GHSA-fc5q-39xc-vjpf | picomatch 2.3.2 and 4.0.7 | A slow match of crafted extglob patterns: the patterns come from the configuration of the tools and never from input; no fixed version is listed; the worst case is a slow build. |
+| GHSA-f88m-g3jw-g9cj | sharp | libvips: `sharp` is an optional dependency that the build never loads, and the site processes no image. |
+| GHSA-rgj7-g3m4-5g8c | sharp | libheif: the same. |
+| GHSA-wq5f-xc86-pv6w | sharp | librsvg: the same. |
+| GHSA-mrhx-c7xc-m3w5 | zod | Memory use when validating oversized collections: `zod` validates the configuration of Astro and the files of the site, and receives no external input. |
+
+The assessment is reopened by any use of a listed feature, by an adapter, a `base` or an image service, by an upgrade of Astro, or by a new advisory.
 
 ## Geometry, layout shift and requests of the nine pages (2026-11-18)
 
