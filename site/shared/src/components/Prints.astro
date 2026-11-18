@@ -1,7 +1,7 @@
 ---
-// The definitions of the nineteen prints, the two gradients and the one filter that gives every print the look
+// The definitions of the twenty-one prints, the two gradients and the one filter that gives every print the look
 // of the logo. Rendered once per page, hidden; Print.astro places a print with <use>.
-// p1 to p9: the nine parts. c1 to c5: the chain of verification. q, k, e, t: page headers. r: an open ring.
+// p1 to p9: the nine parts. c1 to c5: the chain of verification. q, k, e, t, ph, br: page headers. r: an open ring.
 ---
 <svg class="defs" aria-hidden="true" focusable="false">
   <defs>
@@ -53,6 +53,15 @@
     <g id="t">
       <path class="f" d="M30 34 a4 4 0 0 1 4 -4 H108 a10 10 0 0 1 7 3 L176 94 a14 14 0 0 1 0 20 L118 172 a14 14 0 0 1 -20 0 L33 107 a10 10 0 0 1 -3 -7 Z"/>
       <circle class="pp" cx="66" cy="66" r="13"/><path class="ps" d="M92 98 L132 138" stroke-width="7"/><path class="ps" d="M110 80 L150 120" stroke-width="7"/>
+    </g>
+    <g id="ph">
+      <rect class="s" x="112" y="62" width="62" height="118" rx="15" stroke-width="9"/><circle class="s" cx="143" cy="82" r="4" stroke-width="4"/>
+      <rect class="f" x="28" y="30" width="86" height="156" rx="20"/><rect class="pp" x="38" y="44" width="66" height="128" rx="10"/><circle class="f" cx="71" cy="56" r="4.5"/>
+    </g>
+    <g id="br">
+      <path class="s" d="M64 44 V156 M64 112 C64 78 138 96 138 62" stroke-width="12"/>
+      <circle class="f" cx="64" cy="44" r="22"/><circle class="f" cx="64" cy="156" r="22"/><circle class="f" cx="138" cy="62" r="22"/>
+      <circle class="pp" cx="64" cy="44" r="8"/><circle class="pp" cx="64" cy="156" r="8"/><circle class="pp" cx="138" cy="62" r="8"/>
     </g>
     <g id="c1"><rect class="f" x="40" y="78" width="120" height="32" rx="10"/><rect class="f" x="28" y="122" width="144" height="32" rx="10"/><rect class="f" x="14" y="166" width="172" height="32" rx="10"/></g>
     <g id="c2"><rect class="f" x="240" y="70" width="120" height="120" rx="16"/><rect class="ps" x="254" y="84" width="92" height="92" rx="8" stroke-width="5" stroke-dasharray="9 10"/><path class="ps" d="M300 110 V150 M280 130 H320" stroke-width="7"/></g>

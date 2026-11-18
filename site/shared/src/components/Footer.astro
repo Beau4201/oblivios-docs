@@ -1,5 +1,6 @@
 ---
-// Dark footer: attribution and non-affiliation on every page, two link lists, the licence line.
+// Dark footer: attribution and non-affiliation on every page, the link lists (pages, source, about), the line about
+// which sites are mine, and the licence line.
 interface Link {
   label: string;
   href: string;
@@ -8,8 +9,10 @@ interface Props {
   pages: Link[];
   about: Link[];
   legal: string;
+  source?: Link[];
+  own?: string;
 }
-const { pages, about, legal } = Astro.props;
+const { pages, about, legal, source = [], own = "" } = Astro.props;
 ---
 <footer class="night">
   <div class="c">
@@ -17,8 +20,10 @@ const { pages, about, legal } = Astro.props;
       <div>
         <img src="/brand/lockup-dark.svg" alt="ObliviOS" width="152" height="44" />
         <p><b>Based on GrapheneOS.</b> ObliviOS is not affiliated with or endorsed by the GrapheneOS project. The name and the logo are not licensed.</p>
+        {own && <p class="own"><b>Only mine.</b> {own}</p>}
       </div>
       <div><h2>Pages</h2><ul>{pages.map((p) => <li><a href={p.href}>{p.label}</a></li>)}</ul></div>
+      {source.length > 0 && <div><h2>Source</h2><ul>{source.map((s) => <li><a href={s.href}>{s.label}</a></li>)}</ul></div>}
       <div><h2>About</h2><ul>{about.map((p) => <li><a href={p.href}>{p.label}</a></li>)}</ul></div>
     </div>
     <p class="legal">{legal}</p>

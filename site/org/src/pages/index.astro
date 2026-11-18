@@ -67,9 +67,9 @@ sources("index", [
           <a class="pl" href={`/what-it-does#${a.id}`}>
             <Print id={a.p} label={a.alt} />
             <h3>{a.title}</h3>
-            {a.id === "app-drawer" ? <p>A redesigned app drawer, built and checked on the Pixel 7a (<code class="m">lynx</code>).</p>
+            {a.id === "app-drawer" ? <p>A redesigned app drawer, built and checked on the Pixel 7a (<code class="m">lynx</code>) and installed on the Pixel 10a (<code class="m">stallion</code>).</p>
               : a.id === "keyboard" ? <p>An on-screen keyboard restyled for the system, with password suggestions in its suggestion strip.</p>
-              : a.id === "airpods" ? <p>Works with Apple AirPods on the Pixel 7a. <code class="m">airpods-core</code> speaks their accessory protocol and runs without an AOSP build.</p>
+              : a.id === "airpods" ? <p>Works with Apple AirPods on the Pixel 7a and the Pixel 10a. <code class="m">airpods-core</code> speaks their accessory protocol and runs without an AOSP build.</p>
               : <p>{blurbs[a.id]}</p>}
           </a>
         ))}

@@ -15,12 +15,12 @@ const kb = (f) => fs.statSync(path.join(dist, f)).size / 1024;
 
 // ---- W-6: the files every site has
 const pages = files.filter((f) => f.endsWith(".html"));
-for (const f of ["index.html", "404.html", "what-it-does.html", "verify.html", "status.html", "faq.html", "security.html", "privacy.html", "trademark.html",
+for (const f of ["index.html", "404.html", "what-it-does.html", "verify.html", "devices.html", "status.html", "faq.html", "get-involved.html", "security.html", "privacy.html", "trademark.html",
   "robots.txt", "sitemap.xml", ".well-known/security.txt", "security-contact.asc", "licenses.txt", "favicon.ico", "favicon.svg", "apple-touch-icon.png",
   "manifest.webmanifest", "social-preview.png"]) {
   if (!files.includes(f)) fail(`missing: ${f}`);
 }
-if (pages.length !== 9) fail(`${pages.length} html pages, 9 expected (eight pages and the 404)`);
+if (pages.length !== 11) fail(`${pages.length} html pages, 11 expected (ten pages and the 404)`);
 
 // ---- privacy rules: no script, no review layer, no inline style, no data: URI, no other origin, no storage
 for (const f of files) {

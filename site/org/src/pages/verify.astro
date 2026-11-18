@@ -47,9 +47,9 @@ sources("verify", [
     <div class="c">
       <div class="prose">
         <h2>1. Upstream</h2>
-        <p><code>oblivios-manifest</code> holds the pinned GrapheneOS and AOSP revisions that the patches apply to, and how each baseline was chosen. They are copied byte for byte from a GrapheneOS manifest tag. The upstream baseline in the published bill of materials is manifest <code>{sbom.baseline}</code>.</p>
+        <p><a href="https://github.com/Beau4201/oblivios-manifest"><code>oblivios-manifest</code></a> holds the pinned GrapheneOS and AOSP revisions that the patches apply to, and how each baseline was chosen. They are copied byte for byte from a GrapheneOS manifest tag. The upstream baseline in the published bill of materials is manifest <code>{sbom.baseline}</code>.</p>
         <h2>2. Patch</h2>
-        <p><code>oblivios-platform</code> holds the patch packages: ObliviOS added to GrapheneOS source. Each patch keeps the licence of the upstream file it changes, and the packages carry provenance records (<code>SOURCE.md</code>). Two Rust components are committed as prebuilt binaries, <code>exitd</code> and <code>libvault_core.so</code>, each with its source commit, toolchain, build command and SHA-256. <code>oblivios-services</code> holds the platform-independent logic and native daemons those binaries come from.</p>
+        <p><a href="https://github.com/Beau4201/oblivios-platform"><code>oblivios-platform</code></a> holds the patch packages: ObliviOS added to GrapheneOS source. Each patch keeps the licence of the upstream file it changes, and the packages carry provenance records (<code>SOURCE.md</code>). Two Rust components are committed as prebuilt binaries, <code>exitd</code> and <code>libvault_core.so</code>, each with its source commit, toolchain, build command and SHA-256. <a href="https://github.com/Beau4201/oblivios-services"><code>oblivios-services</code></a> holds the platform-independent logic and native daemons those binaries come from.</p>
         <h2>3. Decision</h2>
         <p>The decision log is one table in which one entry is one long line, about 660 KB in all. Do not open it whole. Find an entry by its number:</p>
 <pre tabindex="0"><i># find one entry</i>

@@ -1,6 +1,7 @@
 ---
 // Sticky header: the light lockup (the dark one in the dark scheme), the main navigation, an optional button to the
-// other site, and a menu without script on narrow screens.
+// other site, and on narrow screens a menu without script: a contents sheet of numbered pages, the source links and
+// the line about which sites are mine.
 interface Link {
   label: string;
   href: string;
@@ -9,8 +10,10 @@ interface Props {
   pages: Link[];
   current?: string;
   portal?: Link | null;
+  source?: Link[];
+  own?: string;
 }
-const { pages, current, portal = null } = Astro.props;
+const { pages, current, portal = null, source = [], own = "" } = Astro.props;
 ---
 <header class="hd">
   <div class="c">
@@ -25,11 +28,30 @@ const { pages, current, portal = null } = Astro.props;
     </nav>
     {portal && <a class="btn" href={portal.href}>{portal.label} <span aria-hidden="true">↗</span></a>}
     <details class="menu">
-      <summary>Menu</summary>
-      <ul>
-        {pages.map((p) => <li><a href={p.href}>{p.label}</a></li>)}
-        {portal && <li><a href={portal.href}>{portal.label} ↗</a></li>}
-      </ul>
+      <summary>
+        <span class="mo">Menu</span><span class="mc">Close</span><i aria-hidden="true"></i>
+      </summary>
+      <div class="sheet">
+        <nav aria-label="Menu">
+          <ol>
+            {pages.map((p, i) => (
+              <li>
+                <a href={p.href} aria-current={p.href === current ? "page" : undefined}>
+                  <span class="t">{p.label}</span><span class="n" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+                </a>
+              </li>
+            ))}
+            {portal && <li><a href={portal.href}><span class="t">{portal.label}</span><span class="n" aria-hidden="true">↗</span></a></li>}
+          </ol>
+        </nav>
+        {source.length > 0 && (
+          <div class="src">
+            <h2>Source on GitHub</h2>
+            <ul>{source.map((s) => <li><a href={s.href}>{s.label} <span aria-hidden="true">↗</span></a></li>)}</ul>
+          </div>
+        )}
+        {own && <p class="own">{own}</p>}
+      </div>
     </details>
   </div>
 </header>

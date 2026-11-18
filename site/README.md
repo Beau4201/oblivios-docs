@@ -1,6 +1,6 @@
 # site
 
-The sites of ObliviOS. The application of `oblivios.org` is `org/`; `shared/` holds what `oblivios.dev` will reuse: the tokens, the logo files, the nineteen SVG prints with their one filter, and the layout components. Decisions: ADR-251 (design), ADR-252 (start of the build), ADR-253 (answers and calls). Lessons and measurements: [`docs/architecture/site-engineering-notes.md`](../docs/architecture/site-engineering-notes.md).
+The sites of ObliviOS. The application of `oblivios.org` is `org/`; `shared/` holds what `oblivios.dev` will reuse: the tokens, the logo files, the twenty-one SVG prints with their one filter, and the layout components. Decisions: ADR-251 (design), ADR-252 (start of the build), ADR-253 (answers and calls). Lessons and measurements: [`docs/architecture/site-engineering-notes.md`](../docs/architecture/site-engineering-notes.md).
 
 Authored in `oblivios-foundation`, published unchanged in `oblivios-docs` by `tools/docs/build-public-docs.py` once that script covers `site/`. The relative path from `site/` to `docs/` is the same in both repositories.
 

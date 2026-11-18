@@ -4,7 +4,7 @@ import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
 import Print from "@oblivios/site-shared/components/Print.astro";
 import { security } from "../lib/records.mjs";
 import { securityTxt } from "../lib/securitytxt.mjs";
-import { sources } from "../lib/site.mjs";
+import { sources, own } from "../lib/site.mjs";
 
 sources("security", ["SECURITY.md", "security-contact.asc", "The contact, the key validity and the fingerprint are read from SECURITY.md when the page is built."]);
 const txt = securityTxt();
@@ -36,6 +36,8 @@ const txt = securityTxt();
         <ul><li>I reply within 3 days.</li><li>I agree a disclosure date with you. There is no fixed time to a fix.</li><li>I credit you in the fix unless you ask me not to.</li><li>There is no bug bounty.</li></ul>
         <h2>Scope</h2>
         <p>In scope: the patches, services and scripts in the ObliviOS repositories. ObliviOS is source only, so there is no build, image or update service to report on. A weakness that exists in upstream GrapheneOS or AOSP is better reported to those projects. Tell me as well if my patches make it worse.</p>
+        <h2>Which sites are mine</h2>
+        <p>{own} The contact and the key on this page are the only ones I use for reports.</p>
         <h2><code>security.txt</code></h2>
         <p>The same contact is served as <a href="/.well-known/security.txt"><code>/.well-known/security.txt</code></a> (RFC 9116):</p>
         <pre tabindex="0">{txt}</pre>

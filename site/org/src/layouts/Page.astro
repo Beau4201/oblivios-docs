@@ -2,7 +2,7 @@
 // The page frame of oblivios.org: the shared shell with the navigation and footer lines of this site.
 import Base from "@oblivios/site-shared/components/Base.astro";
 import "../styles/pages.css";
-import { siteUrl, pages, footPages, footAbout, portal, legal, review } from "../lib/site.mjs";
+import { siteUrl, pages, footPages, footAbout, portal, repos, own, legal, review } from "../lib/site.mjs";
 
 interface Props {
   title: string;
@@ -22,6 +22,8 @@ const { title, description, path, current } = Astro.props;
   footAbout={footAbout}
   legal={legal}
   portal={portal}
+  source={repos}
+  own={own}
   current={current}
   review={review}
 >

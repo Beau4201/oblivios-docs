@@ -25,10 +25,12 @@ interface Props {
   footAbout: Link[];
   legal: string;
   portal?: Link | null;
+  source?: Link[];
+  own?: string;
   current?: string;
   review?: boolean;
 }
-const { title, description, path, siteUrl, pages, footPages, footAbout, legal, portal = null, current, review = false } = Astro.props;
+const { title, description, path, siteUrl, pages, footPages, footAbout, legal, portal = null, source = [], own = "", current, review = false } = Astro.props;
 const canonical = siteUrl + (path === "/" ? "/" : path);
 const image = siteUrl + "/social-preview.png";
 ---
@@ -64,8 +66,8 @@ const image = siteUrl + "/social-preview.png";
   <body>
     <Prints />
     <a class="skip" href="#main">Skip to the content</a>
-    <Header pages={pages} current={current} portal={portal} />
+    <Header pages={pages} current={current} portal={portal} source={source} own={own} />
     <main id="main"><slot /></main>
-    <Footer pages={footPages} about={footAbout} legal={legal} />
+    <Footer pages={footPages} about={footAbout} source={source} own={own} legal={legal} />
   </body>
 </html>

@@ -158,24 +158,24 @@ a {
   width: auto;
   display: block;
 }
-.hd nav {
+.hd .c > nav {
   display: flex;
   gap: clamp(18px, 2.6vw, 36px);
   margin-left: auto;
   font: 500 15px / 1 var(--sans);
 }
-.hd nav a {
+.hd .c > nav a {
   color: var(--ink-2);
   padding: 8px 0;
   transition: color 160ms;
 }
-.hd nav a[aria-current] {
+.hd .c > nav a[aria-current] {
   color: var(--ink);
   box-shadow: 0 2px 0 var(--brick);
   border-radius: 0;
 }
 @media (hover: hover) and (pointer: fine) {
-  .hd nav a:hover {
+  .hd .c > nav a:hover {
     color: var(--ink);
   }
 }
@@ -214,40 +214,153 @@ a {
 .hd .btn {
   padding: 11px 18px;
 }
+/* menu on narrow screens: a contents sheet under the header, like the table of contents of a printed record */
 .menu {
   display: none;
-  position: relative;
 }
 .menu summary {
   list-style: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 2px 0 12px;
   font: 600 15px / 1 var(--sans);
-  padding: 11px 18px;
-  box-shadow: inset 0 0 0 1.5px var(--ink);
-  border-radius: 2px;
+  letter-spacing: 0.02em;
+  -webkit-tap-highlight-color: transparent;
 }
 .menu summary::-webkit-details-marker {
   display: none;
 }
-.menu ul {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 10px);
-  background: var(--paper);
-  box-shadow: 0 0 0 1.5px var(--ink);
-  padding: 10px 22px;
-  list-style: none;
-  min-width: 230px;
-  display: grid;
-  font: 500 17px / 1 var(--sans);
-  z-index: 5;
+.menu .mc,
+.menu[open] .mo {
+  display: none;
 }
-.menu li a {
+.menu[open] .mc {
+  display: inline;
+}
+.menu summary i {
+  position: relative;
+  width: 22px;
+  height: 14px;
+  flex: none;
+}
+.menu summary i::before,
+.menu summary i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+  transition: transform 220ms var(--ease-out), top 220ms var(--ease-out);
+}
+.menu summary i::before {
+  top: 2px;
+}
+.menu summary i::after {
+  top: 10px;
+}
+.menu[open] summary i::before {
+  top: 6px;
+  transform: rotate(45deg);
+}
+.menu[open] summary i::after {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+.sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: calc(100vh - 72px);
+  height: calc(100dvh - 72px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--paper);
+  padding: 4px var(--pad) 40px;
+  box-shadow: inset 0 1px 0 var(--rule);
+}
+.sheet ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sheet ol a {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 17px 0;
+  font: 500 clamp(26px, 7.4vw, 34px) / 1.1 var(--serif);
+  color: var(--ink);
+  box-shadow: 0 1px 0 var(--rule);
+}
+.sheet ol a::before {
+  content: "";
+  order: 1;
+  flex: 1;
+  min-width: 24px;
+  border-bottom: 2px dotted var(--ink-2);
+  opacity: 0.45;
+  transform: translateY(-0.3em);
+}
+.sheet ol .n {
+  order: 2;
+  font: 500 13px / 1 var(--mono);
+  color: var(--brick-text);
+}
+.sheet ol a[aria-current] .t {
+  box-shadow: 0 2px 0 var(--brick);
+}
+.sheet ol a:active .t {
+  color: var(--brick-text);
+}
+.sheet .src {
+  margin-top: 30px;
+}
+.sheet .src h2 {
+  font: 600 13px / 1 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brick-text);
+  margin: 0 0 8px;
+}
+.sheet .src ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0 16px;
+  font: 500 15px / 1.2 var(--mono);
+}
+.sheet .src a {
   display: block;
-  padding: 13px 0;
+  padding: 12px 0;
+  color: var(--ink);
+}
+.sheet .own {
+  margin: 22px 0 0;
+  padding-top: 18px;
+  box-shadow: 0 -1px 0 var(--rule);
+  font: 400 14px / 1.6 var(--sans);
+  color: var(--ink-2);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .menu[open] .sheet {
+    animation: sheet-in 240ms var(--ease-out);
+  }
+}
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 }
 @media (max-width: 860px) {
-  .hd nav,
+  .hd .c > nav,
   .hd .c > .btn {
     display: none;
   }
@@ -265,8 +378,11 @@ a {
 }
 .fg {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr 0.7fr;
+  grid-template-columns: 1.3fr 0.7fr 0.8fr 0.8fr;
   gap: clamp(32px, 5vw, 64px);
+}
+.fg p.own {
+  margin-top: 14px;
 }
 .fg img {
   height: 44px;
