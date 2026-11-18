@@ -1470,7 +1470,7 @@ be0c23072089e4de74a7d6148b2efe48fea09855798189c3b9dfb4b1de0e5d10  oblivios-docs/
 b2fb976715d84873c529a20061f972864a7e8b8bd9c2e153514870747b089374  oblivios-docs/docs/architecture/site-engineering-notes.md
 7ccc6231768485ade77ace0b0e0c9c1ce5bad74e12815710fb556ad2f3a0f325  oblivios-docs/docs/devices/support-policy.md
 917b3c7eaf08ca05e1a3f29b54087d072e7a6446cd3ff46bc39818c6dbff9721  oblivios-docs/docs/documentation-standard.md
-f2332329c84632877b3e80cb9c7a97ab435818de923ed3f5531342dfc892af86  oblivios-docs/docs/governance/decision-log.md
+eb04a29f79290b70ad75bae19af0505dc2ae968370bed7c59bf796ae81748190  oblivios-docs/docs/governance/decision-log.md
 e066d93f2881f1ed2463a6bd90db845bbfdb1aec593df97457d1d97d98a703a7  oblivios-docs/docs/release/supply-chain-and-signing.md
 25f9b1535ef40bcc8506e1a8f91a56b01bc72587030f7f21b580f9243d90811b  oblivios-docs/docs/research/licensing-and-branding-review.md
 41fd83049aa1c4aefd9e2285ff2fbe6c4ad14120c1790af368c3b6622f1a5922  oblivios-docs/docs/security/capability-boundaries.md
@@ -1494,7 +1494,7 @@ fe844d4582596110c7631c83a44f6f80b5c14ea7cad02e809a27d02a3720409c  oblivios-docs/
 22b96d72f705b9545e46c96a232b23b42bc3949e9936e7ce8fee76f6051e5979  oblivios-docs/site/org/src/pages/.well-known/security.txt.js
 bf066581d1fb9d57f9151852f34685720e8199e288d66ffeb9ad4de8c865e395  oblivios-docs/site/org/src/pages/404.astro
 cac78338fdc7c1f775cbec46d8e3e05b4a03611d00aa82afcb33aae863b89ff8  oblivios-docs/site/org/src/pages/contact.astro
-84428187426a826170d6f4b8d1dbb3466c5f09a0428efa5d623393c24470f9c3  oblivios-docs/site/org/src/pages/devices.astro
+c73963e8177fbea8cf795049aa11322850e0d32e1907945e959450426a9cf359  oblivios-docs/site/org/src/pages/devices.astro
 cdd485e2954ca789eb3de5ec3a69b0500ac286e28f7782f3e709872d373153e2  oblivios-docs/site/org/src/pages/faq.astro
 d425781285cd25bbdc3f42bc099a1005f6aafb9bdc1ba70de1921ff97d744434  oblivios-docs/site/org/src/pages/index.astro
 9720b8316ff56adbf9b35921497d51cbe408af279d58ea7cbc648a7cf20daa36  oblivios-docs/site/org/src/pages/licenses.txt.js
