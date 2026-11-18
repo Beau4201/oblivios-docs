@@ -1,6 +1,8 @@
 ---
 // Sticky header: the light lockup (the dark one in the dark scheme), the main navigation, an optional button to the
-// other site, and on narrow screens a plain icon button that opens the same links as a list, without script.
+// other site, and on narrow screens an icon button that opens the same links in a drawer from the right edge. The drawer
+// is a native popover: no script, closes with Escape or a tap outside it, and its close button sits where the open
+// button was.
 interface Link {
   label: string;
   href: string;
@@ -24,14 +26,15 @@ const { pages, current, portal = null } = Astro.props;
       {pages.map((p) => <a href={p.href} aria-current={p.href === current ? "page" : undefined}>{p.label}</a>)}
     </nav>
     {portal && <a class="btn" href={portal.href}>{portal.label} <span aria-hidden="true">↗</span></a>}
-    <details class="menu">
-      <summary><span class="vh">Menu</span><i aria-hidden="true"></i></summary>
-      <div class="sheet">
+    <button class="mbtn" type="button" popovertarget="drawer" aria-label="Menu"><i aria-hidden="true"></i></button>
+    <div id="drawer" class="drawer" popover>
+      <button class="mbtn x" type="button" popovertarget="drawer" popovertargetaction="hide" aria-label="Close the menu"><i aria-hidden="true"></i></button>
+      <nav aria-label="Menu">
         <ul>
           {pages.map((p) => <li><a href={p.href} aria-current={p.href === current ? "page" : undefined}><span>{p.label}</span></a></li>)}
           {portal && <li><a href={portal.href}><span>{portal.label} ↗</span></a></li>}
         </ul>
-      </div>
-    </details>
+      </nav>
+    </div>
   </div>
 </header>

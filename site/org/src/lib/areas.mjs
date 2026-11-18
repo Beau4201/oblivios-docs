@@ -7,7 +7,7 @@ const define = (a) => ({ ...a, ...counts(a.adrs) });
 export const areas = [
   define({ id: "compartments", p: "p7", title: "Compartments", alt: "Four cells with a different shape in each", adrs: [167, 173, 174, 175, 179, 180, 186, 187, 188, 208, 209, 211] }),
   define({ id: "network-exit", p: "p5", title: "Network exit", alt: "Concentric rings, layer inside layer", adrs: [178, 181, 184, 186, 187, 188] }),
-  define({ id: "live-data-map", p: "p3", title: "Live Data Map", alt: "A cell tower sending signals", adrs: [157, 158, 159, 160, 161, 162, 165, 189] }),
+  define({ id: "live-data-map", p: "p3", title: "Atlas", alt: "A cell tower sending signals", adrs: [157, 158, 159, 160, 161, 162, 165, 189] }),
   define({ id: "duress-unlock", p: "p2", title: "Duress Unlock", alt: "Two phones, one behind the other", adrs: [38, 39, 42, 55, 56, 59, 60, 63, 65, 66, 67, 73, 75, 76, 77, 78, 79, 80, 83, 85, 86, 87, 88, 96, 98, 114, 145, 194, 210, 213, 217, 222, 228, 229, 230, 231, 233, 234, 238, 239] }),
   define({ id: "passwords", p: "p1", title: "Passwords", alt: "A padlock", adrs: [185, 190, 191, 192, 193, 215] }),
   define({ id: "grab-detection", p: "p8", title: "Grab detection", alt: "A phone pulled away, with a lock", adrs: [169, 176, 195, 197, 198, 204] }),

@@ -60,7 +60,7 @@ evidence.
 | Wrong-PIN behaviour | Reproduced defect, root cause, fix with hardware evidence. | Fixed (ADR-114). Not tested on `lynx`. |
 | Reproducibility | Independent rebuild matches the signed artifact. | **Pending (ADR-112).** No claim of build integrity beyond the owner until it is done. |
 | Update and recovery beyond the proof OTA | Interrupted update, rollback rejection, recovery, factory reset, restore. | Not run. |
-| Mobile core, hardware, accessibility | SIM, calls, radios, camera, biometrics, thermal, accessibility. | Not run. No SIM was inserted. |
+| Mobile core, hardware, accessibility | SIM, calls, radios, camera, biometrics, thermal, accessibility. | A SIM is in the phone and the owner uses it every day: calls, the SIM and the camera work (owner, 2026-11-18). No validation row of this area has been run on `stallion`, so this is the owner's statement of use and not case evidence. |
 
 Known open items for this device: the boot screen shows the GrapheneOS logo until an image carries the boot picture of ADR-152; the dropbox is to be re-read some hours after the first post-OTA boot (it was read at uptime zero); a user-removal hook to clear a stale decoy registration is not done.
 

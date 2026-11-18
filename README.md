@@ -61,9 +61,9 @@ licence or a claim of a NOTICE file is not supported. `sbom/README.md` gives the
 
 ## What this repository is
 
-A one-way snapshot. The documents are authored in a private repository and copied here by a script that
-rewrites host and path details to neutral wording and checks the result. Do not edit a file here: a change
-is made at the source and the snapshot is regenerated.
+The documents are authored in a private repository and copied here by a script that rewrites host and path
+details to neutral wording and checks the result. If you find an error, open an issue: I correct it at the
+source and the snapshot follows.
 
 A link to a record that is not published is shown as plain text. A record cited by path in the decision log
 or in an engineering note may therefore not exist here.

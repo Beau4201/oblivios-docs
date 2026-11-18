@@ -5,10 +5,14 @@ import Print from "@oblivios/site-shared/components/Print.astro";
 import { sources } from "../lib/site.mjs";
 
 sources("devices", [
-  "The owner's statement of 2026-11-18: the Pixel 10a is the daily phone, the Pixel 7a the development phone (decision 256).",
-  "docs/devices/support-policy.md (the entry gate for a supported device)",
-  "The images paragraph is the owner's intention of 2026-11-18, recorded as decision 256.",
-  "What works on each phone is not on this page until the owner states it.",
+  "Daily phone, calls, SIM and camera, Compartments: the owner's statement of 2026-11-18 (decision 256, 257, 258).",
+  "docs/devices/support-policy.md (Pixel 10a bring-up record: Personal Stable, personal data allowed, relocked with the project key; the entry gate for a supported device)",
+  "docs/quality/validation-matrix.md STALLION-001 (relock), STALLION-002, 006, 007, 008, 009 (updates through the updater; the read of 2026-11-09 on candidate 2026110503: user build, yellow and locked, packages airpods, datamap, exit, guardian, passwords), STALLION-004 (Duress core scenarios)",
+  "AIR-197 (candidate 2026100501 through the updater, AirPods stack)",
+  "docs/product/status-app-surfaces.md (the app drawer and the keyboard on stallion since the candidates named there)",
+  "docs/product/status-privacy-and-identity.md and docs/release/build-log.md (the Pixel 7a has no SIM)",
+  "Decision 112 (the independent rebuild is deferred)",
+  "The images paragraph is the owner's intention of 2026-11-18 (decision 256).",
 ]);
 ---
 <Page
@@ -30,9 +34,9 @@ sources("devices", [
     <div class="c gap-top">
       <dl class="kv">
         <dt>Pixel 10a <code>stallion</code></dt>
-        <dd>My daily phone.</dd>
+        <dd>My daily phone, with my personal data on it. Calls, the SIM and the camera work on it. Its bootloader is locked with my own key, so verified boot reads yellow and locked, and it takes signed updates through the system updater: six so far, the latest read on 9 November 2026. It runs Compartments, Network exit, Atlas, Duress Unlock, Passwords, the app drawer, the keyboard and AirPods support.</dd>
         <dt>Pixel 7a <code>lynx</code></dt>
-        <dd>My development phone.</dd>
+        <dd>My development phone and the first engineering target. New work is built and checked here first. It has no SIM card, so calls and mobile data are not tested on it.</dd>
         <dt>Supported</dt>
         <dd>No device. A device counts as supported only after it passes the entry gate below.</dd>
       </dl>
@@ -50,7 +54,7 @@ sources("devices", [
     <div class="c">
       <div class="prose">
         <h2>Images</h2>
-        <p>If real interest in ObliviOS shows, I want to publish images for the Pixel 10a. I have not set a date. Before I do, the five gates of a public beta on the <a href="/status">status page</a> have to be met, and I decide on the day, separately. Until then ObliviOS is source only.</p>
+        <p>If real interest in ObliviOS shows, I want to publish images for the Pixel 10a. I have not set a date. Before I do, the five gates of a public beta on the <a href="/status">status page</a> have to be met. One more thing stands in the way, and I postponed it on purpose: nobody has rebuilt a signed image independently and compared it byte for byte (decision 112). I decide on the day, separately. Until then ObliviOS is source only.</p>
         <div class="callout"><h3>No date, no promise</h3><p>Nothing on this page says that an image will exist. It says what I intend and what stands in the way.</p></div>
       </div>
     </div>

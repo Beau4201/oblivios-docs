@@ -214,91 +214,151 @@ a {
 .hd .btn {
   padding: 11px 18px;
 }
-/* menu on narrow screens: an icon button that opens the page links as a plain list */
-.menu {
+/* menu on narrow screens: an icon button without a box, and a drawer from the right edge (a native popover) that takes
+   three quarters of the width and the whole height. It enters slowly and leaves faster; both are transitions, so a
+   second tap reverses it from where it is. */
+.mbtn {
   display: none;
-}
-.menu summary {
-  list-style: none;
-  cursor: pointer;
-  display: grid;
   place-items: center;
   width: 44px;
   height: 44px;
-  box-shadow: inset 0 0 0 1.5px var(--ink);
-  border-radius: 2px;
+  margin-right: -10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  transition: transform 160ms var(--ease-out);
 }
-.menu summary::-webkit-details-marker {
-  display: none;
+.mbtn:active {
+  transform: scale(0.94);
 }
-.menu summary i {
+.mbtn i {
   position: relative;
-  width: 20px;
+  width: 22px;
   height: 14px;
 }
-.menu summary i::before,
-.menu summary i::after {
+.mbtn i::before,
+.mbtn i::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--ink);
-  transition: transform 160ms var(--ease-out), top 160ms var(--ease-out);
+  background: currentColor;
 }
-.menu summary i::before {
+.mbtn i::before {
   top: 2px;
 }
-.menu summary i::after {
+.mbtn i::after {
   top: 10px;
 }
-.menu[open] summary i::before {
+.mbtn.x i::before {
   top: 6px;
   transform: rotate(45deg);
 }
-.menu[open] summary i::after {
+.mbtn.x i::after {
   top: 6px;
   transform: rotate(-45deg);
 }
-.sheet {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
+.drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  margin: 0;
+  width: 75%;
+  max-width: 440px;
+  height: 100vh;
+  height: 100dvh;
+  padding: 0 var(--pad) 32px;
+  border: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: var(--paper);
-  padding: 4px var(--pad) 10px;
-  box-shadow: 0 1px 0 var(--rule), inset 0 1px 0 var(--rule);
+  color: var(--ink);
+  box-shadow: -1px 0 0 var(--rule);
+  transform: translateX(100%);
+  transition: transform 220ms var(--ease-drawer), overlay 220ms allow-discrete, display 220ms allow-discrete;
 }
-.sheet ul {
+.drawer:popover-open {
+  transform: translateX(0);
+  transition-duration: 340ms;
+}
+@starting-style {
+  .drawer:popover-open {
+    transform: translateX(100%);
+  }
+}
+.drawer::backdrop {
+  background: rgba(20, 14, 12, 0);
+  transition: background-color 220ms var(--ease-out), overlay 220ms allow-discrete, display 220ms allow-discrete;
+}
+.drawer:popover-open::backdrop {
+  background: rgba(20, 14, 12, 0.5);
+  transition-duration: 340ms;
+}
+@starting-style {
+  .drawer:popover-open::backdrop {
+    background: rgba(20, 14, 12, 0);
+  }
+}
+.drawer .mbtn {
+  display: grid;
+  margin: 14px -10px 6px auto;
+}
+.drawer ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.sheet a {
+.drawer a {
   display: block;
-  padding: 16px 0;
-  font: 500 17px / 1 var(--sans);
+  padding: 17px 0;
+  font: 500 18px / 1 var(--sans);
   color: var(--ink-2);
   box-shadow: 0 1px 0 var(--rule);
 }
-.sheet li:last-child a {
+.drawer li:last-child a {
   box-shadow: none;
 }
-.sheet a[aria-current] {
+.drawer a:active {
   color: var(--ink);
 }
-.sheet a[aria-current] span {
+.drawer a[aria-current] {
+  color: var(--ink);
+}
+.drawer a[aria-current] span {
   box-shadow: 0 2px 0 var(--brick);
   padding-bottom: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .drawer {
+    transform: none;
+    opacity: 0;
+    transition: opacity 160ms ease, overlay 160ms allow-discrete, display 160ms allow-discrete;
+  }
+  .drawer:popover-open {
+    opacity: 1;
+  }
+  @starting-style {
+    .drawer:popover-open {
+      opacity: 0;
+      transform: none;
+    }
+  }
 }
 @media (max-width: 860px) {
   .hd .c > nav,
   .hd .c > .btn {
     display: none;
   }
-  .menu {
-    display: block;
+  .hd .c > .mbtn {
+    display: grid;
+  }
+}
+@media (min-width: 861px) {
+  .drawer {
+    display: none !important;
   }
 }
 
