@@ -1,3 +1,12 @@
+<p align="center">
+  <a href="https://oblivios.org">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://oblivios.org/brand/lockup-dark.svg">
+      <img alt="ObliviOS" src="https://oblivios.org/brand/lockup-light.svg" width="220">
+    </picture>
+  </a>
+</p>
+
 <h1 align="center">oblivios-docs</h1>
 
 <p align="center">
@@ -11,7 +20,7 @@
   <img alt="Stage: source only" src="https://img.shields.io/badge/stage-source%20only-lightgrey">
 </p>
 
-> **Stage: source only.** No builds, images or update service are offered, and no device is supported (ADR-171).
+> **Stage: source only.** No builds, images or update service are offered, and no device is supported (ADR-171). Website: [oblivios.org](https://oblivios.org).
 
 ## The four repositories
 
