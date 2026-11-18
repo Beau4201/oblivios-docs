@@ -66,7 +66,7 @@ const image = siteUrl + "/social-preview.png";
   <body>
     <Prints />
     <a class="skip" href="#main">Skip to the content</a>
-    <Header pages={pages} current={current} portal={portal} source={source} own={own} />
+    <Header pages={pages} current={current} portal={portal} />
     <main id="main"><slot /></main>
     <Footer pages={footPages} about={footAbout} source={source} own={own} legal={legal} />
   </body>

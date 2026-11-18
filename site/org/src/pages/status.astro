@@ -16,7 +16,7 @@ const gates = [
 const pct = (n, of) => (100 * n) / Math.max(of, 1);
 sources("status", [
   "docs/devices/support-policy.md (device support policy)",
-  "docs/product/status-stallion-and-memory.md (the Pixel 10a is the daily phone; the Pixel 7a is the development phone)",
+  "The owner's statement of 2026-11-18 (the Pixel 10a is the daily phone; the Pixel 7a is the development phone)",
   "Decision 256 (the owner's intention to publish Pixel 10a images when interest shows; no date, no promise)",
   "docs/research/licensing-and-branding-review.md (licensing and branding review)",
   "sbom/README.md",
@@ -46,7 +46,7 @@ sources("status", [
       <dl class="kv">
         <dt>What exists</dt><dd>Four repositories with the manifest, the platform patches, the services and the records.</dd>
         <dt>Supported devices</dt><dd>None. A device counts as supported only after it passes the entry gate of the device support policy.</dd>
-        <dt>Phones that run it</dt><dd>The Pixel 10a (<code>stallion</code>), my daily phone, and the Pixel 7a (<code>lynx</code>), my development phone. This is a record of my own phones, not a support claim: see <a href="/devices">Devices</a>.</dd>
+        <dt>Phones that run it</dt><dd>The Pixel 10a (<code>stallion</code>), my daily phone, and the Pixel 7a (<code>lynx</code>), my development phone. This says which phones I use, not that they are supported: see <a href="/devices">Devices</a>.</dd>
         <dt>Images</dt><dd>None yet. If real interest in ObliviOS shows, I want to publish images for the Pixel 10a. I have set no date and I promise nothing: the gates below come first.</dd>
         <dt>Upstream baseline</dt><dd>GrapheneOS manifest <code>{sbom.baseline}</code></dd>
       </dl>
@@ -78,7 +78,7 @@ sources("status", [
     <div class="c">
       <div class="prose">
         <h2>The road to a public beta</h2>
-        <p>A public beta with binaries has to pass five gates. None is met, and none has to be at this stage, because it offers no binaries. Images for the Pixel 10a would be that beta, so they wait for these gates and for the open rows on the <a href="/devices">devices page</a>.</p>
+        <p>A public beta with binaries has to pass five gates. None is met, and none has to be at this stage, because it offers no binaries. Images for the Pixel 10a would be that beta, so they wait for these gates.</p>
       </div>
       <div class="steps">
         {gates.map(([t, q]) => (

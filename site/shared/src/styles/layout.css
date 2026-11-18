@@ -214,37 +214,28 @@ a {
 .hd .btn {
   padding: 11px 18px;
 }
-/* menu on narrow screens: a contents sheet under the header, like the table of contents of a printed record */
+/* menu on narrow screens: an icon button that opens the page links as a plain list */
 .menu {
   display: none;
 }
 .menu summary {
   list-style: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 44px;
-  padding: 0 2px 0 12px;
-  font: 600 15px / 1 var(--sans);
-  letter-spacing: 0.02em;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+  border-radius: 2px;
   -webkit-tap-highlight-color: transparent;
 }
 .menu summary::-webkit-details-marker {
   display: none;
 }
-.menu .mc,
-.menu[open] .mo {
-  display: none;
-}
-.menu[open] .mc {
-  display: inline;
-}
 .menu summary i {
   position: relative;
-  width: 22px;
+  width: 20px;
   height: 14px;
-  flex: none;
 }
 .menu summary i::before,
 .menu summary i::after {
@@ -253,8 +244,8 @@ a {
   left: 0;
   right: 0;
   height: 2px;
-  background: currentColor;
-  transition: transform 220ms var(--ease-out), top 220ms var(--ease-out);
+  background: var(--ink);
+  transition: transform 160ms var(--ease-out), top 160ms var(--ease-out);
 }
 .menu summary i::before {
   top: 2px;
@@ -275,89 +266,31 @@ a {
   left: 0;
   right: 0;
   top: 100%;
-  height: calc(100vh - 72px);
-  height: calc(100dvh - 72px);
-  overflow-y: auto;
-  overscroll-behavior: contain;
   background: var(--paper);
-  padding: 4px var(--pad) 40px;
-  box-shadow: inset 0 1px 0 var(--rule);
+  padding: 4px var(--pad) 10px;
+  box-shadow: 0 1px 0 var(--rule), inset 0 1px 0 var(--rule);
 }
-.sheet ol {
+.sheet ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.sheet ol a {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  padding: 17px 0;
-  font: 500 clamp(26px, 7.4vw, 34px) / 1.1 var(--serif);
-  color: var(--ink);
+.sheet a {
+  display: block;
+  padding: 16px 0;
+  font: 500 17px / 1 var(--sans);
+  color: var(--ink-2);
   box-shadow: 0 1px 0 var(--rule);
 }
-.sheet ol a::before {
-  content: "";
-  order: 1;
-  flex: 1;
-  min-width: 24px;
-  border-bottom: 2px dotted var(--ink-2);
-  opacity: 0.45;
-  transform: translateY(-0.3em);
+.sheet li:last-child a {
+  box-shadow: none;
 }
-.sheet ol .n {
-  order: 2;
-  font: 500 13px / 1 var(--mono);
-  color: var(--brick-text);
-}
-.sheet ol a[aria-current] .t {
-  box-shadow: 0 2px 0 var(--brick);
-}
-.sheet ol a:active .t {
-  color: var(--brick-text);
-}
-.sheet .src {
-  margin-top: 30px;
-}
-.sheet .src h2 {
-  font: 600 13px / 1 var(--sans);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--brick-text);
-  margin: 0 0 8px;
-}
-.sheet .src ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 0 16px;
-  font: 500 15px / 1.2 var(--mono);
-}
-.sheet .src a {
-  display: block;
-  padding: 12px 0;
+.sheet a[aria-current] {
   color: var(--ink);
 }
-.sheet .own {
-  margin: 22px 0 0;
-  padding-top: 18px;
-  box-shadow: 0 -1px 0 var(--rule);
-  font: 400 14px / 1.6 var(--sans);
-  color: var(--ink-2);
-}
-@media (prefers-reduced-motion: no-preference) {
-  .menu[open] .sheet {
-    animation: sheet-in 240ms var(--ease-out);
-  }
-}
-@keyframes sheet-in {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
+.sheet a[aria-current] span {
+  box-shadow: 0 2px 0 var(--brick);
+  padding-bottom: 4px;
 }
 @media (max-width: 860px) {
   .hd .c > nav,

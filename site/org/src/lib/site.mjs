@@ -10,7 +10,7 @@ export const pages = [
   { label: "Devices", href: "/devices" },
   { label: "Status", href: "/status" },
   { label: "FAQ", href: "/faq" },
-  { label: "Get involved", href: "/get-involved" },
+  { label: "Contact", href: "/contact" },
   { label: "Security", href: "/security" },
 ];
 export const footPages = pages.filter((p) => p.href !== "/security");

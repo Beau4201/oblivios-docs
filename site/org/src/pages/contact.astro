@@ -1,0 +1,55 @@
+---
+import Page from "../layouts/Page.astro";
+import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import { security } from "../lib/records.mjs";
+import { repos, sources } from "../lib/site.mjs";
+
+const what = {
+  "oblivios-docs": "The decisions, the threat model, the bill of materials and this site. Not sure where your issue belongs? Open it here.",
+  "oblivios-manifest": "The pinned GrapheneOS and AOSP revisions that the patches apply to.",
+  "oblivios-platform": "The patch packages: ObliviOS added to GrapheneOS source.",
+  "oblivios-services": "The platform-independent logic and the native daemons.",
+};
+sources("contact", [
+  "The owner's statement of 2026-11-18: issues are welcome, the owner takes the responsibility for the code, and nobody has to encrypt anything to reach him (decision 256).",
+  "SECURITY.md (the contact address; a reply within 3 days; a report by email, encrypted if you can)",
+  "CONTRIBUTING.md of oblivios-platform and oblivios-services (no pull requests yet)",
+  "oblivios-docs is a snapshot made by a script (README.md of oblivios-docs)",
+  "The contact address is read from SECURITY.md when the page is built.",
+]);
+---
+<Page
+  title="Contact: ObliviOS"
+  description="How to reach the person who builds ObliviOS: open an issue on GitHub or write an email. You do not need to encrypt anything."
+  path="/contact"
+  current="/contact"
+>
+  <PageHeader crumb="Contact" title="Contact" lede="Open an issue on GitHub, or write to me. You do not need to encrypt anything.">
+    <Print id="br" label="A branch with three commits" />
+  </PageHeader>
+  <section class="band alt">
+    <div class="c">
+      <div class="prose">
+        <h2>Open an issue</h2>
+        <p>An issue on GitHub is the easiest way, and the one I like best. It can be a bug, a question, something that is missing or unclear, or a criticism of my code. If my code is bad, say so: it is my code and my responsibility, and I would rather hear it than not.</p>
+        <ul>
+          {repos.map((r) => <li><a href={`${r.href}/issues`}><code>{r.label}</code></a>. {what[r.label]}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="c">
+      <div class="prose">
+        <h2>Write to me</h2>
+        <p>If you would rather not post in public, send an email to <a href={`mailto:${security.email}`}>{security.email}</a>. Plain text is fine. If you want to encrypt it, my key is on the <a href="/security">security page</a>, but you do not have to.</p>
+        <h2>A vulnerability</h2>
+        <p>An email is better if you do not want the problem to be public before it is fixed. The <a href="/security">security page</a> has the key and what to expect, and I reply within 3 days.</p>
+        <h2>What to expect</h2>
+        <p>I build ObliviOS alone, so I cannot promise how fast I answer an issue. Pull requests are not accepted yet; <code>oblivios-docs</code> is a snapshot that a script makes from my private records, so a change to it is made at the source. Tell me in an issue instead.</p>
+        <p>If a sentence on this site, in a README or in a record says more than the records support, tell me, and I will correct it or take it out.</p>
+      </div>
+    </div>
+  </section>
+</Page>

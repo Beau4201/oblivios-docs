@@ -2,22 +2,13 @@
 import Page from "../layouts/Page.astro";
 import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
 import Print from "@oblivios/site-shared/components/Print.astro";
-import { decisions, longDate } from "../lib/records.mjs";
 import { sources } from "../lib/site.mjs";
 
-// What the Pixel 10a has not been shown to do yet: the open rows of its bring-up record.
-const open = [
-  ["An independent rebuild", "A second build of a signed image that matches the first one, byte for byte. This is not done, so nobody but me can say that a build is what the source says."],
-  ["Update and recovery", "An interrupted update, a refused rollback, recovery, a factory reset and a restore. One real update through the system updater is proven, nothing beyond it."],
-  ["Phone, radios and sensors", "SIM, calls, radios, camera, biometrics, thermal behaviour and accessibility. None of it is run; no SIM was inserted."],
-];
 sources("devices", [
-  "docs/devices/support-policy.md (device support policy, the Pixel 10a bring-up record)",
-  "docs/product/status-stallion-and-memory.md (the Pixel 10a is the daily-use device; the Pixel 7a stays the development device)",
-  "docs/product/status.md (what runs on which device)",
-  "Decisions 110 to 114 (the daily-use tier), 112 (the independent rebuild is pending)",
-  "The images paragraph is the owner's statement of 2026-11-18, recorded as decision 256.",
-  "The date is the newest entry of the decision log when the page is built.",
+  "The owner's statement of 2026-11-18: the Pixel 10a is the daily phone, the Pixel 7a the development phone (decision 256).",
+  "docs/devices/support-policy.md (the entry gate for a supported device)",
+  "The images paragraph is the owner's intention of 2026-11-18, recorded as decision 256.",
+  "What works on each phone is not on this page until the owner states it.",
 ]);
 ---
 <Page
@@ -33,15 +24,15 @@ sources("devices", [
     <div class="c lead">
       <div>
         <p class="big">No device is supported. Two phones run ObliviOS builds: the Pixel 10a I use every day, and the Pixel 7a I develop on.</p>
-        <p class="fn">As of {longDate(decisions.latest)}. This is a record of my own phones, not an offer: ObliviOS is source only, and there is no image to flash.</p>
+        <p class="fn">ObliviOS is source only: there is no image to flash.</p>
       </div>
     </div>
     <div class="c gap-top">
       <dl class="kv">
         <dt>Pixel 10a <code>stallion</code></dt>
-        <dd>My daily phone, with my personal data on it. It runs release-signed builds on a locked bootloader with my own key, and it takes updates through the system updater. The AirPods support, the app drawer, the keyboard, the Passwords app and the network exit are installed on it. Compartments is not: it follows when its remaining checks on the Pixel 7a are shown or recorded. Most device checks were run on the Pixel 7a first, so the Pixel 10a has fewer of them.</dd>
+        <dd>My daily phone.</dd>
         <dt>Pixel 7a <code>lynx</code></dt>
-        <dd>My development phone. New work is built and checked here first, and it was the first engineering target. GrapheneOS lists it with May 2028 as the minimum support end, an upstream fact that I re-check before every public support statement.</dd>
+        <dd>My development phone.</dd>
         <dt>Supported</dt>
         <dd>No device. A device counts as supported only after it passes the entry gate below.</dd>
       </dl>
@@ -52,17 +43,6 @@ sources("devices", [
       <div class="prose">
         <h2>What supported means</h2>
         <p>A device is supported only with verified upstream device source, current firmware and driver coverage, a monthly update path, signed images and updates, locked-bootloader verification, recovery validation, and evidence for emergency and radio functions. A booting image alone is not support, and a phone that I use myself is not a support claim.</p>
-        <h2>What is not shown on the Pixel 10a yet</h2>
-        <p>These rows of its bring-up record are open. Each has to be closed with evidence before I say more than "it runs on my phone".</p>
-      </div>
-      <div class="steps">
-        {open.map(([t, q]) => (
-          <div class="st">
-            <Print id="r" label="An open ring: not shown" />
-            <h3>{t}</h3>
-            <p>{q}</p>
-          </div>
-        ))}
       </div>
     </div>
   </section>
@@ -70,7 +50,7 @@ sources("devices", [
     <div class="c">
       <div class="prose">
         <h2>Images</h2>
-        <p>If real interest in ObliviOS shows, I want to publish images for the Pixel 10a. I have not set a date. Before I do, the five gates of a public beta on the <a href="/status">status page</a> have to be met and the open rows above have to be closed, and I decide on the day, separately. Until then ObliviOS is source only.</p>
+        <p>If real interest in ObliviOS shows, I want to publish images for the Pixel 10a. I have not set a date. Before I do, the five gates of a public beta on the <a href="/status">status page</a> have to be met, and I decide on the day, separately. Until then ObliviOS is source only.</p>
         <div class="callout"><h3>No date, no promise</h3><p>Nothing on this page says that an image will exist. It says what I intend and what stands in the way.</p></div>
       </div>
     </div>
