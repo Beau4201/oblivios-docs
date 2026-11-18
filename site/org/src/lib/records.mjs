@@ -18,7 +18,8 @@ const read = (p) => fs.readFileSync(p, "utf8");
 
 // ---- the decision log: status per decision, classified by the first word of the status cell
 const rows = new Map();
-for (const line of read(find(["docs/governance/decision-log.md"], "the decision log")).split("\n")) {
+const logText = read(find(["docs/governance/decision-log.md"], "the decision log"));
+for (const line of logText.split("\n")) {
   const m = line.match(/^\| ADR-(\d+) \| (\d{4}-\d\d-\d\d) \| /);
   if (!m) continue;
   const cells = line.trim().replace(/^\|+|\|+$/g, "").split(" | ").map((c) => c.trim());
@@ -44,6 +45,8 @@ export const decisions = {
   get other() {
     return this.total - this.accepted - this.proposed;
   },
+  // the size of the file in KB, to the nearest ten (the Verify page says the log is too big to open whole)
+  sizeKB: Math.round(Buffer.byteLength(logText) / 1024 / 10) * 10,
   // the newest entry of the log: the date the counts are as of
   latest: [...rows.values()].map((r) => r.date).sort().at(-1),
 };

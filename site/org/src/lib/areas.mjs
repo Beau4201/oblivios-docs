@@ -41,24 +41,24 @@ export const text = {
   },
   "duress-unlock": {
     paras: [
-      "A second, separate credential opens a decoy profile instead of yours. The real profile is stopped and never shown (threat model). One enrolled finger can be chosen in Settings as that credential (ADR-217). GrapheneOS's own duress PIN, which wipes the phone, is kept (ADR-038).",
+      "A second, separate credential opens a decoy profile instead of yours. The real profile is stopped and never shown (threat model). One enrolled finger can be chosen in Settings as that credential (ADR-217, still proposed). GrapheneOS's own duress PIN, which wipes the phone, is kept (ADR-038).",
       "The decoy has to equal the ordinary unlock in time and in every animation, with a margin of zero. That requirement is written down and the measuring is still open (ADR-228, still only proposed).",
     ],
     no: "A sufficiently informed adversary who already suspects ObliviOS has this feature could demand proof that the shown profile is the only one, or examine the OS image offline for the code path. Timing differences between a wrong PIN, a decoy PIN and the real PIN are a residual risk. Publishing the source also tells such an adversary that the feature exists (threat model, ADR-171).",
   },
   passwords: {
     paras: [
-      "The default password manager and autofill provider, replacing Google Password Manager. It is local only: no sync, no server, no account and no network permission. The only way out is one encrypted export file under its own passphrase. The only way in on a new phone is an import, including CSV files from other managers (ADR-190).",
+      "The default password manager and autofill provider. It is local only: no sync, no server, no account and no network permission. The only way out is one encrypted export file under its own passphrase. The only way in on a new phone is an import, including CSV files from other managers (ADR-190).",
       "Unlock uses the system biometric prompt with a passphrase as fallback. Logins appear as chips in the keyboard's suggestion strip and never open a window (ADR-191, still proposed). A website name is accepted only from Vanadium and from browsers you trust (ADR-193).",
     ],
     no: null,
   },
   "grab-detection": {
     paras: [
-      "If the phone is pulled out of your hand while it is unlocked, it locks at once, shows one line above the PIN entry and vibrates. The GrapheneOS auto-reboot timer is armed for 60 seconds, and a PIN unlock cancels it. There is one switch in Settings, the behaviour is the same in the decoy session, and nothing happens during a call (ADR-169).",
-      "The first build ships in a shadow mode that only logs, with thresholds that can be tuned (ADR-169).",
+      "If the phone is pulled out of your hand while it is unlocked, it locks at once, shows one line above the PIN entry and vibrates. A hard impact locks it too, unless it follows a short free fall, which counts as a set-down (ADR-176, ADR-195, ADR-204). The GrapheneOS auto-reboot timer is armed for 60 seconds, and a PIN unlock cancels it. The behaviour is the same in the decoy session, and nothing happens during a call (ADR-169).",
+      "It ships in a shadow mode that only logs. One row in Settings, Lock when grabbed, sets it to Off, Strictest, Standard or Relaxed (ADR-169, ADR-197, ADR-198).",
     ],
-    no: "The false-positive rate outdoors could not be shown by room tests, and a pull without touch contact is not detected (ADR-169).",
+    no: "The thresholds are not tuned on daily use yet, so it can lock when you did not mean it, or miss a pull. A pull while a finger still touches the screen at the peak is not read as a pull (ADR-169, ADR-176).",
   },
   "app-drawer": {
     paras: ["The app drawer takes over the home screen's themed icons (ADR-141) and gets a System group that holds every preinstalled app (ADR-142)."],
