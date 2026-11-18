@@ -36,6 +36,23 @@ const { title, description, path, siteUrl, pages, footPages, footAbout, legal, p
 const analytics = process.env.VERCEL === "1";
 const canonical = siteUrl + (path === "/" ? "/" : path);
 const image = siteUrl + "/social-preview.png";
+const missing = path === "/404";
+// Structured data (schema.org JSON-LD): a data block, not script that runs, so the policy `default-src 'self'` holds.
+// Every value is a fact the page or the footer already states: no rating, no licence, no app, no price.
+const label = [...pages, ...footPages, ...footAbout].find((l) => l.href === path)?.label ?? title.split(":")[0];
+const orgId = siteUrl + "/#org";
+const siteId = siteUrl + "/#site";
+const graph: Record<string, unknown>[] = [
+  { "@type": "Organization", "@id": orgId, name: "ObliviOS", url: siteUrl + "/", logo: siteUrl + "/icon-512.png" },
+  { "@type": "WebSite", "@id": siteId, url: siteUrl + "/", name: "ObliviOS", inLanguage: "en", publisher: { "@id": orgId } },
+  { "@type": "WebPage", "@id": canonical + "#page", url: canonical, name: title, description, inLanguage: "en", isPartOf: { "@id": siteId } },
+];
+if (path === "/") {
+  graph.push({ "@type": "SoftwareSourceCode", "@id": siteUrl + "/#source", name: "ObliviOS", description, codeRepository: source.map((s) => s.href), isBasedOn: { "@type": "CreativeWork", name: "GrapheneOS", url: "https://grapheneos.org" } });
+} else {
+  graph.push({ "@type": "BreadcrumbList", "@id": canonical + "#crumbs", itemListElement: [{ "@type": "ListItem", position: 1, name: "ObliviOS", item: siteUrl + "/" }, { "@type": "ListItem", position: 2, name: label, item: canonical }] });
+}
+const jsonld = JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c");
 ---
 <!doctype html>
 <html lang="en">
@@ -56,7 +73,10 @@ const image = siteUrl + "/social-preview.png";
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="640" />
     <meta property="og:image:alt" content="The ObliviOS logo, a cloud with a server tower, printed in grey and brick red" />
+    <meta property="og:locale" content="en" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content={missing ? "noindex" : "index, follow, max-image-preview:large, max-snippet:-1"} />
+    {!missing && <script type="application/ld+json" is:inline set:html={jsonld}></script>}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

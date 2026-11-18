@@ -117,6 +117,15 @@ Run on the build of `site/` made with `SBOM_DIR=<the docs repository>/sbom`, ser
 - A search of `site/org/dist` for a home-directory path (Linux or macOS), `sourceMappingURL`, `.vercel` and `.env` found nothing.
 - Screenshots at the six widths were taken for Home, What it does and Privacy; only Home at 320 px was opened, at a size too small to read. No page was read by eye at any width in this run.
 
+## Headers, structured data and the Vercel deployment (2026-11-18)
+
+- Vercel does not serve a header whose value is empty: `vercel.json` set `Permissions-Policy` to `""` and the live response (`curl -I https://oblivios-docs.vercel.app/`) had no such header, while the local `serve.mjs` sent it. Vercel adds `access-control-allow-origin: *` to the static files; no key of `vercel.json` removes it.
+- `Content-Security-Policy: default-src 'self'` does not cover `base-uri`, `form-action` or `frame-ancestors`; each is a directive of its own. `frame-ancestors 'self'` keeps the iframe measurement of the section above working (the pages frame each other on one origin); `'none'` would stop it.
+- Chromium reports `Unrecognized feature: 'bluetooth'` for a `Permissions-Policy` that lists it; the other fourteen names of the header in `vercel.json` raised no message.
+- A JSON-LD block is a `<script type="application/ld+json">` that runs nothing and that `script-src` and `default-src` do not apply to; `check-build.mjs` removes exactly that tag before it looks for any other `<script>`. In Astro the tag needs `is:inline` and `set:html`, and every `<` in the JSON is written `<` so that the data cannot close the tag.
+- After `VERCEL=1 npm run build` the local `dist/` holds the analytics tag, and the local server answers its path with the 404 page: the pane then logs `Refused to execute script ... MIME type ('text/html')` on every load. Rebuild without the variable before a local read of the console.
+- On the live site on 2026-11-18 (11 pages at 390, 798 and 1920 px in the pane, 33 loads): no overflow, no other origin, no cookie, empty local and session storage; the only failing request was `/_vercel/insights/script.js` (404): the Analytics switch was not on at that deployment.
+
 ## Counts on the pages
 
 Decision statuses are classified by the first word of the status cell: `Accepted…`, `Proposed…`, anything else. On 2026-11-17 the published log had 249 rows (163 accepted, 60 proposed, 26 other) and this repository 250. The grouping of decisions per part of the system is a list in `gen.py`; a decision that belongs to two parts (ADR-186 to ADR-188) is counted in both.

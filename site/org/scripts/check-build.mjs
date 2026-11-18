@@ -11,6 +11,7 @@ const fail = (m) => fails.push(m);
 // (decision 261); every other build carries none. Nothing else may be a script.
 const analytics = process.env.VERCEL === "1";
 const ANALYTICS_TAG = '<script defer src="/_vercel/insights/script.js"></script>';
+const LD = /<script type="application\/ld\+json">([^<]*)<\/script>/g;
 
 const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]));
 const files = walk(dist).map((f) => path.relative(dist, f));
@@ -37,7 +38,8 @@ for (const f of files.filter((x) => asset.test(x))) {
   if (/\/home\/|\/Users\/|sourceMappingURL/.test(t)) fail(`${f}: a local path or source map reference`);
   if (/localStorage|sessionStorage|document\.cookie/.test(t) && process.env.REVIEW !== "1") fail(`${f}: storage or cookie access`);
   if (f.endsWith(".html")) {
-    if (/<script\b/i.test(analytics ? t.replace(ANALYTICS_TAG, "") : t) && process.env.REVIEW !== "1") fail(`${f}: <script>`);
+    const bare = t.replace(LD, ""); // JSON-LD is a data block: it runs nothing and the policy does not apply to it
+    if (/<script\b/i.test(analytics ? bare.replace(ANALYTICS_TAG, "") : bare) && process.env.REVIEW !== "1") fail(`${f}: <script>`);
     if (analytics && !t.includes(ANALYTICS_TAG)) fail(`${f}: the analytics tag is missing in a Vercel build`);
     if (/<style\b/i.test(t)) fail(`${f}: inline <style>`);
     if (/\sstyle=/i.test(t)) fail(`${f}: a style attribute`);
@@ -58,6 +60,18 @@ for (const f of pages) {
   if (!/<meta name="description" content="[^"]{20,}"/.test(t)) fail(`${f}: no description`);
   if (!/<link rel="canonical" href="https:\/\/oblivios\.org\/[^"]*"/.test(t)) fail(`${f}: no canonical URL`);
   if ((t.match(/<h1[ >]/g) || []).length !== 1) fail(`${f}: not exactly one h1`);
+  const gone = f === "404.html"; // the 404 page carries no structured data and is the only page with noindex
+  const blocks = [...t.matchAll(LD)];
+  if (blocks.length !== (gone ? 0 : 1)) fail(`${f}: ${blocks.length} JSON-LD blocks, ${gone ? 0 : 1} expected`);
+  for (const b of blocks) {
+    try {
+      const j = JSON.parse(b[1]);
+      if (j["@context"] !== "https://schema.org" || !Array.isArray(j["@graph"]) || !j["@graph"].every((n) => n["@type"])) fail(`${f}: JSON-LD without the schema.org context or a typed graph`);
+    } catch {
+      fail(`${f}: JSON-LD is not valid JSON`);
+    }
+  }
+  if (!/<meta name="robots" content="[^"]+"/.test(t) || /<meta name="robots" content="[^"]*noindex/.test(t) !== gone) fail(`${f}: robots meta missing, or noindex on the wrong page`);
   if (/TODO|lorem ipsum|@@|placeholder|\bTBD\b/i.test(t)) fail(`${f}: placeholder text`);
 }
 
