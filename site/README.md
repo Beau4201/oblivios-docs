@@ -38,4 +38,4 @@ npm run serve -w org -- --port 8124 --review
 
 ## Privacy rules
 
-No request to another origin, no cookie, no local storage, no script in the output, self-hosted fonts, and the headers of `org/vercel.json`. The production output holds no review layer.
+No request to another origin, no cookie, no local storage, self-hosted fonts, and the headers of `org/vercel.json`. The output holds no script, except that a build made by Vercel (`VERCEL=1`) adds the one script of Vercel Web Analytics from the site's own address (decision 261); `check-build.mjs` then requires exactly that tag on every page and nothing else. The production output holds no review layer.

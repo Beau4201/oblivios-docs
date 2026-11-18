@@ -7,6 +7,10 @@ const dist = path.resolve("dist");
 const budget = JSON.parse(fs.readFileSync("budget.json", "utf8"));
 const fails = [];
 const fail = (m) => fails.push(m);
+// A build made by Vercel (VERCEL=1) carries the one script of Vercel Web Analytics, from the site's own address
+// (decision 261); every other build carries none. Nothing else may be a script.
+const analytics = process.env.VERCEL === "1";
+const ANALYTICS_TAG = '<script defer src="/_vercel/insights/script.js"></script>';
 
 const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]));
 const files = walk(dist).map((f) => path.relative(dist, f));
@@ -33,7 +37,8 @@ for (const f of files.filter((x) => asset.test(x))) {
   if (/\/home\/|\/Users\/|sourceMappingURL/.test(t)) fail(`${f}: a local path or source map reference`);
   if (/localStorage|sessionStorage|document\.cookie/.test(t) && process.env.REVIEW !== "1") fail(`${f}: storage or cookie access`);
   if (f.endsWith(".html")) {
-    if (/<script\b/i.test(t) && process.env.REVIEW !== "1") fail(`${f}: <script>`);
+    if (/<script\b/i.test(analytics ? t.replace(ANALYTICS_TAG, "") : t) && process.env.REVIEW !== "1") fail(`${f}: <script>`);
+    if (analytics && !t.includes(ANALYTICS_TAG)) fail(`${f}: the analytics tag is missing in a Vercel build`);
     if (/<style\b/i.test(t)) fail(`${f}: inline <style>`);
     if (/\sstyle=/i.test(t)) fail(`${f}: a style attribute`);
     if (/\son[a-z]+=/i.test(t)) fail(`${f}: an event handler attribute`);

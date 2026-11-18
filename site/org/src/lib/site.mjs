@@ -36,7 +36,7 @@ export const footAbout = [
 export const portal = null;
 
 export const legal =
-  "Documents: CC-BY-4.0. Code and scripts: Apache-2.0. The name ObliviOS and its logo are not licensed. This site is static: no cookies, no tracking, no requests to other sites.";
+  "Documents: CC-BY-4.0. Code and scripts: Apache-2.0. The name ObliviOS and its logo are not licensed. This site is static: no cookies, no requests to other sites. Page views are counted without cookies.";
 
 export const review = process.env.REVIEW === "1";
 

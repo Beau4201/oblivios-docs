@@ -18,7 +18,7 @@ const faq = [
   ["Will there be images?", "<p>Not yet. If real interest in ObliviOS shows, I want to publish images for the Pixel 10a. I have set no date and I promise nothing: the five gates of a public beta on the <a href=\"/status\">status page</a> have to be met first.</p>", "Decision 256 · Device support policy"],
   ["Which sites and accounts are yours?", `<p>${own} The <a href="/contact">contact page</a> lists the four repositories.</p>`, "Decision 256"],
   ["Why do older records use other names?", "<p>The project was named AegisOS, SovereignOS and FreeholdOS before ObliviOS. The rename is decision 224. The decision log and the other records keep the names that were in use when they were written.</p>", "Decision 224"],
-  ["How do I report a security problem?", '<p>Email me rather than opening a public issue, and encrypt it if you can. The <a href="/security">security page</a> has the address, the key and what to expect. You get a first reply from me within 3 days.</p>', "Security policy"],
+  ["How do I report a security problem?", '<p>Open an issue, or email me if you would rather the problem is not public before it is fixed. Encrypting the email is optional. The <a href="/security">security page</a> has the address, the key and what to expect. You get a first reply from me within 3 days.</p>', "Security policy"],
 ];
 sources("faq", faq.map(([q, a, s]) => `${q}: ${a.replace(/<[^>]+>/g, "")} [${s}]`));
 ---

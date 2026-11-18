@@ -31,6 +31,9 @@ interface Props {
   review?: boolean;
 }
 const { title, description, path, siteUrl, pages, footPages, footAbout, legal, portal = null, source = [], own = "", current, review = false } = Astro.props;
+// Vercel Web Analytics (decision 261): one script from the site's own address, only in a build that Vercel makes
+// (`VERCEL=1`), so a local build, the snapshot and the review build carry none. It sets no cookie.
+const analytics = process.env.VERCEL === "1";
 const canonical = siteUrl + (path === "/" ? "/" : path);
 const image = siteUrl + "/social-preview.png";
 ---
@@ -62,6 +65,7 @@ const image = siteUrl + "/social-preview.png";
     <link rel="preload" href={serif} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={serifItalic} as="font" type="font/woff2" crossorigin />
     {review && <script src="/review.js" is:inline></script>}
+    {analytics && <script defer src="/_vercel/insights/script.js" is:inline></script>}
   </head>
   <body>
     <Prints />

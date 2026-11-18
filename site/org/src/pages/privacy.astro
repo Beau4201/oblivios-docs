@@ -4,11 +4,11 @@ import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
 import Print from "@oblivios/site-shared/components/Print.astro";
 import { sources } from "../lib/site.mjs";
 
-sources("privacy", ["Design of the public launch, sections 5.4 and 5.5", "README.md", "site/org/vercel.json (the headers listed on the page)"]);
+sources("privacy", ["Design of the public launch, sections 5.4 and 5.5", "README.md", "site/org/vercel.json (the headers listed on the page)", "Vercel's documentation of Web Analytics (vercel.com/docs/analytics and /docs/analytics/privacy-policy), read on 2026-11-18: no cookies, a visitor is a daily hash, the data points", "Decision 261 (the owner wants the analytics to see whether there is interest)"]);
 ---
 <Page
   title="Privacy: ObliviOS"
-  description="This site sets no cookies, makes no request to other hosts and runs no analytics. Vercel serves it and sees IP addresses."
+  description="This site sets no cookies and makes no request to other hosts. It counts page views with Vercel Web Analytics, without cookies. Vercel serves it and sees IP addresses."
   path="/privacy"
 >
   <PageHeader crumb="Privacy" title="Privacy" lede="What this site does with your visit, and what the phone system collects.">
@@ -18,14 +18,15 @@ sources("privacy", ["Design of the public launch, sections 5.4 and 5.5", "README
     <div class="c">
       <div class="prose">
         <h2>This site</h2>
-        <p>This site is a set of static files. It sets no cookie, uses no local storage, runs no analytics and runs no script. Its fonts, images and icons are served from the site itself, so your browser makes no request to any other host.</p>
+        <p>This site is a set of static files. It sets no cookie and uses no local storage. Its fonts, images and icons are served from the site itself, so your browser makes no request to any other host.</p>
+        <p>I count page views with Vercel Web Analytics, to see whether anyone is interested. One small script, served from this site's own address, sends each page view to Vercel without a cookie: the address of the page, the page you came from, your country, and your browser, system and device type. Vercel says that the data is anonymous and not tied to an IP address, and that a visitor is a hash that is discarded after 24 hours. There is no other script and no other analytics.</p>
         <p>It sends these headers on every page: <code>Strict-Transport-Security</code>, a <code>Content-Security-Policy</code> of <code>default-src 'self'</code>, <code>Referrer-Policy: no-referrer</code>, <code>X-Content-Type-Options: nosniff</code>, an empty <code>Permissions-Policy</code> and <code>Cross-Origin-Opener-Policy</code>.</p>
         <h2>Who serves it</h2>
-        <p>The site is hosted on Vercel, a third party. Vercel serves the pages and sees your IP address in its logs. I turn Vercel's analytics, speed insights and toolbar off. Because the output is static, it can move to any other host, and I keep the domain names under my own control.</p>
-        <p>The links to the repositories lead to GitHub. When you follow one, GitHub's own terms apply. I use only GitHub's own traffic page to see interest in the repositories, and no counter from a third party.</p>
+        <p>The site is hosted on Vercel, a third party. Vercel serves the pages and sees your IP address in its logs. I turn Vercel's speed insights and toolbar off. Because the output is static, it can move to any other host, and I keep the domain names under my own control.</p>
+        <p>The links to the repositories lead to GitHub. When you follow one, GitHub's own terms apply.</p>
         <h2>The phone system</h2>
         <p>The constraints are written in the README: no ObliviOS account, no mandatory telemetry, no advertising identifier and no cloud dependency. The Passwords app has no network permission. Anything a feature sends elsewhere is a choice you make per app, such as sending an app's traffic through Tor.</p>
-        <div class="callout"><h3>How to check the site</h3><p>Open the network panel of your browser and load any page. You should see requests to this site only, and no <code>Set-Cookie</code> header.</p></div>
+        <div class="callout"><h3>How to check the site</h3><p>Open the network panel of your browser and load any page. You should see requests to this site only, among them one small request for the page view, and no <code>Set-Cookie</code> header.</p></div>
       </div>
     </div>
   </section>

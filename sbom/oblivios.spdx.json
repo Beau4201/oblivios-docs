@@ -1,14 +1,14 @@
 {
  "SPDXID": "SPDXRef-DOCUMENT",
  "creationInfo": {
-  "created": "2026-11-17T14:05:20Z",
+  "created": "2026-11-18T03:40:39Z",
   "creators": [
    "Tool: build-sbom.py",
    "Organization: Beau ten Berge"
   ]
  },
  "dataLicense": "CC0-1.0",
- "documentNamespace": "https://spdx.org/spdxdocs/oblivios-source-stage-a580763a-5043-553d-aeda-fd6123d6058d",
+ "documentNamespace": "https://spdx.org/spdxdocs/oblivios-source-stage-056bed3f-f2ad-5119-a327-1009bc758938",
  "name": "ObliviOS source-only publication",
  "packages": [
   {
@@ -14100,7 +14100,7 @@
    "licenseDeclared": "CC-BY-SA-4.0",
    "name": "Data Map classifier",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-common-passwords",
@@ -14117,7 +14117,7 @@
    "licenseDeclared": "MIT",
    "name": "Common-password list of vault-core",
    "supplier": "NOASSERTION",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-data-datamap-logos",
@@ -14134,7 +14134,7 @@
    "licenseDeclared": "CC0-1.0",
    "name": "Data Map company logos",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-exit-mask-list",
@@ -14151,7 +14151,7 @@
    "licenseDeclared": "CC-BY-SA-4.0",
    "name": "Compartments exit mask list",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-flags",
@@ -14168,7 +14168,7 @@
    "licenseDeclared": "MIT",
    "name": "Data Map country flags",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-font-licence",
@@ -14185,7 +14185,7 @@
    "licenseDeclared": "OFL-1.1",
    "name": "OFL-1.1 licence text (for Manrope)",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-gradle-wrapper-files",
@@ -14202,7 +14202,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "Gradle wrapper files",
    "supplier": "NOASSERTION",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-data-ipmap-anchors",
@@ -14219,7 +14219,7 @@
    "licenseDeclared": "CC0-1.0",
    "name": "Data Map country anchors",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-land",
@@ -14236,7 +14236,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "Data Map land outlines (land.bin)",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-passwords-logos",
@@ -14253,7 +14253,7 @@
    "licenseDeclared": "CC0-1.0",
    "name": "Passwords app logo pack",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-persona-cells",
@@ -14270,7 +14270,7 @@
    "licenseDeclared": "CC-BY-SA-4.0",
    "name": "Compartments persona cells",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-persona-places",
@@ -14287,7 +14287,7 @@
    "licenseDeclared": "CC-BY-4.0",
    "name": "Compartments persona places",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-vendored-devicesettings",
@@ -14304,7 +14304,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "Vendored DeviceSettings contract",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-data-vendored-onionmasq",
@@ -14321,7 +14321,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "Vendored Onionmasq crates",
    "supplier": "NOASSERTION",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-manifest-2026071500",
@@ -23736,7 +23736,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/airpods/patches/frameworks-base/0001-oblivios-let-a-device-settings-provider-draw-mult.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-airpods-patches-frameworks-base-0002-oblivios-treat-a-refused-bind-of-a-device-settings.patch",
@@ -23753,7 +23753,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/airpods/patches/frameworks-base/0002-oblivios-treat-a-refused-bind-of-a-device-settings.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-airpods-patches-packages-apps-settings-0001-oblivios-show-multi-toggle-labels-inside-the-butt.patch",
@@ -23770,7 +23770,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/airpods/patches/packages-apps-settings/0001-oblivios-show-multi-toggle-labels-inside-the-butt.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-airpods-patches-packages-modules-bluetooth-0001-airpods-scope-the-Device-ID-vendor-and-L2CAP-mode-to.patch",
@@ -23787,7 +23787,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0001-airpods-scope-the-Device-ID-vendor-and-L2CAP-mode-to.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-airpods-patches-packages-modules-bluetooth-0002-airpods-add-BluetoothDevice-setAirPodsMetadata-behin.patch",
@@ -23804,7 +23804,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0002-airpods-add-BluetoothDevice-setAirPodsMetadata-behin.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-airpods-patches-packages-modules-bluetooth-0003-airpods-add-BluetoothDevice-setAirPodsAudioRoute-beh.patch",
@@ -23821,7 +23821,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0003-airpods-add-BluetoothDevice-setAirPodsAudioRoute-beh.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-airpods-patches-packages-modules-bluetooth-0004-airpods-add-BluetoothDevice-setAirPodsMusicDuck-behi.patch",
@@ -23838,7 +23838,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0004-airpods-add-BluetoothDevice-setAirPodsMusicDuck-behi.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-airpods-patches-packages-modules-bluetooth-0005-airpods-add-BluetoothDevice-setAirPodsAlias-behind-M.patch",
@@ -23855,7 +23855,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0005-airpods-add-BluetoothDevice-setAirPodsAlias-behind-M.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-airpods-patches-vendor-adevtool-0001-airpods-ship-AirPodsApp-on-every-Pixel-target-and-it.patch",
@@ -23872,7 +23872,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/airpods/patches/vendor-adevtool/0001-airpods-ship-AirPodsApp-on-every-Pixel-target-and-it.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-branding-boot-patches-build-make-0001-oblivios-do-not-ship-the-upstream-boot-animation-z.patch",
@@ -23889,7 +23889,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/branding/boot/patches/build-make/0001-oblivios-do-not-ship-the-upstream-boot-animation-z.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-branding-boot-patches-frameworks-base-0001-oblivios-boot-clear-colour-matches-the-boot-pictu.patch",
@@ -23906,7 +23906,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/branding/boot/patches/frameworks-base/0001-oblivios-boot-clear-colour-matches-the-boot-pictu.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-branding-boot-patches-frameworks-base-0002-oblivios-boot-picture-assets-ADR-152.patch",
@@ -23923,7 +23923,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/branding/boot/patches/frameworks-base/0002-oblivios-boot-picture-assets-ADR-152.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-build-release-0001-oblivios-squash-credential-capture-enable-relocate-pe.patch",
@@ -23940,7 +23940,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/build-release/0001-oblivios-squash-credential_capture-enable-relocate-pe.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-frameworks-base-0001-oblivios-the-duress-decoy-user-type-its-routing-the-.patch",
@@ -23957,7 +23957,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0001-oblivios-the-duress-decoy-user-type-its-routing-the-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-frameworks-base-0002-oblivios-the-duress-finger-link-the-decoy-administra.patch",
@@ -23974,7 +23974,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0002-oblivios-the-duress-finger-link-the-decoy-administra.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-frameworks-base-0003-oblivios-mirror-the-owner-s-settings-and-wallpaper-t.patch",
@@ -23991,7 +23991,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0003-oblivios-mirror-the-owner-s-settings-and-wallpaper-t.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-frameworks-base-0004-oblivios-the-cold-duress-unlock-at-about-0.90-s-its-.patch",
@@ -24008,7 +24008,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0004-oblivios-the-cold-duress-unlock-at-about-0.90-s-its-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-frameworks-base-0005-oblivios-the-stage-of-an-authorized-switch-the-decoy.patch",
@@ -24025,7 +24025,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0005-oblivios-the-stage-of-an-authorized-switch-the-decoy.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-frameworks-base-0006-oblivios-the-life-of-the-stage-the-zoom-hand-over-an.patch",
@@ -24042,7 +24042,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0006-oblivios-the-life-of-the-stage-the-zoom-hand-over-an.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-frameworks-base-0007-oblivios-the-findings-D1-to-D9-of-the-read-of-2026-1.patch",
@@ -24059,7 +24059,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0007-oblivios-the-findings-D1-to-D9-of-the-read-of-2026-1.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-frameworks-base-0008-oblivios-a-recorded-decoy-routing-failure-is-cleared-.patch",
@@ -24076,7 +24076,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0008-oblivios-a-recorded-decoy-routing-failure-is-cleared-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-packages-apps-multiuser-0001-oblivios-hide-real-user-identity-from-the-Multius.patch",
@@ -24093,7 +24093,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-multiuser/0001-oblivios-hide-real-user-identity-from-the-Multius.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-packages-apps-settings-0001-oblivios-hide-real-user-identity-from-Settings-an.patch",
@@ -24110,7 +24110,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0001-oblivios-hide-real-user-identity-from-Settings-an.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-packages-apps-settings-0002-oblivios-add-the-Duress-Unlock-set-up-flow-main-a.patch",
@@ -24127,7 +24127,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0002-oblivios-add-the-Duress-Unlock-set-up-flow-main-a.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-packages-apps-settings-0003-oblivios-let-the-Duress-Unlock-second-credential-b.patch",
@@ -24144,7 +24144,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0003-oblivios-let-the-Duress-Unlock-second-credential-b.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-packages-apps-settings-0004-oblivios-let-Settings-choose-and-remove-the-Duress.patch",
@@ -24161,7 +24161,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0004-oblivios-let-Settings-choose-and-remove-the-Duress.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-decoy-patches-packages-apps-settings-0005-oblivios-Duress-Unlock-warns-when-a-decoy-PIN-no-lon.patch",
@@ -24178,7 +24178,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0005-oblivios-Duress-Unlock-warns-when-a-decoy-PIN-no-lon.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-dummy-patches-frameworks-base-0001-oblivios-add-hardware-backed-duress-dummy-cost-cr.patch",
@@ -24195,7 +24195,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-dummy/patches/frameworks-base/0001-oblivios-add-hardware-backed-duress-dummy-cost-cr.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-dummy-patches-system-core-0001-oblivios-create-metadata-duress-dummy-at-boot.patch",
@@ -24212,7 +24212,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-dummy/patches/system-core/0001-oblivios-create-metadata-duress-dummy-at-boot.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-credential-duress-unlock-dummy-patches-system-sepolicy-0001-oblivios-add-the-private-SELinux-type-for-duress-.patch",
@@ -24229,7 +24229,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/credential/duress-unlock-dummy/patches/system-sepolicy/0001-oblivios-add-the-private-SELinux-type-for-duress-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0001-datamap-add-the-pure-core-of-the-Data-Map-service.patch",
@@ -24246,7 +24246,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0001-datamap-add-the-pure-core-of-the-Data-Map-service.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0002-datamap-give-the-Data-Map-service-its-own-slot-for-t.patch",
@@ -24263,7 +24263,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0002-datamap-give-the-Data-Map-service-its-own-slot-for-t.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0003-datamap-add-the-Binder-interface-and-the-READ-DATA-M.patch",
@@ -24280,7 +24280,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0003-datamap-add-the-Binder-interface-and-the-READ_DATA_M.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0004-datamap-add-the-Data-Map-service-and-start-it-with-t.patch",
@@ -24297,7 +24297,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0004-datamap-add-the-Data-Map-service-and-start-it-with-t.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0005-datamap-keep-the-netd-callback-thread-free-and-refus.patch",
@@ -24314,7 +24314,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0005-datamap-keep-the-netd-callback-thread-free-and-refus.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0006-datamap-clear-also-removes-the-events-that-were-wait.patch",
@@ -24331,7 +24331,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0006-datamap-clear-also-removes-the-events-that-were-wait.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0007-datamap-fix-what-the-independent-review-found.patch",
@@ -24348,7 +24348,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0007-datamap-fix-what-the-independent-review-found.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0008-datamap-hide-the-READ-DATA-MAP-permission-from-the-p.patch",
@@ -24365,7 +24365,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0008-datamap-hide-the-READ_DATA_MAP-permission-from-the-p.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0009-datamap-keep-the-history-to-the-hour-and-only-from-t.patch",
@@ -24382,7 +24382,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0009-datamap-keep-the-history-to-the-hour-and-only-from-t.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-frameworks-base-0010-datamap-give-every-contacted-address-a-server-plac.patch",
@@ -24399,7 +24399,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap/patches/frameworks-base/0010-datamap-give-every-contacted-address-a-server-plac.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-system-sepolicy-0001-sepolicy-add-the-Data-Map-service-type-and-the-datam.patch",
@@ -24416,7 +24416,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/datamap/patches/system-sepolicy/0001-sepolicy-add-the-Data-Map-service-type-and-the-datam.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-system-sepolicy-0002-sepolicy-keep-system-app-and-traceur-app-from-findin.patch",
@@ -24433,7 +24433,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/datamap/patches/system-sepolicy/0002-sepolicy-keep-system_app-and-traceur_app-from-findin.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-system-sepolicy-0003-sepolicy-list-the-Data-Map-service-without-a-fuzzer.patch",
@@ -24450,7 +24450,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/datamap/patches/system-sepolicy/0003-sepolicy-list-the-Data-Map-service-without-a-fuzzer.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-system-sepolicy-0004-sepolicy-keep-shell-from-finding-the-Data-Map-servic.patch",
@@ -24467,7 +24467,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/datamap/patches/system-sepolicy/0004-sepolicy-keep-shell-from-finding-the-Data-Map-servic.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-vendor-adevtool-0001-datamap-ship-the-Data-Map-classifier-file-on-every-P.patch",
@@ -24484,7 +24484,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/datamap/patches/vendor-adevtool/0001-datamap-ship-the-Data-Map-classifier-file-on-every-P.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-vendor-adevtool-0002-datamap-ship-DataMapApp-on-every-Pixel-target-via-de.patch",
@@ -24501,7 +24501,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/datamap/patches/vendor-adevtool/0002-datamap-ship-DataMapApp-on-every-Pixel-target-via-de.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-datamap-patches-vendor-adevtool-0003-datamap-ship-the-Data-Map-address-data-on-every-Pixe.patch",
@@ -24518,7 +24518,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/datamap/patches/vendor-adevtool/0003-datamap-ship-the-Data-Map-address-data-on-every-Pixe.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-keyboard-autofill-chips-patches-packages-inputmethods-latinime-0001-oblivios-show-inline-autofill-suggestions-as-chips.patch",
@@ -24535,7 +24535,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0001-oblivios-show-inline-autofill-suggestions-as-chips.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-keyboard-autofill-chips-patches-packages-inputmethods-latinime-0002-oblivios-offer-the-chips-again-when-the-field-is-e.patch",
@@ -24552,7 +24552,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0002-oblivios-offer-the-chips-again-when-the-field-is-e.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-keyboard-restyle-patches-packages-inputmethods-latinime-0001-oblivios-restyle-the-keyboard-as-rounded-caps.patch",
@@ -24569,7 +24569,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/keyboard/restyle/patches/packages-inputmethods-latinime/0001-oblivios-restyle-the-keyboard-as-rounded-caps.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-keyboard-restyle-patches-packages-inputmethods-latinime-0002-oblivios-keep-the-keyboard-inside-the-cutout-and-.patch",
@@ -24586,7 +24586,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/keyboard/restyle/patches/packages-inputmethods-latinime/0002-oblivios-keep-the-keyboard-inside-the-cutout-and-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-launcher-app-drawer-patches-packages-apps-launcher3-0001-launcher-theme-the-icons-of-the-app-drawer-and-group.patch",
@@ -24603,7 +24603,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/launcher/app-drawer/patches/packages-apps-launcher3/0001-launcher-theme-the-icons-of-the-app-drawer-and-group.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-launcher-app-drawer-patches-packages-apps-launcher3-0002-launcher-show-the-app-drawer-as-category-groups.patch",
@@ -24620,7 +24620,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/launcher/app-drawer/patches/packages-apps-launcher3/0002-launcher-show-the-app-drawer-as-category-groups.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-launcher-app-drawer-patches-packages-apps-launcher3-0003-launcher-load-the-apps-of-the-drawer-with-the-theme-.patch",
@@ -24637,7 +24637,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/launcher/app-drawer/patches/packages-apps-launcher3/0003-launcher-load-the-apps-of-the-drawer-with-the-theme-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-memory-cached-process-cap-patches-frameworks-base-0001-memory-lower-the-maximum-number-of-cached-processes-from-1024-to-48.patch",
@@ -24654,7 +24654,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/memory/cached-process-cap/patches/frameworks-base/0001-memory-lower-the-maximum-number-of-cached-processes-from-1024-to-48.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-memory-cached-process-cap-patches-vendor-adevtool-0001-memory-do-not-carry-the-Pixel-overlay-value-of-the-cached-process-cap.patch",
@@ -24671,7 +24671,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/memory/cached-process-cap/patches/vendor-adevtool/0001-memory-do-not-carry-the-Pixel-overlay-value-of-the-cached-process-cap.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-memory-cached-process-cap-patches-vendor-adevtool-0002-memory-exclude-the-stock-cached-process-cap-by-key.patch",
@@ -24688,7 +24688,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/memory/cached-process-cap/patches/vendor-adevtool/0002-memory-exclude-the-stock-cached-process-cap-by-key.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-memory-decoy-stop-on-switch-patches-frameworks-base-0001-memory-stop-only-the-Duress-decoy-user-when-the-devi.patch",
@@ -24705,7 +24705,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/memory/decoy-stop-on-switch/patches/frameworks-base/0001-memory-stop-only-the-Duress-decoy-user-when-the-devi.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-memory-decoy-stop-on-switch-patches-vendor-adevtool-0001-memory-stop-a-background-user-when-the-device-switch.patch",
@@ -24722,7 +24722,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/memory/decoy-stop-on-switch/patches/vendor-adevtool/0001-memory-stop-a-background-user-when-the-device-switch.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-memory-decoy-stop-on-switch-patches-vendor-adevtool-0002-memory-drop-fw.stop-bg-users-on-switch-the-decoy-is-s.patch",
@@ -24739,7 +24739,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/memory/decoy-stop-on-switch/patches/vendor-adevtool/0002-memory-drop-fw.stop_bg_users_on_switch-the-decoy-is-s.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-memory-zram-size-patches-vendor-adevtool-0001-memory-raise-the-zram-swap-capacity-to-100-of-RAM.patch",
@@ -24756,7 +24756,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/memory/zram-size/patches/vendor-adevtool/0001-memory-raise-the-zram-swap-capacity-to-100-of-RAM.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-memory-zram-size-patches-vendor-adevtool-0002-memory-exclude-the-stock-zram-size-by-key.patch",
@@ -24773,7 +24773,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/memory/zram-size/patches/vendor-adevtool/0002-memory-exclude-the-stock-zram-size-by-key.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-memory-zram-size-patches-vendor-adevtool-0003-memory-give-the-vendor-zram-size-property-its-100-default.patch",
@@ -24790,7 +24790,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/memory/zram-size/patches/vendor-adevtool/0003-memory-give-the-vendor-zram-size-property-its-100-default.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-passwords-patches-frameworks-base-0001-passwords-make-the-Passwords-app-the-default-autofil.patch",
@@ -24807,7 +24807,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/passwords/patches/frameworks-base/0001-passwords-make-the-Passwords-app-the-default-autofil.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-passwords-patches-vendor-adevtool-0001-passwords-ship-PasswordsApp-on-every-Pixel-target-vi.patch",
@@ -24824,7 +24824,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/passwords/patches/vendor-adevtool/0001-passwords-ship-PasswordsApp-on-every-Pixel-target-vi.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-physical-grab-detection-patches-frameworks-base-0001-grab-detect-a-phone-pulled-out-of-a-hand-in-use-lock.patch",
@@ -24841,7 +24841,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/physical/grab-detection/patches/frameworks-base/0001-grab-detect-a-phone-pulled-out-of-a-hand-in-use-lock.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-physical-grab-detection-patches-frameworks-base-0002-grab-the-strictness-of-the-detection-the-set-down-an.patch",
@@ -24858,7 +24858,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/physical/grab-detection/patches/frameworks-base/0002-grab-the-strictness-of-the-detection-the-set-down-an.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-physical-grab-detection-patches-packages-apps-Settings-0001-grab-switch-for-grab-detection-on-the-exploit-protec.patch",
@@ -24875,7 +24875,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0001-grab-switch-for-grab-detection-on-the-exploit-protec.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-physical-grab-detection-patches-packages-apps-Settings-0002-grab-choose-how-strict-the-impact-route-is.patch",
@@ -24892,7 +24892,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0002-grab-choose-how-strict-the-impact-route-is.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-physical-grab-detection-patches-packages-apps-Settings-0003-grab-one-row-on-the-exploit-protection-page-like-aut.patch",
@@ -24909,7 +24909,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0003-grab-one-row-on-the-exploit-protection-page-like-aut.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-physical-grab-detection-patches-packages-apps-Settings-0004-grab-the-row-selects-nothing-in-shadow-mode-cuts-a.patch",
@@ -24926,7 +24926,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0004-grab-the-row-selects-nothing-in-shadow-mode-cuts-a.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-physical-grab-detection-patches-packages-apps-Settings-0005-grab-the-description-under-the-list-and-the-levels-i.patch",
@@ -24943,7 +24943,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0005-grab-the-description-under-the-list-and-the-levels-i.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0001-compartments-add-the-Binder-interface-and-the-two-pe.patch",
@@ -24960,7 +24960,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0001-compartments-add-the-Binder-interface-and-the-two-pe.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0002-compartments-add-the-policy-service-of-Compartments-.patch",
@@ -24977,7 +24977,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0002-compartments-add-the-policy-service-of-Compartments-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0003-compartments-let-the-Settings-app-hold-READ-COMPARTM.patch",
@@ -24994,7 +24994,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0003-compartments-let-the-Settings-app-hold-READ_COMPARTM.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0004-compartments-add-location-the-place-of-an-app-the-persona.patch",
@@ -25011,7 +25011,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0004-compartments-add-location-the-place-of-an-app-the-persona.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0005-compartments-give-an-app-with-a-persona-the-fixes-of.patch",
@@ -25028,7 +25028,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0005-compartments-give-an-app-with-a-persona-the-fixes-of.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0006-compartments-give-an-app-with-a-persona-the-time-zon.patch",
@@ -25045,7 +25045,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0006-compartments-give-an-app-with-a-persona-the-time-zon.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0007-compartments-write-the-persona-file-salt-without-Str.patch",
@@ -25062,7 +25062,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0007-compartments-write-the-persona-file-salt-without-Str.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0008-compartments-stop-what-changed-retry-failed-mirrors-.patch",
@@ -25079,7 +25079,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0008-compartments-stop-what-changed-retry-failed-mirrors-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0009-compartments-withhold-the-position-of-a-blocked-app-.patch",
@@ -25096,7 +25096,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0009-compartments-withhold-the-position-of-a-blocked-app-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0010-compartments-clear-the-entries-of-packages-that-are-.patch",
@@ -25113,7 +25113,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0010-compartments-clear-the-entries-of-packages-that-are-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0011-compartments-give-an-app-with-a-persona-no-real-oper.patch",
@@ -25130,7 +25130,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0011-compartments-give-an-app-with-a-persona-no-real-oper.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0012-compartments-give-apps-without-an-entry-a-persona-un.patch",
@@ -25147,7 +25147,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0012-compartments-give-apps-without-an-entry-a-persona-un.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0013-compartments-withhold-the-position-from-apps-without.patch",
@@ -25164,7 +25164,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0013-compartments-withhold-the-position-from-apps-without.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0014-compartments-parse-the-place-and-cell-data-without-a.patch",
@@ -25181,7 +25181,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0014-compartments-parse-the-place-and-cell-data-without-a.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0015-compartments-give-the-passive-location-listener-the-.patch",
@@ -25198,7 +25198,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0015-compartments-give-the-passive-location-listener-the-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0016-compartments-give-back-the-location-permissions-that.patch",
@@ -25215,7 +25215,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0016-compartments-give-back-the-location-permissions-that.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0017-compartments-list-the-apps-that-may-use-the-loopback.patch",
@@ -25232,7 +25232,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0017-compartments-list-the-apps-that-may-use-the-loopback.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0018-compartments-choose-an-automatic-place-among-the-pla.patch",
@@ -25249,7 +25249,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0018-compartments-choose-an-automatic-place-among-the-pla.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0019-compartments-list-the-apps-that-have-a-persona-witho.patch",
@@ -25266,7 +25266,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0019-compartments-list-the-apps-that-have-a-persona-witho.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0020-compartments-give-a-platform-signed-package-no-perso.patch",
@@ -25283,7 +25283,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0020-compartments-give-a-platform-signed-package-no-perso.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0021-compartments-a-platform-signed-package-keeps-the-bas.patch",
@@ -25300,7 +25300,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0021-compartments-a-platform-signed-package-keeps-the-bas.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0022-compartments-the-Settings-permission-is-allowlisted-.patch",
@@ -25317,7 +25317,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0022-compartments-the-Settings-permission-is-allowlisted-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0023-compartments-the-passive-fix-listener-names-an-attri.patch",
@@ -25334,7 +25334,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0023-compartments-the-passive-fix-listener-names-an-attri.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0025-compartments-answer-the-identity-of-an-app-Custom-wh.patch",
@@ -25351,7 +25351,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0025-compartments-answer-the-identity-of-an-app-Custom-wh.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0026-compartments-getIdentity-names-a-platform-signed-pac.patch",
@@ -25368,7 +25368,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0026-compartments-getIdentity-names-a-platform-signed-pac.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0027-compartments-give-an-app-with-a-persona-a-standing-f.patch",
@@ -25385,7 +25385,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0027-compartments-give-an-app-with-a-persona-a-standing-f.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0028-compartments-an-emergency-holds-back-a-standing-fix-.patch",
@@ -25402,7 +25402,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0028-compartments-an-emergency-holds-back-a-standing-fix-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0029-compartments-a-telephony-listener-of-an-app-whose-po.patch",
@@ -25419,7 +25419,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0029-compartments-a-telephony-listener-of-an-app-whose-po.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0030-compartments-the-revoked-ledger-gives-back-what-it-c.patch",
@@ -25436,7 +25436,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0030-compartments-the-revoked-ledger-gives-back-what-it-c.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0031-compartments-a-real-fix-moves-the-standing-fix-alarm.patch",
@@ -25453,7 +25453,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0031-compartments-a-real-fix-moves-the-standing-fix-alarm.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0032-compartments-the-stops-of-a-changed-app-happen-at-on.patch",
@@ -25470,7 +25470,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0032-compartments-the-stops-of-a-changed-app-happen-at-on.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0033-compartments-a-mirror-pass-that-succeeds-also-stops-.patch",
@@ -25487,7 +25487,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0033-compartments-a-mirror-pass-that-succeeds-also-stops-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0034-compartments-the-header-of-ICompartmentsPolicy-names-.patch",
@@ -25504,7 +25504,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0034-compartments-the-header-of-ICompartmentsPolicy-names-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-base-0035-compartments-a-clock-app-keeps-the-real-time-zone-u.patch",
@@ -25521,7 +25521,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0035-compartments-a-clock-app-keeps-the-real-time-zone-u.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-native-0003-sensorservice-give-each-app-the-sensor-mode-of-its-p.patch",
@@ -25538,7 +25538,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-native/0003-sensorservice-give-each-app-the-sensor-mode-of-its-p.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-native-0004-sensorservice-tell-the-invented-streams-what-the-pho.patch",
@@ -25555,7 +25555,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-native/0004-sensorservice-tell-the-invented-streams-what-the-pho.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-native-0005-sensorservice-keep-the-last-sensor-table-drop-the-d.patch",
@@ -25572,7 +25572,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-native/0005-sensorservice-keep-the-last-sensor-table-drop-the-d.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-frameworks-native-0006-sensorservice-give-a-Substituted-app-an-invented-air.patch",
@@ -25589,7 +25589,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-native/0006-sensorservice-give-a-Substituted-app-an-invented-air.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-bluetooth-0001-bluetooth-deliver-no-scan-result-to-an-app-with-a-pe.patch",
@@ -25606,7 +25606,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0001-bluetooth-deliver-no-scan-result-to-an-app-with-a-pe.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-bluetooth-0002-bluetooth-write-the-persona-file-salt-without-String.patch",
@@ -25623,7 +25623,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0002-bluetooth-write-the-persona-file-salt-without-String.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-bluetooth-0003-bluetooth-keep-the-last-persona-table-when-the-file-.patch",
@@ -25640,7 +25640,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0003-bluetooth-keep-the-last-persona-table-when-the-file-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-bluetooth-0004-bluetooth-give-an-app-with-a-persona-no-discovery-an.patch",
@@ -25657,7 +25657,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0004-bluetooth-give-an-app-with-a-persona-no-discovery-an.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-bluetooth-0005-bluetooth-treat-an-app-with-a-persona-but-no-place-a.patch",
@@ -25674,7 +25674,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0005-bluetooth-treat-an-app-with-a-persona-but-no-place-a.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-bluetooth-0006-bluetooth-an-app-with-a-persona-that-asks-for-a-peri.patch",
@@ -25691,7 +25691,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0006-bluetooth-an-app-with-a-persona-that-asks-for-a-peri.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-connectivity-0001-connectivity-let-the-apps-that-the-user-trusts-onto-.patch",
@@ -25708,7 +25708,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-connectivity/0001-connectivity-let-the-apps-that-the-user-trusts-onto-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-connectivity-0002-connectivity-redact-the-Wi-Fi-network-details-for-an.patch",
@@ -25725,7 +25725,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-connectivity/0002-connectivity-redact-the-Wi-Fi-network-details-for-an.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-connectivity-0003-connectivity-treat-an-app-with-a-persona-but-no-plac.patch",
@@ -25742,7 +25742,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-connectivity/0003-connectivity-treat-an-app-with-a-persona-but-no-plac.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-wifi-0001-wifi-show-an-app-with-a-persona-no-access-point-of-t.patch",
@@ -25759,7 +25759,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0001-wifi-show-an-app-with-a-persona-no-access-point-of-t.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-wifi-0002-wifi-write-the-persona-file-salt-without-String.patch",
@@ -25776,7 +25776,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0002-wifi-write-the-persona-file-salt-without-String.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-wifi-0003-wifi-keep-the-last-persona-table-when-the-file-canno.patch",
@@ -25793,7 +25793,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0003-wifi-keep-the-last-persona-table-when-the-file-canno.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-wifi-0004-wifi-refuse-location-gated-access-to-an-app-with-a-p.patch",
@@ -25810,7 +25810,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0004-wifi-refuse-location-gated-access-to-an-app-with-a-p.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-wifi-0005-wifi-drop-a-work-note-that-0004-added-by-mistake.patch",
@@ -25827,7 +25827,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0005-wifi-drop-a-work-note-that-0004-added-by-mistake.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-wifi-0006-wifi-refuse-nearby-Wi-Fi-devices-to-an-app-with-a-pe.patch",
@@ -25844,7 +25844,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0006-wifi-refuse-nearby-Wi-Fi-devices-to-an-app-with-a-pe.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-modules-wifi-0007-wifi-treat-an-app-with-a-persona-but-no-place-as-an-.patch",
@@ -25861,7 +25861,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0007-wifi-treat-an-app-with-a-persona-but-no-place-as-an-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-services-Telephony-0001-telephony-answer-an-app-with-a-persona-with-the-cell.patch",
@@ -25878,7 +25878,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0001-telephony-answer-an-app-with-a-persona-with-the-cell.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-services-Telephony-0002-telephony-write-the-persona-file-salt-without-String.patch",
@@ -25895,7 +25895,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0002-telephony-write-the-persona-file-salt-without-String.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-services-Telephony-0003-telephony-keep-the-last-persona-table-when-the-file-.patch",
@@ -25912,7 +25912,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0003-telephony-keep-the-last-persona-table-when-the-file-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-services-Telephony-0004-telephony-give-a-persona-caller-a-service-state-with.patch",
@@ -25929,7 +25929,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0004-telephony-give-a-persona-caller-a-service-state-with.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-services-Telephony-0005-telephony-parse-the-cell-data-without-a-regex.patch",
@@ -25946,7 +25946,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0005-telephony-parse-the-cell-data-without-a-regex.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-services-Telephony-0006-telephony-bring-the-copy-of-CellSubset-up-to-its-sou.patch",
@@ -25963,7 +25963,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0006-telephony-bring-the-copy-of-CellSubset-up-to-its-sou.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-packages-services-Telephony-0007-telephony-answer-an-app-with-a-persona-but-no-place-.patch",
@@ -25980,7 +25980,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0007-telephony-answer-an-app-with-a-persona-but-no-place-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-system-sepolicy-0001-sepolicy-add-the-Compartments-policy-service-and-its.patch",
@@ -25997,7 +25997,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/system-sepolicy/0001-sepolicy-add-the-Compartments-policy-service-and-its.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-system-sepolicy-0002-sepolicy-let-the-telephony-and-Bluetooth-apps-read-t.patch",
@@ -26014,7 +26014,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/system-sepolicy/0002-sepolicy-let-the-telephony-and-Bluetooth-apps-read-t.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-system-sepolicy-0003-sepolicy-add-test-entries-for-the-Compartments-data-.patch",
@@ -26031,7 +26031,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/system-sepolicy/0003-sepolicy-add-test-entries-for-the-Compartments-data-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-system-sepolicy-0004-sepolicy-let-init-stay-out-of-the-Compartments-data-.patch",
@@ -26048,7 +26048,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/system-sepolicy/0004-sepolicy-let-init-stay-out-of-the-Compartments-data-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-compartments-profiles-patches-vendor-adevtool-0001-compartments-ship-the-persona-place-data-on-every-Pi.patch",
@@ -26065,7 +26065,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/privacy/compartments-profiles/patches/vendor-adevtool/0001-compartments-ship-the-persona-place-data-on-every-Pi.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-apps-Settings-0001-Settings-a-Compartments-row-on-the-info-page-of-an-a.patch",
@@ -26082,7 +26082,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0001-Settings-a-Compartments-row-on-the-info-page-of-an-a.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-apps-Settings-0002-Settings-Compartments-is-a-row-of-the-Network-intern.patch",
@@ -26099,7 +26099,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0002-Settings-Compartments-is-a-row-of-the-Network-intern.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-apps-Settings-0003-Settings-show-the-Compartments-profile-of-an-app-on-.patch",
@@ -26116,7 +26116,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0003-Settings-show-the-Compartments-profile-of-an-app-on-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-apps-Settings-0004-Settings-name-the-Compartments-identity-on-the-info-.patch",
@@ -26133,7 +26133,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0004-Settings-name-the-Compartments-identity-on-the-info-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-apps-Settings-0005-Settings-the-info-row-of-an-app-reads-Custom-when-a-.patch",
@@ -26150,7 +26150,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0005-Settings-the-info-row-of-an-app-reads-Custom-when-a-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-apps-Settings-0006-Settings-the-info-row-of-a-platform-signed-app-reads.patch",
@@ -26167,7 +26167,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0006-Settings-the-info-row-of-a-platform-signed-app-reads.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-apps-Settings-0007-oblivios-the-Compartments-row-of-the-app-info-page.patch",
@@ -26184,7 +26184,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0007-oblivios-the-Compartments-row-of-the-app-info-page.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-apps-Settings-0008-oblivios-remove-the-patch-file-of-the-Compartments.patch",
@@ -26201,7 +26201,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0008-oblivios-remove-the-patch-file-of-the-Compartments.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-modules-DnsResolver-0001-resolver-never-cache-or-serve-an-answer-for-a-name-o.patch",
@@ -26218,7 +26218,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-modules-DnsResolver/0001-resolver-never-cache-or-serve-an-answer-for-a-name-o.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-modules-DnsResolver-0002-resolver-read-company-ids-of-32-bits-and-a-list-of-.patch",
@@ -26235,7 +26235,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-modules-DnsResolver/0002-resolver-read-company-ids-of-32-bits-and-a-list-of-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-packages-modules-connectivity-0001-Connectivity-allow-the-OEM-network-preference-on-pho.patch",
@@ -26252,7 +26252,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit/patches/packages-modules-connectivity/0001-Connectivity-allow-the-OEM-network-preference-on-pho.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-system-sepolicy-0001-sepolicy-add-the-domains-of-the-Compartments-exit-se.patch",
@@ -26269,7 +26269,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0001-sepolicy-add-the-domains-of-the-Compartments-exit-se.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-system-sepolicy-0002-sepolicy-make-the-neverallows-of-the-exit-service-ho.patch",
@@ -26286,7 +26286,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0002-sepolicy-make-the-neverallows-of-the-exit-service-ho.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-system-sepolicy-0003-sepolicy-let-init-listen-on-the-exit-sockets-and-the.patch",
@@ -26303,7 +26303,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0003-sepolicy-let-init-listen-on-the-exit-sockets-and-the.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-system-sepolicy-0004-sepolicy-let-the-exit-app-reach-the-exit-sockets-acr.patch",
@@ -26320,7 +26320,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0004-sepolicy-let-the-exit-app-reach-the-exit-sockets-acr.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-system-sepolicy-0005-sepolicy-let-the-exit-daemon-create-its-tun-and-the-.patch",
@@ -26337,7 +26337,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0005-sepolicy-let-the-exit-daemon-create-its-tun-and-the-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-system-sepolicy-0006-sepolicy-let-the-route-helper-read-its-interface-ind.patch",
@@ -26354,7 +26354,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0006-sepolicy-let-the-route-helper-read-its-interface-ind.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-vendor-adevtool-0001-exit-ship-ExitProbe-on-userdebug-images.patch",
@@ -26371,7 +26371,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/privacy/exit/patches/vendor-adevtool/0001-exit-ship-ExitProbe-on-userdebug-images.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-exit-patches-vendor-adevtool-0002-exit-ship-the-exit-service-on-every-Pixel-target.patch",
@@ -26388,7 +26388,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/privacy/exit/patches/vendor-adevtool/0002-exit-ship-the-exit-service-on-every-Pixel-target.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-identity-surface-patches-frameworks-native-0001-sensorservice-do-not-deliver-the-bias-of-uncalibrate.patch",
@@ -26405,7 +26405,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/identity-surface/patches/frameworks-native/0001-sensorservice-do-not-deliver-the-bias-of-uncalibrate.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-identity-surface-patches-frameworks-native-0002-sensorservice-refuse-direct-channels-for-the-uncalib.patch",
@@ -26422,7 +26422,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/identity-surface/patches/frameworks-native/0002-sensorservice-refuse-direct-channels-for-the-uncalib.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-identity-surface-patches-packages-modules-wifi-0001-Wifi-do-not-derive-the-link-local-IPv6-address-from-.patch",
@@ -26439,7 +26439,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/identity-surface/patches/packages-modules-wifi/0001-Wifi-do-not-derive-the-link-local-IPv6-address-from-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-identity-surface-patches-system-sepolicy-0001-sepolicy-keep-apps-from-reading-the-unit-specific-bo.patch",
@@ -26456,7 +26456,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/identity-surface/patches/system-sepolicy/0001-sepolicy-keep-apps-from-reading-the-unit-specific-bo.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-identity-surface-patches-system-sepolicy-0002-sepolicy-hide-more-unit-and-batch-properties-from-ap.patch",
@@ -26473,7 +26473,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/identity-surface/patches/system-sepolicy/0002-sepolicy-hide-more-unit-and-batch-properties-from-ap.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-linkability-patches-frameworks-base-0001-Permissions-make-USE-LOOPBACK-INTERFACE-a-runtime-pe.patch",
@@ -26490,7 +26490,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/linkability/patches/frameworks-base/0001-Permissions-make-USE_LOOPBACK_INTERFACE-a-runtime-pe.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-linkability-patches-frameworks-base-0002-Clipboard-read-only-through-a-paste-and-let-the-owne.patch",
@@ -26507,7 +26507,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/linkability/patches/frameworks-base/0002-Clipboard-read-only-through-a-paste-and-let-the-owne.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-linkability-patches-frameworks-base-0003-SettingsProvider-an-ordinary-app-reads-only-the-sett.patch",
@@ -26524,7 +26524,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/linkability/patches/frameworks-base/0003-SettingsProvider-an-ordinary-app-reads-only-the-sett.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-linkability-patches-frameworks-base-0004-Vibrator-give-apps-a-rounded-calibration-of-the-moto.patch",
@@ -26541,7 +26541,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/linkability/patches/frameworks-base/0004-Vibrator-give-apps-a-rounded-calibration-of-the-moto.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-linkability-patches-packages-modules-connectivity-0001-bpf-refuse-loopback-traffic-between-two-apps-of-one-.patch",
@@ -26558,7 +26558,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/linkability/patches/packages-modules-connectivity/0001-bpf-refuse-loopback-traffic-between-two-apps-of-one-.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-linkability-patches-packages-modules-connectivity-0002-bpf-refuse-broadcast-and-multicast-datagrams-between.patch",
@@ -26575,7 +26575,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/linkability/patches/packages-modules-connectivity/0002-bpf-refuse-broadcast-and-multicast-datagrams-between.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-linkability-patches-packages-providers-mediaprovider-0001-MediaProvider-give-every-app-the-hashed-MediaStore-v.patch",
@@ -26592,7 +26592,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/linkability/patches/packages-providers-mediaprovider/0001-MediaProvider-give-every-app-the-hashed-MediaStore-v.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-linkability-patches-system-sepolicy-0001-sepolicy-hide-the-device-colour-and-the-country-of-o.patch",
@@ -26609,7 +26609,7 @@
    "licenseDeclared": "NOASSERTION",
    "name": "oblivios-platform/privacy/linkability/patches/system-sepolicy/0001-sepolicy-hide-the-device-colour-and-the-country-of-o.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-privacy-screenshot-detection-patches-frameworks-base-0001-wm-tell-no-app-that-the-user-took-a-screenshot.patch",
@@ -26626,7 +26626,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/screenshot-detection/patches/frameworks-base/0001-wm-tell-no-app-that-the-user-took-a-screenshot.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-platform-release-ota-server-url-patches-packages-apps-updater-0001-oblivios-point-Updater-at-the-private-lynx-OTA-server.patch",
@@ -26643,7 +26643,7 @@
    "licenseDeclared": "MIT",
    "name": "oblivios-platform/release/ota-server-url/patches/packages-apps-updater/0001-oblivios-point-Updater-at-the-private-lynx-OTA-server.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0001-onion-tunnel-drop-the-optional-turn-client-dependency.patch",
@@ -26660,7 +26660,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0001-onion-tunnel-drop-the-optional-turn-client-dependency.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0002-onion-tunnel-answer-servfail-when-the-owner-lookup-fails.patch",
@@ -26677,7 +26677,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0002-onion-tunnel-answer-servfail-when-the-owner-lookup-fails.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0003-onion-tunnel-embed-a-constant-instead-of-the-enclosing-git-hash.patch",
@@ -26694,7 +26694,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0003-onion-tunnel-embed-a-constant-instead-of-the-enclosing-git-hash.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0004-onion-tunnel-split-dns-by-policy-and-use-private-fake-ranges.patch",
@@ -26711,7 +26711,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0004-onion-tunnel-split-dns-by-policy-and-use-private-fake-ranges.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0005-onion-tunnel-admit-a-dns-query-through-one-testable-function.patch",
@@ -26728,7 +26728,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0005-onion-tunnel-admit-a-dns-query-through-one-testable-function.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0006-onion-tunnel-count-the-bytes-of-a-flow-per-destination.patch",
@@ -26745,7 +26745,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0006-onion-tunnel-count-the-bytes-of-a-flow-per-destination.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-pkg-airpods",
@@ -26762,7 +26762,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/airpods",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-branding-boot",
@@ -26779,7 +26779,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/branding/boot",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-credential-duress-unlock-decoy",
@@ -26796,7 +26796,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-decoy",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-credential-duress-unlock-dummy",
@@ -26813,7 +26813,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/credential/duress-unlock-dummy",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-datamap",
@@ -26830,7 +26830,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/datamap",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-keyboard-autofill-chips",
@@ -26847,7 +26847,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/keyboard/autofill-chips",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-keyboard-restyle",
@@ -26864,7 +26864,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/keyboard/restyle",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-launcher-app-drawer",
@@ -26881,7 +26881,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/launcher/app-drawer",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-memory-cached-process-cap",
@@ -26898,7 +26898,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/memory/cached-process-cap",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-memory-decoy-stop-on-switch",
@@ -26915,7 +26915,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/memory/decoy-stop-on-switch",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-memory-zram-size",
@@ -26932,7 +26932,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/memory/zram-size",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-passwords",
@@ -26949,7 +26949,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/passwords",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-physical-grab-detection",
@@ -26966,7 +26966,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/physical/grab-detection",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-privacy-compartments-profiles",
@@ -26983,7 +26983,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/compartments-profiles",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-privacy-exit",
@@ -27000,7 +27000,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/exit",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-privacy-identity-surface",
@@ -27017,7 +27017,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/identity-surface",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-privacy-linkability",
@@ -27034,7 +27034,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/linkability",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-privacy-screenshot-detection",
@@ -27051,7 +27051,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/privacy/screenshot-detection",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-pkg-release-ota-server-url",
@@ -27068,14 +27068,14 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform/release/ota-server-url",
    "supplier": "NOASSERTION",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-repo-docs",
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "2a11b0a56998014f15fcb0f9ecfa4dd22f76024fff67067caa23937bab209544"
+     "checksumValue": "f22870dc4780a5f2d31e34f1da84ee3a287a6b38ebea6a998a04c8b0a59f60b4"
     }
    ],
    "copyrightText": "NOASSERTION",
@@ -27092,7 +27092,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "d58769fdf8b2aa7eded52776d3bc03bf1b16023f636bc26db7e084ca35bc4cd1"
+     "checksumValue": "ea907de6604584e13ea6f5c4a9fc67456c1798b79ed7b19abfa1fecc6307ee45"
     }
    ],
    "copyrightText": "NOASSERTION",
@@ -27100,7 +27100,7 @@
    "externalRefs": [
     {
      "referenceCategory": "PACKAGE-MANAGER",
-     "referenceLocator": "pkg:github/Beau4201/oblivios-manifest@d511728991f0b0877a8a5e979405240a24b4fc12",
+     "referenceLocator": "pkg:github/Beau4201/oblivios-manifest@9d8ef6f73726e93d5e4c2feab9acff91b38c91fb",
      "referenceType": "purl"
     }
    ],
@@ -27109,14 +27109,14 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-manifest",
    "supplier": "Organization: Beau ten Berge",
-   "versionInfo": "d511728991f0b0877a8a5e979405240a24b4fc12"
+   "versionInfo": "9d8ef6f73726e93d5e4c2feab9acff91b38c91fb"
   },
   {
    "SPDXID": "SPDXRef-repo-platform",
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "62c46e6a7b221fd09f6a460e1025ab3f1b5a08f5d9a0a7212f15b4c957cc586b"
+     "checksumValue": "56eb7acb96f51ca2bcc698cdc955007c3e3283a2b5c031a237f59e18035c4795"
     }
    ],
    "copyrightText": "NOASSERTION",
@@ -27124,7 +27124,7 @@
    "externalRefs": [
     {
      "referenceCategory": "PACKAGE-MANAGER",
-     "referenceLocator": "pkg:github/Beau4201/oblivios-platform@27f358aa1b18943d46b0d82617e8f253e8532823",
+     "referenceLocator": "pkg:github/Beau4201/oblivios-platform@1f42fcb9c3df98020a5a11f8a8418e39d070b5b3",
      "referenceType": "purl"
     }
    ],
@@ -27133,14 +27133,14 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-platform",
    "supplier": "Organization: Beau ten Berge",
-   "versionInfo": "27f358aa1b18943d46b0d82617e8f253e8532823"
+   "versionInfo": "1f42fcb9c3df98020a5a11f8a8418e39d070b5b3"
   },
   {
    "SPDXID": "SPDXRef-repo-services",
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "b598f65c804d70fd3670aba70b7e3027ce538afd2a662dfefec5c6d3256e95de"
+     "checksumValue": "1c01c18b415cb3d861da42d50f582c68ae73af37362988a4e3df7f52408aed55"
     }
    ],
    "copyrightText": "NOASSERTION",
@@ -27148,7 +27148,7 @@
    "externalRefs": [
     {
      "referenceCategory": "PACKAGE-MANAGER",
-     "referenceLocator": "pkg:github/Beau4201/oblivios-services@c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e",
+     "referenceLocator": "pkg:github/Beau4201/oblivios-services@70f6fd024de50439f0b56f913913e67e14b41cc8",
      "referenceType": "purl"
     }
    ],
@@ -27157,7 +27157,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-services",
    "supplier": "Organization: Beau ten Berge",
-   "versionInfo": "c83b5c2c659dd4c5fc3f5414b5fc4d4782df317e"
+   "versionInfo": "70f6fd024de50439f0b56f913913e67e14b41cc8"
   },
   {
    "SPDXID": "SPDXRef-src-adguard-companiesdb",
