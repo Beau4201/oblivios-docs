@@ -33,7 +33,7 @@ export const own =
   "Only oblivios.org, oblivios.dev and the four repositories on github.com/Beau4201 are mine. Do not trust any other site, app, account or package that uses the name ObliviOS.";
 
 export const legal =
-  "Documents: CC-BY-4.0. Code and scripts: Apache-2.0. The name ObliviOS and its logo are not licensed. This site is static: no cookies, no requests to other sites. It runs one script of its own, for search, and counts nothing.";
+  "Documents: CC-BY-4.0. Code and scripts: Apache-2.0. The name ObliviOS and its logo are not licensed. This site is static: no cookies, no requests to other sites. It runs one script of its own, for search. Page views are counted without cookies.";
 
 export const tag = "Developer portal";
 
