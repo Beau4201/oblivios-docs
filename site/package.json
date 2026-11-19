@@ -2,16 +2,17 @@
   "name": "oblivios-site",
   "private": true,
   "license": "Apache-2.0",
-  "description": "The sites of ObliviOS: the application of oblivios.org (org) and the package (shared) that oblivios.dev will reuse.",
+  "description": "The sites of ObliviOS: the application of oblivios.org (org), the application of oblivios.dev (dev) and the package (shared) that both use.",
   "engines": {
     "node": "20.x"
   },
   "workspaces": [
     "shared",
-    "org"
+    "org",
+    "dev"
   ],
   "scripts": {
-    "build": "npm run build -w org",
-    "check": "npm run check -w org"
+    "build": "npm run build -w org && npm run build -w dev",
+    "check": "npm run check -w org && npm run check -w dev"
   }
 }

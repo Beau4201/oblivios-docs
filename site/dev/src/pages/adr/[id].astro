@@ -1,0 +1,63 @@
+---
+import Page from "../../layouts/Page.astro";
+import Ph from "../../components/Ph.astro";
+import { decisions, decision, hasAdr, longDate } from "../../lib/records.mjs";
+import { inline, paragraphs, plain } from "../../lib/md.mjs";
+import { docsBlob } from "../../lib/site.mjs";
+
+export function getStaticPaths() {
+  return decisions.map((d) => ({ params: { id: String(d.n) }, props: { d } }));
+}
+const { d } = Astro.props;
+const prev = decision(d.n - 1);
+const next = decision(d.n + 1);
+const md = (t: string) => inline(t, { hasAdr });
+const sections = [{ key: "decision", label: "Decision", text: d.decision }, ...d.sections].filter((s) => s.text);
+const link = (n: number) => `<a href="/adr/${n}">ADR-${String(n).padStart(3, "0")}</a>`;
+const description = plain(d.decision).slice(0, 200);
+---
+<Page title={`${d.id}: ${d.title} | ObliviOS developer portal`} description={description.length >= 20 ? description : `${d.id} of the ObliviOS decision log: ${d.title}`} path={`/adr/${d.n}`} current="/decisions">
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Decisions", href: "/decisions" }, { label: d.id }]}
+    title={d.title}
+    lede={`${d.status.label}, recorded ${longDate(d.date)}.`}
+    print="sheet"
+    printLabel="A sealed sheet"
+  />
+  <section class="band">
+    <div class="c">
+      <div class="adr">
+        <div class="prose">
+          <dl class="dfacts">
+            <dt>Decision</dt><dd>{d.id}</dd>
+            <dt>Date</dt><dd>{d.date}</dd>
+            <dt>Status</dt>
+            <dd><span class={`sx ${d.status.kind} big`}>{d.status.label}</span><small set:html={md(d.status.text)} /></dd>
+            {d.parts.length > 0 && (<><dt>Part</dt><dd>{d.parts.join(", ")}</dd></>)}
+            {d.refs.length > 0 && (<><dt>Mentions</dt><dd set:html={d.refs.map(link).join(", ")} /></>)}
+            {d.by.length > 0 && (<><dt>Mentioned by</dt><dd set:html={d.by.map(link).join(", ")} /></>)}
+          </dl>
+          {!d.regular && (
+            <div class="callout"><h3 aria-level="2">Shown as written</h3><p>This entry has {d.columns} columns where the log has seven, because a cell holds the separator of the table or a column is missing. The cells follow in their order, under the label of their place.</p></div>
+          )}
+          {sections.map((s, i) => (
+            <section class="sec" id={`s${i + 1}`}>
+              <h2><i>{i + 1}</i>{s.label}</h2>
+              {paragraphs(s.text).map((p) => <p set:html={md(p)} />)}
+            </section>
+          ))}
+          <p class="fn"><b>Read from</b> <a href={`${docsBlob}docs/governance/decision-log.md`}><code>docs/governance/decision-log.md</code></a>, entry {d.id}.</p>
+          <nav class="step" aria-label="Neighbouring decisions">
+            {next ? <a href={`/adr/${next.n}`}><small>Next</small>{next.id}</a> : <span />}
+            {prev ? <a href={`/adr/${prev.n}`}><small>Previous</small>{prev.id}</a> : <span />}
+          </nav>
+        </div>
+        <aside class="toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>{sections.map((s, i) => <li><a href={`#s${i + 1}`}><i>{i + 1}</i>{s.label}</a></li>)}</ol>
+          <h2><a href="/decisions" class="u">All decisions</a></h2>
+        </aside>
+      </div>
+    </div>
+  </section>
+</Page>

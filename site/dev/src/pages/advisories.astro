@@ -1,0 +1,82 @@
+---
+import Page from "../layouts/Page.astro";
+import Ph from "../components/Ph.astro";
+import SubNav from "../components/SubNav.astro";
+import Find from "../components/Find.astro";
+import Chip from "../components/Chip.astro";
+import { sbom, advisories } from "../lib/sbom.mjs";
+import { docsBlob } from "../lib/site.mjs";
+
+const perEco = advisories.reduce((m, g) => m.set(g.eco, (m.get(g.eco) ?? 0) + g.items.length), new Map());
+const seen = new Set(); // an advisory that affects two versions has one anchor, on the first
+const anchor = (id) => (seen.has(id) ? undefined : (seen.add(id), id));
+---
+<Page
+  title="Advisories | ObliviOS developer portal"
+  description={`The ${sbom.advisories} advisories that OSV lists against the locked versions of the ObliviOS components, grouped by component, each with its assessment.`}
+  path="/advisories"
+  current="/components"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Components", href: "/components" }, { label: "Advisories" }]}
+    title="Advisories"
+    lede={`The ${sbom.advisories} that OSV lists for the locked versions, grouped by the component they affect. Each one has an assessment, written in the records of the project.`}
+    print="shield"
+    printLabel="A cracked shield"
+  />
+  <SubNav current="/advisories" />
+
+  <section class="band tb">
+    <div class="c">
+      <form class="sf" data-scope="advisories" role="search" action="/search" method="get">
+        <Find wide id="q-advisories" label="Search the advisories" placeholder="Search by component, advisory ID or what it says" />
+        <details class="flt tbar gap-top">
+          <summary class="btn ghost sm">Filters</summary>
+          <div class="fbody">
+            <fieldset><legend>Ecosystem</legend><div class="chips">{[...perEco.entries()].map(([e, n]) => <Chip label={e} group="eco" value={e} count={n} />)}</div></fieldset>
+            <button class="btn ghost sm reset" type="reset">Clear filters</button>
+          </div>
+        </details>
+        <p class="status" data-status role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div data-results>
+    <section class="band alt">
+      <div class="c">
+        <div class="sh"><h2>By component</h2><p>The component with the most advisories comes first. The SBOM gives every advisory the state <span class="m">in_triage</span>: the assessment is in the records named under each one.</p></div>
+        <ul class="entries gap-top">
+          {advisories.map((g) => (
+            <li class="en">
+              <div class="id">{g.name}<small>{g.version}</small><span class="sx ok">Assessed</span></div>
+              <div>
+                <h3>{g.items.length === 1 ? g.items[0].description : `${g.items.length} advisories`}</h3>
+                {g.items.length === 1 ? (
+                  <>
+                    <p>{g.items[0].detail}</p>
+                    <p class="meta"><a class="m aid" id={anchor(g.items[0].id)} href={g.items[0].url}>{g.items[0].id}</a></p>
+                  </>
+                ) : (
+                  <>
+                    <p>Each one carries its own assessment, written in <span class="m">{g.record}</span>.</p>
+                    <details class="advd">
+                      <summary class="btn ghost sm">Read the {g.items.length} advisories</summary>
+                      <ul class="advl">
+                        {g.items.map((a) => (
+                          <li><a class="m aid" id={anchor(a.id)} href={a.url}>{a.id}</a><div><b>{a.description}</b><p>{a.detail}</p></div></li>
+                        ))}
+                      </ul>
+                    </details>
+                  </>
+                )}
+                <p class="meta">{g.licence ?? "licence not stated"} · {g.eco} · assessment in {g.record}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p class="fn"><b>Read from</b> <a href={`${docsBlob}sbom/oblivios.cdx.json`}><code>sbom/oblivios.cdx.json</code></a>, the vulnerabilities of the SBOM.</p>
+      </div>
+    </section>
+  </div>
+</Page>

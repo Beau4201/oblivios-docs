@@ -1,0 +1,17 @@
+---
+// The search field: a label for screen readers, the input, the key that focuses it and the button. In a form with
+// data-scope the script searches as you type; in any other form the button goes to /search.
+interface Props {
+  id: string;
+  label: string;
+  placeholder: string;
+  wide?: boolean;
+}
+const { id, label, placeholder, wide = false } = Astro.props;
+---
+<div class={wide ? "find wide" : "find"}>
+  <label class="vh" for={id}>{label}</label>
+  <input id={id} type="search" name="q" placeholder={placeholder} autocomplete="off" autocapitalize="off" spellcheck="false" />
+  <kbd aria-hidden="true">/</kbd>
+  <button class="btn" type="submit">Search</button>
+</div>

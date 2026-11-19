@@ -1,0 +1,72 @@
+---
+import Page from "../../layouts/Page.astro";
+import Ph from "../../components/Ph.astro";
+import Find from "../../components/Find.astro";
+import Chip from "../../components/Chip.astro";
+import Entry from "../../components/Entry.astro";
+import { parts } from "@oblivios/site-shared/lib/parts.mjs";
+import { decisions, decisionStats, fmt, longDate } from "../../lib/records.mjs";
+import { PAGE_SIZE } from "../../lib/site.mjs";
+
+export function getStaticPaths({ paginate }) {
+  return paginate(decisions, { pageSize: PAGE_SIZE });
+}
+const { page } = Astro.props;
+const first = page.currentPage === 1;
+const status = [
+  { v: "ok", l: "Accepted", c: "sx ok" },
+  { v: "pr", l: "Proposed", c: "sx pr" },
+  { v: "old", l: "Superseded", c: "sx" },
+  { v: "ot", l: "Other", c: "sx" },
+];
+const evidence = [
+  { v: "measured", l: "Measured" },
+  { v: "verified-in-source", l: "Verified in source" },
+  { v: "assumption", l: "Assumption" },
+];
+---
+<Page
+  title={first ? "Decision log | ObliviOS developer portal" : `Decision log, page ${page.currentPage} | ObliviOS developer portal`}
+  description={`Every product and security decision of ObliviOS, newest first: ${fmt(decisionStats.total)} entries, ${fmt(decisionStats.accepted)} accepted and ${fmt(decisionStats.proposed)} proposed, the newest of ${longDate(decisionStats.latest)}.`}
+  path={first ? "/decisions" : `/decisions/${page.currentPage}`}
+  current="/decisions"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Decisions" }]}
+    title="Decision log"
+    lede="Every product and security decision, newest first. A decision changes only through a new entry that names the one it replaces and gives the evidence for the change."
+    print="ledger"
+    printLabel="An open ledger"
+  />
+  <section class="band">
+    <div class="c">
+      <form class="sf" data-scope="decisions" role="search" action="/search" method="get">
+        <Find wide id="q-decisions" label="Search the decision log" placeholder="Search the log, or type an ID such as ADR-208" />
+        <p class="status" data-status role="status" aria-live="polite"></p>
+        <div class="logwrap gap-top">
+          <details class="flt">
+            <summary class="btn ghost sm">Filters</summary>
+            <div class="fbody">
+              <fieldset><legend>Status</legend><div class="chips">{status.map((s) => <Chip label={s.l} group="st" value={s.v} cls={s.c} />)}</div></fieldset>
+              <fieldset><legend>Part</legend><div class="chips">{parts.map((p) => <Chip label={p.title} group="pt" value={p.title} />)}</div></fieldset>
+              <fieldset><legend>Evidence</legend><div class="chips">{evidence.map((e) => <Chip label={e.l} group="ev" value={e.v} cls="ev" />)}</div></fieldset>
+              <button class="btn ghost sm reset" type="reset">Clear filters</button>
+            </div>
+          </details>
+          <div>
+            <p class="count" data-hide-when-active>Newest first{page.lastPage > 1 && `, page ${page.currentPage} of ${page.lastPage}`}</p>
+            <div data-results>
+              <ol class="entries">{page.data.map((d) => <Entry d={d} level={2} />)}</ol>
+            </div>
+            {page.lastPage > 1 && (
+              <nav class="btns after" data-hide-when-active aria-label="Pages of the decision log">
+                {page.url.prev !== undefined && <a class="btn ghost" href={page.url.prev || "/decisions"}>Newer entries</a>}
+                {page.url.next && <a class="btn ghost" href={page.url.next}>Older entries</a>}
+              </nav>
+            )}
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</Page>

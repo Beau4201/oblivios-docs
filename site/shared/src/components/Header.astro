@@ -11,8 +11,9 @@ interface Props {
   pages: Link[];
   current?: string;
   portal?: Link | null;
+  tag?: string;
 }
-const { pages, current, portal = null } = Astro.props;
+const { pages, current, portal = null, tag } = Astro.props;
 ---
 <header class="hd">
   <div class="c">
@@ -21,18 +22,19 @@ const { pages, current, portal = null } = Astro.props;
         <source srcset="/brand/lockup-dark.svg" media="(prefers-color-scheme: dark)" />
         <img src="/brand/lockup-light.svg" alt="ObliviOS" width="138" height="40" />
       </picture>
+      {tag && <span class="tag">{tag}</span>}
     </a>
     <nav aria-label="Main">
       {pages.map((p) => <a href={p.href} aria-current={p.href === current ? "page" : undefined}>{p.label}</a>)}
     </nav>
-    {portal && <a class="btn" href={portal.href}>{portal.label} <span aria-hidden="true">↗</span></a>}
+    {portal && <a class="btn" href={portal.href}>{portal.label}</a>}
     <button class="mbtn" type="button" popovertarget="drawer" aria-label="Menu"><i aria-hidden="true"></i></button>
     <div id="drawer" class="drawer" popover>
       <button class="mbtn x" type="button" popovertarget="drawer" popovertargetaction="hide" aria-label="Close the menu"><i aria-hidden="true"></i></button>
       <nav aria-label="Menu">
         <ul>
           {pages.map((p) => <li><a href={p.href} aria-current={p.href === current ? "page" : undefined}><span>{p.label}</span></a></li>)}
-          {portal && <li><a href={portal.href}><span>{portal.label} ↗</span></a></li>}
+          {portal && <li><a href={portal.href}><span>{portal.label}</span></a></li>}
         </ul>
       </nav>
     </div>

@@ -1,0 +1,55 @@
+---
+import Page from "../layouts/Page.astro";
+import Ph from "../components/Ph.astro";
+import SubNav from "../components/SubNav.astro";
+import Bars from "../components/Bars.astro";
+import { fmt } from "../lib/records.mjs";
+import { sbom, upstream, patchAreas } from "../lib/sbom.mjs";
+import { docsBlob } from "../lib/site.mjs";
+
+const c = sbom.coverage;
+const split = [
+  { label: "Own work", value: c.own },
+  { label: "Data files", value: c.datafile },
+  { label: "Patches", value: c.patch },
+  { label: "The website", value: c.site },
+  { label: "Copies of the manifest", value: c["manifest-copy"] },
+  { label: "Prebuilt binaries", value: c.prebuilt },
+];
+---
+<Page
+  title="Files and patches | ObliviOS developer portal"
+  description={`What the ${fmt(sbom.files)} files of the four ObliviOS repositories are, and which projects of the upstream baseline ${sbom.baseline} the ${c.patch} patches change.`}
+  path="/patches"
+  current="/components"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Components", href: "/components" }, { label: "Files and patches" }]}
+    title="Files and patches"
+    lede={`What the ${fmt(sbom.files)} files are, and which parts of the upstream baseline the ${c.patch} patches change.`}
+    print="stack"
+    printLabel="A stack of sheets"
+  />
+  <SubNav current="/patches" />
+
+  <section class="band">
+    <div class="c">
+      <div class="sh"><h2>The {fmt(sbom.files)} files</h2><p>Every file of the four repositories is in <span class="m">files.sha256</span> with its SHA-256. This is what they are.</p></div>
+      <div class="narrow gap-top">
+        <Bars rows={split} />
+        <p class="fn">Own work is code and documents written for ObliviOS. A patch keeps the licence of the project it changes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="c">
+      <div class="sh"><h2>What the patches change</h2><p>{c.patch} patches. Upstream is the GrapheneOS baseline {sbom.baseline}; only the projects that a patch modifies are listed.</p></div>
+      <div class="twocol gap-top">
+        <div><h3 class="mini">By part of ObliviOS</h3><Bars rows={patchAreas.slice(0, 12).map((a) => ({ label: a.name, value: a.patches }))} /></div>
+        <div><h3 class="mini">Files changed, by upstream project ({upstream.length} projects)</h3><Bars rows={upstream.slice(0, 12).map((u) => ({ label: u.name, value: u.files, sub: u.licence ?? "licence not stated" }))} /></div>
+      </div>
+      <p class="fn"><b>Read from</b> <a href={`${docsBlob}sbom/oblivios.cdx.json`}><code>sbom/oblivios.cdx.json</code></a> and <a href={`${docsBlob}sbom/files.sha256`}><code>sbom/files.sha256</code></a>.</p>
+    </div>
+  </section>
+</Page>

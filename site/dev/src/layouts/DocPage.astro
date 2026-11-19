@@ -1,0 +1,91 @@
+---
+// A published document as a page: the header band, the document in sections, a contents column and the one `Read from` line
+// that links the file in the published repository (ADR-268). Used by the threat model, the capability boundaries, every
+// engineering note and every quickstart. A long document is shown as parts (a tab each), and a part that lists cases is paged.
+import Page from "./Page.astro";
+import Ph from "../components/Ph.astro";
+import SubNav from "../components/SubNav.astro";
+import Blocks from "../components/Blocks.astro";
+import { parseDoc, security, partHref, pagesOf, caseCount, sectionsOf } from "../lib/documents.mjs";
+import { firstSentence, plain, inline } from "../lib/md.mjs";
+import { docsBlob } from "../lib/site.mjs";
+
+interface Props {
+  entry: { file: string; href: string; label: string; parts?: any[] };
+  crumbs: { label: string; href?: string }[];
+  current: string;
+  print: string;
+  printLabel: string;
+  lede?: string;
+  sub?: "security";
+  // the part of a document that this page shows, and which page of it
+  part?: { slug: string; label: string; sections: string[]; per?: number; lede?: string };
+  pageNo?: number;
+}
+const { entry, crumbs, current, print, printLabel, lede, sub, part, pageNo = 1 } = Astro.props;
+const doc = parseDoc(entry.file);
+const summary = firstSentence(plain(doc.summary), 230);
+// a summary of one sentence is the lede of the header, so the body does not say it a second time
+const first = doc.sections[0].blocks[0];
+if (!lede && first?.t === "p" && first.text === doc.summary && plain(first.text) === summary) {
+  doc.sections[0].blocks.shift();
+  doc.sections = doc.sections.filter((s) => s.id || s.blocks.length);
+}
+const shown = part ? sectionsOf(doc, part) : doc.sections;
+const titled = shown.filter((s) => s.id);
+const { count, size } = part ? pagesOf(caseCount(shown), part.per) : { count: 1, size: 0 };
+const slice: [number, number] | undefined = part?.per ? [(pageNo - 1) * size, pageNo * size] : undefined;
+// the number of cases before each section of the part, for the numbering and the slice
+let running = 0;
+const offsets = shown.map((s) => {
+  const at = running;
+  running += caseCount([s]);
+  return at;
+});
+const md = (t: string) => inline(t);
+// the header of a part carries the name of the part (the tabs and the crumbs say whose it is); the title of the tab says both
+const head = part && part.slug ? part.label : doc.title;
+const title = `${part && part.slug ? `${entry.label}: ${part.label}` : doc.title}${count > 1 ? `, page ${pageNo} of ${count}` : ""} | ObliviOS developer portal`;
+const subItems = sub === "security" ? [...security[0].parts.map((p) => ({ label: p.label, href: partHref(security[0], p) })), { label: "Capability boundaries", href: security[1].href }] : [];
+const subCurrent = part ? partHref(entry as any, part) : entry.href;
+const pageHref = (n: number) => partHref(entry as any, part!, n);
+---
+<Page
+  title={title}
+  description={(part?.lede ?? lede ?? summary).slice(0, 200)}
+  path={part ? pageHref(pageNo) : entry.href}
+  current={current}
+>
+  <Ph crumbs={crumbs} title={head} lede={part?.lede ?? lede ?? summary} print={print} printLabel={printLabel} />
+  {sub === "security" && <SubNav current={subCurrent} label="Security model" items={subItems} />}
+  <section class="band">
+    <div class="c">
+      <div class:list={["adr", "doc", { solo: titled.length < 2 }]}>
+        <div class="prose">
+          {shown.map((s, i) => (
+            <section class="sec" id={s.id || undefined}>
+              {s.title && <h2><i>{titled.indexOf(s) + 1}</i><Fragment set:html={md(s.title)} /></h2>}
+              <Blocks blocks={s.blocks} dir={doc.dir} file={doc.file} prefix={s.id} level={s.title ? 3 : 2} rowOffset={offsets[i]} slice={slice} />
+            </section>
+          ))}
+          {count > 1 && (
+            <nav class="pager" aria-label="Pages of this list">
+              {pageNo > 1 ? <a class="btn ghost" href={pageHref(pageNo - 1)}>Previous</a> : <span />}
+              <ol>
+                {Array.from({ length: count }, (_, k) => <li><a href={pageHref(k + 1)} aria-current={k + 1 === pageNo ? "page" : undefined} aria-label={`Page ${k + 1}`}>{k + 1}</a></li>)}
+              </ol>
+              {pageNo < count ? <a class="btn ghost" href={pageHref(pageNo + 1)}>Next</a> : <span />}
+            </nav>
+          )}
+          <p class="fn"><b>Read from</b> <a href={`${docsBlob}${entry.file}`}><code>{entry.file}</code></a>.</p>
+        </div>
+        {titled.length > 1 && (
+          <aside class="toc" aria-label="On this page">
+            <h2>On this page</h2>
+            <ol>{titled.map((s, i) => <li><a href={`#${s.id}`} title={plain(s.title)}><i>{i + 1}</i><span>{plain(s.title)}</span></a></li>)}</ol>
+          </aside>
+        )}
+      </div>
+    </div>
+  </section>
+</Page>

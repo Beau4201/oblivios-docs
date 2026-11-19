@@ -31,7 +31,7 @@ export const footAbout = [
   { label: "Privacy", href: "/privacy" },
   { label: "Trademark and attribution", href: "/trademark" },
 ];
-// The developer portal (oblivios.dev) has no pages yet: a link would be dead. Set this to
+// The developer portal (oblivios.dev) is built in site/dev (ADR-268) but not deployed: a link would be dead. Set this to
 // { label: "Developer portal", href: "https://oblivios.dev" } when that site is live and the header and footer show it.
 export const portal = null;
 

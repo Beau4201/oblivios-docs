@@ -1,0 +1,40 @@
+---
+import Page from "../../layouts/Page.astro";
+import Ph from "../../components/Ph.astro";
+import { notes, parseDoc } from "../../lib/documents.mjs";
+import { firstSentence, plain } from "../../lib/md.mjs";
+
+const list = notes.map((n) => {
+  const doc = parseDoc(n.file);
+  return { ...n, title: doc.title, summary: firstSentence(plain(doc.summary), 260), sections: doc.sections.filter((s) => s.id).length };
+});
+---
+<Page
+  title="Engineering notes | ObliviOS developer portal"
+  description="What was learned building each area of ObliviOS: the exact command, the error text, the cause and the way that works."
+  path="/engineering"
+  current="/engineering"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Engineering notes" }]}
+    title="Engineering notes"
+    lede="A tool behaviour, a lesson, a dead end or a working command, kept in full: the exact command, the error text, the cause and the way that works."
+    print="notebook"
+    printLabel="A notebook, open"
+  />
+  <section class="band">
+    <div class="c">
+      <ol class="entries">
+        {list.map((n) => (
+          <li class="en named">
+            <div class="id">{n.label}{n.sections > 0 && <small>{n.sections} sections</small>}</div>
+            <div>
+              <h3 aria-level="2"><a href={n.href}>{n.title}</a></h3>
+              <p>{n.summary}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Page>

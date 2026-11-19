@@ -1,0 +1,231 @@
+/* The page patterns oblivios.dev shares with oblivios.org: the hero, the section head, the lead band and the plates.
+   Copied from site/org/src/styles/pages.css without the patterns the portal does not use (the chain, the parts, the FAQ,
+   the status bars, the key card); the two sites keep the look of one family and change it where the portal needs to. */
+
+/* hero */
+.hero .c {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+  padding-top: clamp(36px, 6vw, 84px);
+  padding-bottom: var(--sec);
+}
+h1 {
+  font: 600 clamp(40px, 5.8vw, 80px) / 1 var(--serif);
+  letter-spacing: -0.028em;
+}
+h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--brick-text);
+}
+.lede {
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.6;
+  max-width: 540px;
+  margin: clamp(20px, 2.4vw, 32px) 0 clamp(24px, 3vw, 38px);
+  color: var(--ink-2);
+}
+.lede b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.plate {
+  position: relative;
+  height: clamp(240px, 34vw, 440px);
+}
+.plate svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.stamp {
+  position: absolute;
+  right: 0;
+  bottom: 6%;
+  transform: rotate(-9deg);
+  border: 3px solid var(--brick-text);
+  color: var(--brick-text);
+  background: var(--paper);
+  padding: 9px 15px 7px;
+  text-align: center;
+  border-radius: 4px;
+  font: 700 clamp(14px, 1.4vw, 19px) / 1.15 var(--sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  -webkit-mask: url("/stamp.svg") center / cover;
+  mask: url("/stamp.svg") center / cover;
+}
+.stamp small {
+  display: block;
+  font: 500 10.5px / 1.4 var(--sans);
+  letter-spacing: 0.1em;
+  margin-top: 5px;
+}
+@media (max-width: 860px) {
+  .hero .c {
+    grid-template-columns: 1fr;
+  }
+  .plate {
+    order: -1;
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto 34px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+  .stamp {
+    bottom: -26px;
+  }
+}
+
+/* section head */
+h2 {
+  font: 600 clamp(32px, 3.8vw, 52px) / 1.08 var(--serif);
+  letter-spacing: -0.022em;
+}
+.sh {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 4vw, 64px);
+  align-items: end;
+}
+.sh p {
+  color: var(--ink-2);
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.6;
+  max-width: 460px;
+  justify-self: end;
+}
+@media (max-width: 760px) {
+  .sh {
+    grid-template-columns: 1fr;
+  }
+  .sh p {
+    justify-self: start;
+  }
+}
+
+/* lead band: statement and a record print */
+.lead {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: clamp(32px, 6vw, 88px);
+  align-items: center;
+}
+.lead .big {
+  font: 400 clamp(24px, 2.7vw, 36px) / 1.38 var(--serif);
+  letter-spacing: -0.012em;
+  margin-bottom: 24px;
+}
+.lead .facts {
+  color: var(--ink-2);
+  max-width: 560px;
+}
+.lead svg {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+@media (max-width: 860px) {
+  .lead {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .lead svg {
+    max-width: 130px;
+    order: -1;
+    margin: 0;
+  }
+}
+
+/* plates: equal columns, centred */
+.plates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(44px, 5vw, 64px) clamp(24px, 4vw, 56px);
+  margin-top: clamp(40px, 5vw, 72px);
+}
+.pl {
+  display: block;
+  text-align: center;
+  transition: transform 220ms var(--ease-out);
+}
+.pl svg {
+  display: block;
+  width: 100%;
+  max-width: 168px;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+.pl h3 {
+  font: 600 clamp(22px, 2vw, 26px) / 1.15 var(--serif);
+  letter-spacing: -0.012em;
+  margin: 24px 0 8px;
+}
+.pl p {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 310px;
+  margin: 0 auto;
+}
+@media (hover: hover) and (pointer: fine) {
+  .pl:hover {
+    transform: translateY(-6px);
+  }
+}
+.pl:active {
+  transform: scale(0.985);
+}
+@media (max-width: 900px) {
+  .plates {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pl:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 520px) {
+  .plates {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gap-top {
+  margin-top: clamp(40px, 5vw, 64px);
+}
+.gap-top-lg {
+  margin-top: clamp(48px, 6vw, 80px);
+}
+
+/* 404 */
+.nf {
+  text-align: center;
+  padding: clamp(60px, 9vw, 120px) 0;
+}
+.nf svg {
+  width: 150px;
+  height: auto;
+  margin: 0 auto 30px;
+  display: block;
+}
+.nf h1 {
+  font: 600 clamp(36px, 5vw, 60px) / 1.05 var(--serif);
+  margin-bottom: 16px;
+}
+.nf p {
+  font: 400 19px / 1.6 var(--sans);
+  color: var(--ink-2);
+  margin: 0 auto 28px;
+  max-width: 520px;
+}
+.nf .btns {
+  justify-content: center;
+}

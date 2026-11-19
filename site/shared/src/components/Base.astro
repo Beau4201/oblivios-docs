@@ -29,11 +29,14 @@ interface Props {
   own?: string;
   current?: string;
   review?: boolean;
+  // oblivios.dev: the name next to the logo, and no page-view counting (the spec counts views on oblivios.org only)
+  tag?: string;
+  analytics?: boolean;
 }
-const { title, description, path, siteUrl, pages, footPages, footAbout, legal, portal = null, source = [], own = "", current, review = false } = Astro.props;
+const { title, description, path, siteUrl, pages, footPages, footAbout, legal, portal = null, source = [], own = "", current, review = false, tag, analytics: countViews = true } = Astro.props;
 // Vercel Web Analytics (decision 261): one script from the site's own address, only in a build that Vercel makes
 // (`VERCEL=1`), so a local build, the snapshot and the review build carry none. It sets no cookie.
-const analytics = process.env.VERCEL === "1";
+const analytics = countViews && process.env.VERCEL === "1";
 const canonical = siteUrl + (path === "/" ? "/" : path);
 const image = siteUrl + "/social-preview.png";
 const missing = path === "/404";
@@ -86,11 +89,12 @@ const jsonld = JSON.stringify({ "@context": "https://schema.org", "@graph": grap
     <link rel="preload" href={serifItalic} as="font" type="font/woff2" crossorigin />
     {review && <script src="/review.js" is:inline></script>}
     {analytics && <script defer src="/_vercel/insights/script.js" is:inline></script>}
+    <slot name="head" />
   </head>
   <body>
-    <Prints />
+    <slot name="defs"><Prints /></slot>
     <a class="skip" href="#main">Skip to the content</a>
-    <Header pages={pages} current={current} portal={portal} />
+    <Header pages={pages} current={current} portal={portal} tag={tag} />
     <main id="main"><slot /></main>
     <Footer pages={footPages} about={footAbout} source={source} own={own} legal={legal} />
   </body>

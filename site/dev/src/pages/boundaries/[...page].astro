@@ -1,0 +1,21 @@
+---
+import DocPage from "../../layouts/DocPage.astro";
+import { security, partParams } from "../../lib/documents.mjs";
+
+export function getStaticPaths() {
+  return partParams(security[1]);
+}
+const entry = security[1];
+const { part, pageNo } = Astro.props;
+---
+<DocPage
+  entry={entry}
+  part={part}
+  pageNo={pageNo}
+  crumbs={[{ label: "Home", href: "/" }, { label: entry.label }]}
+  current="/threat-model"
+  print={entry.print}
+  printLabel={entry.printLabel}
+  lede={entry.lede}
+  sub="security"
+/>

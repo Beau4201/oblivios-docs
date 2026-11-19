@@ -1,0 +1,76 @@
+---
+// A Mermaid flowchart of a document, drawn at build time as one inline SVG, so the page needs no script and no library.
+// parseFlow (documents.mjs) lays the nodes in rows; here a row is centred and an edge is a curve from the foot of one box to
+// the head of the next, ending in a dot. The diagram reads from top to bottom.
+import { parseFlow } from "../lib/documents.mjs";
+
+interface Props {
+  src: string;
+  where: string;
+}
+const { src, where } = Astro.props;
+const { label, edges, rows } = parseFlow(src, where);
+
+const W = 236; // box width
+const H = 62; // box height
+const GX = 22;
+const GY = 50;
+const PAD = 10;
+const widest = Math.max(...rows.map((r) => r.length));
+const width = widest * W + (widest - 1) * GX + PAD * 2;
+const height = rows.length * H + (rows.length - 1) * GY + PAD * 2;
+const pos = new Map<string, { x: number; y: number }>();
+rows.forEach((r, k) => {
+  const w = r.length * W + (r.length - 1) * GX;
+  r.forEach((id, j) => pos.set(id, { x: (width - w) / 2 + j * (W + GX), y: PAD + k * (H + GY) }));
+});
+
+// a label in lines of at most 26 characters
+function wrap(text: string): string[] {
+  const lines: string[] = [];
+  let line = "";
+  for (const w of text.split(" ")) {
+    if (line && (line + " " + w).length > 26) {
+      lines.push(line);
+      line = w;
+    } else line = line ? line + " " + w : w;
+  }
+  lines.push(line);
+  return lines;
+}
+const curve = (a: string, b: string) => {
+  const p = pos.get(a)!;
+  const q = pos.get(b)!;
+  const x1 = p.x + W / 2;
+  const y1 = p.y + H;
+  const x2 = q.x + W / 2;
+  const y2 = q.y;
+  const m = (y2 - y1) / 2;
+  return { d: `M ${x1} ${y1} C ${x1} ${y1 + m} ${x2} ${y2 - m} ${x2} ${y2}`, x2, y2 };
+};
+const said = edges.map(([a, b]) => `${label.get(a) ?? a} leads to ${label.get(b) ?? b}.`).join(" ");
+---
+<figure class="flow">
+  <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby="flow-t flow-d">
+    <title id="flow-t">The trust boundaries, from the top to the bottom</title>
+    <desc id="flow-d">{said}</desc>
+    {edges.map(([a, b]) => {
+      const c = curve(a, b);
+      return (<><path d={c.d} class="fl-e" /><circle cx={c.x2} cy={c.y2} r="3.5" class="fl-d" /></>);
+    })}
+    {rows.flat().map((id) => {
+      const p = pos.get(id)!;
+      const lines = wrap(label.get(id) ?? id);
+      const top = p.y + H / 2 - ((lines.length - 1) * 18) / 2 + 5;
+      return (
+        <g>
+          <rect x={p.x} y={p.y} width={W} height={H} rx="2" class="fl-b" />
+          <text class="fl-t" text-anchor="middle">
+            {lines.map((t, k) => (<tspan x={p.x + W / 2} y={top + k * 18}>{t}</tspan>))}
+          </text>
+        </g>
+      );
+    })}
+  </svg>
+  <figcaption>The diagram of the threat model, drawn from its source in the document. It reads from the top to the bottom.</figcaption>
+</figure>

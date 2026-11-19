@@ -47251,7 +47251,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "9096f2b6ea6501db3c78902288640f40b615991b8b07d42e3ae8e4bb559f2b6d"
+     "content": "a105626dde4b03ecd063e17b71c56cd81b58337d892cf1211af5be2e692b1e4f"
     }
    ],
    "licenses": [
@@ -47263,7 +47263,7 @@
    "properties": [
     {
      "name": "oblivios:files",
-     "value": "99"
+     "value": "154"
     },
     {
      "name": "oblivios:licence-note",
@@ -59814,7 +59814,7 @@
    },
    {
     "name": "oblivios:files-described",
-    "value": "1567"
+    "value": "1622"
    },
    {
     "name": "oblivios:file-list",
@@ -59826,7 +59826,7 @@
    },
    {
     "name": "oblivios:coverage",
-    "value": "{\"datafile\": 432, \"manifest-copy\": 4, \"own\": 891, \"patch\": 178, \"prebuilt\": 3, \"site\": 59}"
+    "value": "{\"datafile\": 432, \"manifest-copy\": 4, \"own\": 894, \"patch\": 178, \"prebuilt\": 3, \"site\": 111}"
    }
   ],
   "supplier": {
@@ -59852,7 +59852,7 @@
    ]
   }
  },
- "serialNumber": "urn:uuid:e32bbf56-3ce7-5053-94dc-a1cc5c48d1e5",
+ "serialNumber": "urn:uuid:e7394bc5-56e5-520b-a58a-22ac586e802a",
  "specVersion": "1.6",
  "version": 1,
  "vulnerabilities": [

@@ -1,0 +1,22 @@
+---
+// The sub-navigation under the page header: the five pages of the bill of materials, or the pages of another group.
+interface Props {
+  current: string;
+  label?: string;
+  items?: { label: string; href: string }[];
+}
+const bom = [
+  { label: "Components", href: "/components" },
+  { label: "Advisories", href: "/advisories" },
+  { label: "Files and patches", href: "/patches" },
+  { label: "Data", href: "/data" },
+  { label: "Verify", href: "/verify" },
+];
+const { current, label = "Bill of materials", items = bom } = Astro.props;
+---
+<nav class="subnav" aria-label={label}>
+  <div class="c">
+    <span class="sn-l">{label}</span>
+    {items.map((i) => <a href={i.href} aria-current={i.href === current ? "page" : undefined}>{i.label}</a>)}
+  </div>
+</nav>

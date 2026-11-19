@@ -1,0 +1,51 @@
+---
+import Page from "../layouts/Page.astro";
+import Ph from "../components/Ph.astro";
+import SubNav from "../components/SubNav.astro";
+import Find from "../components/Find.astro";
+import { dataShipped, dataSources } from "../lib/sbom.mjs";
+import { docsBlob } from "../lib/site.mjs";
+---
+<Page
+  title="Data | ObliviOS developer portal"
+  description="The data files the ObliviOS code reads, and the public sources they were made from, each with its licence, read from the SBOM."
+  path="/data"
+  current="/components"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Components", href: "/components" }, { label: "Data" }]}
+    title="Data"
+    lede="The data files the code reads, and the public sources they were made from, each with its licence."
+    print="notebook"
+    printLabel="A notebook with a pencil"
+  />
+  <SubNav current="/data" />
+
+  <section class="band tb">
+    <div class="c">
+      <form class="sf" data-scope="data" role="search" action="/search" method="get">
+        <Find wide id="q-data" label="Search the data sets" placeholder="Search the data sets and their sources" />
+        <p class="status" data-status role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div data-results>
+    <section class="band alt">
+      <div class="c">
+        <div class="sh"><h2>What there is</h2><p>The data files that are in the repositories, and the public sources they were made from.</p></div>
+        <div class="twocol gap-top">
+          <div>
+            <h3 class="mini">In the repositories ({dataShipped.length})</h3>
+            <ul class="dl2">{dataShipped.map((s) => <li><b>{s.name}</b><span>{s.files} {s.files === 1 ? "file" : "files"} · <span class="m">{s.licence ?? "not stated"}</span></span></li>)}</ul>
+          </div>
+          <div>
+            <h3 class="mini">Made from ({dataSources.length} sources)</h3>
+            <ul class="dl2">{dataSources.map((s) => <li><b>{s.name}</b><span><span class="m">{s.licence ?? "not stated"}</span>{s.missing && <> · <em class="nt-flag">not in the repositories</em></>}</span></li>)}</ul>
+          </div>
+        </div>
+        <p class="fn"><b>Read from</b> <a href={`${docsBlob}sbom/oblivios.cdx.json`}><code>sbom/oblivios.cdx.json</code></a>, the data components.</p>
+      </div>
+    </section>
+  </div>
+</Page>

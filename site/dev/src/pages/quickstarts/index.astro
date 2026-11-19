@@ -1,0 +1,40 @@
+---
+import Page from "../../layouts/Page.astro";
+import Ph from "../../components/Ph.astro";
+import { quickstarts, parseDoc } from "../../lib/documents.mjs";
+import { firstSentence, plain } from "../../lib/md.mjs";
+
+const list = quickstarts.map((q) => {
+  const doc = parseDoc(q.file);
+  return { ...q, title: doc.title, summary: firstSentence(plain(doc.summary), 260) };
+});
+---
+<Page
+  title="Quickstarts | ObliviOS developer portal"
+  description="What each reusable component of ObliviOS is, what it is not, and the commands that build and test it."
+  path="/quickstarts"
+  current="/quickstarts"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Quickstarts" }]}
+    title="Quickstarts"
+    lede="For each reusable component: what it is, what it is not, and the commands that build and test it, with what was run and what was not."
+    print="term"
+    printLabel="A terminal window"
+  />
+  <section class="band">
+    <div class="c">
+      <ol class="entries">
+        {list.map((q) => (
+          <li class="en named">
+            <div class="id">{q.label}</div>
+            <div>
+              <h3 aria-level="2"><a href={q.href}>{q.title}</a></h3>
+              <p>{q.summary}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Page>

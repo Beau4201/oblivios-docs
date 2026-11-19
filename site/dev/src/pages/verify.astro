@@ -1,0 +1,82 @@
+---
+import Page from "../layouts/Page.astro";
+import Ph from "../components/Ph.astro";
+import SubNav from "../components/SubNav.astro";
+import { sbom, prebuilt, fmtSize } from "../lib/sbom.mjs";
+import { docsBlob } from "../lib/site.mjs";
+
+const commands = `sha256sum -c oblivios-docs/sbom/files.sha256
+python3 oblivios-docs/tools/sbom/build-sbom.py \\
+    --root . --docs oblivios-docs \\
+    --evidence oblivios-docs/sbom/evidence \\
+    --check oblivios-docs/sbom`;
+const commits = [
+  ["oblivios-manifest", sbom.commits.manifest],
+  ["oblivios-platform", sbom.commits.platform],
+  ["oblivios-services", sbom.commits.services],
+].filter(([, c]) => c);
+---
+<Page
+  title="Verify | ObliviOS developer portal"
+  description="How to rebuild the ObliviOS SBOM from the same commits and compare it byte for byte, and how each of the three prebuilt binaries was made."
+  path="/verify"
+  current="/components"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Components", href: "/components" }, { label: "Verify" }]}
+    title="Verify"
+    lede="Rebuild the SBOM from the same commits and compare it byte for byte, and see how each prebuilt binary was made."
+    print="term"
+    printLabel="A terminal"
+  />
+  <SubNav current="/verify" />
+
+  <section class="band dk">
+    <div class="c">
+      <div class="sh"><h2>Prebuilt binaries</h2><p>{prebuilt.length === 3 ? "Three" : prebuilt.length} binaries are committed to oblivios-platform. Each says what it was built from and with what, so you can build it again and compare the hash.</p></div>
+      <div class="pbs gap-top">
+        {prebuilt.map((p) => (
+          <article class="pb">
+            <h3>{p.file}</h3>
+            <p class="path m">{p.name}</p>
+            <h4>SHA-256</h4>
+            <p class="hx m">{p.sha256}</p>
+            <dl>
+              <dt>Size</dt><dd>{fmtSize(p.size)}</dd>
+              <dt>Built from</dt><dd>services <span class="m">{p.source}</span> at <span class="m">{p.commit.slice(0, 12)}</span>, {p.current ? "the current source" : "not the current source: the tree has changed since"}</dd>
+              <dt>Toolchain</dt><dd>{p.toolchain}</dd>
+              <dt>Reproduced</dt><dd>{p.reproduced[0].toUpperCase() + p.reproduced.slice(1)}</dd>
+            </dl>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="c">
+      <div class="sh"><h2>Check it yourself</h2><p>Clone the four repositories side by side at these commits, then run both commands from the directory that holds them.</p></div>
+      <div class="verify gap-top">
+        <div class="prose">
+          <dl class="dfacts">
+            {commits.map(([n, c]) => (<><dt>{n}</dt><dd class="m">{c}</dd></>))}
+            <dt>oblivios-docs</dt><dd>A snapshot without history; its files are in <span class="m">files.sha256</span>.</dd>
+            <dt>Upstream baseline</dt><dd class="m">{sbom.baseline}</dd>
+          </dl>
+          <pre tabindex="0">{commands}</pre>
+          <p>The first command compares every file with its recorded SHA-256. The second rebuilds both documents from the same commits and the evidence files, compares them byte for byte, and fails on any fact that the files do not support.</p>
+          <p class="fn"><b>Read from</b> <a href={`${docsBlob}sbom/README.md`}><code>sbom/README.md</code></a> and <a href={`${docsBlob}sbom/oblivios.cdx.json`}><code>sbom/oblivios.cdx.json</code></a>.</p>
+        </div>
+        <div class="callout">
+          <h3>What the SBOM does not claim</h3>
+          <ul>
+            <li>Rust: <span class="m">Cargo.lock</span> lists every package that any configuration may resolve. The subset linked into one binary has not been computed.</li>
+            <li>npm: the packages are build-time tools. The static output of oblivios.org holds two font families and no script of any package.</li>
+            <li>The reproducibility of the prebuilt binaries is stated by their records. It was not run again here.</li>
+            <li>No legal opinion: the licence of a component is what its publisher states.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Page>

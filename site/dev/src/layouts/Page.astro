@@ -1,0 +1,37 @@
+---
+// The page frame of oblivios.dev: the shared shell with the navigation and footer lines of this site, the prints drawn for
+// the portal in place of those of oblivios.org, and the one script of the site (search and filters, ADR-268).
+import Base from "@oblivios/site-shared/components/Base.astro";
+import DevPrints from "../components/DevPrints.astro";
+import "../styles/pages.css";
+import "../styles/portal.css";
+import { siteUrl, pages, footPages, footAbout, portal, repos, own, legal, tag } from "../lib/site.mjs";
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  current?: string;
+}
+const { title, description, path, current } = Astro.props;
+---
+<Base
+  title={title}
+  description={description}
+  path={path}
+  siteUrl={siteUrl}
+  pages={pages}
+  footPages={footPages}
+  footAbout={footAbout}
+  legal={legal}
+  portal={portal}
+  source={repos}
+  own={own}
+  current={current}
+  tag={tag}
+  analytics={false}
+>
+  <script slot="head" defer src="/browse.js" is:inline></script>
+  <DevPrints slot="defs" />
+  <slot />
+</Base>

@@ -1,0 +1,97 @@
+---
+import Page from "../layouts/Page.astro";
+import Ph from "../components/Ph.astro";
+import SubNav from "../components/SubNav.astro";
+import Find from "../components/Find.astro";
+import Chip from "../components/Chip.astro";
+import Bars from "../components/Bars.astro";
+import { fmt } from "../lib/records.mjs";
+import { sbom, libraries } from "../lib/sbom.mjs";
+import { docsBlob } from "../lib/site.mjs";
+
+const first = libraries.slice(0, 24);
+const raw = "https://raw.githubusercontent.com/Beau4201/oblivios-docs/main/sbom/";
+const types = [
+  { v: "all", l: "All" },
+  { v: "lib", l: "Libraries", n: sbom.kinds.library },
+  { v: "file", l: "Files", n: sbom.kinds.file },
+  { v: "data", l: "Data", n: sbom.kinds.data },
+  { v: "tool", l: "Tools and repositories", n: sbom.kinds.application },
+];
+const licences = sbom.licences.filter(([l]) => l !== "Not stated");
+const ecoRows = [...sbom.ecosystems.map(([l, v]) => ({ label: l === "Rust" ? "Rust crates" : l === "npm" ? "npm packages" : l === "Maven" ? "Maven artifacts" : l, value: v })), { label: "Upstream projects and own modules", value: sbom.kinds.library - libraries.length }];
+---
+<Page
+  title="Components | ObliviOS developer portal"
+  description="Every library, upstream project and tool the four ObliviOS repositories rest on, with its version, its licence and the advisories against it, read from the SBOM."
+  path="/components"
+  current="/components"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Components" }]}
+    title="Components"
+    lede="Every library, upstream project and tool the four repositories rest on, with its version, its licence and the advisories against it, read from the SBOM that ships with the repository."
+    print="crate"
+    printLabel="A crate with a label"
+  />
+  <SubNav current="/components" />
+
+  <section class="band tb">
+    <div class="c">
+      <form class="sf" data-scope="components" role="search" action="/search" method="get">
+        <Find wide id="q-components" label="Search the components" placeholder="Search by name, licence, version or the start of a hash" />
+        <details class="flt tbar gap-top">
+          <summary class="btn ghost sm">Filters</summary>
+          <div class="fbody">
+            <fieldset><legend>Type</legend><div class="chips">{types.map((t) => <Chip type="radio" name="type" label={t.l} group="type" value={t.v} count={t.n} checked={t.v === "all"} />)}</div></fieldset>
+            <fieldset><legend>Ecosystem</legend><div class="chips">{sbom.ecosystems.map(([l, n]) => <Chip label={l} group="eco" value={l} count={n} />)}</div></fieldset>
+            <fieldset><legend>Licence</legend><div class="chips">{licences.slice(0, 6).map(([l, n]) => <Chip label={l} group="lic" value={l} count={n} />)}</div></fieldset>
+            <fieldset><legend>Show only</legend><div class="chips"><Chip label="With advisories" group="only" value="adv" /><Chip label="Not in the repositories" group="only" value="np" /><Chip label="Prebuilt" group="only" value="pre" /></div></fieldset>
+            <button class="btn ghost sm reset" type="reset">Clear filters</button>
+          </div>
+        </details>
+        <p class="status" data-status role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div data-results>
+    <section class="band alt">
+      <div class="c">
+        <div class="sumgrid">
+          <div>
+            <p class="big-lead">The SBOM lists <span class="num">{fmt(sbom.total)}</span> components: <span class="num">{fmt(sbom.kinds.library)}</span> libraries, <span class="num">{sbom.kinds.file}</span> files, <span class="num">{sbom.kinds.data}</span> data sets and <span class="num">{sbom.kinds.application}</span> tools and repositories.</p>
+            <p class="facts-line">Made by <span class="m">build-sbom.py</span> on {sbom.stamp}, for the stage the SBOM names itself: {sbom.stage}.</p>
+            <div class="btns after">
+              <a class="btn" href="/advisories">Read the {sbom.advisories} advisories</a>
+              <a class="btn ghost" href={raw + "oblivios.cdx.json"}>Download CycloneDX 1.6</a>
+              <a class="btn ghost" href={raw + "oblivios.spdx.json"}>Download SPDX 2.3</a>
+            </div>
+          </div>
+          <div><h3 class="mini" aria-level="2">Libraries by ecosystem</h3><Bars rows={ecoRows} /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="c">
+        <div class="sh"><h2>Licences</h2><p>As each publisher states them, for the ten most common. The SBOM is not a legal opinion, and says so.</p></div>
+        <div class="narrow gap-top"><Bars rows={sbom.licences.slice(0, 10).map(([l, n]) => ({ label: l, value: n }))} /></div>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="c">
+        <div class="sh"><h2>All components</h2><p>The first {first.length} of {fmt(libraries.length)} libraries, by name. Search or filter above to find the others.</p></div>
+        <ul class="cmpl e5 gap-top">
+          <li class="cmpl-h"><span>Component</span><span>Kind</span><span>Version</span><span>Licence</span><span>Advisories</span></li>
+          {first.map((l) => (
+            <li class="cmpl-r"><span class="n">{l.name}</span><span class="e">{l.eco}</span><span class="v">{l.version}</span><span class="l">{l.licence ?? "not stated"}</span><span class="a">{l.adv ? <b>{l.adv}</b> : "none"}</span></li>
+          ))}
+        </ul>
+        <div class="btns after"><button class="btn ghost" type="button" data-showall hidden>Browse all libraries</button></div>
+        <p class="fn"><b>Read from</b> <a href={`${docsBlob}sbom/oblivios.cdx.json`}><code>sbom/oblivios.cdx.json</code></a>.</p>
+      </div>
+    </section>
+  </div>
+</Page>

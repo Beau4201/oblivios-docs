@@ -1,0 +1,29 @@
+---
+// The band at the top of every inner page: the breadcrumb, the h1, one lede and the print of the page.
+import Print from "@oblivios/site-shared/components/Print.astro";
+
+interface Crumb {
+  label: string;
+  href?: string;
+}
+interface Props {
+  crumbs: Crumb[];
+  title: string;
+  lede: string;
+  print: string;
+  printLabel: string;
+}
+const { crumbs, title, lede, print, printLabel } = Astro.props;
+---
+<section class="ph">
+  <div class="c">
+    <div>
+      <p class="crumb">
+        {crumbs.map((c, i) => (<>{i > 0 && " / "}{c.href ? <a href={c.href}>{c.label}</a> : c.label}</>))}
+      </p>
+      <h1>{title}</h1>
+      <p class="lede">{lede}</p>
+    </div>
+    <Print id={print} label={printLabel} />
+  </div>
+</section>

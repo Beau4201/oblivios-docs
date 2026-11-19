@@ -1,0 +1,74 @@
+---
+// The blocks of one parsed document (documents.mjs) as markup. A table of two columns is a list of facts; a table of more is
+// a list of cases, each with its first cell as the heading and the other cells under the labels of the header, because a
+// table of six columns with a sentence in every cell cannot be read as a table on a page of this width.
+import Flow from "./Flow.astro";
+import { inline } from "../lib/md.mjs";
+import { caseId, localHref } from "../lib/documents.mjs";
+import { hasAdr } from "../lib/records.mjs";
+
+interface Props {
+  blocks: any[];
+  dir: string;
+  file: string;
+  prefix?: string;
+  // the outline level of a case heading: 3 under a section heading, 2 when the page has no section headings
+  level?: 2 | 3;
+  // a paged list of cases: the number of cases before this section in its part, and the range [from, to) shown on this page
+  rowOffset?: number;
+  slice?: [number, number];
+}
+const { blocks, dir, file, prefix = "", level = 3, rowOffset = 0, slice } = Astro.props;
+let row = rowOffset;
+const md = (t: string) => inline(t, { hasAdr, from: dir, local: localHref });
+const ids = new Set<string>();
+const idOf = (text: string) => caseId(prefix, text, ids);
+---
+{blocks.map((b) => {
+  if (b.t === "p") return <p set:html={md(b.text)} />;
+  if (b.t === "h3") return <h3>{b.text}</h3>;
+  if (b.t === "ul" || b.t === "ol") {
+    const Tag = b.t;
+    return (
+      <Tag>
+        {b.items.map((it: { text: string; extra: any[] }) => (
+          <li>
+            <Fragment set:html={md(it.text)} />
+            {it.extra.length > 0 && <Astro.self blocks={it.extra} dir={dir} file={file} prefix={prefix} level={level} />}
+          </li>
+        ))}
+      </Tag>
+    );
+  }
+  if (b.t === "code") {
+    if (b.lang === "mermaid") return <Flow src={b.text} where={file} />;
+    return <pre tabindex="0" class="wrapcode">{b.text}</pre>;
+  }
+  if (b.t === "table" && b.head.length === 2) {
+    return (
+      <dl class="dfacts">
+        {b.rows.map((r: string[]) => (<><dt set:html={md(r[0])} /><dd set:html={md(r[1])} /></>))}
+      </dl>
+    );
+  }
+  if (b.t === "table") {
+    // every case gets its anchor, shown or not, so the anchors do not depend on the page; only the cases of this page are drawn
+    const cases = b.rows.map((r: string[]) => ({ r, id: idOf(r[0]), n: row++ })).filter((c) => !slice || (c.n >= slice[0] && c.n < slice[1]));
+    return (
+      <ol class="entries cases">
+        {cases.map(({ r, id, n }) => (
+          <li class="en" id={id}>
+            <div class="id">{n + 1}</div>
+            <div>
+              <h3 aria-level={level} set:html={md(r[0])} />
+              <dl class="dfacts">
+                {b.head.slice(1).map((h: string, k: number) => r[k + 1] && r[k + 1] !== "-" && (<><dt>{h}</dt><dd set:html={md(r[k + 1])} /></>))}
+              </dl>
+            </div>
+          </li>
+        ))}
+      </ol>
+    );
+  }
+  return null;
+})}

@@ -8,7 +8,7 @@
   ]
  },
  "dataLicense": "CC0-1.0",
- "documentNamespace": "https://spdx.org/spdxdocs/oblivios-source-stage-e32bbf56-3ce7-5053-94dc-a1cc5c48d1e5",
+ "documentNamespace": "https://spdx.org/spdxdocs/oblivios-source-stage-e7394bc5-56e5-520b-a58a-22ac586e802a",
  "name": "ObliviOS source-only publication",
  "packages": [
   {
@@ -27075,7 +27075,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "9096f2b6ea6501db3c78902288640f40b615991b8b07d42e3ae8e4bb559f2b6d"
+     "checksumValue": "a105626dde4b03ecd063e17b71c56cd81b58337d892cf1211af5be2e692b1e4f"
     }
    ],
    "copyrightText": "NOASSERTION",

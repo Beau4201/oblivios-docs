@@ -1,0 +1,18 @@
+---
+// One filter: a real input (so a keyboard and a screen reader work) drawn as a label that fills in when it is on.
+// `group` is the filter the script reads; `cls` is "sx ok" for a status stamp and "ev" for an evidence tag.
+import { fmt } from "../lib/records.mjs";
+
+interface Props {
+  label: string;
+  group: string;
+  value: string;
+  type?: "checkbox" | "radio";
+  name?: string;
+  count?: number;
+  checked?: boolean;
+  cls?: string;
+}
+const { label, group, value, type = "checkbox", name, count, checked = false, cls } = Astro.props;
+---
+<label class="chip"><input type={type} name={name} value={value} data-filter={group} checked={checked} /><span class={cls}>{label}{count !== undefined && <em class="ct">{fmt(count)}</em>}</span></label>

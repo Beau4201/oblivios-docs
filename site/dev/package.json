@@ -1,0 +1,20 @@
+{
+  "name": "@oblivios/dev-site",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "description": "The application of oblivios.dev: the developer portal. The decision log, a page for every decision, the bill of materials and a search over all of it, static output.",
+  "scripts": {
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/check-build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "check": "node scripts/check-build.mjs"
+  },
+  "dependencies": {
+    "@oblivios/site-shared": "*",
+    "astro": "5.18.2"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.3"
+  }
+}

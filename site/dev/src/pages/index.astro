@@ -1,0 +1,82 @@
+---
+import Page from "../layouts/Page.astro";
+import Find from "../components/Find.astro";
+import Entry from "../components/Entry.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import { decisions } from "../lib/records.mjs";
+import { repos } from "../lib/site.mjs";
+
+const newest = decisions.slice(0, 4);
+const plates = [
+  { p: "ledger", t: "Decisions", d: "Every product and security decision, with its status, what it mentions and when to look at it again.", h: "/decisions" },
+  { p: "crate", t: "Components", d: "The libraries, upstream projects and tools the four repositories rest on, each with its licence and its advisories.", h: "/components" },
+  { p: "shield", t: "Advisories", d: "What OSV lists against the locked versions, and the assessment of each one.", h: "/advisories" },
+  { p: "stack", t: "Files and patches", d: "What the files of the repositories are, and which parts of the upstream baseline the patches change.", h: "/patches" },
+  { p: "notebook", t: "Data", d: "The data files the code reads and the public sources they were made from, each with its licence.", h: "/data" },
+  { p: "term", t: "Verify", d: "The commands that rebuild the SBOM, and how each prebuilt binary was made.", h: "/verify" },
+  { p: "sheet", t: "Threat model", d: "Who could attack ObliviOS and along which path, and what each service may and may not do.", h: "/threat-model" },
+  { p: "desk", t: "Engineering notes", d: "What was learned building each area: the exact command, the error, the cause and the way that works.", h: "/engineering" },
+  { p: "term", t: "Quickstarts", d: "What each reusable component is and is not, and the commands that build and test it.", h: "/quickstarts" },
+];
+---
+<Page
+  title="ObliviOS developer portal: read the record"
+  description="The decisions, the threat model, the engineering notes and the bill of materials of ObliviOS, read from the repository: every decision, every component, every advisory, and a search over all of it."
+  path="/"
+>
+  <section class="hero">
+    <div class="c">
+      <div>
+        <h1>Read the <em>record</em>.</h1>
+        <p class="lede">Every decision ObliviOS has made, and the bill of materials of what it is built from, <b>read from the same repository as the code</b>, so a page cannot drift from the record.</p>
+        <form role="search" action="/search" method="get"><Find id="q-home" label="Search the record" placeholder="Search the record" /></form>
+        <p class="hint">Try <a href="/search?q=ADR-208">ADR-208</a><a href="/search?q=compartments">Compartments</a><a href="/search?q=OFL-1.1">OFL-1.1</a></p>
+      </div>
+      <div class="plate">
+        <Print id="desk" label="An open ledger with a lens over it" />
+        <div class="stamp">Open record<small>The same repository as the code</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="c">
+      <div class="lead">
+        <div>
+          <p class="big">This site writes nothing of its own. It reads the repository and shows what is there.</p>
+          <p class="facts">The decision log, the threat model, the engineering notes and the bill of materials are read from <span class="m">docs/</span> and <span class="m">sbom/</span> when the site is built, and each decision, each document and each page of the bill of materials names the file it was read from. A new decision in the repository becomes a new page here, and nobody has to edit the site for it.</p>
+        </div>
+        <Print id="stack" label="A stack of sheets" />
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="c">
+      <div class="sh"><h2>Start where your question is</h2><p>Each page is built from a file of the repository and says which one.</p></div>
+      <div class="plates">
+        {plates.map((x) => (
+          <a class="pl" href={x.h}><Print id={x.p} label={x.t} /><h3>{x.t}</h3><p>{x.d}</p></a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="c">
+      <div class="sh"><h2>From the log</h2><p>The newest entries, with the trigger that would reopen each one.</p></div>
+      <ul class="entries gap-top">{newest.map((d) => <Entry d={d} />)}</ul>
+      <div class="btns after"><a class="btn" href="/decisions">All decisions</a></div>
+    </div>
+  </section>
+
+  <section class="close">
+    <div class="c">
+      <div>
+        <h2>All of it lives in four repositories.</h2>
+        <p>The portal, the project site and the code are built from the same source, on the same account. Read it where it is written.</p>
+      </div>
+      <div class="btns">{repos.map((r) => <a class="btn ghost" href={r.href}>{r.label}</a>)}</div>
+    </div>
+  </section>
+</Page>

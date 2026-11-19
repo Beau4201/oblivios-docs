@@ -1,0 +1,62 @@
+---
+import Page from "../layouts/Page.astro";
+import Ph from "../components/Ph.astro";
+import Find from "../components/Find.astro";
+import Chip from "../components/Chip.astro";
+import { decisionStats, decisions, fmt } from "../lib/records.mjs";
+import { documentIndex } from "../lib/documents.mjs";
+import { sbom, libraries, modules, tools, advisories, dataShipped, dataSources, files } from "../lib/sbom.mjs";
+
+// what each chip counts with no words typed: the documents of its kind, as search-index.mjs builds them
+const total = {
+  d: decisions.length,
+  c: libraries.length + modules.length + tools.length,
+  a: advisories.reduce((n, g) => n + g.items.length, 0),
+  s: dataShipped.length + dataSources.length,
+  f: files.length,
+  x: documentIndex().length,
+};
+
+const kinds = [
+  { v: "d", l: "Decisions" },
+  { v: "c", l: "Components" },
+  { v: "a", l: "Advisories" },
+  { v: "s", l: "Data" },
+  { v: "f", l: "Files" },
+  { v: "x", l: "Documents" },
+];
+---
+<Page
+  title="Search the record | ObliviOS developer portal"
+  description="Search every decision, component, advisory, data set and file of ObliviOS in one place, by word, by ADR number, by advisory ID or by the start of a SHA-256."
+  path="/search"
+  current="/search"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Search" }]}
+    title="Search"
+    lede={`${fmt(decisionStats.total)} decisions and ${fmt(sbom.total)} components, with the advisories, data sets and files that go with them, in one place.`}
+    print="desk"
+    printLabel="An open ledger with a lens over it"
+  />
+  <section class="band">
+    <div class="c">
+      <form class="sf" data-scope="all" role="search" action="/search" method="get">
+        <Find wide id="q-search" label="Search the record" placeholder="A word, ADR-208, an advisory ID, a licence, the start of a SHA-256" />
+        <div class="chips gap-top">
+          {kinds.map((k) => (
+            <label class="chip"><input type="checkbox" value={k.v} data-filter="kind" /><span>{k.l}<em class="ct" data-count={k.v} data-total={total[k.v]}>{fmt(total[k.v])}</em></span></label>
+          ))}
+        </div>
+        <p class="status" data-status role="status" aria-live="polite"></p>
+        <div class="gap-top" data-results>
+          <div class="narrow">
+            <p class="none">Type a word, an ADR number such as 208, an advisory ID, a licence such as MIT, or the first characters of a SHA-256. Words may be a letter off, and the best match comes first.</p>
+            <p class="hint">Try <a href="/search?q=ADR-208">ADR-208</a><a href="/search?q=compartments%20exit">Compartments exit</a><a href="/search?q=GHSA-26w7">GHSA-26w7</a><a href="/search?q=8658fb35">8658fb35</a></p>
+            <noscript><p class="none">Search needs the one script of this site. Without it, read the decision list and the pages of the bill of materials.</p></noscript>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</Page>

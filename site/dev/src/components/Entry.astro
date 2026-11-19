@@ -1,0 +1,22 @@
+---
+// One decision in a list: the number stands in the margin with its date and status stamp, then the first sentence as a link,
+// the trigger that would reopen it and the part of the system it belongs to.
+import { plain } from "../lib/md.mjs";
+
+interface Props {
+  d: { n: number; id: string; date: string; title: string; status: { kind: string; label: string }; review: string; parts: string[] };
+  // the outline level of the title: 3 under a section heading (the home page), 2 on a page whose title is the h1
+  level?: 2 | 3;
+}
+const { d, level = 3 } = Astro.props;
+const review = plain(d.review);
+const short = review.length > 240 ? review.slice(0, 237).replace(/\s+\S*$/, "") + "…" : review;
+---
+<li class="en">
+  <div class="id">{d.id}<small>{d.date}</small><span class={`sx ${d.status.kind}`}>{d.status.label}</span></div>
+  <div>
+    <h3 aria-level={level}><a href={`/adr/${d.n}`}>{d.title}</a></h3>
+    <p><b>Review when:</b> {short}</p>
+    {d.parts.length > 0 && <p class="meta">{d.parts.join(", ")}</p>}
+  </div>
+</li>

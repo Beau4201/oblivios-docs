@@ -1,0 +1,9 @@
+{
+  "_comment": "Page weight budget of oblivios.dev, set before the build (W-5, spec 5.5 item 6). Raw bytes, no compression. Checked by scripts/check-build.mjs; the build fails when one is exceeded. The search index is not part of a first load: the script fetches it when a search starts.",
+  "htmlKBPerPage": 120,
+  "cssKBTotal": 60,
+  "fontKBTotal": 130,
+  "scriptsKBTotal": 40,
+  "firstLoadKBPerPage": 400,
+  "searchIndexKBTotal": 2200
+}

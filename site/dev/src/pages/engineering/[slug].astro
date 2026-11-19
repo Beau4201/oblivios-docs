@@ -1,0 +1,16 @@
+---
+import DocPage from "../../layouts/DocPage.astro";
+import { notes } from "../../lib/documents.mjs";
+
+export function getStaticPaths() {
+  return notes.map((n) => ({ params: { slug: n.slug }, props: { entry: n } }));
+}
+const { entry } = Astro.props;
+---
+<DocPage
+  entry={entry}
+  crumbs={[{ label: "Home", href: "/" }, { label: "Engineering notes", href: "/engineering" }, { label: entry.label }]}
+  current="/engineering"
+  print="notebook"
+  printLabel="A notebook, open"
+/>
