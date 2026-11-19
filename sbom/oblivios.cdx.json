@@ -12,7 +12,7 @@
     },
     {
      "type": "build-meta",
-     "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/SOURCE.md"
+     "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/SOURCE.md"
     }
    ],
    "hashes": [
@@ -62,7 +62,7 @@
     },
     {
      "type": "build-meta",
-     "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/daemon/SOURCE.md"
+     "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/daemon/SOURCE.md"
     }
    ],
    "hashes": [
@@ -112,7 +112,7 @@
     },
     {
      "type": "build-meta",
-     "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/passwords/core/SOURCE.md"
+     "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/passwords/core/SOURCE.md"
     }
    ],
    "hashes": [
@@ -29560,7 +29560,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:common-passwords",
@@ -29591,7 +29591,7 @@
     }
    ],
    "type": "data",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "data:datamap-logos",
@@ -29626,7 +29626,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:exit-mask-list",
@@ -29657,7 +29657,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:flags",
@@ -29692,7 +29692,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:font-licence",
@@ -29723,7 +29723,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:gradle-wrapper-files",
@@ -29758,7 +29758,7 @@
     }
    ],
    "type": "data",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "data:ipmap-anchors",
@@ -29789,7 +29789,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:land",
@@ -29822,7 +29822,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:passwords-logos",
@@ -29857,7 +29857,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:persona-cells",
@@ -29888,7 +29888,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:persona-places",
@@ -29919,7 +29919,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:vendored-devicesettings",
@@ -29954,7 +29954,7 @@
     }
    ],
    "type": "data",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "data:vendored-onionmasq",
@@ -29989,7 +29989,7 @@
     }
    ],
    "type": "data",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "manifest:2026071500",
@@ -43489,7 +43489,7 @@
    ],
    "name": "oblivios-platform/airpods/patches/frameworks-base/0001-oblivios-let-a-device-settings-provider-draw-mult.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/airpods/patches/frameworks-base/0002-oblivios-treat-a-refused-bind-of-a-device-settings.patch",
@@ -43507,7 +43507,7 @@
    ],
    "name": "oblivios-platform/airpods/patches/frameworks-base/0002-oblivios-treat-a-refused-bind-of-a-device-settings.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/airpods/patches/packages-apps-settings/0001-oblivios-show-multi-toggle-labels-inside-the-butt.patch",
@@ -43525,7 +43525,7 @@
    ],
    "name": "oblivios-platform/airpods/patches/packages-apps-settings/0001-oblivios-show-multi-toggle-labels-inside-the-butt.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/airpods/patches/packages-modules-bluetooth/0001-airpods-scope-the-Device-ID-vendor-and-L2CAP-mode-to.patch",
@@ -43543,7 +43543,7 @@
    ],
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0001-airpods-scope-the-Device-ID-vendor-and-L2CAP-mode-to.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/airpods/patches/packages-modules-bluetooth/0002-airpods-add-BluetoothDevice-setAirPodsMetadata-behin.patch",
@@ -43561,7 +43561,7 @@
    ],
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0002-airpods-add-BluetoothDevice-setAirPodsMetadata-behin.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/airpods/patches/packages-modules-bluetooth/0003-airpods-add-BluetoothDevice-setAirPodsAudioRoute-beh.patch",
@@ -43579,7 +43579,7 @@
    ],
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0003-airpods-add-BluetoothDevice-setAirPodsAudioRoute-beh.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/airpods/patches/packages-modules-bluetooth/0004-airpods-add-BluetoothDevice-setAirPodsMusicDuck-behi.patch",
@@ -43597,7 +43597,7 @@
    ],
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0004-airpods-add-BluetoothDevice-setAirPodsMusicDuck-behi.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/airpods/patches/packages-modules-bluetooth/0005-airpods-add-BluetoothDevice-setAirPodsAlias-behind-M.patch",
@@ -43615,7 +43615,7 @@
    ],
    "name": "oblivios-platform/airpods/patches/packages-modules-bluetooth/0005-airpods-add-BluetoothDevice-setAirPodsAlias-behind-M.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/airpods/patches/vendor-adevtool/0001-airpods-ship-AirPodsApp-on-every-Pixel-target-and-it.patch",
@@ -43633,7 +43633,7 @@
    ],
    "name": "oblivios-platform/airpods/patches/vendor-adevtool/0001-airpods-ship-AirPodsApp-on-every-Pixel-target-and-it.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/branding/boot/patches/build-make/0001-oblivios-do-not-ship-the-upstream-boot-animation-z.patch",
@@ -43651,7 +43651,7 @@
    ],
    "name": "oblivios-platform/branding/boot/patches/build-make/0001-oblivios-do-not-ship-the-upstream-boot-animation-z.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/branding/boot/patches/frameworks-base/0001-oblivios-boot-clear-colour-matches-the-boot-pictu.patch",
@@ -43669,7 +43669,7 @@
    ],
    "name": "oblivios-platform/branding/boot/patches/frameworks-base/0001-oblivios-boot-clear-colour-matches-the-boot-pictu.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/branding/boot/patches/frameworks-base/0002-oblivios-boot-picture-assets-ADR-152.patch",
@@ -43687,7 +43687,7 @@
    ],
    "name": "oblivios-platform/branding/boot/patches/frameworks-base/0002-oblivios-boot-picture-assets-ADR-152.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/build-release/0001-oblivios-squash-credential_capture-enable-relocate-pe.patch",
@@ -43705,7 +43705,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/build-release/0001-oblivios-squash-credential_capture-enable-relocate-pe.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/frameworks-base/0001-oblivios-the-duress-decoy-user-type-its-routing-the-.patch",
@@ -43723,7 +43723,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0001-oblivios-the-duress-decoy-user-type-its-routing-the-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/frameworks-base/0002-oblivios-the-duress-finger-link-the-decoy-administra.patch",
@@ -43741,7 +43741,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0002-oblivios-the-duress-finger-link-the-decoy-administra.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/frameworks-base/0003-oblivios-mirror-the-owner-s-settings-and-wallpaper-t.patch",
@@ -43759,7 +43759,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0003-oblivios-mirror-the-owner-s-settings-and-wallpaper-t.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/frameworks-base/0004-oblivios-the-cold-duress-unlock-at-about-0.90-s-its-.patch",
@@ -43777,7 +43777,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0004-oblivios-the-cold-duress-unlock-at-about-0.90-s-its-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/frameworks-base/0005-oblivios-the-stage-of-an-authorized-switch-the-decoy.patch",
@@ -43795,7 +43795,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0005-oblivios-the-stage-of-an-authorized-switch-the-decoy.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/frameworks-base/0006-oblivios-the-life-of-the-stage-the-zoom-hand-over-an.patch",
@@ -43813,7 +43813,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0006-oblivios-the-life-of-the-stage-the-zoom-hand-over-an.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/frameworks-base/0007-oblivios-the-findings-D1-to-D9-of-the-read-of-2026-1.patch",
@@ -43831,7 +43831,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0007-oblivios-the-findings-D1-to-D9-of-the-read-of-2026-1.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/frameworks-base/0008-oblivios-a-recorded-decoy-routing-failure-is-cleared-.patch",
@@ -43849,7 +43849,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0008-oblivios-a-recorded-decoy-routing-failure-is-cleared-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/packages-apps-multiuser/0001-oblivios-hide-real-user-identity-from-the-Multius.patch",
@@ -43867,7 +43867,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-multiuser/0001-oblivios-hide-real-user-identity-from-the-Multius.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0001-oblivios-hide-real-user-identity-from-Settings-an.patch",
@@ -43885,7 +43885,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0001-oblivios-hide-real-user-identity-from-Settings-an.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0002-oblivios-add-the-Duress-Unlock-set-up-flow-main-a.patch",
@@ -43903,7 +43903,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0002-oblivios-add-the-Duress-Unlock-set-up-flow-main-a.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0003-oblivios-let-the-Duress-Unlock-second-credential-b.patch",
@@ -43921,7 +43921,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0003-oblivios-let-the-Duress-Unlock-second-credential-b.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0004-oblivios-let-Settings-choose-and-remove-the-Duress.patch",
@@ -43939,7 +43939,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0004-oblivios-let-Settings-choose-and-remove-the-Duress.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0005-oblivios-Duress-Unlock-warns-when-a-decoy-PIN-no-lon.patch",
@@ -43957,7 +43957,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0005-oblivios-Duress-Unlock-warns-when-a-decoy-PIN-no-lon.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-dummy/patches/frameworks-base/0001-oblivios-add-hardware-backed-duress-dummy-cost-cr.patch",
@@ -43975,7 +43975,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-dummy/patches/frameworks-base/0001-oblivios-add-hardware-backed-duress-dummy-cost-cr.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-dummy/patches/system-core/0001-oblivios-create-metadata-duress-dummy-at-boot.patch",
@@ -43993,7 +43993,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-dummy/patches/system-core/0001-oblivios-create-metadata-duress-dummy-at-boot.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/credential/duress-unlock-dummy/patches/system-sepolicy/0001-oblivios-add-the-private-SELinux-type-for-duress-.patch",
@@ -44013,7 +44013,7 @@
    ],
    "name": "oblivios-platform/credential/duress-unlock-dummy/patches/system-sepolicy/0001-oblivios-add-the-private-SELinux-type-for-duress-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0001-datamap-add-the-pure-core-of-the-Data-Map-service.patch",
@@ -44031,7 +44031,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0001-datamap-add-the-pure-core-of-the-Data-Map-service.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0002-datamap-give-the-Data-Map-service-its-own-slot-for-t.patch",
@@ -44049,7 +44049,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0002-datamap-give-the-Data-Map-service-its-own-slot-for-t.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0003-datamap-add-the-Binder-interface-and-the-READ_DATA_M.patch",
@@ -44067,7 +44067,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0003-datamap-add-the-Binder-interface-and-the-READ_DATA_M.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0004-datamap-add-the-Data-Map-service-and-start-it-with-t.patch",
@@ -44085,7 +44085,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0004-datamap-add-the-Data-Map-service-and-start-it-with-t.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0005-datamap-keep-the-netd-callback-thread-free-and-refus.patch",
@@ -44103,7 +44103,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0005-datamap-keep-the-netd-callback-thread-free-and-refus.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0006-datamap-clear-also-removes-the-events-that-were-wait.patch",
@@ -44121,7 +44121,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0006-datamap-clear-also-removes-the-events-that-were-wait.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0007-datamap-fix-what-the-independent-review-found.patch",
@@ -44139,7 +44139,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0007-datamap-fix-what-the-independent-review-found.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0008-datamap-hide-the-READ_DATA_MAP-permission-from-the-p.patch",
@@ -44157,7 +44157,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0008-datamap-hide-the-READ_DATA_MAP-permission-from-the-p.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0009-datamap-keep-the-history-to-the-hour-and-only-from-t.patch",
@@ -44175,7 +44175,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0009-datamap-keep-the-history-to-the-hour-and-only-from-t.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/frameworks-base/0010-datamap-give-every-contacted-address-a-server-plac.patch",
@@ -44193,7 +44193,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/frameworks-base/0010-datamap-give-every-contacted-address-a-server-plac.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/system-sepolicy/0001-sepolicy-add-the-Data-Map-service-type-and-the-datam.patch",
@@ -44213,7 +44213,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/system-sepolicy/0001-sepolicy-add-the-Data-Map-service-type-and-the-datam.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/system-sepolicy/0002-sepolicy-keep-system_app-and-traceur_app-from-findin.patch",
@@ -44233,7 +44233,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/system-sepolicy/0002-sepolicy-keep-system_app-and-traceur_app-from-findin.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/system-sepolicy/0003-sepolicy-list-the-Data-Map-service-without-a-fuzzer.patch",
@@ -44253,7 +44253,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/system-sepolicy/0003-sepolicy-list-the-Data-Map-service-without-a-fuzzer.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/system-sepolicy/0004-sepolicy-keep-shell-from-finding-the-Data-Map-servic.patch",
@@ -44273,7 +44273,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/system-sepolicy/0004-sepolicy-keep-shell-from-finding-the-Data-Map-servic.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/vendor-adevtool/0001-datamap-ship-the-Data-Map-classifier-file-on-every-P.patch",
@@ -44291,7 +44291,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/vendor-adevtool/0001-datamap-ship-the-Data-Map-classifier-file-on-every-P.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/vendor-adevtool/0002-datamap-ship-DataMapApp-on-every-Pixel-target-via-de.patch",
@@ -44309,7 +44309,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/vendor-adevtool/0002-datamap-ship-DataMapApp-on-every-Pixel-target-via-de.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/datamap/patches/vendor-adevtool/0003-datamap-ship-the-Data-Map-address-data-on-every-Pixe.patch",
@@ -44327,7 +44327,7 @@
    ],
    "name": "oblivios-platform/datamap/patches/vendor-adevtool/0003-datamap-ship-the-Data-Map-address-data-on-every-Pixe.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0001-oblivios-show-inline-autofill-suggestions-as-chips.patch",
@@ -44345,7 +44345,7 @@
    ],
    "name": "oblivios-platform/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0001-oblivios-show-inline-autofill-suggestions-as-chips.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0002-oblivios-offer-the-chips-again-when-the-field-is-e.patch",
@@ -44363,7 +44363,7 @@
    ],
    "name": "oblivios-platform/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0002-oblivios-offer-the-chips-again-when-the-field-is-e.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/keyboard/restyle/patches/packages-inputmethods-latinime/0001-oblivios-restyle-the-keyboard-as-rounded-caps.patch",
@@ -44381,7 +44381,7 @@
    ],
    "name": "oblivios-platform/keyboard/restyle/patches/packages-inputmethods-latinime/0001-oblivios-restyle-the-keyboard-as-rounded-caps.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/keyboard/restyle/patches/packages-inputmethods-latinime/0002-oblivios-keep-the-keyboard-inside-the-cutout-and-.patch",
@@ -44399,7 +44399,7 @@
    ],
    "name": "oblivios-platform/keyboard/restyle/patches/packages-inputmethods-latinime/0002-oblivios-keep-the-keyboard-inside-the-cutout-and-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/launcher/app-drawer/patches/packages-apps-launcher3/0001-launcher-theme-the-icons-of-the-app-drawer-and-group.patch",
@@ -44417,7 +44417,7 @@
    ],
    "name": "oblivios-platform/launcher/app-drawer/patches/packages-apps-launcher3/0001-launcher-theme-the-icons-of-the-app-drawer-and-group.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/launcher/app-drawer/patches/packages-apps-launcher3/0002-launcher-show-the-app-drawer-as-category-groups.patch",
@@ -44435,7 +44435,7 @@
    ],
    "name": "oblivios-platform/launcher/app-drawer/patches/packages-apps-launcher3/0002-launcher-show-the-app-drawer-as-category-groups.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/launcher/app-drawer/patches/packages-apps-launcher3/0003-launcher-load-the-apps-of-the-drawer-with-the-theme-.patch",
@@ -44453,7 +44453,7 @@
    ],
    "name": "oblivios-platform/launcher/app-drawer/patches/packages-apps-launcher3/0003-launcher-load-the-apps-of-the-drawer-with-the-theme-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/memory/cached-process-cap/patches/frameworks-base/0001-memory-lower-the-maximum-number-of-cached-processes-from-1024-to-48.patch",
@@ -44471,7 +44471,7 @@
    ],
    "name": "oblivios-platform/memory/cached-process-cap/patches/frameworks-base/0001-memory-lower-the-maximum-number-of-cached-processes-from-1024-to-48.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/memory/cached-process-cap/patches/vendor-adevtool/0001-memory-do-not-carry-the-Pixel-overlay-value-of-the-cached-process-cap.patch",
@@ -44489,7 +44489,7 @@
    ],
    "name": "oblivios-platform/memory/cached-process-cap/patches/vendor-adevtool/0001-memory-do-not-carry-the-Pixel-overlay-value-of-the-cached-process-cap.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/memory/cached-process-cap/patches/vendor-adevtool/0002-memory-exclude-the-stock-cached-process-cap-by-key.patch",
@@ -44507,7 +44507,7 @@
    ],
    "name": "oblivios-platform/memory/cached-process-cap/patches/vendor-adevtool/0002-memory-exclude-the-stock-cached-process-cap-by-key.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/memory/decoy-stop-on-switch/patches/frameworks-base/0001-memory-stop-only-the-Duress-decoy-user-when-the-devi.patch",
@@ -44525,7 +44525,7 @@
    ],
    "name": "oblivios-platform/memory/decoy-stop-on-switch/patches/frameworks-base/0001-memory-stop-only-the-Duress-decoy-user-when-the-devi.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/memory/decoy-stop-on-switch/patches/vendor-adevtool/0001-memory-stop-a-background-user-when-the-device-switch.patch",
@@ -44543,7 +44543,7 @@
    ],
    "name": "oblivios-platform/memory/decoy-stop-on-switch/patches/vendor-adevtool/0001-memory-stop-a-background-user-when-the-device-switch.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/memory/decoy-stop-on-switch/patches/vendor-adevtool/0002-memory-drop-fw.stop_bg_users_on_switch-the-decoy-is-s.patch",
@@ -44561,7 +44561,7 @@
    ],
    "name": "oblivios-platform/memory/decoy-stop-on-switch/patches/vendor-adevtool/0002-memory-drop-fw.stop_bg_users_on_switch-the-decoy-is-s.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/memory/zram-size/patches/vendor-adevtool/0001-memory-raise-the-zram-swap-capacity-to-100-of-RAM.patch",
@@ -44579,7 +44579,7 @@
    ],
    "name": "oblivios-platform/memory/zram-size/patches/vendor-adevtool/0001-memory-raise-the-zram-swap-capacity-to-100-of-RAM.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/memory/zram-size/patches/vendor-adevtool/0002-memory-exclude-the-stock-zram-size-by-key.patch",
@@ -44597,7 +44597,7 @@
    ],
    "name": "oblivios-platform/memory/zram-size/patches/vendor-adevtool/0002-memory-exclude-the-stock-zram-size-by-key.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/memory/zram-size/patches/vendor-adevtool/0003-memory-give-the-vendor-zram-size-property-its-100-default.patch",
@@ -44615,7 +44615,7 @@
    ],
    "name": "oblivios-platform/memory/zram-size/patches/vendor-adevtool/0003-memory-give-the-vendor-zram-size-property-its-100-default.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/passwords/patches/frameworks-base/0001-passwords-make-the-Passwords-app-the-default-autofil.patch",
@@ -44633,7 +44633,7 @@
    ],
    "name": "oblivios-platform/passwords/patches/frameworks-base/0001-passwords-make-the-Passwords-app-the-default-autofil.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/passwords/patches/vendor-adevtool/0001-passwords-ship-PasswordsApp-on-every-Pixel-target-vi.patch",
@@ -44651,7 +44651,7 @@
    ],
    "name": "oblivios-platform/passwords/patches/vendor-adevtool/0001-passwords-ship-PasswordsApp-on-every-Pixel-target-vi.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/physical/grab-detection/patches/frameworks-base/0001-grab-detect-a-phone-pulled-out-of-a-hand-in-use-lock.patch",
@@ -44669,7 +44669,7 @@
    ],
    "name": "oblivios-platform/physical/grab-detection/patches/frameworks-base/0001-grab-detect-a-phone-pulled-out-of-a-hand-in-use-lock.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/physical/grab-detection/patches/frameworks-base/0002-grab-the-strictness-of-the-detection-the-set-down-an.patch",
@@ -44687,7 +44687,7 @@
    ],
    "name": "oblivios-platform/physical/grab-detection/patches/frameworks-base/0002-grab-the-strictness-of-the-detection-the-set-down-an.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/physical/grab-detection/patches/packages-apps-Settings/0001-grab-switch-for-grab-detection-on-the-exploit-protec.patch",
@@ -44705,7 +44705,7 @@
    ],
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0001-grab-switch-for-grab-detection-on-the-exploit-protec.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/physical/grab-detection/patches/packages-apps-Settings/0002-grab-choose-how-strict-the-impact-route-is.patch",
@@ -44723,7 +44723,7 @@
    ],
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0002-grab-choose-how-strict-the-impact-route-is.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/physical/grab-detection/patches/packages-apps-Settings/0003-grab-one-row-on-the-exploit-protection-page-like-aut.patch",
@@ -44741,7 +44741,7 @@
    ],
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0003-grab-one-row-on-the-exploit-protection-page-like-aut.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/physical/grab-detection/patches/packages-apps-Settings/0004-grab-the-row-selects-nothing-in-shadow-mode-cuts-a.patch",
@@ -44759,7 +44759,7 @@
    ],
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0004-grab-the-row-selects-nothing-in-shadow-mode-cuts-a.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/physical/grab-detection/patches/packages-apps-Settings/0005-grab-the-description-under-the-list-and-the-levels-i.patch",
@@ -44777,7 +44777,7 @@
    ],
    "name": "oblivios-platform/physical/grab-detection/patches/packages-apps-Settings/0005-grab-the-description-under-the-list-and-the-levels-i.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0001-compartments-add-the-Binder-interface-and-the-two-pe.patch",
@@ -44795,7 +44795,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0001-compartments-add-the-Binder-interface-and-the-two-pe.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0002-compartments-add-the-policy-service-of-Compartments-.patch",
@@ -44813,7 +44813,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0002-compartments-add-the-policy-service-of-Compartments-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0003-compartments-let-the-Settings-app-hold-READ_COMPARTM.patch",
@@ -44831,7 +44831,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0003-compartments-let-the-Settings-app-hold-READ_COMPARTM.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0004-compartments-add-location-the-place-of-an-app-the-persona.patch",
@@ -44849,7 +44849,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0004-compartments-add-location-the-place-of-an-app-the-persona.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0005-compartments-give-an-app-with-a-persona-the-fixes-of.patch",
@@ -44867,7 +44867,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0005-compartments-give-an-app-with-a-persona-the-fixes-of.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0006-compartments-give-an-app-with-a-persona-the-time-zon.patch",
@@ -44885,7 +44885,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0006-compartments-give-an-app-with-a-persona-the-time-zon.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0007-compartments-write-the-persona-file-salt-without-Str.patch",
@@ -44903,7 +44903,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0007-compartments-write-the-persona-file-salt-without-Str.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0008-compartments-stop-what-changed-retry-failed-mirrors-.patch",
@@ -44921,7 +44921,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0008-compartments-stop-what-changed-retry-failed-mirrors-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0009-compartments-withhold-the-position-of-a-blocked-app-.patch",
@@ -44939,7 +44939,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0009-compartments-withhold-the-position-of-a-blocked-app-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0010-compartments-clear-the-entries-of-packages-that-are-.patch",
@@ -44957,7 +44957,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0010-compartments-clear-the-entries-of-packages-that-are-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0011-compartments-give-an-app-with-a-persona-no-real-oper.patch",
@@ -44975,7 +44975,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0011-compartments-give-an-app-with-a-persona-no-real-oper.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0012-compartments-give-apps-without-an-entry-a-persona-un.patch",
@@ -44993,7 +44993,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0012-compartments-give-apps-without-an-entry-a-persona-un.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0013-compartments-withhold-the-position-from-apps-without.patch",
@@ -45011,7 +45011,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0013-compartments-withhold-the-position-from-apps-without.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0014-compartments-parse-the-place-and-cell-data-without-a.patch",
@@ -45029,7 +45029,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0014-compartments-parse-the-place-and-cell-data-without-a.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0015-compartments-give-the-passive-location-listener-the-.patch",
@@ -45047,7 +45047,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0015-compartments-give-the-passive-location-listener-the-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0016-compartments-give-back-the-location-permissions-that.patch",
@@ -45065,7 +45065,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0016-compartments-give-back-the-location-permissions-that.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0017-compartments-list-the-apps-that-may-use-the-loopback.patch",
@@ -45083,7 +45083,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0017-compartments-list-the-apps-that-may-use-the-loopback.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0018-compartments-choose-an-automatic-place-among-the-pla.patch",
@@ -45101,7 +45101,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0018-compartments-choose-an-automatic-place-among-the-pla.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0019-compartments-list-the-apps-that-have-a-persona-witho.patch",
@@ -45119,7 +45119,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0019-compartments-list-the-apps-that-have-a-persona-witho.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0020-compartments-give-a-platform-signed-package-no-perso.patch",
@@ -45137,7 +45137,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0020-compartments-give-a-platform-signed-package-no-perso.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0021-compartments-a-platform-signed-package-keeps-the-bas.patch",
@@ -45155,7 +45155,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0021-compartments-a-platform-signed-package-keeps-the-bas.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0022-compartments-the-Settings-permission-is-allowlisted-.patch",
@@ -45173,7 +45173,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0022-compartments-the-Settings-permission-is-allowlisted-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0023-compartments-the-passive-fix-listener-names-an-attri.patch",
@@ -45191,7 +45191,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0023-compartments-the-passive-fix-listener-names-an-attri.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0025-compartments-answer-the-identity-of-an-app-Custom-wh.patch",
@@ -45209,7 +45209,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0025-compartments-answer-the-identity-of-an-app-Custom-wh.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0026-compartments-getIdentity-names-a-platform-signed-pac.patch",
@@ -45227,7 +45227,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0026-compartments-getIdentity-names-a-platform-signed-pac.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0027-compartments-give-an-app-with-a-persona-a-standing-f.patch",
@@ -45245,7 +45245,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0027-compartments-give-an-app-with-a-persona-a-standing-f.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0028-compartments-an-emergency-holds-back-a-standing-fix-.patch",
@@ -45263,7 +45263,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0028-compartments-an-emergency-holds-back-a-standing-fix-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0029-compartments-a-telephony-listener-of-an-app-whose-po.patch",
@@ -45281,7 +45281,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0029-compartments-a-telephony-listener-of-an-app-whose-po.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0030-compartments-the-revoked-ledger-gives-back-what-it-c.patch",
@@ -45299,7 +45299,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0030-compartments-the-revoked-ledger-gives-back-what-it-c.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0031-compartments-a-real-fix-moves-the-standing-fix-alarm.patch",
@@ -45317,7 +45317,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0031-compartments-a-real-fix-moves-the-standing-fix-alarm.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0032-compartments-the-stops-of-a-changed-app-happen-at-on.patch",
@@ -45335,7 +45335,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0032-compartments-the-stops-of-a-changed-app-happen-at-on.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0033-compartments-a-mirror-pass-that-succeeds-also-stops-.patch",
@@ -45353,7 +45353,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0033-compartments-a-mirror-pass-that-succeeds-also-stops-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0034-compartments-the-header-of-ICompartmentsPolicy-names-.patch",
@@ -45371,7 +45371,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0034-compartments-the-header-of-ICompartmentsPolicy-names-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-base/0035-compartments-a-clock-app-keeps-the-real-time-zone-u.patch",
@@ -45389,7 +45389,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-base/0035-compartments-a-clock-app-keeps-the-real-time-zone-u.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-native/0003-sensorservice-give-each-app-the-sensor-mode-of-its-p.patch",
@@ -45407,7 +45407,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-native/0003-sensorservice-give-each-app-the-sensor-mode-of-its-p.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-native/0004-sensorservice-tell-the-invented-streams-what-the-pho.patch",
@@ -45425,7 +45425,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-native/0004-sensorservice-tell-the-invented-streams-what-the-pho.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-native/0005-sensorservice-keep-the-last-sensor-table-drop-the-d.patch",
@@ -45443,7 +45443,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-native/0005-sensorservice-keep-the-last-sensor-table-drop-the-d.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/frameworks-native/0006-sensorservice-give-a-Substituted-app-an-invented-air.patch",
@@ -45461,7 +45461,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/frameworks-native/0006-sensorservice-give-a-Substituted-app-an-invented-air.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0001-bluetooth-deliver-no-scan-result-to-an-app-with-a-pe.patch",
@@ -45479,7 +45479,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0001-bluetooth-deliver-no-scan-result-to-an-app-with-a-pe.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0002-bluetooth-write-the-persona-file-salt-without-String.patch",
@@ -45497,7 +45497,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0002-bluetooth-write-the-persona-file-salt-without-String.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0003-bluetooth-keep-the-last-persona-table-when-the-file-.patch",
@@ -45515,7 +45515,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0003-bluetooth-keep-the-last-persona-table-when-the-file-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0004-bluetooth-give-an-app-with-a-persona-no-discovery-an.patch",
@@ -45533,7 +45533,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0004-bluetooth-give-an-app-with-a-persona-no-discovery-an.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0005-bluetooth-treat-an-app-with-a-persona-but-no-place-a.patch",
@@ -45551,7 +45551,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0005-bluetooth-treat-an-app-with-a-persona-but-no-place-a.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0006-bluetooth-an-app-with-a-persona-that-asks-for-a-peri.patch",
@@ -45569,7 +45569,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-bluetooth/0006-bluetooth-an-app-with-a-persona-that-asks-for-a-peri.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-connectivity/0001-connectivity-let-the-apps-that-the-user-trusts-onto-.patch",
@@ -45587,7 +45587,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-connectivity/0001-connectivity-let-the-apps-that-the-user-trusts-onto-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-connectivity/0002-connectivity-redact-the-Wi-Fi-network-details-for-an.patch",
@@ -45605,7 +45605,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-connectivity/0002-connectivity-redact-the-Wi-Fi-network-details-for-an.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-connectivity/0003-connectivity-treat-an-app-with-a-persona-but-no-plac.patch",
@@ -45623,7 +45623,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-connectivity/0003-connectivity-treat-an-app-with-a-persona-but-no-plac.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-wifi/0001-wifi-show-an-app-with-a-persona-no-access-point-of-t.patch",
@@ -45641,7 +45641,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0001-wifi-show-an-app-with-a-persona-no-access-point-of-t.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-wifi/0002-wifi-write-the-persona-file-salt-without-String.patch",
@@ -45659,7 +45659,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0002-wifi-write-the-persona-file-salt-without-String.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-wifi/0003-wifi-keep-the-last-persona-table-when-the-file-canno.patch",
@@ -45677,7 +45677,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0003-wifi-keep-the-last-persona-table-when-the-file-canno.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-wifi/0004-wifi-refuse-location-gated-access-to-an-app-with-a-p.patch",
@@ -45695,7 +45695,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0004-wifi-refuse-location-gated-access-to-an-app-with-a-p.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-wifi/0005-wifi-drop-a-work-note-that-0004-added-by-mistake.patch",
@@ -45713,7 +45713,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0005-wifi-drop-a-work-note-that-0004-added-by-mistake.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-wifi/0006-wifi-refuse-nearby-Wi-Fi-devices-to-an-app-with-a-pe.patch",
@@ -45731,7 +45731,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0006-wifi-refuse-nearby-Wi-Fi-devices-to-an-app-with-a-pe.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-modules-wifi/0007-wifi-treat-an-app-with-a-persona-but-no-place-as-an-.patch",
@@ -45749,7 +45749,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-modules-wifi/0007-wifi-treat-an-app-with-a-persona-but-no-place-as-an-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-services-Telephony/0001-telephony-answer-an-app-with-a-persona-with-the-cell.patch",
@@ -45767,7 +45767,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0001-telephony-answer-an-app-with-a-persona-with-the-cell.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-services-Telephony/0002-telephony-write-the-persona-file-salt-without-String.patch",
@@ -45785,7 +45785,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0002-telephony-write-the-persona-file-salt-without-String.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-services-Telephony/0003-telephony-keep-the-last-persona-table-when-the-file-.patch",
@@ -45803,7 +45803,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0003-telephony-keep-the-last-persona-table-when-the-file-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-services-Telephony/0004-telephony-give-a-persona-caller-a-service-state-with.patch",
@@ -45821,7 +45821,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0004-telephony-give-a-persona-caller-a-service-state-with.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-services-Telephony/0005-telephony-parse-the-cell-data-without-a-regex.patch",
@@ -45839,7 +45839,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0005-telephony-parse-the-cell-data-without-a-regex.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-services-Telephony/0006-telephony-bring-the-copy-of-CellSubset-up-to-its-sou.patch",
@@ -45857,7 +45857,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0006-telephony-bring-the-copy-of-CellSubset-up-to-its-sou.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/packages-services-Telephony/0007-telephony-answer-an-app-with-a-persona-but-no-place-.patch",
@@ -45875,7 +45875,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/packages-services-Telephony/0007-telephony-answer-an-app-with-a-persona-but-no-place-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/system-sepolicy/0001-sepolicy-add-the-Compartments-policy-service-and-its.patch",
@@ -45895,7 +45895,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/system-sepolicy/0001-sepolicy-add-the-Compartments-policy-service-and-its.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/system-sepolicy/0002-sepolicy-let-the-telephony-and-Bluetooth-apps-read-t.patch",
@@ -45915,7 +45915,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/system-sepolicy/0002-sepolicy-let-the-telephony-and-Bluetooth-apps-read-t.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/system-sepolicy/0003-sepolicy-add-test-entries-for-the-Compartments-data-.patch",
@@ -45935,7 +45935,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/system-sepolicy/0003-sepolicy-add-test-entries-for-the-Compartments-data-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/system-sepolicy/0004-sepolicy-let-init-stay-out-of-the-Compartments-data-.patch",
@@ -45955,7 +45955,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/system-sepolicy/0004-sepolicy-let-init-stay-out-of-the-Compartments-data-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/compartments-profiles/patches/vendor-adevtool/0001-compartments-ship-the-persona-place-data-on-every-Pi.patch",
@@ -45973,7 +45973,7 @@
    ],
    "name": "oblivios-platform/privacy/compartments-profiles/patches/vendor-adevtool/0001-compartments-ship-the-persona-place-data-on-every-Pi.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-apps-Settings/0001-Settings-a-Compartments-row-on-the-info-page-of-an-a.patch",
@@ -45991,7 +45991,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0001-Settings-a-Compartments-row-on-the-info-page-of-an-a.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-apps-Settings/0002-Settings-Compartments-is-a-row-of-the-Network-intern.patch",
@@ -46009,7 +46009,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0002-Settings-Compartments-is-a-row-of-the-Network-intern.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-apps-Settings/0003-Settings-show-the-Compartments-profile-of-an-app-on-.patch",
@@ -46027,7 +46027,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0003-Settings-show-the-Compartments-profile-of-an-app-on-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-apps-Settings/0004-Settings-name-the-Compartments-identity-on-the-info-.patch",
@@ -46045,7 +46045,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0004-Settings-name-the-Compartments-identity-on-the-info-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-apps-Settings/0005-Settings-the-info-row-of-an-app-reads-Custom-when-a-.patch",
@@ -46063,7 +46063,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0005-Settings-the-info-row-of-an-app-reads-Custom-when-a-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-apps-Settings/0006-Settings-the-info-row-of-a-platform-signed-app-reads.patch",
@@ -46081,7 +46081,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0006-Settings-the-info-row-of-a-platform-signed-app-reads.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-apps-Settings/0007-oblivios-the-Compartments-row-of-the-app-info-page.patch",
@@ -46099,7 +46099,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0007-oblivios-the-Compartments-row-of-the-app-info-page.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-apps-Settings/0008-oblivios-remove-the-patch-file-of-the-Compartments.patch",
@@ -46117,7 +46117,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-apps-Settings/0008-oblivios-remove-the-patch-file-of-the-Compartments.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-modules-DnsResolver/0001-resolver-never-cache-or-serve-an-answer-for-a-name-o.patch",
@@ -46135,7 +46135,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-modules-DnsResolver/0001-resolver-never-cache-or-serve-an-answer-for-a-name-o.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-modules-DnsResolver/0002-resolver-read-company-ids-of-32-bits-and-a-list-of-.patch",
@@ -46153,7 +46153,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-modules-DnsResolver/0002-resolver-read-company-ids-of-32-bits-and-a-list-of-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/packages-modules-connectivity/0001-Connectivity-allow-the-OEM-network-preference-on-pho.patch",
@@ -46171,7 +46171,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/packages-modules-connectivity/0001-Connectivity-allow-the-OEM-network-preference-on-pho.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/system-sepolicy/0001-sepolicy-add-the-domains-of-the-Compartments-exit-se.patch",
@@ -46191,7 +46191,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0001-sepolicy-add-the-domains-of-the-Compartments-exit-se.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/system-sepolicy/0002-sepolicy-make-the-neverallows-of-the-exit-service-ho.patch",
@@ -46211,7 +46211,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0002-sepolicy-make-the-neverallows-of-the-exit-service-ho.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/system-sepolicy/0003-sepolicy-let-init-listen-on-the-exit-sockets-and-the.patch",
@@ -46231,7 +46231,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0003-sepolicy-let-init-listen-on-the-exit-sockets-and-the.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/system-sepolicy/0004-sepolicy-let-the-exit-app-reach-the-exit-sockets-acr.patch",
@@ -46251,7 +46251,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0004-sepolicy-let-the-exit-app-reach-the-exit-sockets-acr.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/system-sepolicy/0005-sepolicy-let-the-exit-daemon-create-its-tun-and-the-.patch",
@@ -46271,7 +46271,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0005-sepolicy-let-the-exit-daemon-create-its-tun-and-the-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/system-sepolicy/0006-sepolicy-let-the-route-helper-read-its-interface-ind.patch",
@@ -46291,7 +46291,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/system-sepolicy/0006-sepolicy-let-the-route-helper-read-its-interface-ind.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/vendor-adevtool/0001-exit-ship-ExitProbe-on-userdebug-images.patch",
@@ -46309,7 +46309,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/vendor-adevtool/0001-exit-ship-ExitProbe-on-userdebug-images.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/exit/patches/vendor-adevtool/0002-exit-ship-the-exit-service-on-every-Pixel-target.patch",
@@ -46327,7 +46327,7 @@
    ],
    "name": "oblivios-platform/privacy/exit/patches/vendor-adevtool/0002-exit-ship-the-exit-service-on-every-Pixel-target.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/identity-surface/patches/frameworks-native/0001-sensorservice-do-not-deliver-the-bias-of-uncalibrate.patch",
@@ -46345,7 +46345,7 @@
    ],
    "name": "oblivios-platform/privacy/identity-surface/patches/frameworks-native/0001-sensorservice-do-not-deliver-the-bias-of-uncalibrate.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/identity-surface/patches/frameworks-native/0002-sensorservice-refuse-direct-channels-for-the-uncalib.patch",
@@ -46363,7 +46363,7 @@
    ],
    "name": "oblivios-platform/privacy/identity-surface/patches/frameworks-native/0002-sensorservice-refuse-direct-channels-for-the-uncalib.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/identity-surface/patches/packages-modules-wifi/0001-Wifi-do-not-derive-the-link-local-IPv6-address-from-.patch",
@@ -46381,7 +46381,7 @@
    ],
    "name": "oblivios-platform/privacy/identity-surface/patches/packages-modules-wifi/0001-Wifi-do-not-derive-the-link-local-IPv6-address-from-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/identity-surface/patches/system-sepolicy/0001-sepolicy-keep-apps-from-reading-the-unit-specific-bo.patch",
@@ -46401,7 +46401,7 @@
    ],
    "name": "oblivios-platform/privacy/identity-surface/patches/system-sepolicy/0001-sepolicy-keep-apps-from-reading-the-unit-specific-bo.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/identity-surface/patches/system-sepolicy/0002-sepolicy-hide-more-unit-and-batch-properties-from-ap.patch",
@@ -46421,7 +46421,7 @@
    ],
    "name": "oblivios-platform/privacy/identity-surface/patches/system-sepolicy/0002-sepolicy-hide-more-unit-and-batch-properties-from-ap.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/linkability/patches/frameworks-base/0001-Permissions-make-USE_LOOPBACK_INTERFACE-a-runtime-pe.patch",
@@ -46439,7 +46439,7 @@
    ],
    "name": "oblivios-platform/privacy/linkability/patches/frameworks-base/0001-Permissions-make-USE_LOOPBACK_INTERFACE-a-runtime-pe.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/linkability/patches/frameworks-base/0002-Clipboard-read-only-through-a-paste-and-let-the-owne.patch",
@@ -46457,7 +46457,7 @@
    ],
    "name": "oblivios-platform/privacy/linkability/patches/frameworks-base/0002-Clipboard-read-only-through-a-paste-and-let-the-owne.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/linkability/patches/frameworks-base/0003-SettingsProvider-an-ordinary-app-reads-only-the-sett.patch",
@@ -46475,7 +46475,7 @@
    ],
    "name": "oblivios-platform/privacy/linkability/patches/frameworks-base/0003-SettingsProvider-an-ordinary-app-reads-only-the-sett.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/linkability/patches/frameworks-base/0004-Vibrator-give-apps-a-rounded-calibration-of-the-moto.patch",
@@ -46493,7 +46493,7 @@
    ],
    "name": "oblivios-platform/privacy/linkability/patches/frameworks-base/0004-Vibrator-give-apps-a-rounded-calibration-of-the-moto.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/linkability/patches/packages-modules-connectivity/0001-bpf-refuse-loopback-traffic-between-two-apps-of-one-.patch",
@@ -46511,7 +46511,7 @@
    ],
    "name": "oblivios-platform/privacy/linkability/patches/packages-modules-connectivity/0001-bpf-refuse-loopback-traffic-between-two-apps-of-one-.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/linkability/patches/packages-modules-connectivity/0002-bpf-refuse-broadcast-and-multicast-datagrams-between.patch",
@@ -46529,7 +46529,7 @@
    ],
    "name": "oblivios-platform/privacy/linkability/patches/packages-modules-connectivity/0002-bpf-refuse-broadcast-and-multicast-datagrams-between.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/linkability/patches/packages-providers-mediaprovider/0001-MediaProvider-give-every-app-the-hashed-MediaStore-v.patch",
@@ -46547,7 +46547,7 @@
    ],
    "name": "oblivios-platform/privacy/linkability/patches/packages-providers-mediaprovider/0001-MediaProvider-give-every-app-the-hashed-MediaStore-v.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/linkability/patches/system-sepolicy/0001-sepolicy-hide-the-device-colour-and-the-country-of-o.patch",
@@ -46567,7 +46567,7 @@
    ],
    "name": "oblivios-platform/privacy/linkability/patches/system-sepolicy/0001-sepolicy-hide-the-device-colour-and-the-country-of-o.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/privacy/screenshot-detection/patches/frameworks-base/0001-wm-tell-no-app-that-the-user-took-a-screenshot.patch",
@@ -46585,7 +46585,7 @@
    ],
    "name": "oblivios-platform/privacy/screenshot-detection/patches/frameworks-base/0001-wm-tell-no-app-that-the-user-took-a-screenshot.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:platform/release/ota-server-url/patches/packages-apps-updater/0001-oblivios-point-Updater-at-the-private-lynx-OTA-server.patch",
@@ -46603,7 +46603,7 @@
    ],
    "name": "oblivios-platform/release/ota-server-url/patches/packages-apps-updater/0001-oblivios-point-Updater-at-the-private-lynx-OTA-server.patch",
    "type": "file",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0001-onion-tunnel-drop-the-optional-turn-client-dependency.patch",
@@ -46621,7 +46621,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0001-onion-tunnel-drop-the-optional-turn-client-dependency.patch",
    "type": "file",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0002-onion-tunnel-answer-servfail-when-the-owner-lookup-fails.patch",
@@ -46639,7 +46639,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0002-onion-tunnel-answer-servfail-when-the-owner-lookup-fails.patch",
    "type": "file",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0003-onion-tunnel-embed-a-constant-instead-of-the-enclosing-git-hash.patch",
@@ -46657,7 +46657,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0003-onion-tunnel-embed-a-constant-instead-of-the-enclosing-git-hash.patch",
    "type": "file",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0004-onion-tunnel-split-dns-by-policy-and-use-private-fake-ranges.patch",
@@ -46675,7 +46675,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0004-onion-tunnel-split-dns-by-policy-and-use-private-fake-ranges.patch",
    "type": "file",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0005-onion-tunnel-admit-a-dns-query-through-one-testable-function.patch",
@@ -46693,7 +46693,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0005-onion-tunnel-admit-a-dns-query-through-one-testable-function.patch",
    "type": "file",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0006-onion-tunnel-count-the-bytes-of-a-flow-per-destination.patch",
@@ -46711,7 +46711,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0006-onion-tunnel-count-the-bytes-of-a-flow-per-destination.patch",
    "type": "file",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "pkg:airpods",
@@ -46739,7 +46739,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:branding/boot",
@@ -46767,7 +46767,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:credential/duress-unlock-decoy",
@@ -46795,7 +46795,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:credential/duress-unlock-dummy",
@@ -46823,7 +46823,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:datamap",
@@ -46851,7 +46851,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:keyboard/autofill-chips",
@@ -46879,7 +46879,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:keyboard/restyle",
@@ -46907,7 +46907,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:launcher/app-drawer",
@@ -46935,7 +46935,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:memory/cached-process-cap",
@@ -46963,7 +46963,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:memory/decoy-stop-on-switch",
@@ -46991,7 +46991,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:memory/zram-size",
@@ -47019,7 +47019,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:passwords",
@@ -47047,7 +47047,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:physical/grab-detection",
@@ -47075,7 +47075,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:privacy/compartments-profiles",
@@ -47103,7 +47103,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:privacy/exit",
@@ -47131,7 +47131,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:privacy/identity-surface",
@@ -47159,7 +47159,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:privacy/linkability",
@@ -47187,7 +47187,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:privacy/screenshot-detection",
@@ -47215,7 +47215,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "pkg:release/ota-server-url",
@@ -47243,7 +47243,7 @@
     }
    ],
    "type": "library",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "repo:docs",
@@ -47251,7 +47251,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "f6415b421afda2f141272a1ba35771b435f05bd1d10c850c21f3ce723fe9a31c"
+     "content": "3db10894ca8db2faad0af82097f295cb9d82adf956e820f70315f302b5a6b4ef"
     }
    ],
    "licenses": [
@@ -47292,7 +47292,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "90b4b4fc31040209b5ce77ec9e9cdc1b0375383dfc94bcc54352108cb959caae"
+     "content": "5d810b6fc678e14fb9916c57a4ed29b65588a0c85d48fb3789ccf10dec4ff955"
     }
    ],
    "licenses": [
@@ -47308,15 +47308,15 @@
     },
     {
      "name": "oblivios:git-tree",
-     "value": "1c30252c0f646186f146b882c54e8c8f1bd741bd"
+     "value": "9eb72686d8aa0fdfc60ed9f8e27ef7a6789bfd38"
     }
    ],
-   "purl": "pkg:github/Beau4201/oblivios-manifest@0cfaafa823604a1e508ee484ad1cbbf8bf64d221",
+   "purl": "pkg:github/Beau4201/oblivios-manifest@0b0517d4b1bb107046ce8cc716cdfe419d2d055e",
    "supplier": {
     "name": "Beau ten Berge"
    },
    "type": "application",
-   "version": "0cfaafa823604a1e508ee484ad1cbbf8bf64d221"
+   "version": "0b0517d4b1bb107046ce8cc716cdfe419d2d055e"
   },
   {
    "bom-ref": "repo:platform",
@@ -47330,7 +47330,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "479c7ed008f935ef4309db7766be0c9c1a727522a21bb5d735b1dd6df409c91d"
+     "content": "7824b39b255dc70715d8af4c49ce5103b8aa671d57501f87f5b0a308304bcd2e"
     }
    ],
    "licenses": [
@@ -47346,15 +47346,15 @@
     },
     {
      "name": "oblivios:git-tree",
-     "value": "c36b7b26e27c765e4f04255169bad6f6a10f09a8"
+     "value": "0782d957caa4a4369df8d40d26f5f5e63598a772"
     }
    ],
-   "purl": "pkg:github/Beau4201/oblivios-platform@c1ff1d71e410cf5ebdb8d380f4cc25859bae7868",
+   "purl": "pkg:github/Beau4201/oblivios-platform@5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e",
    "supplier": {
     "name": "Beau ten Berge"
    },
    "type": "application",
-   "version": "c1ff1d71e410cf5ebdb8d380f4cc25859bae7868"
+   "version": "5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e"
   },
   {
    "bom-ref": "repo:services",
@@ -47368,7 +47368,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "b618787d31afee42c417f2ce26e0bf554ed19a2946b8218243adcb66913fbc71"
+     "content": "9c517e8ed962f3e0a34bf3d689d2bb10ff4d8726537ad09c4c54b84683885729"
     }
    ],
    "licenses": [
@@ -47384,15 +47384,15 @@
     },
     {
      "name": "oblivios:git-tree",
-     "value": "a5c92fe9a14a2e59c48b11408aaebc46748046d3"
+     "value": "c5d06c20e19a71814ede0ae3194b4310e8fa6815"
     }
    ],
-   "purl": "pkg:github/Beau4201/oblivios-services@1110f95581d3ce31aee0f1318ce96e1c04ac9e41",
+   "purl": "pkg:github/Beau4201/oblivios-services@db22a32dc30448229dfd3a02a3804eb0699b5f78",
    "supplier": {
     "name": "Beau ten Berge"
    },
    "type": "application",
-   "version": "1110f95581d3ce31aee0f1318ce96e1c04ac9e41"
+   "version": "db22a32dc30448229dfd3a02a3804eb0699b5f78"
   },
   {
    "bom-ref": "src:adguard-companiesdb",
@@ -48060,7 +48060,7 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/branding/boot/patches/build-make/0001-oblivios-do-not-ship-the-upstream-boot-animation-z.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/branding/boot/patches/build-make/0001-oblivios-do-not-ship-the-upstream-boot-animation-z.patch"
       },
       "type": "unofficial"
      }
@@ -48107,7 +48107,7 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/build-release/0001-oblivios-squash-credential_capture-enable-relocate-pe.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/build-release/0001-oblivios-squash-credential_capture-enable-relocate-pe.patch"
       },
       "type": "unofficial"
      }
@@ -48152,403 +48152,403 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/patches/frameworks-base/0001-oblivios-let-a-device-settings-provider-draw-mult.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/patches/frameworks-base/0001-oblivios-let-a-device-settings-provider-draw-mult.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/patches/frameworks-base/0002-oblivios-treat-a-refused-bind-of-a-device-settings.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/patches/frameworks-base/0002-oblivios-treat-a-refused-bind-of-a-device-settings.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/branding/boot/patches/frameworks-base/0001-oblivios-boot-clear-colour-matches-the-boot-pictu.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/branding/boot/patches/frameworks-base/0001-oblivios-boot-clear-colour-matches-the-boot-pictu.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/branding/boot/patches/frameworks-base/0002-oblivios-boot-picture-assets-ADR-152.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/branding/boot/patches/frameworks-base/0002-oblivios-boot-picture-assets-ADR-152.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/frameworks-base/0001-oblivios-the-duress-decoy-user-type-its-routing-the-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/frameworks-base/0001-oblivios-the-duress-decoy-user-type-its-routing-the-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/frameworks-base/0002-oblivios-the-duress-finger-link-the-decoy-administra.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/frameworks-base/0002-oblivios-the-duress-finger-link-the-decoy-administra.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/frameworks-base/0003-oblivios-mirror-the-owner-s-settings-and-wallpaper-t.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/frameworks-base/0003-oblivios-mirror-the-owner-s-settings-and-wallpaper-t.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/frameworks-base/0004-oblivios-the-cold-duress-unlock-at-about-0.90-s-its-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/frameworks-base/0004-oblivios-the-cold-duress-unlock-at-about-0.90-s-its-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/frameworks-base/0005-oblivios-the-stage-of-an-authorized-switch-the-decoy.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/frameworks-base/0005-oblivios-the-stage-of-an-authorized-switch-the-decoy.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/frameworks-base/0006-oblivios-the-life-of-the-stage-the-zoom-hand-over-an.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/frameworks-base/0006-oblivios-the-life-of-the-stage-the-zoom-hand-over-an.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/frameworks-base/0007-oblivios-the-findings-D1-to-D9-of-the-read-of-2026-1.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/frameworks-base/0007-oblivios-the-findings-D1-to-D9-of-the-read-of-2026-1.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/frameworks-base/0008-oblivios-a-recorded-decoy-routing-failure-is-cleared-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/frameworks-base/0008-oblivios-a-recorded-decoy-routing-failure-is-cleared-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-dummy/patches/frameworks-base/0001-oblivios-add-hardware-backed-duress-dummy-cost-cr.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-dummy/patches/frameworks-base/0001-oblivios-add-hardware-backed-duress-dummy-cost-cr.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0001-datamap-add-the-pure-core-of-the-Data-Map-service.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0001-datamap-add-the-pure-core-of-the-Data-Map-service.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0002-datamap-give-the-Data-Map-service-its-own-slot-for-t.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0002-datamap-give-the-Data-Map-service-its-own-slot-for-t.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0003-datamap-add-the-Binder-interface-and-the-READ_DATA_M.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0003-datamap-add-the-Binder-interface-and-the-READ_DATA_M.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0004-datamap-add-the-Data-Map-service-and-start-it-with-t.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0004-datamap-add-the-Data-Map-service-and-start-it-with-t.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0005-datamap-keep-the-netd-callback-thread-free-and-refus.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0005-datamap-keep-the-netd-callback-thread-free-and-refus.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0006-datamap-clear-also-removes-the-events-that-were-wait.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0006-datamap-clear-also-removes-the-events-that-were-wait.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0007-datamap-fix-what-the-independent-review-found.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0007-datamap-fix-what-the-independent-review-found.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0008-datamap-hide-the-READ_DATA_MAP-permission-from-the-p.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0008-datamap-hide-the-READ_DATA_MAP-permission-from-the-p.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0009-datamap-keep-the-history-to-the-hour-and-only-from-t.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0009-datamap-keep-the-history-to-the-hour-and-only-from-t.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/frameworks-base/0010-datamap-give-every-contacted-address-a-server-plac.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/frameworks-base/0010-datamap-give-every-contacted-address-a-server-plac.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/memory/cached-process-cap/patches/frameworks-base/0001-memory-lower-the-maximum-number-of-cached-processes-from-1024-to-48.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/memory/cached-process-cap/patches/frameworks-base/0001-memory-lower-the-maximum-number-of-cached-processes-from-1024-to-48.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/memory/decoy-stop-on-switch/patches/frameworks-base/0001-memory-stop-only-the-Duress-decoy-user-when-the-devi.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/memory/decoy-stop-on-switch/patches/frameworks-base/0001-memory-stop-only-the-Duress-decoy-user-when-the-devi.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/passwords/patches/frameworks-base/0001-passwords-make-the-Passwords-app-the-default-autofil.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/passwords/patches/frameworks-base/0001-passwords-make-the-Passwords-app-the-default-autofil.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/physical/grab-detection/patches/frameworks-base/0001-grab-detect-a-phone-pulled-out-of-a-hand-in-use-lock.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/physical/grab-detection/patches/frameworks-base/0001-grab-detect-a-phone-pulled-out-of-a-hand-in-use-lock.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/physical/grab-detection/patches/frameworks-base/0002-grab-the-strictness-of-the-detection-the-set-down-an.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/physical/grab-detection/patches/frameworks-base/0002-grab-the-strictness-of-the-detection-the-set-down-an.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0001-compartments-add-the-Binder-interface-and-the-two-pe.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0001-compartments-add-the-Binder-interface-and-the-two-pe.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0002-compartments-add-the-policy-service-of-Compartments-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0002-compartments-add-the-policy-service-of-Compartments-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0003-compartments-let-the-Settings-app-hold-READ_COMPARTM.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0003-compartments-let-the-Settings-app-hold-READ_COMPARTM.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0004-compartments-add-location-the-place-of-an-app-the-persona.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0004-compartments-add-location-the-place-of-an-app-the-persona.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0005-compartments-give-an-app-with-a-persona-the-fixes-of.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0005-compartments-give-an-app-with-a-persona-the-fixes-of.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0006-compartments-give-an-app-with-a-persona-the-time-zon.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0006-compartments-give-an-app-with-a-persona-the-time-zon.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0007-compartments-write-the-persona-file-salt-without-Str.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0007-compartments-write-the-persona-file-salt-without-Str.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0008-compartments-stop-what-changed-retry-failed-mirrors-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0008-compartments-stop-what-changed-retry-failed-mirrors-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0009-compartments-withhold-the-position-of-a-blocked-app-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0009-compartments-withhold-the-position-of-a-blocked-app-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0010-compartments-clear-the-entries-of-packages-that-are-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0010-compartments-clear-the-entries-of-packages-that-are-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0011-compartments-give-an-app-with-a-persona-no-real-oper.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0011-compartments-give-an-app-with-a-persona-no-real-oper.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0012-compartments-give-apps-without-an-entry-a-persona-un.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0012-compartments-give-apps-without-an-entry-a-persona-un.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0013-compartments-withhold-the-position-from-apps-without.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0013-compartments-withhold-the-position-from-apps-without.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0014-compartments-parse-the-place-and-cell-data-without-a.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0014-compartments-parse-the-place-and-cell-data-without-a.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0015-compartments-give-the-passive-location-listener-the-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0015-compartments-give-the-passive-location-listener-the-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0016-compartments-give-back-the-location-permissions-that.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0016-compartments-give-back-the-location-permissions-that.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0017-compartments-list-the-apps-that-may-use-the-loopback.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0017-compartments-list-the-apps-that-may-use-the-loopback.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0018-compartments-choose-an-automatic-place-among-the-pla.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0018-compartments-choose-an-automatic-place-among-the-pla.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0019-compartments-list-the-apps-that-have-a-persona-witho.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0019-compartments-list-the-apps-that-have-a-persona-witho.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0020-compartments-give-a-platform-signed-package-no-perso.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0020-compartments-give-a-platform-signed-package-no-perso.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0021-compartments-a-platform-signed-package-keeps-the-bas.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0021-compartments-a-platform-signed-package-keeps-the-bas.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0022-compartments-the-Settings-permission-is-allowlisted-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0022-compartments-the-Settings-permission-is-allowlisted-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0023-compartments-the-passive-fix-listener-names-an-attri.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0023-compartments-the-passive-fix-listener-names-an-attri.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0025-compartments-answer-the-identity-of-an-app-Custom-wh.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0025-compartments-answer-the-identity-of-an-app-Custom-wh.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0026-compartments-getIdentity-names-a-platform-signed-pac.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0026-compartments-getIdentity-names-a-platform-signed-pac.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0027-compartments-give-an-app-with-a-persona-a-standing-f.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0027-compartments-give-an-app-with-a-persona-a-standing-f.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0028-compartments-an-emergency-holds-back-a-standing-fix-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0028-compartments-an-emergency-holds-back-a-standing-fix-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0029-compartments-a-telephony-listener-of-an-app-whose-po.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0029-compartments-a-telephony-listener-of-an-app-whose-po.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0030-compartments-the-revoked-ledger-gives-back-what-it-c.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0030-compartments-the-revoked-ledger-gives-back-what-it-c.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0031-compartments-a-real-fix-moves-the-standing-fix-alarm.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0031-compartments-a-real-fix-moves-the-standing-fix-alarm.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0032-compartments-the-stops-of-a-changed-app-happen-at-on.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0032-compartments-the-stops-of-a-changed-app-happen-at-on.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0033-compartments-a-mirror-pass-that-succeeds-also-stops-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0033-compartments-a-mirror-pass-that-succeeds-also-stops-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0034-compartments-the-header-of-ICompartmentsPolicy-names-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0034-compartments-the-header-of-ICompartmentsPolicy-names-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-base/0035-compartments-a-clock-app-keeps-the-real-time-zone-u.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-base/0035-compartments-a-clock-app-keeps-the-real-time-zone-u.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/linkability/patches/frameworks-base/0001-Permissions-make-USE_LOOPBACK_INTERFACE-a-runtime-pe.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/linkability/patches/frameworks-base/0001-Permissions-make-USE_LOOPBACK_INTERFACE-a-runtime-pe.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/linkability/patches/frameworks-base/0002-Clipboard-read-only-through-a-paste-and-let-the-owne.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/linkability/patches/frameworks-base/0002-Clipboard-read-only-through-a-paste-and-let-the-owne.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/linkability/patches/frameworks-base/0003-SettingsProvider-an-ordinary-app-reads-only-the-sett.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/linkability/patches/frameworks-base/0003-SettingsProvider-an-ordinary-app-reads-only-the-sett.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/linkability/patches/frameworks-base/0004-Vibrator-give-apps-a-rounded-calibration-of-the-moto.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/linkability/patches/frameworks-base/0004-Vibrator-give-apps-a-rounded-calibration-of-the-moto.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/screenshot-detection/patches/frameworks-base/0001-wm-tell-no-app-that-the-user-took-a-screenshot.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/screenshot-detection/patches/frameworks-base/0001-wm-tell-no-app-that-the-user-took-a-screenshot.patch"
       },
       "type": "unofficial"
      }
@@ -48593,37 +48593,37 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-native/0003-sensorservice-give-each-app-the-sensor-mode-of-its-p.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-native/0003-sensorservice-give-each-app-the-sensor-mode-of-its-p.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-native/0004-sensorservice-tell-the-invented-streams-what-the-pho.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-native/0004-sensorservice-tell-the-invented-streams-what-the-pho.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-native/0005-sensorservice-keep-the-last-sensor-table-drop-the-d.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-native/0005-sensorservice-keep-the-last-sensor-table-drop-the-d.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/frameworks-native/0006-sensorservice-give-a-Substituted-app-an-invented-air.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/frameworks-native/0006-sensorservice-give-a-Substituted-app-an-invented-air.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/identity-surface/patches/frameworks-native/0001-sensorservice-do-not-deliver-the-bias-of-uncalibrate.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/identity-surface/patches/frameworks-native/0001-sensorservice-do-not-deliver-the-bias-of-uncalibrate.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/identity-surface/patches/frameworks-native/0002-sensorservice-refuse-direct-channels-for-the-uncalib.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/identity-surface/patches/frameworks-native/0002-sensorservice-refuse-direct-channels-for-the-uncalib.patch"
       },
       "type": "unofficial"
      }
@@ -48668,19 +48668,19 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/launcher/app-drawer/patches/packages-apps-launcher3/0001-launcher-theme-the-icons-of-the-app-drawer-and-group.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/launcher/app-drawer/patches/packages-apps-launcher3/0001-launcher-theme-the-icons-of-the-app-drawer-and-group.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/launcher/app-drawer/patches/packages-apps-launcher3/0002-launcher-show-the-app-drawer-as-category-groups.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/launcher/app-drawer/patches/packages-apps-launcher3/0002-launcher-show-the-app-drawer-as-category-groups.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/launcher/app-drawer/patches/packages-apps-launcher3/0003-launcher-load-the-apps-of-the-drawer-with-the-theme-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/launcher/app-drawer/patches/packages-apps-launcher3/0003-launcher-load-the-apps-of-the-drawer-with-the-theme-.patch"
       },
       "type": "unofficial"
      }
@@ -48725,7 +48725,7 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/packages-apps-multiuser/0001-oblivios-hide-real-user-identity-from-the-Multius.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/packages-apps-multiuser/0001-oblivios-hide-real-user-identity-from-the-Multius.patch"
       },
       "type": "unofficial"
      }
@@ -48770,115 +48770,115 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/patches/packages-apps-settings/0001-oblivios-show-multi-toggle-labels-inside-the-butt.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/patches/packages-apps-settings/0001-oblivios-show-multi-toggle-labels-inside-the-butt.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/packages-apps-settings/0001-oblivios-hide-real-user-identity-from-Settings-an.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/packages-apps-settings/0001-oblivios-hide-real-user-identity-from-Settings-an.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/packages-apps-settings/0002-oblivios-add-the-Duress-Unlock-set-up-flow-main-a.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/packages-apps-settings/0002-oblivios-add-the-Duress-Unlock-set-up-flow-main-a.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/packages-apps-settings/0003-oblivios-let-the-Duress-Unlock-second-credential-b.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/packages-apps-settings/0003-oblivios-let-the-Duress-Unlock-second-credential-b.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/packages-apps-settings/0004-oblivios-let-Settings-choose-and-remove-the-Duress.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/packages-apps-settings/0004-oblivios-let-Settings-choose-and-remove-the-Duress.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-decoy/patches/packages-apps-settings/0005-oblivios-Duress-Unlock-warns-when-a-decoy-PIN-no-lon.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-decoy/patches/packages-apps-settings/0005-oblivios-Duress-Unlock-warns-when-a-decoy-PIN-no-lon.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/physical/grab-detection/patches/packages-apps-Settings/0001-grab-switch-for-grab-detection-on-the-exploit-protec.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/physical/grab-detection/patches/packages-apps-Settings/0001-grab-switch-for-grab-detection-on-the-exploit-protec.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/physical/grab-detection/patches/packages-apps-Settings/0002-grab-choose-how-strict-the-impact-route-is.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/physical/grab-detection/patches/packages-apps-Settings/0002-grab-choose-how-strict-the-impact-route-is.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/physical/grab-detection/patches/packages-apps-Settings/0003-grab-one-row-on-the-exploit-protection-page-like-aut.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/physical/grab-detection/patches/packages-apps-Settings/0003-grab-one-row-on-the-exploit-protection-page-like-aut.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/physical/grab-detection/patches/packages-apps-Settings/0004-grab-the-row-selects-nothing-in-shadow-mode-cuts-a.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/physical/grab-detection/patches/packages-apps-Settings/0004-grab-the-row-selects-nothing-in-shadow-mode-cuts-a.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/physical/grab-detection/patches/packages-apps-Settings/0005-grab-the-description-under-the-list-and-the-levels-i.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/physical/grab-detection/patches/packages-apps-Settings/0005-grab-the-description-under-the-list-and-the-levels-i.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-apps-Settings/0001-Settings-a-Compartments-row-on-the-info-page-of-an-a.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-apps-Settings/0001-Settings-a-Compartments-row-on-the-info-page-of-an-a.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-apps-Settings/0002-Settings-Compartments-is-a-row-of-the-Network-intern.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-apps-Settings/0002-Settings-Compartments-is-a-row-of-the-Network-intern.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-apps-Settings/0003-Settings-show-the-Compartments-profile-of-an-app-on-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-apps-Settings/0003-Settings-show-the-Compartments-profile-of-an-app-on-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-apps-Settings/0004-Settings-name-the-Compartments-identity-on-the-info-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-apps-Settings/0004-Settings-name-the-Compartments-identity-on-the-info-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-apps-Settings/0005-Settings-the-info-row-of-an-app-reads-Custom-when-a-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-apps-Settings/0005-Settings-the-info-row-of-an-app-reads-Custom-when-a-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-apps-Settings/0006-Settings-the-info-row-of-a-platform-signed-app-reads.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-apps-Settings/0006-Settings-the-info-row-of-a-platform-signed-app-reads.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-apps-Settings/0007-oblivios-the-Compartments-row-of-the-app-info-page.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-apps-Settings/0007-oblivios-the-Compartments-row-of-the-app-info-page.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-apps-Settings/0008-oblivios-remove-the-patch-file-of-the-Compartments.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-apps-Settings/0008-oblivios-remove-the-patch-file-of-the-Compartments.patch"
       },
       "type": "unofficial"
      }
@@ -48923,7 +48923,7 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/release/ota-server-url/patches/packages-apps-updater/0001-oblivios-point-Updater-at-the-private-lynx-OTA-server.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/release/ota-server-url/patches/packages-apps-updater/0001-oblivios-point-Updater-at-the-private-lynx-OTA-server.patch"
       },
       "type": "unofficial"
      }
@@ -48968,25 +48968,25 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0001-oblivios-show-inline-autofill-suggestions-as-chips.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0001-oblivios-show-inline-autofill-suggestions-as-chips.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0002-oblivios-offer-the-chips-again-when-the-field-is-e.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/keyboard/autofill-chips/patches/packages-inputmethods-latinime/0002-oblivios-offer-the-chips-again-when-the-field-is-e.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/keyboard/restyle/patches/packages-inputmethods-latinime/0001-oblivios-restyle-the-keyboard-as-rounded-caps.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/keyboard/restyle/patches/packages-inputmethods-latinime/0001-oblivios-restyle-the-keyboard-as-rounded-caps.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/keyboard/restyle/patches/packages-inputmethods-latinime/0002-oblivios-keep-the-keyboard-inside-the-cutout-and-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/keyboard/restyle/patches/packages-inputmethods-latinime/0002-oblivios-keep-the-keyboard-inside-the-cutout-and-.patch"
       },
       "type": "unofficial"
      }
@@ -49031,67 +49031,67 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/patches/packages-modules-bluetooth/0001-airpods-scope-the-Device-ID-vendor-and-L2CAP-mode-to.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/patches/packages-modules-bluetooth/0001-airpods-scope-the-Device-ID-vendor-and-L2CAP-mode-to.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/patches/packages-modules-bluetooth/0002-airpods-add-BluetoothDevice-setAirPodsMetadata-behin.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/patches/packages-modules-bluetooth/0002-airpods-add-BluetoothDevice-setAirPodsMetadata-behin.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/patches/packages-modules-bluetooth/0003-airpods-add-BluetoothDevice-setAirPodsAudioRoute-beh.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/patches/packages-modules-bluetooth/0003-airpods-add-BluetoothDevice-setAirPodsAudioRoute-beh.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/patches/packages-modules-bluetooth/0004-airpods-add-BluetoothDevice-setAirPodsMusicDuck-behi.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/patches/packages-modules-bluetooth/0004-airpods-add-BluetoothDevice-setAirPodsMusicDuck-behi.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/patches/packages-modules-bluetooth/0005-airpods-add-BluetoothDevice-setAirPodsAlias-behind-M.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/patches/packages-modules-bluetooth/0005-airpods-add-BluetoothDevice-setAirPodsAlias-behind-M.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-bluetooth/0001-bluetooth-deliver-no-scan-result-to-an-app-with-a-pe.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-bluetooth/0001-bluetooth-deliver-no-scan-result-to-an-app-with-a-pe.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-bluetooth/0002-bluetooth-write-the-persona-file-salt-without-String.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-bluetooth/0002-bluetooth-write-the-persona-file-salt-without-String.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-bluetooth/0003-bluetooth-keep-the-last-persona-table-when-the-file-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-bluetooth/0003-bluetooth-keep-the-last-persona-table-when-the-file-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-bluetooth/0004-bluetooth-give-an-app-with-a-persona-no-discovery-an.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-bluetooth/0004-bluetooth-give-an-app-with-a-persona-no-discovery-an.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-bluetooth/0005-bluetooth-treat-an-app-with-a-persona-but-no-place-a.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-bluetooth/0005-bluetooth-treat-an-app-with-a-persona-but-no-place-a.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-bluetooth/0006-bluetooth-an-app-with-a-persona-that-asks-for-a-peri.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-bluetooth/0006-bluetooth-an-app-with-a-persona-that-asks-for-a-peri.patch"
       },
       "type": "unofficial"
      }
@@ -49136,37 +49136,37 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-connectivity/0001-connectivity-let-the-apps-that-the-user-trusts-onto-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-connectivity/0001-connectivity-let-the-apps-that-the-user-trusts-onto-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-connectivity/0002-connectivity-redact-the-Wi-Fi-network-details-for-an.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-connectivity/0002-connectivity-redact-the-Wi-Fi-network-details-for-an.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-connectivity/0003-connectivity-treat-an-app-with-a-persona-but-no-plac.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-connectivity/0003-connectivity-treat-an-app-with-a-persona-but-no-plac.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-modules-connectivity/0001-Connectivity-allow-the-OEM-network-preference-on-pho.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-modules-connectivity/0001-Connectivity-allow-the-OEM-network-preference-on-pho.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/linkability/patches/packages-modules-connectivity/0001-bpf-refuse-loopback-traffic-between-two-apps-of-one-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/linkability/patches/packages-modules-connectivity/0001-bpf-refuse-loopback-traffic-between-two-apps-of-one-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/linkability/patches/packages-modules-connectivity/0002-bpf-refuse-broadcast-and-multicast-datagrams-between.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/linkability/patches/packages-modules-connectivity/0002-bpf-refuse-broadcast-and-multicast-datagrams-between.patch"
       },
       "type": "unofficial"
      }
@@ -49211,13 +49211,13 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-modules-DnsResolver/0001-resolver-never-cache-or-serve-an-answer-for-a-name-o.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-modules-DnsResolver/0001-resolver-never-cache-or-serve-an-answer-for-a-name-o.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/packages-modules-DnsResolver/0002-resolver-read-company-ids-of-32-bits-and-a-list-of-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/packages-modules-DnsResolver/0002-resolver-read-company-ids-of-32-bits-and-a-list-of-.patch"
       },
       "type": "unofficial"
      }
@@ -49262,49 +49262,49 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-wifi/0001-wifi-show-an-app-with-a-persona-no-access-point-of-t.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-wifi/0001-wifi-show-an-app-with-a-persona-no-access-point-of-t.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-wifi/0002-wifi-write-the-persona-file-salt-without-String.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-wifi/0002-wifi-write-the-persona-file-salt-without-String.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-wifi/0003-wifi-keep-the-last-persona-table-when-the-file-canno.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-wifi/0003-wifi-keep-the-last-persona-table-when-the-file-canno.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-wifi/0004-wifi-refuse-location-gated-access-to-an-app-with-a-p.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-wifi/0004-wifi-refuse-location-gated-access-to-an-app-with-a-p.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-wifi/0005-wifi-drop-a-work-note-that-0004-added-by-mistake.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-wifi/0005-wifi-drop-a-work-note-that-0004-added-by-mistake.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-wifi/0006-wifi-refuse-nearby-Wi-Fi-devices-to-an-app-with-a-pe.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-wifi/0006-wifi-refuse-nearby-Wi-Fi-devices-to-an-app-with-a-pe.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-modules-wifi/0007-wifi-treat-an-app-with-a-persona-but-no-place-as-an-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-modules-wifi/0007-wifi-treat-an-app-with-a-persona-but-no-place-as-an-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/identity-surface/patches/packages-modules-wifi/0001-Wifi-do-not-derive-the-link-local-IPv6-address-from-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/identity-surface/patches/packages-modules-wifi/0001-Wifi-do-not-derive-the-link-local-IPv6-address-from-.patch"
       },
       "type": "unofficial"
      }
@@ -49349,7 +49349,7 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/linkability/patches/packages-providers-mediaprovider/0001-MediaProvider-give-every-app-the-hashed-MediaStore-v.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/linkability/patches/packages-providers-mediaprovider/0001-MediaProvider-give-every-app-the-hashed-MediaStore-v.patch"
       },
       "type": "unofficial"
      }
@@ -49394,43 +49394,43 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-services-Telephony/0001-telephony-answer-an-app-with-a-persona-with-the-cell.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-services-Telephony/0001-telephony-answer-an-app-with-a-persona-with-the-cell.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-services-Telephony/0002-telephony-write-the-persona-file-salt-without-String.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-services-Telephony/0002-telephony-write-the-persona-file-salt-without-String.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-services-Telephony/0003-telephony-keep-the-last-persona-table-when-the-file-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-services-Telephony/0003-telephony-keep-the-last-persona-table-when-the-file-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-services-Telephony/0004-telephony-give-a-persona-caller-a-service-state-with.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-services-Telephony/0004-telephony-give-a-persona-caller-a-service-state-with.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-services-Telephony/0005-telephony-parse-the-cell-data-without-a-regex.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-services-Telephony/0005-telephony-parse-the-cell-data-without-a-regex.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-services-Telephony/0006-telephony-bring-the-copy-of-CellSubset-up-to-its-sou.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-services-Telephony/0006-telephony-bring-the-copy-of-CellSubset-up-to-its-sou.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/packages-services-Telephony/0007-telephony-answer-an-app-with-a-persona-but-no-place-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/packages-services-Telephony/0007-telephony-answer-an-app-with-a-persona-but-no-place-.patch"
       },
       "type": "unofficial"
      }
@@ -49475,7 +49475,7 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-dummy/patches/system-core/0001-oblivios-create-metadata-duress-dummy-at-boot.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-dummy/patches/system-core/0001-oblivios-create-metadata-duress-dummy-at-boot.patch"
       },
       "type": "unofficial"
      }
@@ -49522,109 +49522,109 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/credential/duress-unlock-dummy/patches/system-sepolicy/0001-oblivios-add-the-private-SELinux-type-for-duress-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/credential/duress-unlock-dummy/patches/system-sepolicy/0001-oblivios-add-the-private-SELinux-type-for-duress-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/system-sepolicy/0001-sepolicy-add-the-Data-Map-service-type-and-the-datam.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/system-sepolicy/0001-sepolicy-add-the-Data-Map-service-type-and-the-datam.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/system-sepolicy/0002-sepolicy-keep-system_app-and-traceur_app-from-findin.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/system-sepolicy/0002-sepolicy-keep-system_app-and-traceur_app-from-findin.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/system-sepolicy/0003-sepolicy-list-the-Data-Map-service-without-a-fuzzer.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/system-sepolicy/0003-sepolicy-list-the-Data-Map-service-without-a-fuzzer.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/system-sepolicy/0004-sepolicy-keep-shell-from-finding-the-Data-Map-servic.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/system-sepolicy/0004-sepolicy-keep-shell-from-finding-the-Data-Map-servic.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/system-sepolicy/0001-sepolicy-add-the-Compartments-policy-service-and-its.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/system-sepolicy/0001-sepolicy-add-the-Compartments-policy-service-and-its.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/system-sepolicy/0002-sepolicy-let-the-telephony-and-Bluetooth-apps-read-t.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/system-sepolicy/0002-sepolicy-let-the-telephony-and-Bluetooth-apps-read-t.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/system-sepolicy/0003-sepolicy-add-test-entries-for-the-Compartments-data-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/system-sepolicy/0003-sepolicy-add-test-entries-for-the-Compartments-data-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/system-sepolicy/0004-sepolicy-let-init-stay-out-of-the-Compartments-data-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/system-sepolicy/0004-sepolicy-let-init-stay-out-of-the-Compartments-data-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/system-sepolicy/0001-sepolicy-add-the-domains-of-the-Compartments-exit-se.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/system-sepolicy/0001-sepolicy-add-the-domains-of-the-Compartments-exit-se.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/system-sepolicy/0002-sepolicy-make-the-neverallows-of-the-exit-service-ho.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/system-sepolicy/0002-sepolicy-make-the-neverallows-of-the-exit-service-ho.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/system-sepolicy/0003-sepolicy-let-init-listen-on-the-exit-sockets-and-the.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/system-sepolicy/0003-sepolicy-let-init-listen-on-the-exit-sockets-and-the.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/system-sepolicy/0004-sepolicy-let-the-exit-app-reach-the-exit-sockets-acr.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/system-sepolicy/0004-sepolicy-let-the-exit-app-reach-the-exit-sockets-acr.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/system-sepolicy/0005-sepolicy-let-the-exit-daemon-create-its-tun-and-the-.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/system-sepolicy/0005-sepolicy-let-the-exit-daemon-create-its-tun-and-the-.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/system-sepolicy/0006-sepolicy-let-the-route-helper-read-its-interface-ind.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/system-sepolicy/0006-sepolicy-let-the-route-helper-read-its-interface-ind.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/identity-surface/patches/system-sepolicy/0001-sepolicy-keep-apps-from-reading-the-unit-specific-bo.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/identity-surface/patches/system-sepolicy/0001-sepolicy-keep-apps-from-reading-the-unit-specific-bo.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/identity-surface/patches/system-sepolicy/0002-sepolicy-hide-more-unit-and-batch-properties-from-ap.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/identity-surface/patches/system-sepolicy/0002-sepolicy-hide-more-unit-and-batch-properties-from-ap.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/linkability/patches/system-sepolicy/0001-sepolicy-hide-the-device-colour-and-the-country-of-o.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/linkability/patches/system-sepolicy/0001-sepolicy-hide-the-device-colour-and-the-country-of-o.patch"
       },
       "type": "unofficial"
      }
@@ -49669,91 +49669,91 @@
     "patches": [
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/airpods/patches/vendor-adevtool/0001-airpods-ship-AirPodsApp-on-every-Pixel-target-and-it.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/airpods/patches/vendor-adevtool/0001-airpods-ship-AirPodsApp-on-every-Pixel-target-and-it.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/vendor-adevtool/0001-datamap-ship-the-Data-Map-classifier-file-on-every-P.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/vendor-adevtool/0001-datamap-ship-the-Data-Map-classifier-file-on-every-P.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/vendor-adevtool/0002-datamap-ship-DataMapApp-on-every-Pixel-target-via-de.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/vendor-adevtool/0002-datamap-ship-DataMapApp-on-every-Pixel-target-via-de.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/datamap/patches/vendor-adevtool/0003-datamap-ship-the-Data-Map-address-data-on-every-Pixe.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/datamap/patches/vendor-adevtool/0003-datamap-ship-the-Data-Map-address-data-on-every-Pixe.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/memory/cached-process-cap/patches/vendor-adevtool/0001-memory-do-not-carry-the-Pixel-overlay-value-of-the-cached-process-cap.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/memory/cached-process-cap/patches/vendor-adevtool/0001-memory-do-not-carry-the-Pixel-overlay-value-of-the-cached-process-cap.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/memory/cached-process-cap/patches/vendor-adevtool/0002-memory-exclude-the-stock-cached-process-cap-by-key.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/memory/cached-process-cap/patches/vendor-adevtool/0002-memory-exclude-the-stock-cached-process-cap-by-key.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/memory/decoy-stop-on-switch/patches/vendor-adevtool/0001-memory-stop-a-background-user-when-the-device-switch.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/memory/decoy-stop-on-switch/patches/vendor-adevtool/0001-memory-stop-a-background-user-when-the-device-switch.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/memory/decoy-stop-on-switch/patches/vendor-adevtool/0002-memory-drop-fw.stop_bg_users_on_switch-the-decoy-is-s.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/memory/decoy-stop-on-switch/patches/vendor-adevtool/0002-memory-drop-fw.stop_bg_users_on_switch-the-decoy-is-s.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/memory/zram-size/patches/vendor-adevtool/0001-memory-raise-the-zram-swap-capacity-to-100-of-RAM.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/memory/zram-size/patches/vendor-adevtool/0001-memory-raise-the-zram-swap-capacity-to-100-of-RAM.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/memory/zram-size/patches/vendor-adevtool/0002-memory-exclude-the-stock-zram-size-by-key.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/memory/zram-size/patches/vendor-adevtool/0002-memory-exclude-the-stock-zram-size-by-key.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/memory/zram-size/patches/vendor-adevtool/0003-memory-give-the-vendor-zram-size-property-its-100-default.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/memory/zram-size/patches/vendor-adevtool/0003-memory-give-the-vendor-zram-size-property-its-100-default.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/passwords/patches/vendor-adevtool/0001-passwords-ship-PasswordsApp-on-every-Pixel-target-vi.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/passwords/patches/vendor-adevtool/0001-passwords-ship-PasswordsApp-on-every-Pixel-target-vi.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/compartments-profiles/patches/vendor-adevtool/0001-compartments-ship-the-persona-place-data-on-every-Pi.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/compartments-profiles/patches/vendor-adevtool/0001-compartments-ship-the-persona-place-data-on-every-Pi.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/vendor-adevtool/0001-exit-ship-ExitProbe-on-userdebug-images.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/vendor-adevtool/0001-exit-ship-ExitProbe-on-userdebug-images.patch"
       },
       "type": "unofficial"
      },
      {
       "diff": {
-       "url": "https://github.com/Beau4201/oblivios-platform/blob/c1ff1d71e410cf5ebdb8d380f4cc25859bae7868/privacy/exit/patches/vendor-adevtool/0002-exit-ship-the-exit-service-on-every-Pixel-target.patch"
+       "url": "https://github.com/Beau4201/oblivios-platform/blob/5a8dacbc4cb58a969922a7b4cb4e58e703a61a3e/privacy/exit/patches/vendor-adevtool/0002-exit-ship-the-exit-service-on-every-Pixel-target.patch"
       },
       "type": "unofficial"
      }
@@ -59832,7 +59832,7 @@
   "supplier": {
    "name": "Beau ten Berge"
   },
-  "timestamp": "2026-11-18T14:10:26Z",
+  "timestamp": "2026-11-19T03:14:21Z",
   "tools": {
    "components": [
     {
@@ -59852,7 +59852,7 @@
    ]
   }
  },
- "serialNumber": "urn:uuid:e7394bc5-56e5-520b-a58a-22ac586e802a",
+ "serialNumber": "urn:uuid:8a2968c3-14a0-5f17-bac8-8f10886fa3e8",
  "specVersion": "1.6",
  "version": 1,
  "vulnerabilities": [
