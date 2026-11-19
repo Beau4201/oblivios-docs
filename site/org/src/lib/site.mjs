@@ -31,9 +31,9 @@ export const footAbout = [
   { label: "Privacy", href: "/privacy" },
   { label: "Trademark and attribution", href: "/trademark" },
 ];
-// The developer portal (oblivios.dev) is built in site/dev (ADR-268) but not deployed: a link would be dead. Set this to
-// { label: "Developer portal", href: "https://oblivios.dev" } when that site is live and the header and footer show it.
-export const portal = null;
+// The developer portal (oblivios.dev, site/dev, ADR-268) is live since 2026-11-19 (read: 340 files identical to the
+// build, 200 over HTTPS), so the header and the footer link it: it is the way from this site to the 315 pages of the record.
+export const portal = { label: "Developer portal", href: "https://oblivios.dev" };
 
 export const legal =
   "Documents: CC-BY-4.0. Code and scripts: Apache-2.0. The name ObliviOS and its logo are not licensed. This site is static: no cookies, no requests to other sites. Page views are counted without cookies.";

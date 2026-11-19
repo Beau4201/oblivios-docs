@@ -58,6 +58,10 @@ for (const f of pages) {
   const t = text(f);
   if (!/<title>[^<]{3,}<\/title>/.test(t)) fail(`${f}: no title`);
   if (!/<meta name="description" content="[^"]{20,}"/.test(t)) fail(`${f}: no description`);
+  // Search results cut a title at about 60 characters and a description at about 160 (Base.astro fits both).
+  const chars = (s) => (s ?? "").replace(/&(?:#x?[0-9a-f]+|[a-z]+);/gi, "x").length; // an entity is one character
+  if (chars(t.match(/<title>([^<]*)</)?.[1]) > 60) fail(`${f}: title over 60 characters`);
+  if (chars(t.match(/<meta name="description" content="([^"]*)"/)?.[1]) > 160) fail(`${f}: description over 160 characters`);
   if (!/<link rel="canonical" href="https:\/\/oblivios\.org\/[^"]*"/.test(t)) fail(`${f}: no canonical URL`);
   if ((t.match(/<h1[ >]/g) || []).length !== 1) fail(`${f}: not exactly one h1`);
   const gone = f === "404.html"; // the 404 page carries no structured data and is the only page with noindex

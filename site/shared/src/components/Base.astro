@@ -40,6 +40,19 @@ const analytics = countViews && process.env.VERCEL === "1";
 const canonical = siteUrl + (path === "/" ? "/" : path);
 const image = siteUrl + "/social-preview.png";
 const missing = path === "/404";
+// A search result cuts a title at about 60 characters and a description at about 160: both are fitted here, once, at a
+// word, so that no page depends on its author counting. A page of a list says which page it is, so that no two pages
+// of the site share a description.
+const fit = (s: string, max: number): string => {
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  const atWord = cut.replace(/\s+\S*$/, ""); // a long unbreakable word (a path) would leave almost nothing: then cut inside it
+  return (atWord.length >= max / 2 ? atWord : cut) + "…";
+};
+const shortTitle = fit(title.length <= 60 ? title : title.replace(/ \| [^|]+$/, ""), 60);
+const pageNo = path.match(/^\/(?:decisions|boundaries|threat-model\/abuse-cases)\/(\d+)$/)?.[1];
+const pageNote = pageNo ? ` Page ${pageNo}.` : "";
+const desc = fit(description, 160 - pageNote.length) + pageNote;
 // Structured data (schema.org JSON-LD): a data block, not script that runs, so the policy `default-src 'self'` holds.
 // Every value is a fact the page or the footer already states: no rating, no licence, no app, no price.
 const label = [...pages, ...footPages, ...footAbout].find((l) => l.href === path)?.label ?? title.split(":")[0];
@@ -48,10 +61,10 @@ const siteId = siteUrl + "/#site";
 const graph: Record<string, unknown>[] = [
   { "@type": "Organization", "@id": orgId, name: "ObliviOS", url: siteUrl + "/", logo: siteUrl + "/icon-512.png" },
   { "@type": "WebSite", "@id": siteId, url: siteUrl + "/", name: "ObliviOS", inLanguage: "en", publisher: { "@id": orgId } },
-  { "@type": "WebPage", "@id": canonical + "#page", url: canonical, name: title, description, inLanguage: "en", isPartOf: { "@id": siteId } },
+  { "@type": "WebPage", "@id": canonical + "#page", url: canonical, name: shortTitle, description: desc, inLanguage: "en", isPartOf: { "@id": siteId } },
 ];
 if (path === "/") {
-  graph.push({ "@type": "SoftwareSourceCode", "@id": siteUrl + "/#source", name: "ObliviOS", description, codeRepository: source.map((s) => s.href), isBasedOn: { "@type": "CreativeWork", name: "GrapheneOS", url: "https://grapheneos.org" } });
+  graph.push({ "@type": "SoftwareSourceCode", "@id": siteUrl + "/#source", name: "ObliviOS", description: desc, codeRepository: source.map((s) => s.href), isBasedOn: { "@type": "CreativeWork", name: "GrapheneOS", url: "https://grapheneos.org" } });
 } else {
   graph.push({ "@type": "BreadcrumbList", "@id": canonical + "#crumbs", itemListElement: [{ "@type": "ListItem", position: 1, name: "ObliviOS", item: siteUrl + "/" }, { "@type": "ListItem", position: 2, name: label, item: canonical }] });
 }
@@ -62,15 +75,15 @@ const jsonld = JSON.stringify({ "@context": "https://schema.org", "@graph": grap
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <title>{shortTitle}</title>
+    <meta name="description" content={desc} />
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#f3eee6" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#181312" media="(prefers-color-scheme: dark)" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ObliviOS" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={shortTitle} />
+    <meta property="og:description" content={desc} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1280" />

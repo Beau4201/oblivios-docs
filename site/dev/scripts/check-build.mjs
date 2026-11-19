@@ -1,7 +1,7 @@
 // Checks dist/ after a build: the privacy rules (5.4), the files of W-6, the weight budget (W-5) and the links.
 // Exits 1 and lists every failure. Run by `npm run build` and alone by `npm run check`.
-// oblivios.dev differs from oblivios.org in one rule: it ships exactly one script, /browse.js, the search and the filters
-// (ADR-268). That file may fetch /search-index.json and nothing else, and uses no storage, cookie or dynamic code.
+// oblivios.dev differs from oblivios.org in one rule: it ships one script of its own, /browse.js, the search and the filters
+// (ADR-268), and in a Vercel build the page-view counter of Vercel Web Analytics besides. That file may fetch /search-index.json and nothing else, and uses no storage, cookie or dynamic code.
 import fs from "node:fs";
 import path from "node:path";
 
@@ -10,6 +10,10 @@ const budget = JSON.parse(fs.readFileSync("budget.json", "utf8"));
 const fails = [];
 const fail = (m) => fails.push(m);
 const SCRIPT_TAG = '<script defer src="/browse.js"></script>';
+// A build made by Vercel (VERCEL=1) carries the one script of Vercel Web Analytics as well, from the site's own address
+// (ADR-261 for oblivios.org, ADR-272 for this site): two scripts then, and no other.
+const analytics = process.env.VERCEL === "1";
+const ANALYTICS_TAG = '<script defer src="/_vercel/insights/script.js"></script>';
 const LD = /<script type="application\/ld\+json">([^<]*)<\/script>/g;
 const ORIGIN = "https://oblivios.dev";
 
@@ -50,7 +54,8 @@ for (const f of files.filter((x) => asset.test(x))) {
   if (f.endsWith(".html")) {
     const bare = t.replace(LD, "");
     const scripts = bare.match(/<script\b[^>]*>/gi) || [];
-    if (scripts.length !== 1 || !bare.includes(SCRIPT_TAG)) fail(`${f}: expected exactly ${SCRIPT_TAG}, found ${scripts.join(" ") || "none"}`);
+    const want = [SCRIPT_TAG, ...(analytics ? [ANALYTICS_TAG] : [])];
+    if (scripts.length !== want.length || !want.every((s) => bare.includes(s))) fail(`${f}: expected exactly ${want.join(" and ")}, found ${scripts.join(" ") || "none"}`);
     if (/<style\b/i.test(t)) fail(`${f}: inline <style>`);
     if (/\sstyle=/i.test(t)) fail(`${f}: a style attribute`);
     if (/\son[a-z]+=/i.test(t)) fail(`${f}: an event handler attribute`);
@@ -92,6 +97,10 @@ for (const f of pages) {
   const t = text(f);
   if (!/<title>[^<]{3,}<\/title>/.test(t)) fail(`${f}: no title`);
   if (!/<meta name="description" content="[^"]{20,}"/.test(t)) fail(`${f}: no description`);
+  // Search results cut a title at about 60 characters and a description at about 160 (Base.astro fits both).
+  const chars = (s) => (s ?? "").replace(/&(?:#x?[0-9a-f]+|[a-z]+);/gi, "x").length; // an entity is one character
+  if (chars(t.match(/<title>([^<]*)</)?.[1]) > 60) fail(`${f}: title over 60 characters`);
+  if (chars(t.match(/<meta name="description" content="([^"]*)"/)?.[1]) > 160) fail(`${f}: description over 160 characters`);
   if (!/<link rel="canonical" href="https:\/\/oblivios\.dev\/[^"]*"/.test(t)) fail(`${f}: no canonical URL`);
   if ((t.match(/<h1[ >]/g) || []).length !== 1) fail(`${f}: not exactly one h1`);
   const gone = f === "404.html"; // the 404 page carries no structured data and is the only page with noindex
