@@ -613,16 +613,24 @@
     const pre = $("pre", box);
     const btn = $("button", box);
     const msg = $("p", box);
-    const say = (t) => {
+    let timer;
+    // a failure is shown as text under the box; a success is the icon turning into a tick, and the words go to screen readers only
+    const say = (t, ok) => {
       msg.textContent = t;
+      msg.className = ok ? "vh" : "";
       msg.hidden = false;
     };
-    const fail = () => say("Could not copy. Select the text above and copy it.");
+    const fail = () => say("Could not copy. Select the text above and copy it.", false);
     btn.hidden = false;
     btn.addEventListener("click", () => {
       try {
         if (!navigator.clipboard || !navigator.clipboard.writeText) return fail();
-        navigator.clipboard.writeText(pre.textContent).then(() => say("Copied."), fail);
+        navigator.clipboard.writeText(pre.textContent).then(() => {
+          say("Copied.", true);
+          btn.classList.add("done");
+          clearTimeout(timer);
+          timer = setTimeout(() => btn.classList.remove("done"), 1800);
+        }, fail);
       } catch (e) {
         fail();
       }

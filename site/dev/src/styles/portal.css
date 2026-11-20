@@ -1405,23 +1405,96 @@ mark {
 .adr .prose pre {
   overflow-wrap: normal;
 }
-/* the prompt for a person's own AI and its copy button: the prompt wraps inside its box */
+/* the prompt for a person's own AI: the prompt wraps inside its box and the copy icon sits in the top right corner */
 .aicopy {
-  margin: 28px 0;
+  position: relative;
+  margin: clamp(28px, 3.4vw, 44px) 0 0;
 }
 .aicopy pre {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+  padding-right: 72px;
+}
+.aicopy .cp {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--pre-dim);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--pre-fg);
+  cursor: pointer;
+  transition: background 160ms, border-color 160ms, transform 160ms var(--ease-out);
+}
+.aicopy .cp svg {
+  width: 20px;
+  height: 20px;
+}
+.aicopy .cp .ok,
+.aicopy .cp.done .cc {
+  display: none;
+}
+.aicopy .cp.done .ok {
+  display: block;
+}
+.aicopy .cp.done {
+  border-color: var(--brick-light);
+  color: var(--brick-light);
+}
+@media (hover: hover) and (pointer: fine) {
+  .aicopy .cp:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--pre-fg);
+  }
+}
+.aicopy .cp:active {
+  transform: scale(0.94);
+}
+.aicopy .cp:focus-visible {
+  outline: 2px solid var(--brick-light);
+  outline-offset: 2px;
 }
 .aicopy [hidden] {
   display: none;
 }
-.aicopy .btn {
-  margin-top: 14px;
-}
 .aicopy p[role="status"] {
   margin: 10px 0 0;
   font: 500 15px / 1.4 var(--sans);
+}
+/* the guides as two plates, as the home page shows its ways in */
+.plates.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.plates.two .pl:last-child {
+  grid-column: auto;
+}
+.plates.two .pl svg {
+  max-width: 190px;
+}
+.pl .kind {
+  display: block;
+  margin-top: 26px;
+  font: 500 italic clamp(17px, 1.5vw, 19px) / 1 var(--serif);
+  color: var(--proof-text);
+}
+.plates.two .pl h3 {
+  margin-top: 10px;
+}
+.plates.two .pl p {
+  max-width: 340px;
+}
+@media (max-width: 560px) {
+  .plates.two {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 /* auto side margins make a grid item shrink to its content, so a long line (a pre) widens it past the track; the track centres it */
 .adr .prose {

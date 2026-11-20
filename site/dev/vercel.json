@@ -9,7 +9,9 @@
   "redirects": [
     { "source": "/quickstarts", "destination": "/modules", "permanent": true },
     { "source": "/quickstarts.md", "destination": "/modules.md", "permanent": true },
-    { "source": "/quickstarts/:slug", "destination": "/modules/:slug", "permanent": true }
+    { "source": "/quickstarts/:slug", "destination": "/modules/:slug", "permanent": true },
+    { "source": "/guide/review", "destination": "/guide/start", "permanent": true },
+    { "source": "/guide/review.md", "destination": "/guide/start.md", "permanent": true }
   ],
   "headers": [
     {

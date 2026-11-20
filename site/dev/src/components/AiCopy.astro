@@ -1,10 +1,13 @@
 ---
-// The prompt that a person gives to their own AI (ADR-284), and the button that copies it. The prompt is written once, in the
+// The prompt that a person gives to their own AI (ADR-284), and the icon that copies it. The prompt is written once, in the
 // `pre`; browse.js un-hides the button and reads the text from there. Without the script the text is still on the page, and it is
 // in the Markdown twin too (the converter drops the button and the hidden status line).
 ---
 <div class="aicopy" data-ai-copy>
-  <pre tabindex="0">Read https://oblivios.dev/ai.md first, then answer my questions about ObliviOS only from it and the pages it links. Cite the page for every fact. Say "not measured" or "not supported" where the records do.</pre>
-  <button type="button" class="btn" hidden>Copy for your AI</button>
+  <pre tabindex="0">Read https://oblivios.dev/ai.md first. It says where each fact about ObliviOS lives and how to answer without inventing anything. Then answer my questions about ObliviOS only from that page and the pages it links to. Cite the page for every fact. Where the records say "not measured" or "not supported", say that and do not guess. If the pages do not answer a question, say so. If my question is unclear, ask me one question first. Answer in the language I write in.</pre>
+  <button type="button" class="cp" aria-label="Copy the prompt" title="Copy the prompt" hidden>
+    <svg class="cc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3" /></svg>
+    <svg class="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+  </button>
   <p role="status" hidden></p>
 </div>

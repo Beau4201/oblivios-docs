@@ -24,7 +24,7 @@ The test of the guides and the brief: a fresh AI that has only the brief and the
 | understand | Will there be installable images, and when? | https://oblivios.org/faq (not yet, no date) |
 | build | Can I build an image of ObliviOS myself, and for which phones? | docs/guides/build.md (yes for `lynx` and `stallion`, unsupported, no binary is offered) |
 | build | Does a build from the published source equal the images the owner flashes? | docs/guides/build.md and docs/architecture/site-engineering-notes.md (the answer is no, not yet) |
-| build | Was the build guide run from a clean source tree to a flashed phone? | docs/guides/build.md (the answer is no: no clean sync, build, signing or flash was run; not measured) |
+| build | Was the build guide run from a clean source tree to a flashed phone? | docs/guides/build.md (the answer is no: no full sync, build, signing or flash was run; not measured) |
 | build | Which signing keys and which update address does a fork use? | docs/guides/build.md, chapter Make it yours (its own; the published update address is a placeholder) |
 | build | Are the signing scripts and the update server published? | docs/guides/build.md (the answer is no) |
 | build | Which GrapheneOS tag is the source pinned to? | docs/guides/build.md, chapter Get the source, and the README of oblivios-manifest |
@@ -44,17 +44,16 @@ The test of the guides and the brief: a fresh AI that has only the brief and the
 | build | How soon do I get a first reply to an issue? | CONTRIBUTING.md |
 | build | Under which licence are the documents and the scripts? | CONTRIBUTING.md |
 | review | How do I report a vulnerability privately? | SECURITY.md and https://oblivios.org/security |
-| review | What do the labels measured, verified-in-source and assumption mean? | docs/guides/review.md |
+| review | What do the labels measured, verified-in-source and assumption mean? | docs/guides/start.md |
 | review | Where is the threat model, and what does it say the project does not claim? | docs/security/threat-model.md |
 | review | How do I check that the published files are the files that were built? | https://oblivios.dev/verify |
 | review | Where is the bill of materials, and what does it not claim? | https://oblivios.dev/components and https://oblivios.dev/verify |
 | review | Which prebuilt binaries are committed, and was their build reproduced again for the site? | https://oblivios.dev/verify (reproduction not run again) |
-| review | Where do I read the patch packages, and where is the upstream revision pinned? | docs/guides/review.md and https://oblivios.dev/patches |
+| review | Where do I read the patch packages, and where is the upstream revision pinned? | docs/guides/start.md and https://oblivios.dev/patches |
 | review | Has the portal oblivios.dev been claim-reviewed? | docs/product/status-platform-and-release.md (the answer is no) |
 | review | Is the set of Rust packages linked into each binary computed? | https://oblivios.dev/verify (not computed) |
 | review | Does the bill of materials give a legal opinion on licences? | https://oblivios.dev/verify (the answer is no) |
 | review | What residual risk does Duress Unlock accept about timing? | docs/security/threat-model.md |
 | review | Which hardening of GrapheneOS does ObliviOS keep? | https://oblivios.org/faq |
 | review | How do I find the decisions behind one feature? | docs/guides/start.md and https://oblivios.dev/decisions |
-| review | What does a reviewer do first with a claim in the records? | docs/guides/review.md |
 | review | Is Compartments' device identity undetectable by an app? | docs/security/threat-model.md and ADR-209 (the answer is no) |

@@ -31,7 +31,7 @@ for (const f of ["index.html", "404.html", "decisions.html", "search.html", "com
   if (!files.includes(f)) fail(`missing: ${f}`);
 }
 // the guides (ADR-284): a page for each, and the build guide as one page per chapter (ADR-285)
-for (const f of ["ai.html", "ai.md", "guide.html", "guide/start.html", "guide/build.html", "guide/review.html", "guide/build/get-the-source.html"]) {
+for (const f of ["ai.html", "ai.md", "guide.html", "guide/start.html", "guide/build.html", "guide/build/get-the-source.html"]) {
   if (!files.includes(f)) fail(`missing: ${f}`);
 }
 // every section of the build guide is shown on exactly one built page: a section that no part lists is dropped without a message

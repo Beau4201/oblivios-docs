@@ -79,12 +79,11 @@ const buildChapters = [
   ["what-this-guide-does-not-cover", "What this guide does not cover", "The limits of the guide, plainly."],
 ];
 export const guides = [
-  { slug: "start", file: "docs/guides/start.md", label: "Start here", kind: "Understand", who: "You have just found ObliviOS and want to understand what it is and where to look next." },
+  { slug: "start", file: "docs/guides/start.md", label: "Start here", kind: "Understand", who: "You have just found ObliviOS and want to understand what it is and where to look next.", plate: "desk", plateLabel: "An open ledger with a lens over it" },
   {
-    slug: "build", file: "docs/guides/build.md", label: "Build with it", kind: "Build", who: "You want to build ObliviOS for a Pixel 7a or a Pixel 10a, or to take it further as a fork.",
+    slug: "build", file: "docs/guides/build.md", label: "Build with it", kind: "Build", who: "You want to build ObliviOS for a Pixel 7a or a Pixel 10a, or to take it further as a fork.", plate: "term", plateLabel: "A terminal window",
     parts: buildChapters.map(([slug, label, lede], i) => ({ slug: i ? slug : "", label, lede, sections: i ? [slug] : ["", slug] })),
   },
-  { slug: "review", file: "docs/guides/review.md", label: "Review it", kind: "Check", who: "You want to check ObliviOS rather than trust it, and to report what you find." },
 ].map((g) => ({ ...g, href: `/guide/${g.slug}` }));
 // the brief for AI agents (ADR-284), a page of its own at /ai on both sites
 export const brief = { slug: "ai", file: "docs/guides/ai.md", label: "Brief for AI agents", href: "/ai" };

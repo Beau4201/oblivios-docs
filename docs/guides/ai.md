@@ -40,7 +40,7 @@ It is not an official GrapheneOS product and is not affiliated with it. It does 
 
 ### Build
 
-- Can I build an image myself? There is a complete build guide for the Pixel 7a (`lynx`) and the Pixel 10a (`stallion`), from the pinned GrapheneOS source to signed factory images, at [Build with it](build.md) (chapter pages under `/guide/build` on oblivios.dev). The project offers no binary, so you build and sign it yourself, and the image is unsupported and unaudited. The guide was not run end to end: no clean sync, build, signing or flash was run for it, and each chapter labels its steps. The published patches do not reproduce the build branch of the owner's images in several projects, so a build from them is close to the owner's images and not the same.
+- Can I build an image myself? There is a complete build guide for the Pixel 7a (`lynx`) and the Pixel 10a (`stallion`), from the pinned GrapheneOS source to signed factory images, at [Build with it](build.md) (chapter pages under `/guide/build` on oblivios.dev). The project offers no binary, so you build and sign it yourself, and the image is unsupported and unaudited. The guide was not run end to end: no full sync, build, signing or flash was run for it, but the check of the signed tag, `repo init`, the sync and patching of five projects and the checks of a finished build were, and each chapter labels its steps. The published patches do not reproduce the build branch of the owner's images in several projects, so a build from them is close to the owner's images and not the same.
 - Can I send a pull request? Not yet. Open an issue that names the file and the statement. You get a first reply within three days. See [CONTRIBUTING](https://github.com/Beau4201/oblivios-docs/blob/main/CONTRIBUTING.md).
 - Which repositories are there? See [Start here](start.md) for what each public repository holds.
 - Can I build vault-core or exit-daemon on a laptop? No. Both need a build server with the AOSP Rust toolchain. See the [vault-core module](../modules/vault-core.md) and the [exit-daemon module](../modules/exit-daemon.md).
@@ -52,7 +52,7 @@ It is not an official GrapheneOS product and is not affiliated with it. It does 
 ### Review
 
 - How do I report a vulnerability? Open an issue, or send an email if you would rather it is not public before it is fixed. See [SECURITY](https://github.com/Beau4201/oblivios-docs/blob/main/SECURITY.md).
-- What do the evidence labels mean? `measured` is something that was run and observed, `verified-in-source` is something read in the source, and `assumption` is something not yet checked. See [Review it](review.md).
+- What do the evidence labels mean? `measured` is something that was run and observed, `verified-in-source` is something read in the source, and `assumption` is something not yet checked. See [Start here](start.md).
 - How do I check that what is published is what was built? [Verify](https://oblivios.dev/verify) has the commands. It also says that the reproduction of the prebuilt binaries was not run again for the page.
 - Has the developer portal been claim-reviewed? No. Say so when you quote it.
 - Where are the patches and the upstream revision? The [manifest repository](https://github.com/Beau4201/oblivios-manifest) pins the upstream revisions, the [platform repository](https://github.com/Beau4201/oblivios-platform) holds the patch packages, and [Files and patches](https://oblivios.dev/patches) describes them.
