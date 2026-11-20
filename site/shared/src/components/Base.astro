@@ -78,6 +78,8 @@ const jsonld = JSON.stringify({ "@context": "https://schema.org", "@graph": grap
     <title>{shortTitle}</title>
     <meta name="description" content={desc} />
     <link rel="canonical" href={canonical} />
+    {!missing && <link rel="alternate" type="text/markdown" href={path === "/" ? "/index.md" : path + ".md"} />}
+    {!missing && <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />}
     <meta name="theme-color" content="#f3eee6" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#181312" media="(prefers-color-scheme: dark)" />
     <meta property="og:type" content="website" />

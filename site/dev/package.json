@@ -6,7 +6,7 @@
   "type": "module",
   "description": "The application of oblivios.dev: the developer portal. The decision log, a page for every decision, the bill of materials and a search over all of it, static output.",
   "scripts": {
-    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/check-build.mjs",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/agent-files.mjs && node scripts/check-build.mjs",
     "serve": "node scripts/serve.mjs",
     "check": "node scripts/check-build.mjs"
   },

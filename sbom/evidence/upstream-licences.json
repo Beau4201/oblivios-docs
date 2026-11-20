@@ -1,6 +1,6 @@
 {
  "manifest": "upstream-2026100600.xml",
- "retrieved": "2026-11-17",
+ "retrieved": "2026-11-20",
  "projects": {
   "build/make": {
    "name": "platform_build",
@@ -124,6 +124,7 @@
     "services/core/java/com/android/server/vibrator/VibratorManagerService.java": "Apache-2.0",
     "services/core/java/com/android/server/wm/ActivityTaskManagerService.java": "Apache-2.0",
     "services/core/java/com/android/server/wm/RootWindowContainer.java": "Apache-2.0",
+    "services/core/java/com/android/server/wm/ScreenRecordingCallbackController.java": "Apache-2.0",
     "services/core/java/com/android/server/wm/WallpaperController.java": "Apache-2.0",
     "services/core/java/com/android/server/wm/WindowManagerService.java": "Apache-2.0",
     "services/core/java/com/android/server/wm/WindowStateAnimator.java": "Apache-2.0",

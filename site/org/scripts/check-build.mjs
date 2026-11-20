@@ -99,6 +99,32 @@ for (const f of pages) {
   }
 }
 
+// ---- files for machines (ADR-276): a Markdown twin of every page, llms.txt and llms-full.txt, all consistent with the build
+{
+  for (const f of ["llms.txt", "llms-full.txt"]) if (!files.includes(f)) fail(`missing: ${f}`);
+  const mds = files.filter((f) => f.endsWith(".md"));
+  const real = pages.filter((p) => p !== "404.html");
+  if (mds.length !== real.length) fail(`${mds.length} Markdown files for ${real.length} pages`);
+  for (const f of real) {
+    const md = f === "index.html" ? "index.md" : f.replace(/\.html$/, ".md");
+    if (!files.includes(md)) fail(`${f}: no Markdown twin`);
+    if (!text(f).includes(`<link rel="alternate" type="text/markdown" href="/${md}"`)) fail(`${f}: no link to its Markdown twin`);
+  }
+  for (const f of [...mds, "llms.txt", "llms-full.txt"].filter((x) => files.includes(x))) {
+    const t = text(f);
+    if (!t.startsWith("# ")) fail(`${f}: does not start with a heading`);
+    if (/\/home\/|\/Users\//.test(t)) fail(`${f}: a local path`);
+    if (f.endsWith(".md") && t.length < 200) fail(`${f}: almost empty`);
+    if (/&(?:amp|lt|gt|quot|nbsp|#\d+);|<\/?(?:div|span|section|main|a|p)\b/.test(t.replace(/```[\s\S]*?```/g, ""))) fail(`${f}: HTML or an entity is left in the text`);
+  }
+  const llms = files.includes("llms.txt") ? text("llms.txt") : "";
+  if (!/^# .+\n\n> .+\n/.test(llms)) fail("llms.txt: no name and summary");
+  for (const m of llms.matchAll(/\]\((https:\/\/oblivios\.org\/[^)#]*)\)/g)) {
+    const p = new URL(m[1]).pathname;
+    if (!target(p)) fail(`llms.txt: ${m[1]} is not in the build`);
+  }
+}
+
 // ---- the weight budget
 const cssKB = files.filter((f) => f.endsWith(".css")).reduce((s, f) => s + kb(f), 0);
 const fontKB = files.filter((f) => f.endsWith(".woff2")).reduce((s, f) => s + kb(f), 0);
@@ -107,7 +133,7 @@ if (fontKB > budget.fontKBTotal) fail(`fonts ${fontKB.toFixed(1)} KB over the bu
 const worst = { html: ["", 0], first: ["", 0] };
 for (const f of pages) {
   const t = text(f);
-  const used = new Set([...t.matchAll(/(?:href|src)="(\/[^"#]+)"/g)].map((m) => m[1].replace(/^\//, "")).filter((p) => files.includes(p) && !/\.(html|txt|xml|asc|webmanifest)$/.test(p)));
+  const used = new Set([...t.matchAll(/(?:href|src)="(\/[^"#]+)"/g)].map((m) => m[1].replace(/^\//, "")).filter((p) => files.includes(p) && !/\.(html|txt|xml|asc|webmanifest|md)$/.test(p))); // an alternate link (the Markdown twin) is not loaded with the page
   const first = kb(f) + [...used].reduce((s, p) => s + kb(p), 0);
   if (kb(f) > worst.html[1]) worst.html = [f, kb(f)];
   if (first > worst.first[1]) worst.first = [f, first];

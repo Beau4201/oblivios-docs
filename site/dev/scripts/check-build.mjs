@@ -41,7 +41,7 @@ for (const f of files) {
   if (f.endsWith(".js") && f !== "browse.js") fail(`${f}: a script other than browse.js is shipped`);
 }
 // the pages that show a record or a document as it is written: a decision, an engineering note, a quickstart, the threat model
-const DOCUMENT = /^(adr|engineering|quickstarts)\/|^(threat-model|boundaries)\.html$/;
+const DOCUMENT = /^(adr|engineering|quickstarts)\/|^(threat-model|boundaries)\.html$|^llms-full\.txt$/;
 const asset = /\.(html|css|svg|webmanifest|txt|xml|js)$/;
 for (const f of files.filter((x) => asset.test(x))) {
   const t = text(f);
@@ -141,6 +141,40 @@ for (const f of pages) {
   }
 }
 
+// ---- files for machines (ADR-276): a Markdown twin of every page, llms.txt, llms-full.txt and the JSON data, all consistent with the build
+{
+  for (const f of ["llms.txt", "llms-full.txt", "data/index.json", "data/decisions.json", "data/components.json", "data/advisories.json"]) if (!files.includes(f)) fail(`missing: ${f}`);
+  const mds = files.filter((f) => f.endsWith(".md"));
+  const real = pages.filter((p) => p !== "404.html");
+  if (mds.length !== real.length) fail(`${mds.length} Markdown files for ${real.length} pages`);
+  for (const f of real) {
+    const md = f === "index.html" ? "index.md" : f.replace(/\.html$/, ".md");
+    if (!files.includes(md)) fail(`${f}: no Markdown twin`);
+    if (!text(f).includes(`<link rel="alternate" type="text/markdown" href="/${md}"`)) fail(`${f}: no link to its Markdown twin`);
+  }
+  for (const f of [...mds, "llms.txt", "llms-full.txt"].filter((x) => files.includes(x))) {
+    const t = text(f);
+    if (!t.startsWith("# ")) fail(`${f}: does not start with a heading`);
+    if (/\/home\/|\/Users\//.test(t)) fail(`${f}: a local path`);
+    if (f.endsWith(".md") && t.length < 100) fail(`${f}: almost empty`);
+  }
+  const llms = files.includes("llms.txt") ? text("llms.txt") : "";
+  if (!/^# .+\n\n> .+\n/.test(llms)) fail("llms.txt: no name and summary");
+  for (const m of llms.matchAll(/\]\((https:\/\/oblivios\.dev\/[^)#]*)\)/g)) {
+    const p = new URL(m[1]).pathname;
+    if (!target(p)) fail(`llms.txt: ${m[1]} is not in the build`);
+  }
+  for (const f of files.filter((x) => /^data\/.+\.json$/.test(x))) {
+    try {
+      JSON.parse(text(f));
+    } catch {
+      fail(`${f}: not valid JSON`);
+    }
+    if (/\/home\/|\/Users\//.test(text(f))) fail(`${f}: a local path`);
+  }
+  if (files.includes("data/decisions.json") && JSON.parse(text("data/decisions.json")).decisions.length !== rows) fail(`data/decisions.json does not hold the ${rows} entries of the log`);
+}
+
 // ---- the weight budget
 const cssKB = files.filter((f) => f.endsWith(".css")).reduce((s, f) => s + kb(f), 0);
 const fontKB = files.filter((f) => f.endsWith(".woff2")).reduce((s, f) => s + kb(f), 0);
@@ -149,7 +183,7 @@ if (fontKB > budget.fontKBTotal) fail(`fonts ${fontKB.toFixed(1)} KB over the bu
 const worst = { html: ["", 0], first: ["", 0] };
 for (const f of pages) {
   const t = text(f);
-  const used = new Set([...t.matchAll(/(?:href|src)="(\/[^"#?]+)"/g)].map((m) => m[1].replace(/^\//, "")).filter((p) => files.includes(p) && !/\.(html|txt|xml|asc|webmanifest|json)$/.test(p)));
+  const used = new Set([...t.matchAll(/(?:href|src)="(\/[^"#?]+)"/g)].map((m) => m[1].replace(/^\//, "")).filter((p) => files.includes(p) && !/\.(html|txt|xml|asc|webmanifest|json|md)$/.test(p))); // an alternate link (the Markdown twin) is not loaded with the page
   const first = kb(f) + [...used].reduce((s, p) => s + kb(p), 0);
   if (kb(f) > worst.html[1]) worst.html = [f, kb(f)];
   if (first > worst.first[1]) worst.first = [f, first];
