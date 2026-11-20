@@ -1,0 +1,20 @@
+---
+import DocPage from "../../../layouts/DocPage.astro";
+import { guides, partParams } from "../../../lib/documents.mjs";
+
+const entry = guides.find((g) => g.slug === "build")!;
+export function getStaticPaths() {
+  return partParams(guides.find((g) => g.slug === "build")!);
+}
+const { part, pageNo } = Astro.props;
+---
+<DocPage
+  entry={entry}
+  part={part}
+  pageNo={pageNo}
+  crumbs={part.slug ? [{ label: "Home", href: "/" }, { label: "Guide", href: "/guide" }, { label: entry.label, href: entry.href }, { label: part.label }] : [{ label: "Home", href: "/" }, { label: "Guide", href: "/guide" }, { label: entry.label }]}
+  current="/guide"
+  print="desk"
+  printLabel="A writing desk"
+  sub="parts"
+/>

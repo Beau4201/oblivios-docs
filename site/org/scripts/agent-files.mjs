@@ -10,10 +10,11 @@ const r = writeAgentFiles({
   name: "ObliviOS",
   details: [
     `Official addresses: oblivios.org, oblivios.dev and the four repositories on github.com/Beau4201. Any other site, app, account or package that uses the name ObliviOS is not the project's. ${legal}`,
+    `If you answer questions about ObliviOS for a person, read the brief first: ${siteUrl}/ai.md.`,
     `Every page of this site also exists as Markdown at its address with .md added (the home page is ${siteUrl}/index.md). The decisions, the threat model, the bill of materials and their machine-readable data are on the developer portal: https://oblivios.dev/llms.txt.`,
   ],
   sections: [
-    { title: "What it is", items: [{ path: "/what-it-does" }, { path: "/status" }, { path: "/devices" }, { path: "/faq" }] },
+    { title: "What it is", items: [{ path: "/ai", note: "the brief for an AI that answers questions about ObliviOS: read it first" }, { path: "/what-it-does" }, { path: "/status" }, { path: "/devices" }, { path: "/faq" }] },
     { title: "Verify and trust", items: [{ path: "/verify" }, { path: "/security" }, { path: "/privacy" }, { path: "/trademark" }, { path: "/contact" }] },
     {
       title: "Optional",
@@ -26,6 +27,6 @@ const r = writeAgentFiles({
       ],
     },
   ],
-  full: ["/", "/what-it-does", "/status", "/devices", "/faq", "/verify", "/security", "/privacy", "/trademark", "/contact"],
+  full: ["/ai", "/", "/what-it-does", "/status", "/devices", "/faq", "/verify", "/security", "/privacy", "/trademark", "/contact"],
 });
 console.log(`agent files: ${r.pages} Markdown pages, llms.txt ${r.llms} bytes, llms-full.txt from ${r.full} pages`);

@@ -1,7 +1,7 @@
 ---
 // A published document as a page: the header band, the document in sections, a contents column and the one `Read from` line
 // that links the file in the published repository (ADR-268). Used by the threat model, the capability boundaries, every
-// engineering note and every quickstart. A long document is shown as parts (a tab each), and a part that lists cases is paged.
+// engineering note and the module pages. A long document is shown as parts (a tab each), and a part that lists cases is paged.
 import Page from "./Page.astro";
 import Ph from "../components/Ph.astro";
 import SubNav from "../components/SubNav.astro";
@@ -17,7 +17,8 @@ interface Props {
   print: string;
   printLabel: string;
   lede?: string;
-  sub?: "security";
+  // "security": the tabs of the security model; "parts": the tabs are the parts of this document, with a link to the previous and the next
+  sub?: "security" | "parts";
   // the part of a document that this page shows, and which page of it
   part?: { slug: string; label: string; sections: string[]; per?: number; lede?: string };
   pageNo?: number;
@@ -46,9 +47,19 @@ const md = (t: string) => inline(t);
 // the header of a part carries the name of the part (the tabs and the crumbs say whose it is); the title of the tab says both
 const head = part && part.slug ? part.label : doc.title;
 const title = `${part && part.slug ? `${entry.label}: ${part.label}` : doc.title}${count > 1 ? `, page ${pageNo} of ${count}` : ""} | ObliviOS developer portal`;
-const subItems = sub === "security" ? [...security[0].parts.map((p) => ({ label: p.label, href: partHref(security[0], p) })), { label: "Capability boundaries", href: security[1].href }] : [];
+const subItems =
+  sub === "security"
+    ? [...security[0].parts.map((p) => ({ label: p.label, href: partHref(security[0], p) })), { label: "Capability boundaries", href: security[1].href }]
+    : sub === "parts"
+      ? entry.parts!.map((p) => ({ label: p.label, href: partHref(entry as any, p) }))
+      : [];
+const subLabel = sub === "security" ? "Security model" : entry.label;
 const subCurrent = part ? partHref(entry as any, part) : entry.href;
 const pageHref = (n: number) => partHref(entry as any, part!, n);
+// the previous and the next part of a document that is read in order
+const at = sub === "parts" && part ? entry.parts!.indexOf(part) : -1;
+const before = at > 0 ? entry.parts![at - 1] : undefined;
+const after = at >= 0 && at < entry.parts!.length - 1 ? entry.parts![at + 1] : undefined;
 ---
 <Page
   title={title}
@@ -57,11 +68,12 @@ const pageHref = (n: number) => partHref(entry as any, part!, n);
   current={current}
 >
   <Ph crumbs={crumbs} title={head} lede={part?.lede ?? lede ?? summary} print={print} printLabel={printLabel} />
-  {sub === "security" && <SubNav current={subCurrent} label="Security model" items={subItems} />}
+  {subItems.length > 0 && <SubNav current={subCurrent} label={subLabel} items={subItems} />}
   <section class="band">
     <div class="c">
       <div class:list={["adr", "doc", { solo: titled.length < 2 }]}>
         <div class="prose">
+          <slot />
           {shown.map((s, i) => (
             <section class="sec" id={s.id || undefined}>
               {s.title && <h2><i>{titled.indexOf(s) + 1}</i><Fragment set:html={md(s.title)} /></h2>}
@@ -75,6 +87,12 @@ const pageHref = (n: number) => partHref(entry as any, part!, n);
                 {Array.from({ length: count }, (_, k) => <li><a href={pageHref(k + 1)} aria-current={k + 1 === pageNo ? "page" : undefined} aria-label={`Page ${k + 1}`}>{k + 1}</a></li>)}
               </ol>
               {pageNo < count ? <a class="btn ghost" href={pageHref(pageNo + 1)}>Next</a> : <span />}
+            </nav>
+          )}
+          {sub === "parts" && at >= 0 && (
+            <nav class="pager" aria-label={`Parts of ${entry.label}`}>
+              {before ? <a class="btn ghost" href={partHref(entry as any, before)}>Previous: {before.label}</a> : <span />}
+              {after ? <a class="btn ghost" href={partHref(entry as any, after)}>Next: {after.label}</a> : <span />}
             </nav>
           )}
           <p class="fn"><b>Read from</b> <a href={`${docsBlob}${entry.file}`}><code>{entry.file}</code></a>.</p>

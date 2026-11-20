@@ -34,6 +34,10 @@ home, and a changed fact is changed in every record that states it.
 
 - Impersonal and factual. No first person, no narrative of who asked what.
   "The owner" is acceptable where a decision belongs to the owner.
+- Documents in `docs/guides/` are the exception: they are written to the reader in the
+  second person, in plain words, and every other rule of this page still holds for them.
+  Start here, Build with it and Review it speak as the maker in the first person; the brief for
+  AI agents and its question list name the maker, because an AI that reads "I" takes it for itself.
 - State is present tense. Evidence is past tense with a date.
 - `status.md` and the `status-*.md` records hold durable state only. Timestamps, free disk space, load,
   process IDs, build status and what is currently on a device are snapshots:

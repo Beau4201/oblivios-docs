@@ -1,7 +1,7 @@
 // The documents the portal shows as pages: the threat model, the capability boundaries, the engineering notes of the areas
-// and the component quickstarts. Each is a Markdown file of the repository that the snapshot of oblivios-docs publishes
+// and the module pages. Each is a Markdown file of the repository that the snapshot of oblivios-docs publishes
 // (PUBLISH in tools/docs/build-public-docs.py), read here at build time and never copied into the site.
-import path from "node:path";
+import { slugify, parseDocText } from "@oblivios/site-shared/lib/doc.mjs";
 import { find, read } from "./records.mjs";
 import { plain } from "./md.mjs";
 
@@ -50,7 +50,44 @@ export function partPages(entry) {
 export const partParams = (entry) =>
   partPages(entry).map((p) => ({ params: { page: p.href.slice(entry.href.length + 1) || undefined }, props: { part: p.part, pageNo: p.pageNo } }));
 // every path of the pages that show a document
-export const documentPaths = () => [...security.flatMap((e) => partPages(e).map((p) => p.href)), "/engineering", ...notes.map((n) => n.href), "/quickstarts", ...quickstarts.map((q) => q.href)];
+export const documentPaths = () => [
+  "/guide",
+  brief.href,
+  ...guides.flatMap((g) => (g.parts ? partPages(g).map((p) => p.href) : [g.href])),
+  ...security.flatMap((e) => partPages(e).map((p) => p.href)),
+  "/engineering",
+  ...notes.map((n) => n.href),
+  "/modules",
+  ...modules.map((q) => q.href),
+];
+
+// The guides of docs/guides/ (ADR-284), in the order a reader needs them. The build guide is long, so it is one page per chapter:
+// a part for each `##` heading (its id is the slug of the page), the first with the text before the first heading.
+const buildChapters = [
+  ["before-you-begin", "Before you begin", "What you will have at the end, what a self-built image is and is not, how long it takes and what differs between the two phones."],
+  ["what-you-need", "What you need", "The machines, the tools, the disk and the checks to make before a long job."],
+  ["get-the-source", "Get the source", "The pinned GrapheneOS tree: choose the tag, check the manifest, sync."],
+  ["add-oblivios", "Add ObliviOS", "Apply the patch packages in the right order, and read what the published source does not yet contain."],
+  ["vendor-files-for-your-device", "Vendor files for your device", "Generate the Pixel vendor modules for each device, and the flags that look like shortcuts and are not."],
+  ["build-the-prebuilt-pieces", "Build the prebuilt pieces", "The binaries that are committed, how each is rebuilt and what is known about them."],
+  ["build-the-image", "Build the image", "The exports, the build for each phone and the checks that a clean exit does not give."],
+  ["make-it-yours", "Make it yours", "Your own keys, update address and patches, and a move to a newer upstream tag."],
+  ["sign-and-package", "Sign and package", "Why a separate machine signs, and what to check on its result."],
+  ["flash-and-check", "Flash and check", "Flash from fastbootd and verify the phone before you trust it."],
+  ["test", "Test", "The checks that run without a phone and the ones that need one."],
+  ["when-something-goes-wrong", "When something goes wrong", "Each known failure as a symptom, a cause and a fix."],
+  ["what-this-guide-does-not-cover", "What this guide does not cover", "The limits of the guide, plainly."],
+];
+export const guides = [
+  { slug: "start", file: "docs/guides/start.md", label: "Start here", kind: "Understand", who: "You have just found ObliviOS and want to understand what it is and where to look next." },
+  {
+    slug: "build", file: "docs/guides/build.md", label: "Build with it", kind: "Build", who: "You want to build ObliviOS for a Pixel 7a or a Pixel 10a, or to take it further as a fork.",
+    parts: buildChapters.map(([slug, label, lede], i) => ({ slug: i ? slug : "", label, lede, sections: i ? [slug] : ["", slug] })),
+  },
+  { slug: "review", file: "docs/guides/review.md", label: "Review it", kind: "Check", who: "You want to check ObliviOS rather than trust it, and to report what you find." },
+].map((g) => ({ ...g, href: `/guide/${g.slug}` }));
+// the brief for AI agents (ADR-284), a page of its own at /ai on both sites
+export const brief = { slug: "ai", file: "docs/guides/ai.md", label: "Brief for AI agents", href: "/ai" };
 
 export const notes = [
   { slug: "airpods", file: "docs/architecture/airpods-engineering-notes.md", label: "AirPods" },
@@ -63,23 +100,21 @@ export const notes = [
   { slug: "site", file: "docs/architecture/site-engineering-notes.md", label: "These sites" },
 ].map((n) => ({ ...n, href: `/engineering/${n.slug}` }));
 
-export const quickstarts = [
-  { slug: "vault-core", file: "docs/quickstarts/vault-core.md", label: "vault-core" },
-  { slug: "exit-daemon", file: "docs/quickstarts/exit-daemon.md", label: "exit-daemon" },
-  { slug: "airpods-core", file: "docs/quickstarts/airpods-core.md", label: "airpods-core" },
-].map((q) => ({ ...q, href: `/quickstarts/${q.slug}` }));
+export const modules = [
+  { slug: "vault-core", file: "docs/modules/vault-core.md", label: "vault-core" },
+  { slug: "exit-daemon", file: "docs/modules/exit-daemon.md", label: "exit-daemon" },
+  { slug: "airpods-core", file: "docs/modules/airpods-core.md", label: "airpods-core" },
+].map((q) => ({ ...q, href: `/modules/${q.slug}` }));
 
-const all = [...security, ...notes, ...quickstarts];
-// the page of this portal for a repository path, so a link between two documents stays on the portal
-export const localHref = (p) => all.find((d) => d.file === p)?.href ?? null;
-
-export const slugify = (s) =>
-  s
-    .toLowerCase()
-    .replace(/`/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "")
-    .slice(0, 60) || "section";
+const all = [...guides, brief, ...security, ...notes, ...modules];
+// the page of this portal for a repository path, so a link between two documents stays on the portal; a link to a section
+// of a document that is shown in parts lands on the part that holds the section
+export const localHref = (p, frag = "") => {
+  const e = all.find((d) => d.file === p);
+  if (!e) return null;
+  const part = frag && e.parts?.find((x) => x.sections.includes(frag));
+  return part ? `${partHref(e, part)}#${frag}` : e.href;
+};
 
 // The anchor of one case (a row of a table of three columns or more) on its page; `used` holds the anchors of the section so far.
 // Blocks.astro and the search index both call it, so a search hit lands on the case it found.
@@ -96,7 +131,7 @@ export function caseId(prefix, text, used) {
 export function documentIndex() {
   const out = [];
   const excerpt = (t) => (t.length > 420 ? t.slice(0, 417).replace(/\s+\S*$/, "") + "…" : t);
-  for (const [group, list] of [["Security model", security], ["Engineering notes", notes], ["Quickstarts", quickstarts]]) {
+  for (const [group, list] of [["Guides", guides], ["Security model", security], ["Engineering notes", notes], ["Modules", modules]]) {
     for (const e of list) {
       const doc = parseDoc(e.file);
       const text = (blocks) =>
@@ -152,111 +187,9 @@ export function documentIndex() {
   return out;
 }
 
-// One Markdown file as blocks. Supported, because the documents use nothing else: a title, headings of level 2 and 3,
-// paragraphs, bullet and numbered lists, tables, and fenced code. Anything else makes the build fail with the line named,
-// so a new construct is added here on purpose and never lost on a page.
+// One Markdown file as blocks (the reader is in the shared package, doc.mjs, for both sites).
 export function parseDoc(file) {
-  const lines = read(find([file], file)).replace(/\r/g, "").split("\n");
-  const doc = { file, title: "", sections: [{ id: "", title: "", blocks: [] }] };
-  const used = new Set();
-  const cur = () => doc.sections[doc.sections.length - 1];
-  const fail = (i, why) => {
-    throw new Error(`${file}:${i + 1}: ${why}`);
-  };
-  const cells = (l) =>
-    l
-      .trim()
-      .replace(/\\\|/g, "\u0001")
-      .replace(/`[^`]*`/g, (c) => c.replace(/\|/g, "\u0001")) // a pipe inside a code span is text
-      .replace(/^\||\|$/g, "")
-      .split("|")
-      .map((c) => c.replace(/\u0001/g, "|").trim());
-  // a table from line i (its lines may be indented); returns the block and the line after it
-  const table = (i) => {
-    const head = cells(lines[i]);
-    if (!/^\s*\|[\s|:-]+\|?$/.test(lines[i + 1] || "")) fail(i, "a table without its separator row");
-    const rows = [];
-    for (i += 2; i < lines.length && /^\s*\|/.test(lines[i]); i++) {
-      const r = cells(lines[i]);
-      if (r.length !== head.length) fail(i, `a table row with ${r.length} cells where the header has ${head.length}`);
-      rows.push(r);
-    }
-    return [{ t: "table", head, rows }, i];
-  };
-  let i = 0;
-  while (i < lines.length) {
-    const l = lines[i];
-    if (!l.trim()) {
-      i++;
-    } else if (/^# /.test(l)) {
-      if (doc.title) fail(i, "a second level-1 heading");
-      doc.title = l.slice(2).trim();
-      i++;
-    } else if (/^## /.test(l)) {
-      const title = l.slice(3).trim();
-      let id = slugify(title);
-      for (let k = 2; used.has(id); k++) id = `${slugify(title)}-${k}`;
-      used.add(id);
-      doc.sections.push({ id, title, blocks: [] });
-      i++;
-    } else if (/^### /.test(l)) {
-      cur().blocks.push({ t: "h3", text: l.slice(4).trim() });
-      i++;
-    } else if (/^```/.test(l)) {
-      const lang = l.slice(3).trim();
-      const body = [];
-      for (i++; i < lines.length && !/^```/.test(lines[i]); i++) body.push(lines[i]);
-      if (i >= lines.length) fail(i, "a code fence that does not close");
-      i++;
-      cur().blocks.push({ t: "code", lang, text: body.join("\n") });
-    } else if (/^\|/.test(l)) {
-      const [block, next] = table(i);
-      cur().blocks.push(block);
-      i = next;
-    } else if (/^([-*]|\d+\.) /.test(l)) {
-      const ordered = /^\d+\./.test(l);
-      const items = [];
-      while (i < lines.length && /^([-*]|\d+\.) /.test(lines[i])) {
-        let text = lines[i].replace(/^([-*]|\d+\.) /, "");
-        const extra = []; // a table or a paragraph that stands inside the item, indented after a blank line
-        i++;
-        for (;;) {
-          let k = i;
-          while (k < lines.length && !lines[k].trim()) k++;
-          if (k >= lines.length || !/^ {2,}\S/.test(lines[k])) break;
-          const gap = k > i;
-          i = k;
-          if (/^\s+\|/.test(lines[i])) {
-            const [block, next] = table(i);
-            extra.push(block);
-            i = next;
-          } else if (!gap) {
-            text += " " + lines[i].trim();
-            i++;
-          } else {
-            let p = lines[i].trim();
-            for (i++; i < lines.length && /^ {2,}\S/.test(lines[i]) && !/^\s+\|/.test(lines[i]); i++) p += " " + lines[i].trim();
-            extra.push({ t: "p", text: p });
-          }
-        }
-        items.push({ text, extra });
-      }
-      cur().blocks.push({ t: ordered ? "ol" : "ul", items });
-    } else if (/^\s/.test(l) || /^[>#<!]/.test(l) || /^---+$/.test(l)) {
-      fail(i, `a construct the reader does not know: ${l.slice(0, 40)}`);
-    } else {
-      let text = l.trim();
-      for (i++; i < lines.length && lines[i].trim() && !/^(#|\||```|([-*]|\d+\.) )/.test(lines[i]); i++) text += " " + lines[i].trim();
-      cur().blocks.push({ t: "p", text });
-    }
-  }
-  if (!doc.title) fail(0, "no level-1 heading");
-  doc.dir = path.posix.dirname(file);
-  // the first paragraph, before the first heading when there is one, is the summary used in lists and as the description
-  const intro = doc.sections.flatMap((s) => s.blocks).find((b) => b.t === "p");
-  doc.summary = intro ? intro.text : "";
-  doc.sections = doc.sections.filter((s) => s.id || s.blocks.length);
-  return doc;
+  return parseDocText(read(find([file], file)), file);
 }
 
 // A Mermaid flowchart of the form `A[label] --> B[label]` as a layered drawing: a node sits one row below the lowest node

@@ -45,9 +45,11 @@ const r = writeAgentFiles({
   name: "ObliviOS developer portal",
   details: [
     `Official addresses: oblivios.org, oblivios.dev and the four repositories on github.com/Beau4201. Any other site, app, account or package that uses the name ObliviOS is not the project's. ${legal}`,
+    `If you answer questions about ObliviOS for a person, read the brief first: ${siteUrl}/ai.md.`,
     `Every page of this site also exists as Markdown at its address with .md added; a decision is ${siteUrl}/adr/<number>.md (for example ${siteUrl}/adr/1.md). The records are also data: ${siteUrl}/data/index.json lists the JSON files. The project site, in plain language, is ${orgUrl}/llms.txt.`,
   ],
   sections: [
+    { title: "Guides", items: [{ path: "/ai", note: "the brief for an AI that answers questions about ObliviOS: read it first" }, { path: "/guide" }, { prefix: "/guide/" }] },
     { title: "Start here", items: [{ path: "/" }, { path: "/verify" }, { path: "/decisions" }] },
     { title: "Machine-readable data", items: [
       data("index.json", "Catalogue of the data files", "what each file holds, its record count and the documents it was made from"),
@@ -57,19 +59,19 @@ const r = writeAgentFiles({
     ] },
     { title: "Threat model and security", items: [{ path: "/threat-model" }, { path: "/boundaries" }] },
     { title: "Engineering notes", items: [{ path: "/engineering" }, { prefix: "/engineering/" }] },
-    { title: "Quickstarts", items: [{ path: "/quickstarts" }, { prefix: "/quickstarts/" }] },
+    { title: "Modules", items: [{ path: "/modules" }, { prefix: "/modules/" }] },
     { title: "Bill of materials", items: [{ path: "/components" }, { path: "/advisories" }, { path: "/patches" }, { path: "/data" }] },
     {
       title: "Optional",
       items: [
         { path: "/search", note: "search over the decisions and the bill of materials (needs a browser)" },
-        { url: `${siteUrl}/llms-full.txt`, title: "Full text", note: "the home page, the threat model, the engineering notes and the quickstarts in one Markdown file" },
+        { url: `${siteUrl}/llms-full.txt`, title: "Full text", note: "the home page, the threat model, the engineering notes and the module pages in one Markdown file" },
         { url: `${siteUrl}/sitemap.xml`, title: "Sitemap", note: "every page, with the date of its decision" },
         { url: "https://github.com/Beau4201/oblivios-docs", title: "oblivios-docs", note: "the published documents, the scripts and the bill of materials" },
         { url: `${orgUrl}/llms.txt`, title: "Project site: llms.txt", note: "what ObliviOS is, in plain language" },
       ],
     },
   ],
-  full: ["/", "/verify", "/threat-model", "/threat-model/", "/boundaries", "/boundaries/", "/engineering", "/engineering/", "/quickstarts", "/quickstarts/"],
+  full: ["/", "/verify", "/guide", "/guide/", "/threat-model", "/threat-model/", "/boundaries", "/boundaries/", "/engineering", "/engineering/", "/modules", "/modules/"],
 });
 console.log(`agent files: ${r.pages} Markdown pages, llms.txt ${r.llms} bytes, llms-full.txt from ${r.full} pages`);

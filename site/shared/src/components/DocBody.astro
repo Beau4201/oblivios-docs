@@ -1,0 +1,44 @@
+---
+// The blocks of a short Markdown document as plain markup: paragraphs, third-level headings, lists (with the blocks that follow an
+// item), code and two-column tables as definition lists. Used for the agent brief on oblivios.org, which has no document reader of
+// its own. A block it does not draw fails the build and names the file: nothing is dropped without a message.
+import { inline } from "../lib/doc.mjs";
+import DocBody from "./DocBody.astro";
+
+interface Props {
+  blocks: any[];
+  file: string;
+  // a link to a repository path that a site of ours shows as a page: the address of that page, or null for the file on GitHub
+  local?: (p: string, fragment?: string) => string | null;
+  // the folder of the document, to which its relative links are relative
+  from?: string;
+}
+const { blocks, file, local, from = "docs/guides" } = Astro.props;
+const md = (t: string) => inline(t, { from, local });
+for (const b of blocks) {
+  if (!["p", "h3", "ul", "ol", "code"].includes(b.t) && !(b.t === "table" && b.head.length === 2)) {
+    throw new Error(`${file}: DocBody does not draw a block of kind ${b.t}`);
+  }
+}
+---
+{blocks.map((b) => {
+  if (b.t === "p") return <p set:html={md(b.text)} />;
+  if (b.t === "h3") return <h3 set:html={md(b.text)} />;
+  if (b.t === "code") return <pre tabindex="0"><code>{b.text}</code></pre>;
+  if (b.t === "table") return (
+    <dl>
+      {b.rows.map((r) => (<><dt set:html={md(r[0])} /><dd set:html={md(r[1])} /></>))}
+    </dl>
+  );
+  const List = b.t === "ol" ? "ol" : "ul";
+  return (
+    <List>
+      {b.items.map((i) => (
+        <li>
+          <Fragment set:html={md(i.text)} />
+          {i.extra?.length > 0 && <DocBody blocks={i.extra} file={file} local={local} from={from} />}
+        </li>
+      ))}
+    </List>
+  );
+})}

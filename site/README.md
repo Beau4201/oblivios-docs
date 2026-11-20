@@ -38,7 +38,7 @@ npm run serve -w org -- --port 8124 --review
 
 ## The developer portal (`dev/`)
 
-`oblivios.dev` is built the same way and from the same lockfile: the decision log with a page for every entry (`/adr/<n>`), the threat model in four parts and the capability boundaries, the engineering notes (a page each) and three quickstarts, a search over all of it, and the bill of materials as five pages under Components. Every fact is read at build time from `docs/governance/decision-log.md`, the published documents named in `dev/src/lib/documents.mjs`, `sbom/oblivios.cdx.json`, `sbom/files.sha256` and `SECURITY.md`; where the repository has no `sbom/` (the private repository), the build needs it:
+`oblivios.dev` is built the same way and from the same lockfile: the decision log with a page for every entry (`/adr/<n>`), the threat model in four parts and the capability boundaries, the engineering notes (a page each), three module pages, the guides of `docs/guides/` at `/guide` (the build guide as one page per chapter under `/guide/build`, one part for each `##` heading, and `check-build.mjs` fails when a section is on no page or on two), a search over all of it, and the bill of materials as five pages under Components. Every fact is read at build time from `docs/governance/decision-log.md`, the published documents named in `dev/src/lib/documents.mjs`, `sbom/oblivios.cdx.json`, `sbom/files.sha256` and `SECURITY.md`; where the repository has no `sbom/` (the private repository), the build needs it:
 
 ```bash
 SBOM_DIR=../oblivios-docs/sbom npm run build -w dev     # build, then dev/scripts/check-build.mjs

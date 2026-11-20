@@ -143,6 +143,7 @@ export const robotsTxt = (siteUrl) =>
   [
     "# Everything on this site is public. Search engines and AI agents are welcome.",
     `# ${siteUrl}/llms.txt is the index for agents; every page also exists as Markdown at its address with .md added.`,
+    `# ${siteUrl}/ai.md is a short brief for an AI that answers questions about the project: read it first.`,
     "",
     "User-agent: *",
     "Content-Signal: search=yes, ai-input=yes, ai-train=yes",
@@ -180,7 +181,7 @@ export function writeAgentFiles({ dist, siteUrl, name, details = [], sections, f
     let description = own?.description ?? decode(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? "");
     const lede = md.split("\n\n").slice(1).find((b) => /^[A-Z0-9]/.test(b) && !b.includes("\n"));
     if (description.endsWith("…") && lede) description = lede.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").match(/^.{40,300}?[.!?](?=\s|$)|^.{1,300}/)[0];
-    const head = `> ${oneLine(description)}\n> Source: ${siteUrl}${p === "/" ? "/" : p} · Index for agents: ${siteUrl}/llms.txt`;
+    const head = `> ${oneLine(description)}\n> Source: ${siteUrl}${p === "/" ? "/" : p} · Index for agents: ${siteUrl}/llms.txt · Brief for agents: ${siteUrl}/ai.md`;
     md = /^# .*\n/.test(md) ? md.replace(/^(# .*)\n/, `$1\n\n${head}\n`) : `${head}\n\n${md}`;
     const out = path.join(dist, mdOf(p).slice(1));
     fs.mkdirSync(path.dirname(out), { recursive: true });

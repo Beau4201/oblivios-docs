@@ -1,4 +1,4 @@
-# airpods-core quickstart
+# airpods-core module
 
 airpods-core is the platform-independent logic for AirPods support, written in Java: the codec for the AirPods control messages (`AapCodec`), the validated settings and states, and the state machine that the platform integration drives. Its prebuilt `airpods-core.jar` is committed in `oblivios-platform`. This page says what the module is, what it is not, and how to build and test it; the README of the module in `oblivios-services` holds its provenance.
 

@@ -1,0 +1,16 @@
+---
+import DocPage from "../../layouts/DocPage.astro";
+import { modules } from "../../lib/documents.mjs";
+
+export function getStaticPaths() {
+  return modules.map((q) => ({ params: { slug: q.slug }, props: { entry: q } }));
+}
+const { entry } = Astro.props;
+---
+<DocPage
+  entry={entry}
+  crumbs={[{ label: "Home", href: "/" }, { label: "Modules", href: "/modules" }, { label: entry.label }]}
+  current="/modules"
+  print="term"
+  printLabel="A terminal window"
+/>

@@ -4,6 +4,7 @@
 // (ADR-268), and in a Vercel build the page-view counter of Vercel Web Analytics besides. That file may fetch /search-index.json and nothing else, and uses no storage, cookie or dynamic code.
 import fs from "node:fs";
 import path from "node:path";
+import { parseDoc } from "../src/lib/documents.mjs";
 
 const dist = path.resolve("dist");
 const budget = JSON.parse(fs.readFileSync("budget.json", "utf8"));
@@ -29,6 +30,19 @@ for (const f of ["index.html", "404.html", "decisions.html", "search.html", "com
   "manifest.webmanifest", "social-preview.png", "browse.js", "search-index.json"]) {
   if (!files.includes(f)) fail(`missing: ${f}`);
 }
+// the guides (ADR-284): a page for each, and the build guide as one page per chapter (ADR-285)
+for (const f of ["ai.html", "ai.md", "guide.html", "guide/start.html", "guide/build.html", "guide/review.html", "guide/build/get-the-source.html"]) {
+  if (!files.includes(f)) fail(`missing: ${f}`);
+}
+// every section of the build guide is shown on exactly one built page: a section that no part lists is dropped without a message
+{
+  const doc = parseDoc("docs/guides/build.md");
+  const chapters = pages.filter((f) => f === "guide/build.html" || f.startsWith("guide/build/"));
+  for (const s of doc.sections.filter((x) => x.id)) {
+    const on = chapters.filter((f) => text(f).includes(`<section class="sec" id="${s.id}">`));
+    if (on.length !== 1) fail(`guide/build: the section "${s.title}" is on ${on.length} pages, not one`);
+  }
+}
 const adrPages = pages.filter((f) => /^adr\/\d+\.html$/.test(f));
 const logText = fs.readFileSync(path.resolve("../../docs/governance/decision-log.md"), "utf8");
 const rows = logText.split("\n").filter((l) => /^\| ADR-\d+ \| /.test(l)).length;
@@ -40,8 +54,8 @@ for (const f of files) {
   if (/\.(mjs|map)$/.test(f)) fail(`${f}: a module or source map is shipped`);
   if (f.endsWith(".js") && f !== "browse.js") fail(`${f}: a script other than browse.js is shipped`);
 }
-// the pages that show a record or a document as it is written: a decision, an engineering note, a quickstart, the threat model
-const DOCUMENT = /^(adr|engineering|quickstarts)\/|^(threat-model|boundaries)\.html$|^llms-full\.txt$/;
+// the pages that show a record or a document as it is written: a decision, an engineering note, the module pages, the threat model
+const DOCUMENT = /^(adr|engineering|modules|guide)\/|^(threat-model|boundaries)\.html$|^llms-full\.txt$/;
 const asset = /\.(html|css|svg|webmanifest|txt|xml|js)$/;
 for (const f of files.filter((x) => asset.test(x))) {
   const t = text(f);
@@ -160,6 +174,18 @@ for (const f of pages) {
   }
   const llms = files.includes("llms.txt") ? text("llms.txt") : "";
   if (!/^# .+\n\n> .+\n/.test(llms)) fail("llms.txt: no name and summary");
+  // the brief for AI agents (ADR-284) is announced by metadata on every page, never by a visible link
+  const BRIEF = `${ORIGIN}/ai.md`;
+  for (const f of real) if (!text(f).includes('<link rel="describedby" type="text/markdown" href="/ai.md"')) fail(`${f}: no describedby link to the brief`);
+  for (const f of mds.filter((x) => x !== "ai.md")) if (!text(f).includes(`Brief for agents: ${BRIEF}`)) fail(`${f}: no line that names the brief`);
+  if (llms.match(/^- \[[^\]]*\]\(([^)]*)\)/m)?.[1] !== BRIEF) fail("llms.txt: the first page listed is not the brief");
+  if (!files.includes("robots.txt") || !text("robots.txt").includes("/ai.md")) fail("robots.txt does not name the brief");
+  // the copy button: the page holds the prompt once, in a pre, and the twin keeps it although the converter drops the button
+  for (const f of ["guide.html", "ai.html"]) if (!text(f).includes("data-ai-copy")) fail(`${f}: no copy button for the brief`);
+  if (!text("browse.js").includes("navigator.clipboard.writeText")) fail("browse.js: no copy of the prompt to the clipboard");
+  if (!text("ai.md").includes("Read https://oblivios.dev/ai.md first")) fail("ai.md: the prompt for a person's own AI is not in the twin");
+  const link = JSON.parse(fs.readFileSync("vercel.json", "utf8")).headers.flatMap((h) => h.headers).find((h) => h.key === "Link");
+  if (!link || !/rel="describedby"/.test(link.value) || !link.value.includes("</ai.md>")) fail("vercel.json: no Link header that points at the brief");
   for (const m of llms.matchAll(/\]\((https:\/\/oblivios\.dev\/[^)#]*)\)/g)) {
     const p = new URL(m[1]).pathname;
     if (!target(p)) fail(`llms.txt: ${m[1]} is not in the build`);

@@ -20,12 +20,12 @@ const kb = (f) => fs.statSync(path.join(dist, f)).size / 1024;
 
 // ---- W-6: the files every site has
 const pages = files.filter((f) => f.endsWith(".html"));
-for (const f of ["index.html", "404.html", "what-it-does.html", "verify.html", "devices.html", "status.html", "faq.html", "contact.html", "security.html", "privacy.html", "trademark.html",
+for (const f of ["index.html", "404.html", "what-it-does.html", "verify.html", "devices.html", "status.html", "faq.html", "contact.html", "security.html", "privacy.html", "trademark.html", "ai.html", "ai.md",
   "robots.txt", "sitemap.xml", ".well-known/security.txt", "security-contact.asc", "licenses.txt", "favicon.ico", "favicon.svg", "apple-touch-icon.png",
   "manifest.webmanifest", "social-preview.png"]) {
   if (!files.includes(f)) fail(`missing: ${f}`);
 }
-if (pages.length !== 11) fail(`${pages.length} html pages, 11 expected (ten pages and the 404)`);
+if (pages.length !== 12) fail(`${pages.length} html pages, 12 expected (ten pages, the brief for AI agents and the 404)`);
 
 // ---- privacy rules: no script, no review layer, no inline style, no data: URI, no other origin, no storage
 for (const f of files) {
@@ -119,6 +119,14 @@ for (const f of pages) {
   }
   const llms = files.includes("llms.txt") ? text("llms.txt") : "";
   if (!/^# .+\n\n> .+\n/.test(llms)) fail("llms.txt: no name and summary");
+  // the brief for AI agents (ADR-284) is announced by metadata on every page, never by a visible link
+  const BRIEF = "https://oblivios.org/ai.md";
+  for (const f of real) if (!text(f).includes('<link rel="describedby" type="text/markdown" href="/ai.md"')) fail(`${f}: no describedby link to the brief`);
+  for (const f of mds.filter((x) => x !== "ai.md")) if (!text(f).includes(`Brief for agents: ${BRIEF}`)) fail(`${f}: no line that names the brief`);
+  if (llms.match(/^- \[[^\]]*\]\(([^)]*)\)/m)?.[1] !== BRIEF) fail("llms.txt: the first page listed is not the brief");
+  if (!files.includes("robots.txt") || !text("robots.txt").includes("/ai.md")) fail("robots.txt does not name the brief");
+  const link = JSON.parse(fs.readFileSync("vercel.json", "utf8")).headers.flatMap((h) => h.headers).find((h) => h.key === "Link");
+  if (!link || !/rel="describedby"/.test(link.value) || !link.value.includes("</ai.md>")) fail("vercel.json: no Link header that points at the brief");
   for (const m of llms.matchAll(/\]\((https:\/\/oblivios\.org\/[^)#]*)\)/g)) {
     const p = new URL(m[1]).pathname;
     if (!target(p)) fail(`llms.txt: ${m[1]} is not in the build`);

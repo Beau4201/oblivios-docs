@@ -1,0 +1,64 @@
+---
+// The brief for AI agents (ADR-284): docs/guides/ai.md as a page, so that an AI that a visitor asks reads one short page that says
+// what the project is, where each kind of fact lives and how to answer without inventing. It is found by metadata and by the
+// Markdown twin, and no visible link leads to it.
+import fs from "node:fs";
+import path from "node:path";
+import Page from "../layouts/Page.astro";
+import PageHeader from "@oblivios/site-shared/components/PageHeader.astro";
+import Print from "@oblivios/site-shared/components/Print.astro";
+import DocBody from "@oblivios/site-shared/components/DocBody.astro";
+import { parseDocText, plain } from "@oblivios/site-shared/lib/doc.mjs";
+import { ROOT } from "../lib/records.mjs";
+import { sources } from "../lib/site.mjs";
+
+const file = "docs/guides/ai.md";
+const doc = parseDocText(fs.readFileSync(path.join(ROOT, file), "utf8"), file);
+const summary = plain(doc.summary);
+const lede = summary.match(/^(.+?[.!?])(\s|$)/)?.[1] ?? summary;
+// the header says the first sentence; the text before the first heading says the rest, so the page does not say it twice
+const intro = doc.sections[0].blocks;
+if (intro[0]?.t === "p" && plain(intro[0].text).startsWith(lede)) {
+  const rest = intro[0].text.slice(intro[0].text.indexOf(lede.slice(-12)) + 12).trim();
+  if (rest) intro[0].text = rest;
+  else intro.shift();
+}
+// a repository path that oblivios.dev shows as a page is linked there; any other is a file on GitHub (docHref)
+const portal = "https://oblivios.dev";
+const local = (p: string) => {
+  const g = p.match(/^docs\/guides\/(start|build|review)\.md$/);
+  if (g) return `${portal}/guide/${g[1]}`;
+  if (p === file) return "/ai";
+  if (p === "docs/security/threat-model.md") return `${portal}/threat-model`;
+  if (p === "docs/security/capability-boundaries.md") return `${portal}/boundaries`;
+  const n = p.match(/^docs\/architecture\/(.+)-engineering-notes\.md$/);
+  if (n) return `${portal}/engineering/${n[1]}`;
+  const m = p.match(/^docs\/modules\/(.+)\.md$/);
+  if (m) return `${portal}/modules/${m[1]}`;
+  if (p === "docs/governance/decision-log.md") return `${portal}/decisions`;
+  return null;
+};
+
+sources("ai", [file, "Every answer of the brief links to the page that holds the fact; the brief states none of its own."]);
+---
+<Page
+  title="Brief for AI agents: ObliviOS"
+  description={lede.slice(0, 158)}
+  path="/ai"
+>
+  <PageHeader crumb="Brief for AI agents" title="Brief for AI agents" lede={lede}>
+    <Print id="p7" label="Four cells with a different shape in each" />
+  </PageHeader>
+  <section class="band">
+    <div class="c">
+      <div class="prose">
+        {doc.sections.map((s) => (
+          <>
+            {s.title && <h2>{s.title}</h2>}
+            <DocBody blocks={s.blocks} file={file} local={local} />
+          </>
+        ))}
+      </div>
+    </div>
+  </section>
+</Page>

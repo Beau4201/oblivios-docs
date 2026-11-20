@@ -1,0 +1,15 @@
+---
+import DocPage from "../layouts/DocPage.astro";
+import AiCopy from "../components/AiCopy.astro";
+import { brief } from "../lib/documents.mjs";
+---
+<DocPage
+  entry={brief}
+  crumbs={[{ label: "Home", href: "/" }, { label: brief.label }]}
+  current="/ai"
+  print="desk"
+  printLabel="A writing desk"
+>
+  <p>To have your own AI use this brief, give it this text.</p>
+  <AiCopy />
+</DocPage>

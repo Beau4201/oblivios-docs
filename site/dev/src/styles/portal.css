@@ -1405,6 +1405,24 @@ mark {
 .adr .prose pre {
   overflow-wrap: normal;
 }
+/* the prompt for a person's own AI and its copy button: the prompt wraps inside its box */
+.aicopy {
+  margin: 28px 0;
+}
+.aicopy pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.aicopy [hidden] {
+  display: none;
+}
+.aicopy .btn {
+  margin-top: 14px;
+}
+.aicopy p[role="status"] {
+  margin: 10px 0 0;
+  font: 500 15px / 1.4 var(--sans);
+}
 /* auto side margins make a grid item shrink to its content, so a long line (a pre) widens it past the track; the track centres it */
 .adr .prose {
   margin-left: 0;
@@ -1467,7 +1485,7 @@ mark {
 .cases .dfacts dd {
   font-size: clamp(15.5px, 1.1vw, 17px);
 }
-/* a list of documents named in the margin (engineering notes, quickstarts) */
+/* a list of documents named in the margin (engineering notes, modules) */
 .en.named .id {
   font-size: clamp(19px, 1.7vw, 24px);
   line-height: 1.15;

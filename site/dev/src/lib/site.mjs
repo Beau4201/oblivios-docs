@@ -3,14 +3,16 @@
 export const siteUrl = "https://oblivios.dev";
 export const orgUrl = "https://oblivios.org";
 // The documents of the published repository, where the "Read from" line of a page points (ADR-268).
-export const docsBlob = "https://github.com/Beau4201/oblivios-docs/blob/main/";
+export { docsBlob } from "@oblivios/site-shared/lib/doc.mjs";
 
 export const pages = [
+  // learn, then understand the design, then look things up
+  { label: "Guide", href: "/guide" },
+  { label: "Modules", href: "/modules" },
+  { label: "Engineering", href: "/engineering" },
+  { label: "Threat model", href: "/threat-model" },
   { label: "Decisions", href: "/decisions" },
   { label: "Components", href: "/components" },
-  { label: "Threat model", href: "/threat-model" },
-  { label: "Engineering", href: "/engineering" },
-  { label: "Quickstarts", href: "/quickstarts" },
   { label: "Search", href: "/search" },
 ];
 export const footPages = pages;

@@ -606,6 +606,29 @@
     update();
   })();
 
+  // ---- the copy button of the guide and the brief: the prompt is in the page, once, in a pre, and the button copies that text
+  (function aiCopy() {
+    const box = $("[data-ai-copy]");
+    if (!box) return;
+    const pre = $("pre", box);
+    const btn = $("button", box);
+    const msg = $("p", box);
+    const say = (t) => {
+      msg.textContent = t;
+      msg.hidden = false;
+    };
+    const fail = () => say("Could not copy. Select the text above and copy it.");
+    btn.hidden = false;
+    btn.addEventListener("click", () => {
+      try {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) return fail();
+        navigator.clipboard.writeText(pre.textContent).then(() => say("Copied."), fail);
+      } catch (e) {
+        fail();
+      }
+    });
+  })();
+
   // ---- the tabs under a page header: on a phone the row scrolls sideways, so the current tab is brought into view
   (function tabs() {
     const row = $(".subnav .c");

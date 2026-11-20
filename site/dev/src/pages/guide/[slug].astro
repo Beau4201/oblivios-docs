@@ -1,0 +1,17 @@
+---
+import DocPage from "../../layouts/DocPage.astro";
+import { guides } from "../../lib/documents.mjs";
+
+// the build guide is one page per chapter and has pages of its own (build/[...page].astro)
+export function getStaticPaths() {
+  return guides.filter((g) => !g.parts).map((g) => ({ params: { slug: g.slug }, props: { entry: g } }));
+}
+const { entry } = Astro.props;
+---
+<DocPage
+  entry={entry}
+  crumbs={[{ label: "Home", href: "/" }, { label: "Guide", href: "/guide" }, { label: entry.label }]}
+  current="/guide"
+  print="desk"
+  printLabel="A writing desk"
+/>

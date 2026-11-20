@@ -1,4 +1,4 @@
-# exit-daemon quickstart
+# exit-daemon module
 
 exit-daemon builds `exitd`, the exit daemon of Compartments (ADR-184, ADR-178, ADR-186): a Rust process that reads the packets of the apps that the platform steers into its tun interface, answers the DNS of masked apps, and carries the connections of apps set to Tor on each app's own Tor circuit family. The same binary, started with `--routes`, is the route helper that writes the rules that steer packets into the tun and nothing else. This page says what the crate is, what it is not, and how it is built and tested; the README of the crate in `oblivios-services` holds the detail and the known gaps.
 

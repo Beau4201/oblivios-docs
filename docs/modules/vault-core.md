@@ -1,4 +1,4 @@
-# vault-core quickstart
+# vault-core module
 
 vault-core is the Rust core of the ObliviOS Passwords app (ADR-185): the sealed vault file, the key wrappers, the domain index, the checkup and the export file. The Kotlin app in `oblivios-platform` reaches it through one JNI module, and the prebuilt `libvault_core.so` there is built from this crate. This page says what the crate is, what it is not, and how it is built and tested; the README of the crate in `oblivios-services` holds the detail.
 

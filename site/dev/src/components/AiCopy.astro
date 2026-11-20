@@ -1,0 +1,10 @@
+---
+// The prompt that a person gives to their own AI (ADR-284), and the button that copies it. The prompt is written once, in the
+// `pre`; browse.js un-hides the button and reads the text from there. Without the script the text is still on the page, and it is
+// in the Markdown twin too (the converter drops the button and the hidden status line).
+---
+<div class="aicopy" data-ai-copy>
+  <pre tabindex="0">Read https://oblivios.dev/ai.md first, then answer my questions about ObliviOS only from it and the pages it links. Cite the page for every fact. Say "not measured" or "not supported" where the records do.</pre>
+  <button type="button" class="btn" hidden>Copy for your AI</button>
+  <p role="status" hidden></p>
+</div>

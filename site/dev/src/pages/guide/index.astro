@@ -1,0 +1,40 @@
+---
+import Page from "../../layouts/Page.astro";
+import Ph from "../../components/Ph.astro";
+import AiCopy from "../../components/AiCopy.astro";
+import { guides, parseDoc } from "../../lib/documents.mjs";
+
+const list = guides.map((g) => ({ ...g, title: parseDoc(g.file).title }));
+---
+<Page
+  title="Guide | ObliviOS developer portal"
+  description="Three guides for three readers: understand ObliviOS, build it, or check it, each ending with where to go next."
+  path="/guide"
+  current="/guide"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Guide" }]}
+    title="Guide"
+    lede="Three guides for three readers: one to understand ObliviOS, one to build it and take it further, and one to check it instead of trusting it."
+    print="desk"
+    printLabel="A writing desk"
+  />
+  <section class="band">
+    <div class="c">
+      <ol class="entries">
+        {list.map((g) => (
+          <li class="en named">
+            <div class="id">{g.kind}</div>
+            <div>
+              <h3 aria-level="2"><a href={g.href}>{g.title}</a></h3>
+              <p>{g.who}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <h2 class="aih">Ask your own AI</h2>
+      <p>If you would rather ask your own AI assistant than read the guides, give it this text. It reads the brief, which says where each fact lives and how to answer without inventing anything.</p>
+      <AiCopy />
+    </div>
+  </section>
+</Page>
