@@ -188,13 +188,13 @@ git -C <scratch>/wt am <the patches of that project, oldest author date first>
 git -C <scratch>/wt rev-parse 'HEAD^{tree}'
 ```
 
-`git am` applied plain in `build/release` (1 patch), `system/sepolicy` (18 patches) and `packages/apps/Settings` (19 patches), and the tree it made is the tree of the branch that the images of the build host are built from. In `frameworks/base` (68 patches) plain `git am` stopped on one patch, as it does on the build host, and `git am -C1` applied all 68: one hunk needs its context reduced. If `git am` stops, run `git am --abort` and run it again with `-C1` from a clean copy.
+`git am` applied plain in `build/release` (1 patch), `system/sepolicy` (18 patches) and `packages/apps/Settings` (19 patches), and the tree it made is the tree of the branch that the images of the build host are built from. `packages/apps/Updater` (1 patch) applied too, and its tree differs from the branch only by the update address, which is intended: the published patch holds a placeholder (see [Make it yours](build.md#make-it-yours)). In `frameworks/base` (68 patches) plain `git am` stopped on one patch, as it does on the build host, and `git am -C1` applied all 68: one hunk needs its context reduced. If `git am` stops, run `git am --abort` and run it again with `-C1` from a clean copy.
 
 `git am` did not ask for a committer identity on the build host, which has none configured. Some machines refuse without one, with `unable to auto-detect email address`; if yours does, set `GIT_COMMITTER_NAME` and `GIT_COMMITTER_EMAIL` in the environment for that command, not in a configuration file. The patch files themselves are never edited; if one does not apply, you fix it by landing a new commit and exporting again ([CONTRIBUTING](https://github.com/Beau4201/oblivios-platform/blob/main/CONTRIBUTING.md)).
 
 **What the check found.** On 2026-11-20 the published patches were applied in that way, project by project, and the tree was compared with the branch the images are built from. `git am` applied in every project tried, `frameworks/base` only with `-C1`. The tree equals the build branch in some projects and differs in others, `frameworks/base` among them even with `-C1`; which ones is listed in the [notes on the build guide](../architecture/site-engineering-notes.md). That list is what is missing from the published source. Until the packages are exported again, a build from them is not my image `[measured: 2026-11-20, fresh sync in a scratch directory, git am and tree comparison]`.
 
-**The files that are not patches.** The apps, the prebuilt binaries and the data files of a package go into the tree as their own directory, `vendor/oblivios/<name>/`. On the build host that directory holds `airpods`, `compartments-data`, `datamap`, `exit` and `passwords`, and below them directories that carry the names of the package folders (`app`, `core`, `daemon`). The [exit package README](https://github.com/Beau4201/oblivios-platform/blob/main/privacy/exit/README.md) names the target of each of its folders. The published repository has no script that does the copying, so the exact copy for the other packages is `assumption`: you read each package README and match the names. Two package folders were compared file by file with the build host (the exit daemon and the Rust core of the Passwords vault): the files match except the prebuilt `exitd`, whose hash is not the one the build host installs, and the record and licence files, which the build host does not hold or holds in another version. Four more folders (the exit app, the Passwords app, the AirPods app and the AirPods core) have another folder hash than the build host and the cause was not read `[measured: 2026-11-20, file hashes, read-only]`. The next chapter says what that means.
+**The files that are not patches.** The apps, the prebuilt binaries and the data files of a package go into the tree as their own directory, `vendor/oblivios/<name>/`. On the build host that directory holds `airpods`, `compartments-data`, `datamap`, `exit` and `passwords` (and `guardian`, a leftover: the project removed Guardian from the sources in [ADR-240](../governance/decision-log.md), and the package check refuses it in an image, so do not copy one), and below them directories that carry the names of the package folders (`app`, `core`, `daemon`). The [exit package README](https://github.com/Beau4201/oblivios-platform/blob/main/privacy/exit/README.md) names the target of each of its folders. The published repository has no script that does the copying, so the exact copy for the other packages is `assumption`: you read each package README and match the names. Two package folders were compared file by file with the build host (the exit daemon and the Rust core of the Passwords vault): the files match except the prebuilt `exitd`, whose hash is not the one the build host installs, and the record and licence files, which the build host does not hold or holds in another version. Four more folders (the exit app, the Passwords app, the AirPods app and the AirPods core) have another folder hash than the build host and the cause was not read `[measured: 2026-11-20, file hashes, read-only]`. The next chapter says what that means.
 
 **After `git am` on `vendor/adevtool`,** the build refuses to start, because a pin file stores the commit of `vendor/adevtool` and any new commit breaks it. [Vendor files for your device](build.md#vendor-files-for-your-device) fixes that in the same step as the vendor modules.
 
@@ -292,7 +292,7 @@ Not run:
 ```
 export OUT_DIR=out-stallion
 export OFFICIAL_BUILD=true USE_CCACHE=1 CCACHE_EXEC=$(command -v ccache) CCACHE_DIR=<your-ccache-dir>
-export USE_FIXED_TIMESTAMP_IMG_FILES=true BUILD_NUMBER=<your-build-number> BUILD_DATETIME=$(date -u +%s)
+export USE_FIXED_TIMESTAMP_IMG_FILES=true BUILD_NUMBER=<your-build-number> BUILD_DATETIME=$(date +%s)
 source build/envsetup.sh
 lunch stallion-cur-user
 m -j6 -k && m target-files-package otatools-package
@@ -450,7 +450,7 @@ cd <flashset> && pwd && ANDROID_PRODUCT_OUT=$PWD fastboot flashall
 - After a reboot the app data can look missing: that is encrypted storage before the first unlock, not data loss. `ls /data/data | wc -l` still shows the total.
 - A crash count in the dropbox is not a verdict. Read the entry.
 
-Last verified: 2026-11-20 (the flashing notes and the validation rules read; no phone was flashed for this guide, so each step here is `verified-in-source` and none is `measured`).
+Last verified: 2026-11-20 (the flashing notes and the validation rules read, and the hash-list check run on two files; no phone was flashed for this guide, so the steps on the phone are `verified-in-source` and none of them is `measured`).
 
 ## Test
 

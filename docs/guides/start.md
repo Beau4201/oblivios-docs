@@ -1,6 +1,6 @@
 # Start here
 
-This guide is for you if you have just found ObliviOS and want to understand what it is, what it is not and where to look next, without reading the decision log first. After it you can say in two sentences what the project is, name its parts and find the page that answers your next question.
+This guide is for you if you have just found ObliviOS and want to learn about it: what it is, what it is not and where to look next, without reading the decision log first. After it you can say in two sentences what the project is, name its parts and find the page that answers your next question.
 
 **How long this takes.** About 10 minutes to read all of it. The first two chapters take 3 minutes and hold the two facts that matter most: you cannot install ObliviOS from the project, and it is not an official GrapheneOS product. The rest is a map. Read the rows you care about and skip the others; nothing later depends on an earlier row.
 
@@ -20,12 +20,12 @@ You will save time if you know the limits first.
 
 - It is source only. The project publishes source, records and a bill of materials. There is no binary, no image and no update service, and no device is supported. You cannot install it from the project. You can build an image yourself for a Pixel 7a or a Pixel 10a by following [Build with it](build.md); that image is unsupported, it is not audited by anyone, and the published source is not exactly the source of the images I flash. See [Status](https://oblivios.org/status) and the [device support policy](../devices/support-policy.md).
 - It does not claim to be more private or more secure than GrapheneOS. The [threat model](../security/threat-model.md) says what it does not claim to defeat.
-- It needs no account and sends no telemetry.
+- It needs no ObliviOS account and has no mandatory telemetry, no advertising identifier and no cloud dependency. Anything a feature sends elsewhere is a choice you make per app, such as sending an app's traffic through Tor.
 - It is made by one person, me. An issue gets a first reply within three days ([CONTRIBUTING](https://github.com/Beau4201/oblivios-docs/blob/main/CONTRIBUTING.md)); there is no support desk and no release date.
 
 ## The map
 
-The system is split into parts. Each part has a record: decisions (an ADR is one decision), engineering notes or a module page. Read the row that matches your interest. A decision is either accepted or still only proposed, and its page in the decision log says which; [Status](https://oblivios.org/status) says what runs on which phone.
+The system is split into parts. Each part has a record: decisions (an ADR is one decision), engineering notes or a module page. Read the row that matches your interest. A decision is either accepted or still only proposed, and its page in the decision log says which. A feature can already be built and running on the Pixel 7a while its decision is still proposed, so read the status of the decision before you read a row as a promise. [What it does](https://oblivios.org/what-it-does) counts the accepted and the proposed decisions of each part, and [Status](https://oblivios.org/status) says what runs on which phone.
 
 | Part | What it does | Where to read |
 | --- | --- | --- |
@@ -34,7 +34,7 @@ The system is split into parts. Each part has a record: decisions (an ADR is one
 | Atlas | A map and a list of the companies and places your apps talk to (ADR-157). | The [data map notes](../architecture/datamap-engineering-notes.md) |
 | Duress Unlock | A second credential opens a decoy profile instead of yours. | The [Duress Unlock notes](../architecture/duress-engineering-notes.md) |
 | Passwords | A local-only password manager and autofill provider: no sync, no server, no account (ADR-190). | The [vault-core module](../modules/vault-core.md) |
-| Grab detection | Locks the phone at once if it is pulled out of your hand while it is unlocked (ADR-176). | The [grab detection notes](../architecture/grab-detection-engineering-notes.md) |
+| Grab detection | Locks the phone at once if it is pulled out of your hand while it is unlocked, or hit hard. It ships in a shadow mode that only logs, and its thresholds are not tuned on daily use, so it can lock when you did not mean it (ADR-169, ADR-176). | The [grab detection notes](../architecture/grab-detection-engineering-notes.md) |
 | App drawer | Themed icons and a System group that holds every preinstalled app (ADR-141, ADR-142). | The [app drawer notes](../architecture/app-drawer-engineering-notes.md) |
 | Keyboard | A new look and a landscape fix for the on-screen keyboard (ADR-146). | The [keyboard notes](../architecture/keyboard-engineering-notes.md) |
 | AirPods | A Settings page with every control the AirPods expose (ADR-132). | The [AirPods notes](../architecture/airpods-engineering-notes.md) and the [airpods-core module](../modules/airpods-core.md) |
@@ -54,13 +54,13 @@ The documents are authored in a private repository and copied to oblivios-docs b
 
 ## How to read a claim
 
-A claim in the records says what it rests on, with one of three labels, and you should not trust a claim more than its label allows.
+A claim in the records says what it rests on, with one of three labels, and you should not trust a claim more than its label allows. A claim with no label counts as an assumption.
 
 - `measured`: something was run and observed, and the label names the run.
 - `verified-in-source`: it was read in the source, and the label names the path.
 - `assumption`: it has not been checked.
 
-On oblivios.dev the labels are small tags in the text. A claim with no label is my statement, and you are right to ask for the evidence. Where a record says "not run" or "not measured", that is me telling you where to look first.
+On oblivios.dev the labels are small tags in the text. A statement of mine that carries no label is something you are right to ask the evidence for. A few records also mark a fact taken from a public web page with `[web]`; it is not one of the three labels and it proves nothing by itself. Where a record says "not run" or "not measured", that is me telling you where to look first.
 
 ## Check it yourself
 
@@ -93,7 +93,7 @@ You do not have to trust any of this. Each of these starts from a page that name
 
 oblivios.org is the plain-language site: what ObliviOS does, its status, the devices, the FAQ and how to report a security problem. oblivios.dev is the record: the decision log with a page for every entry, the threat model, the engineering notes, the module pages, the bill of materials and a search over all of it.
 
-Everything on oblivios.dev is read from the same repository as the code, so a page cannot drift from the record. When you want the evidence behind a sentence of oblivios.org, look for it on oblivios.dev.
+The facts on oblivios.dev are read from the project's documents when the site is built and are not typed on the pages, so a page does not drift from the record. When you want the evidence behind a sentence of oblivios.org, look for it on oblivios.dev.
 
 ## Where to go next
 
@@ -101,6 +101,7 @@ Everything on oblivios.dev is read from the same repository as the code, so a pa
 - You want to know whether you can use it: [Status](https://oblivios.org/status) and [Devices](https://oblivios.org/devices).
 - You want to know why something was decided: the [decisions](https://oblivios.dev/decisions), searched by number or by word.
 - You want to know what it protects against, and what not: the [threat model](../security/threat-model.md).
+- You want to know what changed and when: the [changelog](https://oblivios.dev/changelog).
 - You want to build it or take it further: [Build with it](build.md).
 - You want to check the claims: the chapter Check it yourself, above, and [Verify](https://oblivios.dev/verify).
 - You want to ask your own AI about all of this: [the brief for AI agents](ai.md).

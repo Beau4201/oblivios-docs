@@ -79,7 +79,7 @@ const buildChapters = [
   ["what-this-guide-does-not-cover", "What this guide does not cover", "The limits of the guide, plainly."],
 ];
 export const guides = [
-  { slug: "start", file: "docs/guides/start.md", label: "Start here", kind: "Understand", who: "You have just found ObliviOS and want to understand what it is and where to look next.", plate: "desk", plateLabel: "An open ledger with a lens over it" },
+  { slug: "start", file: "docs/guides/start.md", label: "Start here", kind: "Learn", who: "You have just found ObliviOS and want to learn about it: what it is and where to look next.", plate: "desk", plateLabel: "An open ledger with a lens over it" },
   {
     slug: "build", file: "docs/guides/build.md", label: "Build with it", kind: "Build", who: "You want to build ObliviOS for a Pixel 7a or a Pixel 10a, or to take it further as a fork.", plate: "term", plateLabel: "A terminal window",
     parts: buildChapters.map(([slug, label, lede], i) => ({ slug: i ? slug : "", label, lede, sections: i ? [slug] : ["", slug] })),
