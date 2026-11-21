@@ -2,6 +2,10 @@
   "about": "One line for every publication of the snapshot: the time of the run (UTC) and what changed. Newest first. tools/docs/sync-site.py adds a line at every publication; the first 49 are the snapshot commits of oblivios-docs before it did.",
   "entries": [
     {
+      "t": "2026-11-21T18:47:46Z",
+      "text": "Duress fix round: theme key measured, stage release, return match and stored picture built (ADR-293)"
+    },
+    {
       "t": "2026-11-21T14:02:05Z",
       "text": "guides: Learn replaces Understand, audit of both guides, home wording"
     },
