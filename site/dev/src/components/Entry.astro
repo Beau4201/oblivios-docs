@@ -4,19 +4,23 @@
 import { plain } from "../lib/md.mjs";
 
 interface Props {
-  d: { n: number; id: string; date: string; title: string; status: { kind: string; label: string }; review: string; parts: string[] };
+  d: { n: number; id: string; date: string; title: string; status: { kind: string; label: string }; review: string; parts: string[]; topic: string; crucial: { why: string } | null };
   // the outline level of the title: 3 under a section heading (the home page), 2 on a page whose title is the h1
   level?: 2 | 3;
 }
 const { d, level = 3 } = Astro.props;
 const review = plain(d.review);
 const short = review.length > 240 ? review.slice(0, 237).replace(/\s+\S*$/, "") + "…" : review;
+// the topic first, then the parts of the system it is also listed under
+const also = d.parts.filter((p) => p !== d.topic);
+const meta = d.topic + (also.length ? ` · also ${also.join(", ")}` : "");
 ---
 <li class="en">
-  <div class="id">{d.id}<small>{d.date}</small><span class={`sx ${d.status.kind}`}>{d.status.label}</span></div>
+  <div class="id"><span class="no">{d.id}</span><small>{d.date}</small><span class={`sx ${d.status.kind}`}>{d.status.label}</span>{d.crucial && <span class="sx key">Crucial</span>}</div>
   <div>
     <h3 aria-level={level}><a href={`/adr/${d.n}`}>{d.title}</a></h3>
+    {d.crucial && <p class="why"><b>Why it is crucial:</b> {d.crucial.why}</p>}
     <p><b>Review when:</b> {short}</p>
-    {d.parts.length > 0 && <p class="meta">{d.parts.join(", ")}</p>}
+    <p class="meta">{meta}</p>
   </div>
 </li>

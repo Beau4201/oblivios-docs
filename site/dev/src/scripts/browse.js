@@ -257,9 +257,10 @@
       const b = window_(d.r, words, 200);
       p = b.count > a.count ? "<p><b>Review when:</b> " + mark(b.text, words) + "</p>" : "<p>" + mark(a.text, words) + "</p>";
     } else p = "<p><b>Review when:</b> " + esc(d.r.length > 240 ? d.r.slice(0, 237) + "…" : d.r) + "</p>";
-    const meta = [d.pt.join(", "), hit.mask && showText ? "Found in " + found(hit.mask) : "", d.c ? "Shown as written: the entry does not have the usual seven columns" : ""].filter(Boolean).join(" · ");
+    const also = d.pt.filter((p) => p !== d.tp);
+    const meta = [d.tp + (also.length ? " · also " + also.join(", ") : ""), hit.mask && showText ? "Found in " + found(hit.mask) : "", d.c ? "Shown as written: the entry does not have the usual seven columns" : ""].filter(Boolean).join(" · ");
     return (
-      '<li class="en"><div class="id">' + esc(d.i) + "<small>" + esc(d.dt) + "</small>" + stamp(d) + '</div><div><h3><a data-hit href="' + href(d) + '">' + mark(d.n, words) + "</a></h3>" + p + (meta ? '<p class="meta">' + esc(meta) + "</p>" : "") + "</div></li>"
+      '<li class="en"><div class="id"><span class="no">' + esc(d.i) + "</span><small>" + esc(d.dt) + "</small>" + stamp(d) + (d.cr ? '<span class="sx key">Crucial</span>' : "") + '</div><div><h3><a data-hit href="' + href(d) + '">' + mark(d.n, words) + "</a></h3>" + (d.cw ? '<p class="why"><b>Why it is crucial:</b> ' + esc(d.cw) + "</p>" : "") + p + (meta ? '<p class="meta">' + esc(meta) + "</p>" : "") + "</div></li>"
     );
   }
   function generalHtml(hit, words) {
@@ -322,8 +323,8 @@
   const SCOPES = {
     decisions: {
       list: "ol, ul",
-      pass: (f) => (d) => d.t === "d" && (!f.st.length || f.st.indexOf(d.st) >= 0) && (!f.pt.length || d.pt.some((p) => f.pt.indexOf(p) >= 0)) && (!f.ev.length || d.ev.some((e) => f.ev.indexOf(e) >= 0)),
-      groups: ["st", "pt", "ev"],
+      pass: (f) => (d) => d.t === "d" && (!f.st.length || f.st.indexOf(d.st) >= 0) && (!f.pt.length || d.pt.some((p) => f.pt.indexOf(p) >= 0)) && (!f.ev.length || d.ev.some((e) => f.ev.indexOf(e) >= 0)) && (!f.tp.length || f.tp.indexOf(d.tp) >= 0) && (!f.cr.length || d.cr === 1),
+      groups: ["st", "pt", "ev", "tp", "cr"],
       html: (h, w, q) => decisionHtml(h, w, q),
     },
     components: {
@@ -424,6 +425,9 @@
       const u = new URL(location.href);
       if (q.trim()) u.searchParams.set("q", q.trim());
       else u.searchParams.delete("q");
+      // the crucial filter of the decision log lives there too (the link of a crucial decision opens the log with it on)
+      if (f.cr && f.cr.length) u.searchParams.set("crucial", "1");
+      else u.searchParams.delete("crucial");
       history.replaceState(null, "", u.pathname + u.search + u.hash);
       if (!active && out) {
         out.innerHTML = saved;
@@ -543,6 +547,10 @@
 
     const start = new URL(location.href).searchParams.get("q");
     if (start && input) input.value = start;
+    if (new URL(location.href).searchParams.get("crucial") === "1") {
+      const cr = $('input[data-filter="cr"]', form);
+      if (cr) cr.checked = true;
+    }
     if (start || !neutral(filters())) run();
     return input;
   }
@@ -644,5 +652,28 @@
     // only when the current tab would be cut off at the right edge: scroll just far enough to show it
     const need = on ? on.offsetLeft + on.offsetWidth + 24 - row.clientWidth : 0;
     if (need > 0) row.scrollLeft = need;
+  })();
+
+  // ---- the changelog: "5 minutes ago" for a time that the page wrote as a date; the date stays beside it (no script: the date alone)
+  (function () {
+    const els = $$("time[data-rel]");
+    if (!els.length) return;
+    const unit = (n, w) => n + " " + w + (n === 1 ? "" : "s") + " ago";
+    function ago(ms) {
+      const m = Math.floor(Math.max(0, ms) / 60000);
+      if (m < 1) return "just now";
+      if (m < 60) return unit(m, "minute");
+      const h = Math.floor(m / 60);
+      if (h < 24) return unit(h, "hour");
+      return unit(Math.floor(h / 24), "day");
+    }
+    function paint() {
+      const now = Date.now();
+      els.forEach((el) => {
+        el.textContent = ago(now - Date.parse(el.getAttribute("datetime"))) + " · " + el.getAttribute("data-abs");
+      });
+    }
+    paint();
+    setInterval(paint, 60000);
   })();
 })();

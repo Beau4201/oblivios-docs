@@ -1,0 +1,205 @@
+{
+  "about": "One line for every publication of the snapshot: the time of the run (UTC) and what changed. Newest first. tools/docs/sync-site.py adds a line at every publication; the first 49 are the snapshot commits of oblivios-docs before it did.",
+  "entries": [
+    {
+      "t": "2026-11-21T03:22:46Z",
+      "text": "portal rework: grouped menu, new home, changelog by day, crucial in the log"
+    },
+    {
+      "t": "2026-11-20T20:32:48Z",
+      "text": "decision log: the guide rework is published"
+    },
+    {
+      "t": "2026-11-20T20:20:31Z",
+      "text": "two guides as plates, icon to copy the prompt, reworked Start here and build guide, Review it withdrawn"
+    },
+    {
+      "t": "2026-11-20T19:42:08Z",
+      "text": "live read of both sites recorded"
+    },
+    {
+      "t": "2026-11-20T19:33:01Z",
+      "text": "guides, agent brief, build guide and copy button"
+    },
+    {
+      "t": "2026-11-20T17:18:11Z",
+      "text": "Duress picture work built and run, ADR-280, secure capture method"
+    },
+    {
+      "t": "2026-11-20T17:17:43Z",
+      "text": "the picture work built and run, ADR-280, the secure capture method"
+    },
+    {
+      "t": "2026-11-20T02:01:00Z",
+      "text": "the live content types of the Markdown and JSON files"
+    },
+    {
+      "t": "2026-11-20T01:58:28Z",
+      "text": "llms.txt, Markdown twins and JSON data for both sites, the AirPods and screen-recording records (ADR-275 to ADR-278)"
+    },
+    {
+      "t": "2026-11-20T01:51:41Z",
+      "text": "the picture work of ADR-274 is landed on the build tree, licence evidence of patch 0002, page budget of oblivios.dev (ADR-279)"
+    },
+    {
+      "t": "2026-11-19T03:16:56Z",
+      "text": "the site notes on the READMEs"
+    },
+    {
+      "t": "2026-11-19T03:15:02Z",
+      "text": "the READMEs of the four repositories link oblivios.dev"
+    },
+    {
+      "t": "2026-11-19T03:11:15Z",
+      "text": "ADR-273, the footer of the portal and the close of the SEO session"
+    },
+    {
+      "t": "2026-11-19T02:55:10Z",
+      "text": "ADR-272, the search-engine face of both sites, analytics and the portal link"
+    },
+    {
+      "t": "2026-11-19T02:35:00Z",
+      "text": "the sync script on the site notes"
+    },
+    {
+      "t": "2026-11-19T02:27:11Z",
+      "text": "ADR-268 to ADR-271, the developer portal oblivios.dev and the three quickstarts"
+    },
+    {
+      "t": "2026-11-18T16:45:08Z",
+      "text": "ADR-267, the settings after the flip"
+    },
+    {
+      "t": "2026-11-18T16:41:48Z",
+      "text": "ADR-266, the builder that audits every file"
+    },
+    {
+      "t": "2026-11-18T16:15:42Z",
+      "text": "ADR-265, the four repositories public"
+    },
+    {
+      "t": "2026-11-18T14:47:02Z",
+      "text": "the cause of the router cache on the site notes"
+    },
+    {
+      "t": "2026-11-18T14:11:03Z",
+      "text": "ADR-264, the community files and the logo in the README"
+    },
+    {
+      "t": "2026-11-18T13:53:31Z",
+      "text": "ADR-263, the code repositories without build-server paths, the icons without timestamps"
+    },
+    {
+      "t": "2026-11-18T13:43:31Z",
+      "text": "the pre-flip scans and the GitHub settings of the repositories"
+    },
+    {
+      "t": "2026-11-18T13:36:44Z",
+      "text": "the DNS reads worded without a resolver address"
+    },
+    {
+      "t": "2026-11-18T13:36:05Z",
+      "text": "the domain, the DNS and the certificate of oblivios.org"
+    },
+    {
+      "t": "2026-11-18T13:25:28Z",
+      "text": "the live check of the headers and of Web Analytics"
+    },
+    {
+      "t": "2026-11-18T13:23:15Z",
+      "text": "ADR-262, the headers, the structured data and the robots meta of the site"
+    },
+    {
+      "t": "2026-11-18T13:03:59Z",
+      "text": "the quality checks of the site build, the body without a minimum width"
+    },
+    {
+      "t": "2026-11-18T03:49:32Z",
+      "text": "the engineering notes of the site, the README line on the decision log"
+    },
+    {
+      "t": "2026-11-18T03:43:13Z",
+      "text": "ADR-261, the security policy, the analytics line of the privacy page"
+    },
+    {
+      "t": "2026-11-18T03:32:48Z",
+      "text": "ADR-260, the corrected statements of the site"
+    },
+    {
+      "t": "2026-11-18T03:25:58Z",
+      "text": "ADR-259, grab detection on the Pixel 10a"
+    },
+    {
+      "t": "2026-11-18T03:20:23Z",
+      "text": "ADR-258, the drawer menu, Devices, Atlas"
+    },
+    {
+      "t": "2026-11-18T03:08:19Z",
+      "text": "ADR-257, the simple menu, the Contact page, no device-state claims"
+    },
+    {
+      "t": "2026-11-18T02:55:40Z",
+      "text": "ADR-256, the new menu and the Devices and Get involved pages"
+    },
+    {
+      "t": "2026-11-18T02:35:46Z",
+      "text": "ADR-255, the assessments of the npm advisories"
+    },
+    {
+      "t": "2026-11-18T02:32:28Z",
+      "text": "ADR-254, site/ and the npm packages of its lockfile in the SBOM"
+    },
+    {
+      "t": "2026-11-17T14:34:03Z",
+      "text": "ADR-249, the licensing rows for the logo and the domains, the SBOM schema sources"
+    },
+    {
+      "t": "2026-11-17T14:11:04Z",
+      "text": "ADR-248 record, SBOM validated against both schemas"
+    },
+    {
+      "t": "2026-11-17T14:07:09Z",
+      "text": "ADR-248 and the new disclosure key, with the SBOM of the new commits"
+    },
+    {
+      "t": "2026-11-17T13:30:24Z",
+      "text": "ADR-247"
+    },
+    {
+      "t": "2026-11-17T13:23:49Z",
+      "text": "new READMEs, with the SBOM of the new commits"
+    },
+    {
+      "t": "2026-11-17T13:13:35Z",
+      "text": "ADR-246"
+    },
+    {
+      "t": "2026-11-17T12:51:07Z",
+      "text": "ADR-245, with the SBOM of the new commits"
+    },
+    {
+      "t": "2026-11-16T14:44:17Z",
+      "text": "ADR-244 coverage note"
+    },
+    {
+      "t": "2026-11-16T14:43:48Z",
+      "text": "ADR-244, with the SBOM and its scripts"
+    },
+    {
+      "t": "2026-11-16T13:22:49Z",
+      "text": "ADR-243"
+    },
+    {
+      "t": "2026-11-16T13:21:11Z",
+      "text": "ADR-242"
+    },
+    {
+      "t": "2026-11-16T13:06:24Z",
+      "text": "triage note of ADR-241"
+    },
+    {
+      "t": "2026-11-16T13:05:19Z",
+      "text": "regenerate the snapshot without Guardian; add ADR-240 and ADR-241"
+    }
+  ]
+}

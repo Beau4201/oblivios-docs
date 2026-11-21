@@ -1,0 +1,54 @@
+---
+import Page from "../../layouts/Page.astro";
+import Ph from "../../components/Ph.astro";
+import { changelog, days, linked, DAYS_PER_PAGE } from "../../lib/changelog.mjs";
+import { fmt } from "../../lib/records.mjs";
+
+export function getStaticPaths({ paginate }) {
+  return paginate(days, { pageSize: DAYS_PER_PAGE });
+}
+const { page } = Astro.props;
+const first = page.currentPage === 1;
+const span = page.data.length > 1 ? `${page.data.at(-1).label} to ${page.data[0].label}` : page.data[0].label;
+---
+<Page
+  title={first ? "Changelog | ObliviOS developer portal" : `Changelog, page ${page.currentPage} | ObliviOS developer portal`}
+  description={`Every publication of the ObliviOS snapshot and what changed, newest first: ${fmt(changelog.length)} so far.`}
+  path={first ? "/changelog" : `/changelog/${page.currentPage}`}
+  current="/changelog"
+>
+  <Ph
+    crumbs={[{ label: "Home", href: "/" }, { label: "Changelog" }]}
+    title="Changelog"
+    lede="Every publication of the snapshot and what changed, by day, newest first. Times are UTC."
+    print="stack"
+    printLabel="A stack of sheets"
+  />
+  <section class="band">
+    <div class="c">
+      <div class="narrow">
+        <p class="fn">Atom feeds: <a href="/feed/changelog.xml">this changelog</a>, <a href="/feed/decisions.xml">the decision log</a> and <a href="/feed/advisories.xml">the advisories</a>.</p>
+        {page.lastPage > 1 && <p class="count">Page {page.currentPage} of {page.lastPage}: {span}</p>}
+        {page.data.map((d) => (
+          <section class="cd" aria-labelledby={`d${d.day}`}>
+            <h2 id={`d${d.day}`}>{d.label}<small>{d.entries.length} {d.entries.length === 1 ? "publication" : "publications"}</small></h2>
+            <ol class="cl">
+              {d.entries.map((e) => (
+                <li id={e.id}>
+                  <time datetime={e.t} data-rel data-abs={e.hm}>{e.hm}</time>
+                  <p set:html={linked(e.text)} />
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))}
+        {page.lastPage > 1 && (
+          <nav class="btns after" aria-label="Pages of the changelog">
+            {page.url.prev !== undefined && <a class="btn ghost" href={page.url.prev || "/changelog"}>Newer days</a>}
+            {page.url.next && <a class="btn ghost" href={page.url.next}>Older days</a>}
+          </nav>
+        )}
+      </div>
+    </div>
+  </section>
+</Page>

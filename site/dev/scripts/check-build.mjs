@@ -25,7 +25,7 @@ const kb = (f) => fs.statSync(path.join(dist, f)).size / 1024;
 
 // ---- W-6: the files every site has
 const pages = files.filter((f) => f.endsWith(".html"));
-for (const f of ["index.html", "404.html", "decisions.html", "search.html", "components.html", "advisories.html", "patches.html", "data.html", "verify.html",
+for (const f of ["index.html", "404.html", "decisions.html", "changelog.html", "feed/decisions.xml", "feed/changelog.xml", "feed/advisories.xml", "search.html", "components.html", "advisories.html", "patches.html", "data.html", "verify.html",
   "robots.txt", "sitemap.xml", ".well-known/security.txt", "security-contact.asc", "favicon.ico", "favicon.svg", "apple-touch-icon.png",
   "manifest.webmanifest", "social-preview.png", "browse.js", "search-index.json"]) {
   if (!files.includes(f)) fail(`missing: ${f}`);

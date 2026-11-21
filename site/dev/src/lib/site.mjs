@@ -5,17 +5,48 @@ export const orgUrl = "https://oblivios.org";
 // The documents of the published repository, where the "Read from" line of a page points (ADR-268).
 export { docsBlob } from "@oblivios/site-shared/lib/doc.mjs";
 
-export const pages = [
-  // learn, then understand the design, then look things up
+// The header menu: learn, then understand the design, then read the record, then look things up. A group opens a list of
+// its pages, so a page that was only reachable from another page (advisories, the capability boundaries, the two guides)
+// is one step from every page. The first item of a group is the page its label links to.
+export const nav = [
+  { label: "Guide", print: "notebook", intro: "Two guides for two readers, and a brief for an AI that answers questions about ObliviOS.", items: [
+    { label: "Overview", href: "/guide", note: "Two guides for two readers" },
+    { label: "Start here", href: "/guide/start", note: "What ObliviOS is and is not, and where to look next" },
+    { label: "Build with it", href: "/guide/build", note: "Build the image for a Pixel 7a or 10a" },
+    { label: "Brief for AI agents", href: "/ai", note: "Where each fact lives, for an AI that answers questions" },
+  ] },
+  { label: "Design", print: "sheet", intro: "How the code is built, what could attack it, and what each service may and may not do.", items: [
+    { label: "Modules", href: "/modules", note: "What each module is and is not" },
+    { label: "Engineering notes", href: "/engineering", note: "What was learned building each area" },
+    { label: "Threat model", href: "/threat-model", note: "Who could attack, along which path" },
+    { label: "Capability boundaries", href: "/boundaries", note: "What each service may and may not do" },
+  ] },
+  { label: "Record", print: "ledger", intro: "Every decision and every publication, read from the repository.", items: [
+    { label: "Decisions", href: "/decisions", note: "Every decision, its status and when to review it" },
+    { label: "Changelog", href: "/changelog", note: "Every publication and what changed" },
+  ] },
+  { label: "Bill of materials", print: "crate", intro: "What ObliviOS is built from, and how to rebuild the list and check it.", items: [
+    { label: "Components", href: "/components", note: "Libraries, projects and tools, with licences" },
+    { label: "Advisories", href: "/advisories", note: "What OSV lists, and the assessment of each" },
+    { label: "Files and patches", href: "/patches", note: "The files, and what the patches change" },
+    { label: "Data", href: "/data", note: "The data files and their public sources" },
+    { label: "Verify", href: "/verify", note: "Rebuild the SBOM and compare it byte for byte" },
+  ] },
+  { label: "Search", href: "/search", print: "desk" },
+];
+// the footer keeps one short list
+export const footPages = [
   { label: "Guide", href: "/guide" },
   { label: "Modules", href: "/modules" },
   { label: "Engineering", href: "/engineering" },
   { label: "Threat model", href: "/threat-model" },
   { label: "Decisions", href: "/decisions" },
+  { label: "Changelog", href: "/changelog" },
   { label: "Components", href: "/components" },
   { label: "Search", href: "/search" },
 ];
-export const footPages = pages;
+// every page the menu names, for the label of a page (the footer's names come first, so /guide is "Guide")
+export const pages = [...footPages, ...nav.flatMap((n) => n.items ?? [n])];
 export const footAbout = [
   { label: "Project site", href: orgUrl },
   { label: "Security", href: `${orgUrl}/security` },

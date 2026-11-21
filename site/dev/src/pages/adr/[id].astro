@@ -33,6 +33,8 @@ const description = plain(d.decision).slice(0, 200);
             <dt>Date</dt><dd>{d.date}</dd>
             <dt>Status</dt>
             <dd><span class={`sx ${d.status.kind} big`}>{d.status.label}</span><small set:html={md(d.status.text)} /></dd>
+            <dt>Topic</dt><dd>{d.topic}</dd>
+            {d.crucial && (<><dt>Crucial</dt><dd>{d.crucial.why} <a class="u" href="/decisions?crucial=1">All crucial decisions</a></dd></>)}
             {d.parts.length > 0 && (<><dt>Part</dt><dd>{d.parts.join(", ")}</dd></>)}
             {d.refs.length > 0 && (<><dt>Mentions</dt><dd set:html={d.refs.map(link).join(", ")} /></>)}
             {d.by.length > 0 && (<><dt>Mentioned by</dt><dd set:html={d.by.map(link).join(", ")} /></>)}

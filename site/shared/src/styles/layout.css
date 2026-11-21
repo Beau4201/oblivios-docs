@@ -170,12 +170,47 @@ a {
 }
 .hd .c > nav a[aria-current] {
   color: var(--ink);
-  box-shadow: 0 2px 0 var(--brick);
-  border-radius: 0;
 }
 @media (hover: hover) and (pointer: fine) {
   .hd .c > nav a:hover {
     color: var(--ink);
+  }
+}
+/* a link whose text carries a thin line: the line is there at 38 percent, and on hover the full line is drawn in from
+   the left (260 ms on the strong ease-out), so the pointer shows where it goes. The line sits on the text (a span with
+   this class in the header, the link itself elsewhere), not on the whole box; the page you are on keeps the full line. */
+:root {
+  --ul: var(--brick);
+}
+.ulk {
+  padding-bottom: 2px;
+  background-image: linear-gradient(var(--ul), var(--ul)), linear-gradient(color-mix(in srgb, var(--ul) 38%, transparent), color-mix(in srgb, var(--ul) 38%, transparent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 1.5px, 100% 1.5px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size 260ms var(--ease-out), color 160ms;
+}
+/* the same box for every label of the header, so the line sits at the same distance under each */
+.hd .c > nav .ulk {
+  display: inline-block;
+  line-height: 1.15;
+}
+a[aria-current] > .ulk,
+a:focus-visible > .ulk,
+a.ulk:focus-visible {
+  background-size: 100% 1.5px, 100% 1.5px;
+}
+@media (hover: hover) and (pointer: fine) {
+  a:hover > .ulk,
+  a.ulk:hover {
+    background-size: 100% 1.5px, 100% 1.5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ulk {
+    transition: color 160ms;
   }
 }
 .btn {
@@ -212,6 +247,231 @@ a {
 }
 .hd .btn {
   padding: 11px 18px;
+}
+/* a group of the menu is a link (to its first page) that opens a panel under the header, on hover and on keyboard focus:
+   a mega menu on the width of the page, the print and line of the group on the left, its pages in two columns. The
+   panel is placed against the header (not the label), the page dims below it, and the pointer crosses the gap between
+   the label and the header's edge on a bridge that belongs to the label. It is hidden from keyboard and screen reader
+   until it opens. It wipes down from the header (clip-path, 240 ms on the strong ease-out) while it fades in, the head
+   and the pages rise in one after the other (30 ms apart), and it leaves in 120 ms; moving to the next group crossfades
+   the two panels, which share their place. */
+.hd .c > nav {
+  align-items: center;
+}
+.hd .grp > a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hd .grp > a::after {
+  content: "";
+  position: absolute;
+  left: -14px;
+  right: -14px;
+  top: 100%;
+  height: 24px;
+}
+.hd .grp > a i {
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 180ms var(--ease-out);
+}
+.hd .sub {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--paper-2);
+  box-shadow: 0 1px 0 var(--rule), 0 30px 44px -26px rgba(20, 14, 12, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  clip-path: inset(0 0 100% 0);
+  transition: opacity 120ms ease-out, clip-path 120ms ease-out, visibility 0s linear 120ms;
+}
+.hd .mega {
+  box-sizing: border-box;
+  max-width: var(--max);
+  min-height: 236px;
+  margin: 0 auto;
+  padding: 34px var(--pad) 38px;
+  display: grid;
+  grid-template-columns: minmax(210px, 290px) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+.hd .mh {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  align-self: stretch;
+  padding-right: clamp(20px, 3vw, 40px);
+  border-right: 1px solid var(--rule);
+}
+.hd .mh svg {
+  display: block;
+  width: 76px;
+  height: auto;
+  margin-bottom: 4px;
+  overflow: visible;
+}
+.hd .mh p {
+  margin: 0;
+  font: 400 15px / 1.55 var(--sans);
+  color: var(--ink-2);
+}
+.hd .mh p.mt {
+  font: 600 26px / 1.1 var(--serif);
+  letter-spacing: -0.016em;
+  color: var(--ink);
+}
+.hd .mega ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  gap: 6px 20px;
+  counter-reset: pg;
+}
+/* the pages read down the first column, then down the second: the rows are half the pages, rounded up */
+.hd .mega ul[data-n="2"] {
+  grid-template-rows: auto;
+}
+.hd .mega ul[data-n="3"],
+.hd .mega ul[data-n="4"] {
+  grid-template-rows: repeat(2, auto);
+}
+.hd .c > nav .mega ul a {
+  position: relative;
+  display: block;
+  padding: 14px 16px 15px 52px;
+  white-space: normal;
+  border-radius: 4px;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+  transition: background-color 140ms ease-out;
+}
+/* the number of the page in the margin, as in the contents of a printed book */
+.hd .c > nav .mega ul a::before {
+  counter-increment: pg;
+  content: counter(pg, decimal-leading-zero);
+  position: absolute;
+  left: 16px;
+  top: 17px;
+  font: 600 12px / 1.3 var(--sans);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+}
+.hd .c > nav .mega ul a b {
+  display: inline-block;
+  font: 600 16px / 1.3 var(--sans);
+  color: var(--ink);
+}
+.hd .c > nav .mega ul a small {
+  display: block;
+  margin-top: 5px;
+  font: 400 14px / 1.45 var(--sans);
+}
+/* the page you are on keeps the full line under its title (.ulk), the pointer draws it in and tints the row */
+.hd .c > nav .mega ul a[aria-current] {
+  box-shadow: none;
+  color: var(--ink-2);
+}
+.hd .c > nav .mega ul a:hover,
+.hd .c > nav .mega ul a:focus-visible {
+  background: var(--tint);
+}
+/* head and pages wait below their place and rise in when the panel opens */
+.hd .mh > *,
+.hd .mega li {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 100ms ease-out, transform 100ms ease-out;
+}
+/* the page dims below an open panel; the veil never takes the pointer */
+.hd::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: rgba(20, 14, 12, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 120ms ease-out, visibility 0s linear 120ms;
+}
+.hd:has(.grp:hover, .grp:focus-within)::after {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 240ms ease-out, visibility 0s;
+}
+.hd .grp:hover .sub,
+.hd .grp:focus-within .sub {
+  opacity: 1;
+  visibility: visible;
+  clip-path: inset(0 0 -60px 0);
+  transition: opacity 160ms ease-out, clip-path 240ms var(--ease-out), visibility 0s;
+}
+.hd .grp:hover > a i,
+.hd .grp:focus-within > a i {
+  transform: translateY(2px) rotate(225deg);
+}
+.hd .grp:hover .mh > *,
+.hd .grp:focus-within .mh > *,
+.hd .grp:hover .mega li,
+.hd .grp:focus-within .mega li {
+  opacity: 1;
+  transform: none;
+  transition: opacity 220ms var(--ease-out), transform 260ms var(--ease-out);
+  transition-delay: 40ms;
+}
+.hd .grp:hover .mega li:nth-child(2),
+.hd .grp:focus-within .mega li:nth-child(2) {
+  transition-delay: 70ms;
+}
+.hd .grp:hover .mega li:nth-child(3),
+.hd .grp:focus-within .mega li:nth-child(3) {
+  transition-delay: 100ms;
+}
+.hd .grp:hover .mega li:nth-child(4),
+.hd .grp:focus-within .mega li:nth-child(4) {
+  transition-delay: 130ms;
+}
+.hd .grp:hover .mega li:nth-child(n + 5),
+.hd .grp:focus-within .mega li:nth-child(n + 5) {
+  transition-delay: 160ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hd .sub,
+  .hd .grp:hover .sub,
+  .hd .grp:focus-within .sub {
+    clip-path: none;
+    transition: opacity 120ms ease, visibility 0s linear 120ms;
+  }
+  .hd .grp:hover .sub,
+  .hd .grp:focus-within .sub {
+    transition: opacity 120ms ease, visibility 0s;
+  }
+  .hd .mh > *,
+  .hd .mega li {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hd .grp > a i {
+    transition: none;
+  }
 }
 /* menu on narrow screens: an icon button without a box, and a drawer from the right edge (a native popover) that takes
    three quarters of the width and the whole height. It enters slowly and leaves faster; both are transitions, so a
@@ -269,7 +529,7 @@ a {
   max-width: 440px;
   height: 100vh;
   height: 100dvh;
-  padding: 0 var(--pad) 32px;
+  padding: 0 var(--pad);
   border: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -280,12 +540,19 @@ a {
   transition: transform 220ms var(--ease-drawer), overlay 220ms allow-discrete, display 220ms allow-discrete;
 }
 .drawer:popover-open {
+  display: flex;
+  flex-direction: column;
   transform: translateX(0);
   transition-duration: 340ms;
 }
 @starting-style {
   .drawer:popover-open {
     transform: translateX(100%);
+  }
+}
+@media (max-width: 520px) {
+  .drawer {
+    width: 88%;
   }
 }
 .drawer::backdrop {
@@ -303,32 +570,212 @@ a {
 }
 .drawer .mbtn {
   display: grid;
-  margin: 14px -10px 6px auto;
+  margin: 0 -10px 0 0;
 }
 .drawer ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.drawer a {
-  display: block;
-  padding: 17px 0;
-  font: 500 18px / 1 var(--sans);
+/* the head of the drawer: its name on the left, the close button where the open button was */
+.drawer .dh {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.drawer .dh span {
+  font: 600 12.5px / 1 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--ink-2);
-  box-shadow: 0 1px 0 var(--rule);
 }
-.drawer li:last-child a {
-  box-shadow: none;
+/* a row of the menu: the print of the group, its name in the serif and how many pages it holds, a chevron. A hairline
+   above each row; the rows rise in one after the other when the drawer has come in. */
+.drawer nav > ul > li {
+  border-top: 1px solid var(--rule);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 120ms ease-out, transform 120ms ease-out;
 }
-.drawer a:active {
+.drawer nav > ul > li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.drawer:popover-open nav > ul > li {
+  opacity: 1;
+  transform: none;
+  transition: opacity 320ms var(--ease-out), transform 420ms var(--ease-out);
+  transition-delay: 100ms;
+}
+.drawer:popover-open nav > ul > li:nth-child(2) {
+  transition-delay: 140ms;
+}
+.drawer:popover-open nav > ul > li:nth-child(3) {
+  transition-delay: 180ms;
+}
+.drawer:popover-open nav > ul > li:nth-child(4) {
+  transition-delay: 220ms;
+}
+.drawer:popover-open nav > ul > li:nth-child(n + 5) {
+  transition-delay: 260ms;
+}
+@starting-style {
+  .drawer:popover-open nav > ul > li {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+.drawer .dr {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 76px;
+  padding: 12px 0;
+  list-style: none;
+  cursor: pointer;
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 140ms var(--ease-out);
+}
+.drawer .dr::-webkit-details-marker {
+  display: none;
+}
+.drawer .dr:active {
+  transform: scale(0.985);
+}
+.drawer .dp {
+  flex: none;
+  width: 52px;
+}
+.drawer .dp svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.drawer .dn {
+  display: grid;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+.drawer .dn b {
+  font: 600 25px / 1.15 var(--serif);
+  letter-spacing: -0.014em;
   color: var(--ink);
 }
-.drawer a[aria-current] {
+.drawer .dn b.ulk {
+  justify-self: start;
+}
+/* a touch screen has no hover: only the page you are on carries the line */
+.drawer .ulk {
+  background-size: 0 1.5px, 0 1.5px;
+}
+.drawer a[aria-current] > .ulk {
+  background-size: 100% 1.5px, 100% 1.5px;
+}
+.drawer .dn small {
+  font: 500 13px / 1.3 var(--sans);
+  color: var(--ink-2);
+}
+.drawer .dr > i {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-right: 2px solid var(--ink-2);
+  border-bottom: 2px solid var(--ink-2);
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 220ms var(--ease-out);
+}
+.drawer details[open] > .dr > i {
+  transform: translateY(2px) rotate(225deg);
+}
+/* a group of the menu is a native disclosure (details): one open at a time (the shared name), the group of the current
+   page open at the start. Its pages open with a height transition where the browser can animate to `auto`
+   (`::details-content`, `interpolate-size`); elsewhere they open at once. It opens slower than it closes. */
+.drawer details {
+  interpolate-size: allow-keywords;
+}
+.drawer details::details-content {
+  block-size: 0;
+  overflow: clip;
+  opacity: 0;
+  transition: block-size 180ms var(--ease-out), opacity 120ms ease-out, content-visibility 180ms allow-discrete;
+}
+.drawer details[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+  transition-duration: 260ms, 200ms, 260ms;
+}
+/* the pages of a group sit under its name, numbered in the margin as in the mega menu of the wide header */
+.drawer details ul {
+  margin: 0 0 14px 68px;
+  counter-reset: pg;
+}
+.drawer details li a {
+  position: relative;
+  display: block;
+  padding: 11px 10px 12px 30px;
+  margin-left: -10px;
+  padding-left: 40px;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+  transition: background-color 140ms ease-out;
+}
+.drawer details li a::before {
+  counter-increment: pg;
+  content: counter(pg, decimal-leading-zero);
+  position: absolute;
+  left: 10px;
+  top: 14px;
+  font: 600 12px / 1.3 var(--sans);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+}
+.drawer details li a:active {
+  background: var(--tint);
+}
+.drawer details li a b {
+  font: 600 17px / 1.3 var(--sans);
   color: var(--ink);
 }
-.drawer a[aria-current] span {
-  box-shadow: 0 2px 0 var(--brick);
-  padding-bottom: 4px;
+.drawer details li a small {
+  display: block;
+  margin-top: 4px;
+  font: 400 14px / 1.45 var(--sans);
+  color: var(--ink-2);
+}
+/* the button to the other site stays at the foot of the drawer */
+.drawer .df {
+  position: sticky;
+  bottom: 0;
+  margin-top: auto;
+  padding: 20px 0 calc(22px + env(safe-area-inset-bottom));
+  background: var(--paper);
+}
+.drawer nav {
+  padding-bottom: 8px;
+}
+.drawer .df .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 16px 20px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .drawer nav > ul > li,
+  .drawer:popover-open nav > ul > li {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .drawer details::details-content,
+  .drawer .dr,
+  .drawer .dr > i {
+    transition: none;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .drawer {

@@ -2,7 +2,7 @@ import { decisions, decisionStats } from "../../lib/records.mjs";
 import { siteUrl, docsBlob } from "../../lib/site.mjs";
 
 // Every decision of the log as data (ADR-276): the cells of its row as the log writes them (inline Markdown), the parts of the
-// system it belongs to, and the decisions it names and that name it. Newest first, like the log.
+// system it belongs to, its topic, the reason it is crucial when it is (null when not), and the decisions it names and that name it. Newest first, like the log.
 export function GET() {
   return new Response(
     JSON.stringify({
@@ -22,6 +22,8 @@ export function GET() {
         statusText: d.status.text,
         decision: d.decision,
         sections: d.sections.map(({ label, text }) => ({ label, text })),
+        topic: d.topic,
+        crucial: d.crucial ? d.crucial.why : null,
         parts: d.parts,
         evidenceTags: d.ev,
         references: d.refs.map((n) => `ADR-${n}`),

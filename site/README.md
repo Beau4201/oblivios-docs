@@ -22,6 +22,7 @@ Facts the pages show are read at build time and never typed:
 | Status of each decision, per part and in total, the date of the pages | `docs/governance/decision-log.md` |
 | Contact address, key validity, fingerprint, public key | `SECURITY.md` and `security-contact.asc` at the root of the snapshot, `tools/docs/` in the private repository |
 | Number of components and hashed files, the three commits, the upstream baseline | `sbom/` at the root of the snapshot; `SBOM_DIR` names it where the repository has none |
+| The lines of the changelog of `oblivios.dev` | `dev/src/data/changelog.json`, a line added at every publication by `tools/docs/sync-site.py` (ADR-291) |
 | `Expires` of `security.txt` | `org/src/lib/securitytxt.mjs` (the build fails with fewer than 60 days left) |
 
 The sources of each page are written to `org/.build/claims/` for the claim review and are not shown on any page.

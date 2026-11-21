@@ -9,6 +9,8 @@ for (const f of ["oblivios.cdx.json", "files.sha256"]) {
   if (!fs.existsSync(path.join(dir, f))) throw new Error(`the SBOM file ${f} is not in ${dir} (set SBOM_DIR)`);
 }
 const cdx = JSON.parse(read(path.join(dir, "oblivios.cdx.json")));
+// when the SBOM was made: the advisories carry no date of their own, so their feed is as of this time
+export const sbomTime = cdx.metadata.timestamp;
 const cs = cdx.components;
 const props = (c) => Object.fromEntries((c.properties ?? []).map((p) => [p.name, p.value]));
 const meta = Object.fromEntries(cdx.metadata.properties.map((p) => [p.name, p.value]));

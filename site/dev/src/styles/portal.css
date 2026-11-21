@@ -20,12 +20,6 @@
 :focus-visible {
   outline-color: var(--proof-text);
 }
-.hd .c > nav a[aria-current] {
-  box-shadow: 0 2px 0 var(--proof);
-}
-.drawer a[aria-current] span {
-  box-shadow: 0 2px 0 var(--proof);
-}
 .u {
   background-image: linear-gradient(var(--proof), var(--proof));
 }
@@ -161,7 +155,11 @@ h1 em {
   font-family: var(--mono);
   font-size: 0.9em;
   color: var(--ink);
-  margin-right: 10px;
+  margin-right: 14px;
+}
+/* on this site the lines under links are the proof blue, as in the text of a page */
+:root {
+  --ul: var(--proof);
 }
 
 /* buttons: a link that leads on is a button, never an arrow */
@@ -448,6 +446,26 @@ h1 em {
   font-size: 11.5px;
   padding: 7px 9px 6px;
 }
+/* the stamps of a decision (its status, and Crucial) stand in a row that wraps, with room between them, under the date;
+   the tilt of a stamp needs that room, or the corner of one lies on the next */
+.en .id:has(> .sx) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0 12px;
+}
+.en .id:has(> .sx) .no {
+  flex: 0 0 100%;
+}
+@media (min-width: 641px) {
+  .en .id:has(> .sx) small {
+    flex: 0 0 100%;
+  }
+  .en .id:has(> .sx) .sx {
+    margin-top: 16px;
+  }
+}
 .en h3 {
   font: 600 clamp(20px, 2vw, 26px) / 1.22 var(--serif);
   letter-spacing: -0.012em;
@@ -494,7 +512,10 @@ h1 em {
     margin-top: 0;
   }
   .en .id .sx {
-    margin: 0 0 0 auto;
+    margin: 0;
+  }
+  .en .id .sx:first-of-type {
+    margin-left: auto;
   }
 }
 
@@ -589,6 +610,64 @@ h1 em {
   font: 500 15px / 1.4 var(--sans);
   color: var(--ink-2);
   margin: 0 0 4px;
+}
+
+/* decision log: the crucial filter sits at the head of the list, and a crucial entry says why it is; the topics are a row of chips */
+.crrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  margin: 0 0 18px;
+}
+.crrow .chips {
+  flex: none;
+}
+.crrow p {
+  margin: 0;
+  flex: 1 1 260px;
+  font: 400 15px / 1.5 var(--sans);
+  color: var(--ink-2);
+}
+.en p.why {
+  color: var(--ink);
+}
+.en p.why b {
+  color: var(--proof-text);
+}
+/* the mark of a crucial decision: a filled stamp, beside the status stamp */
+.sx.key {
+  --c: var(--proof-text);
+  background: var(--c);
+  color: var(--paper);
+}
+/* as a filter the mark shows its state: an outline when off, filled with a tick when on */
+.chip .sx.key {
+  background: transparent;
+  color: var(--c);
+}
+.chip input:checked + .sx.key {
+  background: var(--c);
+  color: var(--paper);
+}
+.chip input:checked + .sx.key::before {
+  content: "\2713";
+  margin-right: 8px;
+}
+.tpics fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 26px;
+  min-width: 0;
+}
+.tpics legend {
+  font: 600 19px / 1.2 var(--serif);
+  letter-spacing: -0.01em;
+  padding: 0;
+  margin-bottom: 14px;
+}
+.tpics {
+  margin-top: 28px;
 }
 
 /* one decision */
@@ -1270,9 +1349,11 @@ a.aid {
 }
 .subnav .sn-l {
   flex: none;
-  font: 500 italic 17px / 1 var(--serif);
-  color: var(--proof-text);
-  padding: 20px 0 18px;
+  font: 600 12.5px / 1 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  padding: 22px 0 19px;
   white-space: nowrap;
 }
 .subnav a {
@@ -1716,6 +1797,111 @@ mark {
   .prose .pager a:not([aria-current]):not(.btn):hover {
     color: var(--ink);
     box-shadow: inset 0 0 0 1.5px var(--ink);
+  }
+  /* the ghost button fills with --ink on hover (layout.css); the text must turn to --paper or it vanishes */
+  .prose .pager a.btn:hover {
+    color: var(--paper);
+  }
+}
+
+/* the changelog: the time on a line of its own (browse.js turns it into "5 minutes ago" and keeps the date), then what changed */
+.cl {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+.cl li {
+  padding: 14px 0;
+  border-top: 1px solid var(--rule);
+}
+.cl time {
+  display: block;
+  margin-bottom: 4px;
+  font: 600 13px / 1.4 var(--sans);
+  color: var(--ink-2);
+}
+.cl p {
+  margin: 0;
+}
+/* the changelog by day: a heading per day, then its lines */
+.cd {
+  margin-top: clamp(36px, 4vw, 52px);
+}
+.cd h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin: 0;
+  font: 600 clamp(22px, 2.2vw, 26px) / 1.2 var(--serif);
+  letter-spacing: -0.014em;
+}
+.cd h2 small {
+  font: 500 13px / 1 var(--sans);
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
+}
+.cd .cl {
+  margin-top: 14px;
+}
+
+/* home: the four groups of the menu as plates, in the order of the menu, each with the pages it holds. The plate is the
+   house plate (print, serif title, line); under it a rule and the pages as a short centred list. Only the print lifts on
+   hover, so the links under it stay where the pointer is. */
+.plates.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(48px, 5vw, 64px) clamp(20px, 3vw, 44px);
+  align-items: start;
+}
+.plates.four .pl svg {
+  max-width: 150px;
+}
+.plates.four .pl h3 {
+  margin: 24px 0 10px;
+}
+.plates.four .pl p {
+  max-width: 250px;
+}
+.plates.four .pl:last-child {
+  grid-column: auto;
+}
+.plates.four .pl:hover {
+  transform: none;
+}
+.gp .pt {
+  display: block;
+}
+.gp .pt svg {
+  transition: transform 220ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .gp:hover .pt svg {
+    transform: translateY(-6px);
+  }
+}
+.gp ul {
+  list-style: none;
+  max-width: 250px;
+  margin: 22px auto 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  gap: 2px;
+}
+.gp ul a {
+  display: block;
+  padding: 7px 0;
+  font: 500 16px / 1.3 var(--sans);
+  color: var(--ink);
+}
+@media (max-width: 1000px) {
+  .plates.four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .plates.four {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 @media (max-width: 560px) {

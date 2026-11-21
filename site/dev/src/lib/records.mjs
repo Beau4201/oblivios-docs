@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { parts } from "@oblivios/site-shared/lib/parts.mjs";
 import { firstSentence, plain } from "./md.mjs";
+import { topics, topicOf, unsorted, crucial } from "./topics.mjs";
 
 export const ROOT = path.resolve(process.cwd(), "../..");
 
@@ -36,6 +37,8 @@ function statusOf(cell) {
   return { kind, label, text: cell.replace(/\*\*/g, "").trim() };
 }
 
+const crucialOf = new Map(crucial.map((c) => [c.n, c]));
+
 const entries = [];
 for (const line of logText.split("\n")) {
   const m = line.match(/^\| ADR-(\d+) \| (\d{4}-\d\d-\d\d) \| /);
@@ -65,6 +68,8 @@ for (const line of logText.split("\n")) {
     regular,
     review: sections.at(-1).text,
     parts: partsOf.get(n) ?? [],
+    topic: topicOf(n),
+    crucial: crucialOf.get(n) ?? null,
     ev: ["measured", "verified-in-source", "assumption"].filter((t) => new RegExp(`\\[${t}`).test(rest.join(" "))),
     refs: [...new Set([...body.matchAll(/\bADR-(\d{1,3})\b/g)].map((x) => Number(x[1])).filter((x) => x !== n))].sort((a, b) => a - b),
     by: [],
@@ -77,8 +82,20 @@ for (const e of entries) {
   for (const x of e.refs) byNumber.get(x).by.push(e.n);
 }
 for (const e of entries) e.by.sort((a, b) => a - b);
+// the crucial set holds decisions that still hold: a replaced or only proposed one stops the build, so the set is reviewed
+for (const c of crucial) {
+  const e = byNumber.get(c.n);
+  if (!e || e.status.kind === "old" || e.status.kind === "pr" || !/accepted/i.test(e.status.text)) {
+    throw new Error(`ADR-${c.n} is in the crucial set (topics.mjs) but the log no longer shows it as an accepted decision: review the set`);
+  }
+}
 
 export const decisions = entries.sort((a, b) => b.n - a.n); // newest first
+export const crucialDecisions = crucial.map((c) => ({ ...byNumber.get(c.n), why: c.why, group: c.group }));
+// the topics with the number of entries each holds; "Not yet sorted" appears only when a new entry has no topic yet
+export const topicList = [...topics, { id: "unsorted", group: topics.at(-1).group, title: unsorted, adrs: [] }]
+  .map((t) => ({ id: t.id, group: t.group, title: t.title, count: entries.filter((e) => e.topic === t.title).length }))
+  .filter((t) => t.count > 0);
 export const decision = (n) => byNumber.get(n);
 export const hasAdr = (n) => byNumber.has(n);
 export const decisionStats = {

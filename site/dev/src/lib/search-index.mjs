@@ -26,11 +26,11 @@ export function buildSearchIndex() {
 
   for (const d of decisions) {
     add(
-      { t: "d", i: d.id, n: d.title, dt: d.date, st: d.status.kind, sl: d.status.label, pt: d.parts, ev: d.ev, x: plain(d.decision).slice(0, 520), r: plain(d.review).slice(0, 240), c: d.regular ? 0 : 1 },
+      { t: "d", i: d.id, n: d.title, dt: d.date, st: d.status.kind, sl: d.status.label, pt: d.parts, tp: d.topic, cr: d.crucial ? 1 : 0, cw: d.crucial ? d.crucial.why : "", ev: d.ev, x: plain(d.decision).slice(0, 520), r: plain(d.review).slice(0, 240), c: d.regular ? 0 : 1 },
       [
         ["name", `${d.id} adr ${d.n}`], ["title", plain(d.title)], ["main", plain(d.decision)],
         ["text", d.sections[0] ? plain(d.sections[0].text) : ""], ["more", d.sections.slice(1, -1).map((s) => plain(s.text)).join(" ")],
-        ["note", plain(d.review)], ["tag", `${d.status.label} ${d.parts.join(" ")} ${d.ev.join(" ").replace(/-/g, " ")}`],
+        ["note", plain(d.review)], ["tag", `${d.status.label} ${d.topic} ${d.crucial ? "crucial" : ""} ${d.parts.join(" ")} ${d.ev.join(" ").replace(/-/g, " ")}`],
       ],
     );
   }

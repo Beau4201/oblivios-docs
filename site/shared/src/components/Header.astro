@@ -3,17 +3,32 @@
 // other site, and on narrow screens an icon button that opens the same links in a drawer from the right edge. The drawer
 // is a native popover: no script, closes with Escape or a tap outside it, and its close button sits where the open
 // button was.
+import Print from "./Print.astro";
 interface Link {
   label: string;
   href: string;
+  note?: string;
+  // a print for the row of the drawer
+  print?: string;
+}
+// A group opens a panel of pages under the header (a mega menu: the group's print and line on the left, its pages in two
+// columns with a line each). The label links to the first page, so the menu works without script: the panel opens on
+// hover and on keyboard focus (CSS only), and on a narrow screen the same groups are disclosures in the drawer.
+interface Group {
+  label: string;
+  items: Link[];
+  // the line and the print at the head of the panel
+  intro?: string;
+  print?: string;
 }
 interface Props {
-  pages: Link[];
+  pages: (Link | Group)[];
   current?: string;
   portal?: Link | null;
   tag?: string;
 }
 const { pages, current, portal = null, tag } = Astro.props;
+const isGroup = (p: Link | Group): p is Group => "items" in p;
 ---
 <header class="hd">
   <div class="c">
@@ -25,18 +40,57 @@ const { pages, current, portal = null, tag } = Astro.props;
       {tag && <span class="tag">{tag}</span>}
     </a>
     <nav aria-label="Main">
-      {pages.map((p) => <a href={p.href} aria-current={p.href === current ? "page" : undefined}>{p.label}</a>)}
+      {pages.map((p) => isGroup(p) ? (
+        <div class="grp">
+          <a href={p.items[0].href} aria-current={p.items.some((i) => i.href === current) ? "true" : undefined}><span class="ulk">{p.label}</span><i aria-hidden="true"></i></a>
+          <div class="sub">
+            <div class="mega">
+              <div class="mh">
+                {p.print && <div aria-hidden="true"><Print id={p.print} label={p.label} /></div>}
+                <p class="mt">{p.label}</p>
+                {p.intro && <p>{p.intro}</p>}
+              </div>
+              <ul data-n={p.items.length}>
+                {p.items.map((i) => <li><a href={i.href} aria-current={i.href === current ? "page" : undefined}><b class="ulk">{i.label}</b>{i.note && <small>{i.note}</small>}</a></li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ) : <a href={p.href} aria-current={p.href === current ? "page" : undefined}><span class="ulk">{p.label}</span></a>)}
     </nav>
     {portal && <a class="btn" href={portal.href}>{portal.label}</a>}
     <button class="mbtn" type="button" popovertarget="drawer" aria-label="Menu"><i aria-hidden="true"></i></button>
     <div id="drawer" class="drawer" popover>
-      <button class="mbtn x" type="button" popovertarget="drawer" popovertargetaction="hide" aria-label="Close the menu"><i aria-hidden="true"></i></button>
+      <div class="dh">
+        <span>Menu</span>
+        <button class="mbtn x" type="button" popovertarget="drawer" popovertargetaction="hide" aria-label="Close the menu"><i aria-hidden="true"></i></button>
+      </div>
       <nav aria-label="Menu">
         <ul>
-          {pages.map((p) => <li><a href={p.href} aria-current={p.href === current ? "page" : undefined}><span>{p.label}</span></a></li>)}
-          {portal && <li><a href={portal.href}><span>{portal.label}</span></a></li>}
+          {pages.map((p) => isGroup(p) ? (
+            <li>
+              <details name="menu" open={p.items.some((i) => i.href === current)} data-active={p.items.some((i) => i.href === current) ? "" : undefined}>
+                <summary class="dr">
+                  {p.print && <span class="dp" aria-hidden="true"><Print id={p.print} label={p.label} /></span>}
+                  <span class="dn"><b>{p.label}</b><small>{p.items.length} pages</small></span>
+                  <i aria-hidden="true"></i>
+                </summary>
+                <ul>
+                  {p.items.map((i) => <li><a href={i.href} aria-current={i.href === current ? "page" : undefined}><b class="ulk">{i.label}</b>{i.note && <small>{i.note}</small>}</a></li>)}
+                </ul>
+              </details>
+            </li>
+          ) : (
+            <li>
+              <a class="dr" href={p.href} aria-current={p.href === current ? "page" : undefined}>
+                {p.print && <span class="dp" aria-hidden="true"><Print id={p.print} label={p.label} /></span>}
+                <span class="dn"><b class="ulk">{p.label}</b></span>
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
+      {portal && <div class="df"><a class="btn" href={portal.href}>{portal.label}</a></div>}
     </div>
   </div>
 </header>

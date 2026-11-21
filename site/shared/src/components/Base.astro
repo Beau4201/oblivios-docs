@@ -15,12 +15,15 @@ interface Link {
   label: string;
   href: string;
 }
+type NavItem = (Link & { print?: string }) | { label: string; intro?: string; print?: string; items: (Link & { note?: string })[] };
 interface Props {
   title: string;
   description: string;
   path: string;
   siteUrl: string;
   pages: Link[];
+  // the header menu when it has groups (oblivios.dev); without it the header lists `pages`
+  nav?: NavItem[];
   footPages: Link[];
   footAbout: Link[];
   legal: string;
@@ -33,7 +36,7 @@ interface Props {
   tag?: string;
   analytics?: boolean;
 }
-const { title, description, path, siteUrl, pages, footPages, footAbout, legal, portal = null, source = [], own = "", current, review = false, tag, analytics: countViews = true } = Astro.props;
+const { title, description, path, siteUrl, pages, nav, footPages, footAbout, legal, portal = null, source = [], own = "", current, review = false, tag, analytics: countViews = true } = Astro.props;
 // Vercel Web Analytics (decision 261): one script from the site's own address, only in a build that Vercel makes
 // (`VERCEL=1`), so a local build, the snapshot and the review build carry none. It sets no cookie.
 const analytics = countViews && process.env.VERCEL === "1";
@@ -110,7 +113,7 @@ const jsonld = JSON.stringify({ "@context": "https://schema.org", "@graph": grap
   <body>
     <slot name="defs"><Prints /></slot>
     <a class="skip" href="#main">Skip to the content</a>
-    <Header pages={pages} current={current} portal={portal} tag={tag} />
+    <Header pages={nav ?? pages} current={current} portal={portal} tag={tag} />
     <main id="main"><slot /></main>
     <Footer pages={footPages} about={footAbout} source={source} own={own} legal={legal} />
   </body>

@@ -15,7 +15,7 @@ const anchor = (id) => (seen.has(id) ? undefined : (seen.add(id), id));
   title="Advisories | ObliviOS developer portal"
   description={`The ${sbom.advisories} advisories that OSV lists against the locked versions of the ObliviOS components, grouped by component, each with its assessment.`}
   path="/advisories"
-  current="/components"
+  current="/advisories"
 >
   <Ph
     crumbs={[{ label: "Home", href: "/" }, { label: "Components", href: "/components" }, { label: "Advisories" }]}

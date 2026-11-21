@@ -5,7 +5,7 @@ import Base from "@oblivios/site-shared/components/Base.astro";
 import DevPrints from "../components/DevPrints.astro";
 import "../styles/pages.css";
 import "../styles/portal.css";
-import { siteUrl, pages, footPages, footAbout, portal, repos, own, legal, tag } from "../lib/site.mjs";
+import { siteUrl, nav, pages, footPages, footAbout, portal, repos, own, legal, tag } from "../lib/site.mjs";
 
 interface Props {
   title: string;
@@ -21,6 +21,7 @@ const { title, description, path, current } = Astro.props;
   path={path}
   siteUrl={siteUrl}
   pages={pages}
+  nav={nav}
   footPages={footPages}
   footAbout={footAbout}
   legal={legal}
@@ -31,6 +32,9 @@ const { title, description, path, current } = Astro.props;
   tag={tag}
 >
   <script slot="head" defer src="/browse.js" is:inline></script>
+  <link slot="head" rel="alternate" type="application/atom+xml" href="/feed/decisions.xml" title="ObliviOS decision log" />
+  <link slot="head" rel="alternate" type="application/atom+xml" href="/feed/changelog.xml" title="ObliviOS changelog" />
+  <link slot="head" rel="alternate" type="application/atom+xml" href="/feed/advisories.xml" title="ObliviOS advisories" />
   <DevPrints slot="defs" />
   <slot />
 </Base>
