@@ -2,6 +2,10 @@
   "about": "One line for every publication of the snapshot: the time of the run (UTC) and what changed. Newest first. tools/docs/sync-site.py adds a line at every publication; the first 49 are the snapshot commits of oblivios-docs before it did.",
   "entries": [
     {
+      "t": "2026-11-22T22:47:29Z",
+      "text": "Duress ADR-300 and ADR-301 landed and pushed, series 8 to 11"
+    },
+    {
       "t": "2026-11-22T20:13:31Z",
       "text": "Duress 0037 and 0038, series 7, ADR-298 and ADR-299"
     },
