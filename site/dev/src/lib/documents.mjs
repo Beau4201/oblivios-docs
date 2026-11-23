@@ -94,6 +94,7 @@ export const notes = [
   { slug: "boot", file: "docs/architecture/boot-engineering-notes.md", label: "Boot picture" },
   { slug: "datamap", file: "docs/architecture/datamap-engineering-notes.md", label: "Data map" },
   { slug: "duress", file: "docs/architecture/duress-engineering-notes.md", label: "Duress Unlock" },
+  { slug: "duress-picture", file: "docs/architecture/duress-picture-engineering-notes.md", label: "Duress Unlock: picture and timing" },
   { slug: "grab-detection", file: "docs/architecture/grab-detection-engineering-notes.md", label: "Grab detection" },
   { slug: "keyboard", file: "docs/architecture/keyboard-engineering-notes.md", label: "Keyboard" },
   { slug: "site", file: "docs/architecture/site-engineering-notes.md", label: "These sites" },
