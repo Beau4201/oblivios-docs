@@ -23,6 +23,9 @@
 
 > **Stage: source only.** No builds, images or update service are offered, and no device is supported (ADR-171). Websites: [oblivios.org](https://oblivios.org), the project, and [oblivios.dev](https://oblivios.dev), the developer portal.
 
+> **Guides.** [Start here](https://oblivios.dev/guide/start) says what ObliviOS is and is not. [Build with it](https://oblivios.dev/guide/build)
+> is a build guide for a Pixel 7a and a Pixel 10a; each command in it is marked as verified or not run.
+
 ## The four repositories
 
 ```mermaid
