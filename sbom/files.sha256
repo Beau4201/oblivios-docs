@@ -1558,7 +1558,7 @@ e277b801a406fa99ab450405da208f2950a665e771a5099b44420c8a855c879f  oblivios-docs/
 e53235c7ade089cd7e6fb177db77f2719efe8cd9b6910a338b47e5a9308b67a3  oblivios-docs/site/dev/src/components/Flow.astro
 3013dcef073bdbdc0ba3d58e6a9cb556d69dffc23c45d4826ff8a7db22351393  oblivios-docs/site/dev/src/components/Ph.astro
 7759595d7426968020616070c458a012462412fa7dc0553f71ade04e16d71972  oblivios-docs/site/dev/src/components/SubNav.astro
-f712b38c2524cc5db161d3d3718766de01fc45aad6a0cff5ff2d162b9255fabb  oblivios-docs/site/dev/src/data/changelog.json
+29ad4073403dd37c70def928dc034c0cbf8c2990734293a257dbf1107895132d  oblivios-docs/site/dev/src/data/changelog.json
 4fe0a1453b45b241e564358f9df08f0b618fc8bed5caef7712b34a82758022c0  oblivios-docs/site/dev/src/layouts/DocPage.astro
 e4c199f140b6427ab90b36c20d9eaf3576a12e405c4bd42441248c8d390a4846  oblivios-docs/site/dev/src/layouts/Page.astro
 cc0a7c267c15a8804e24e936d40705a9671804dcfb0afdd162fc39a8984efe2e  oblivios-docs/site/dev/src/lib/atom.mjs
