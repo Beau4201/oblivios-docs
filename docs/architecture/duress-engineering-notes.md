@@ -301,7 +301,8 @@ so the numbers are `DUR-019` evidence with that caveat). Design and plan: `2026-
   (`FINISHED ... from=PRIMARY_BOUNCER, to=GONE`): ordinary, 10 runs, 0.77 to 0.79 s (the exit starts at 0.24 to 0.26 s).
   Duress, 8 runs: 2.57, 2.75 and 2.96 s with a cold launcher, 1.30 to 1.50 s with a running launcher. A duress unlock is
   `Verifying ... user 0` then `Verifying ... user 12` 25 to 50 ms later, then `startUser-12-fg`; the return from the decoy is
-  `Verifying ... user 12` then `startUser-0-fg`. `tools/duress-timing-probe/stages.py` reads both from a logcat file.
+  `Verifying ... user 12` then `startUser-0-fg`. `tools/duress-timing-probe/stages.py` reads both from a logcat file. Since
+  ADR-304 (P6) the lines name no user; `stages.py` then takes the kind from the switch that follows (its README).
 - **Why the common case is cold.** Owner unlock: `User 12 state changed from RUNNING_UNLOCKED to STOPPING`, vold evicts the
   decoy's CE key (`Files still open after removing key`), at the next lock `startUser-12-bg-start-mode-2` brings it to
   `RUNNING_LOCKED` with two processes (`systemui`, `hbmsvmanager`). `0014` defers `BOOT_COMPLETED`, and the launcher was only
@@ -617,3 +618,47 @@ through series 13, the design of ADR-296 and the automated security review of se
 - **Own error.** `check-docs.py | tail -2 && git commit` committed `d01a262` while the gate failed (a status line of 4023 characters): the pipe gives `tail`'s exit code. Repaired in `472ccd6`. Run the gate without a pipe before `&&`.
 - **The close of this session.** By the owner's word (2026-11-23) the sites were not synced at this close (`sync-site.py` not run, against the rule of ADR-275 for this one close), so the public snapshot does not hold the records of this day.
 - **State left (2026-11-23).** Phone: `lynx` `2026111501` with the module files of the device run above, at the owner's session (user 0); the listings in `/data/local/tmp/fx`; grab detection mode 2. Build server: unchanged, no build. Workstation: the listings in the session's scratch directory (not kept).
+
+## Duress Unlock on the emulator (2026-11-24, ADR-304, ADR-306)
+
+- **Patch and build [measured].** The ADR-304 patch was written in a disposable repository of only the touched files
+  (`oblivios-platform/.worktrees/duress-adr304`, base commit = `frameworks/base` `16e2102e12f0`, equal on the build
+  server and in the emulator tree that day), applied with `git am` to the emulator tree on branch
+  `oblivios-adr304-emulator` (the mirror of ADR-305 now carries a branch of its own), and built with
+  `tools/emulator/build-emulator.sh` run in the background: 5 min 18 s incrementally, exit 0. Proof that the image holds
+  it: unzip `out-emulator/target/product/emu64x/system/framework/services.jar` and `grep -c -a` its `classes*.dex` for a
+  new string. The emulator's `ro.build.version.incremental` (`2026112300`) has the form of a `lynx` image number; a result
+  names it as `emulator emu64x 2026112300` with the `frameworks/base` head.
+- **JVM tests without the Android test stack.** The finger policy and codec tests run with plain `javac` and JUnit 4.13
+  plus Hamcrest from the Gradle cache. `SoftwareRateLimiterTest` needs Mockito, Truth and AndroidJUnit4, which are not on
+  the laptop: its cases were copied into a harness with stubs of `LockscreenCredential`, `ArrayMap`, `Slog`, `Slogf`,
+  `FrameworkStatsLog`, `ArrayUtils`, `IndentingPrintWriter`, `TextUtils`, `LockPatternUtils` and the annotations, compiled
+  against the real `SoftwareRateLimiter`, `LskfIdentifier` and `SoftwareRateLimiterResult`. Mutants were applied with
+  `sed` to copies in the scratch directory. Note: a `replace_content` replacement that starts with a digit after `$!1`
+  reads as group 11; use literal mode then.
+- **A decoy from the shell.** `adb shell locksettings set-pin <owner test PIN>`; `pm create-user --user-type
+  org.oblivios.usertype.full.DECOY Decoy`; `am start-user -w <id>`; `locksettings set-pin --user <id> <decoy test PIN>`;
+  `cmd lock_settings set-decoy-profile --owner-credential <owner test PIN> <id>`; `am stop-user -w -f <id>`. The Settings
+  screens set one up as well (Security, Device unlock, Duress Unlock, Set up).
+- **Driving the keyguard.** `input keyevent KEYCODE_SLEEP`, 2 to 3 s, `KEYCODE_WAKEUP`, `input swipe 540 1800 540 600 200`,
+  `input text <PIN>`, `input keyevent 66`. A swipe while the screen dozes opens no bouncer and the PIN goes nowhere: wake
+  first. Read the result with `am get-current-user` and `dumpsys window | grep isKeyguardShowing`. A switch to another user
+  started with `am switch-user` removes the owner's bouncer before a PIN typed through `adb` arrives (`DUR-091`).
+- **Fingers.** The emulator's HAL is `fingerprint-service.ranchu`: `adb emu finger touch <n>` then `adb emu finger remove`
+  is a touch of finger n. Enrolment through `am start -a android.settings.FINGERPRINT_ENROLL` (the owner PIN, More four
+  times, then 12 touches); the HAL calls the fingers by their n (`fpHash=<n>`). The finger link is read from
+  `sqlite3 /data/system/locksettings.db` as root: names `decoy_finger_state` and `decoy_finger_tombstone`, print only the
+  version and finger id of the state, never its wrapped part.
+- **Reading the owner's rate limiter.** `dumpsys lock_settings`, the block `userId=0, protectorId=...` (`numFailures`,
+  `lockoutEndTime`, `numSavedWrongGuesses`), and `od -An -tu1 /data/system_de/0/spblob/<protector>.failure_counter`. The
+  emulator's Gatekeeper answers a wrong PIN with a generic failure, so no wrong guess is saved and the duplicate path of P2
+  cannot be reached there (`DUR-090`).
+- **Screens.** Settings' Duress Unlock screens are secure windows: `screencap` gives black; read them with `uiautomator
+  dump`. The view tree does not tell the check icon of the finger list from the finger icon.
+- **Seen in passing [measured].** At a duress unlock `DecoyLauncherLook.readBoolean` (from `applyOwnerLookToDecoy`) logs
+  `Outgoing transactions from this process must be FLAG_ONEWAY` with a stack: a blocking provider query from
+  `system_server`, a warning, not a crash; not changed. A refused duress finger is reported as a success and stops the
+  sensor (`DUR-104`).
+- **State left (2026-11-24).** The emulator is stopped. Its userdata (kept, the scripts run without `-wipe-data`) holds an
+  owner PIN and a decoy PIN chosen by the agent, a decoy (user 12), a secondary user `Third` (11), two enrolled fingers
+  and no finger link; start with `-wipe-data` for a clean device. The emulator tree is on branch `oblivios-adr304-emulator`.
