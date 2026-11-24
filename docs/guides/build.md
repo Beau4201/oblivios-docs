@@ -322,6 +322,40 @@ On the `lynx` output (`userdebug`, build `2026111501`) and on the `stallion` out
 
 Last verified: 2026-11-20 (the build scripts of the build host read, and the checks run on its two finished outputs; no build was started, since a clean build does not fit in the free space of the host). The scripts themselves made the images of this project: their logs show 37 builds of `lynx` between 2026-10-11 and 2026-11-15, 34 of them ending with exit code 0, and 9 builds of `stallion`.
 
+## Run it in the emulator
+
+To see an image boot you do not need a phone. The emulator target builds the same tree for x86_64 and boots on any machine with KVM. It has an output directory of its own, so keep `OUT_DIR` apart from the `lynx` and `stallion` ones.
+
+Verified on 2026-11-24:
+
+```
+export OUT_DIR=out-emulator
+export ALLOW_MISSING_DEPENDENCIES=true
+source build/envsetup.sh
+lunch sdk_phone64_x86_64-cur-userdebug
+m -j8
+```
+
+`ALLOW_MISSING_DEPENDENCIES=true` is for this target only. The Passwords app names a library that exists for arm64 and is disabled for x86_64; without the variable Soong stops in analysis with `depends on disabled module "libvault_core"`, and the emulator image does not install the app. Never export it for a device build, where it would hide a dependency that is really missing. `OFFICIAL_BUILD` is a rule for device images and the emulator target does not need it.
+
+The first build took 4 h 59 min with 8 jobs on a laptop with 15 GB of RAM and 48.9 GB of swap. It ran about 156,800 steps, the output directory grew to 117 GB and the source tree it ran in is 159 GB. Analysing a cold tree eats memory and swap (see [When something goes wrong](build.md#when-something-goes-wrong)), so put a guard on swap use and on free disk space before you start, and keep a laptop on its charger.
+
+Start it from the same shell, after `lunch`; the emulator comes with the tree and took its images from `out-emulator`.
+
+Verified on 2026-11-24:
+
+```
+EMU=prebuilts/android-emulator/linux-x86_64
+export LD_LIBRARY_PATH=$EMU/lib64/qt/lib QT_QPA_PLATFORM=xcb
+$EMU/emulator -no-window -no-audio -no-boot-anim -no-snapshot -no-metrics -writable-system -gpu host -memory 4096 -cores 6
+```
+
+`-no-snapshot` keeps an old quick-boot snapshot from hanging a boot on a new image. `-no-metrics` turns off the usage-data question the emulator asks otherwise, which a project with no telemetry answers no. `-gpu host` used the laptop GPU (an Intel Iris Xe); `-gpu swiftshader_indirect` is the software fallback and was not tried. Take `-no-window` out to get a window: under Wayland it came up through XWayland with the two variables exported above, and the launcher drew 725 frames under 12 swipes of `adb input` with a median of 16 ms.
+
+The first start printed `Boot completed in 24517 ms`, the second `12935 ms`. `adb devices` listed `emulator-5554 device`, `ro.build.type` was `userdebug` with `test-keys`, `getenforce` said `Enforcing`, the launcher held the focus and logcat held no `FATAL EXCEPTION`. The emulator reported `androidboot.verifiedbootstate=orange`: this is a test-key image, so nothing here tests signing or verified boot. Stop the emulator with `adb emu kill` and read that its process is gone, because a forgotten one keeps burning CPU.
+
+Last verified: 2026-11-24 (the build, a headless boot and a boot with a window, run on a laptop). Not tried: a boot from a second build, and any measure of a person using the window.
+
 ## Make it yours
 
 If you only want to see an image boot, skip this chapter. If you want to keep one, do not ship someone else's keys, address or name.
@@ -480,6 +514,7 @@ Each entry is a symptom, then the cause, then the fix. All come from real incide
 | A stale pin no longer fails the build | `--noVerify` wrote `$(warning` for `$(error` | Put `$(error` back by hand |
 | Vendor tool: `failed to write resources.pb to archive` | `/tmp` is a small partition and is full | Free at least 150 MB in `/tmp` before the run |
 | Vendor tool: `depends on disabled module` | The host-tool product has no arm64 libraries | `ALLOW_MISSING_DEPENDENCIES=true` for that run only |
+| Emulator build: `depends on disabled module "libvault_core"` | The Passwords app needs a library that is arm64 only and disabled for x86_64 | `ALLOW_MISSING_DEPENDENCIES=true` for the emulator target only, never for a device build |
 | `error: invalid file path '...values.xml.pre-cap48'` | A backup file inside an overlay's `res/` is compiled as a resource | Keep backups outside `res/` |
 | A default changed in `frameworks/base` has no effect | The Pixel vendor overlay overrides the framework value of the same resource | Change the overlay value |
 | Build ends 0, an app is missing | `OFFICIAL_BUILD=true` was not exported | Export it, and read `installed-files*.txt` |
@@ -509,7 +544,7 @@ Last verified: 2026-11-20 (each entry read in the notes; none was reproduced for
 
 A guide that hides its gaps costs you a weekend, so here they are.
 
-- **No full sync, no build, no signing and no flash was run for this guide.** The build host had 39 GB free of 590 GB, and a source tree with one output directory is about 300 GB. What was run, in a scratch directory and read-only on the live tree: the check of the signed tag and the manifest, `repo init`, the sync of five projects, the patch method on five projects, the update-address script, the checks of the two finished outputs, `avbtool` on a `vbmeta.img`, the help of the vendor tool, the conflict check of a rebase and a hash list. The build itself rests on scripts that made the images of this project in 46 builds; they were read and not run again. When I free the disk, the chapters that become `measured` change their label.
+- **No full sync, no device build, no signing and no flash was run for this guide.** The one build that ran is the emulator target of [Run it in the emulator](build.md#run-it-in-the-emulator), in a copy of the tree on a laptop. The build host had 39 GB free of 590 GB, and a source tree with one output directory is about 300 GB. What was run, in a scratch directory and read-only on the live tree: the check of the signed tag and the manifest, `repo init`, the sync of five projects, the patch method on five projects, the update-address script, the checks of the two finished outputs, `avbtool` on a `vbmeta.img`, the help of the vendor tool, the conflict check of a rebase and a hash list. The build itself rests on scripts that made the images of this project in 46 builds; they were read and not run again. When I free the disk, the chapters that become `measured` change their label.
 - **Nothing was signed and nothing was flashed for this guide.** The signing chapter has only the read-only `avbtool` run behind it, and the flashing chapter only the hash list. You flashing a phone with it is what would make a step `measured`.
 - **The published source is not my source** in the places named in [Before you begin](build.md#before-you-begin), and one prebuilt binary differs. The list is in the [notes on the build guide](../architecture/site-engineering-notes.md).
 - **The signing scripts, the update server and the build scripts are not published.** This guide describes what they do and what they refuse, and gives no script that cannot be shown.

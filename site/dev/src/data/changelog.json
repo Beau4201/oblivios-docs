@@ -2,6 +2,14 @@
   "about": "One line for every publication of the snapshot: the time of the run (UTC) and what changed. Newest first. tools/docs/sync-site.py adds a line at every publication; the first 49 are the snapshot commits of oblivios-docs before it did.",
   "entries": [
     {
+      "t": "2026-11-24T08:35:32Z",
+      "text": "emulator build and run on the laptop, ADR-305"
+    },
+    {
+      "t": "2026-11-24T08:32:57Z",
+      "text": "emulator build and run on the laptop, ADR-305"
+    },
+    {
       "t": "2026-11-23T14:57:40Z",
       "text": "link the guides in the READMEs"
     },

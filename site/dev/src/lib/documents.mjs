@@ -71,6 +71,7 @@ const buildChapters = [
   ["vendor-files-for-your-device", "Vendor files for your device", "Generate the Pixel vendor modules for each device, and the flags that look like shortcuts and are not."],
   ["build-the-prebuilt-pieces", "Build the prebuilt pieces", "The binaries that are committed, how each is rebuilt and what is known about them."],
   ["build-the-image", "Build the image", "The exports, the build for each phone and the checks that a clean exit does not give."],
+  ["run-it-in-the-emulator", "Run it in the emulator", "Build the emulator target and boot it with a window on a laptop, with no phone."],
   ["make-it-yours", "Make it yours", "Your own keys, update address and patches, and a move to a newer upstream tag."],
   ["sign-and-package", "Sign and package", "Why a separate machine signs, and what to check on its result."],
   ["flash-and-check", "Flash and check", "Flash from fastbootd and verify the phone before you trust it."],
