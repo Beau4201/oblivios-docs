@@ -67,8 +67,9 @@ found only on the device, each costing a build, a flash and an unlock.
   construction, `TYPE_REBIND_SAFE` does not, so a model rebind closes the card.
 - Collection info for accessibility: a custom row type must be counted
   (`isCountedForAccessibility`) and exempted from `getRowsNotForAccessibility`,
-  or the row count becomes negative. Verified in code only, not with TalkBack
-  (`DRW-012`).
+  or the row count becomes negative. Read from the window tree with an
+  accessibility service on the emulator (`DRW-012`): two groups give 1 row and
+  three give 2, with 2 columns; TalkBack itself was not run.
 - Grouping is limited to the main list of the phone launcher: `showsCategoryGroups`
   needs a non-null store, a null work manager and a `Launcher` host.
 - A category read is a binder call (`LauncherApps.getApplicationInfo`): do not
@@ -86,6 +87,16 @@ found only on the device, each costing a build, a flash and an unlock.
   ids, `dumpsys gfxinfo` after a `reset` for frame times, `cmd uimode night`,
   `settings put system font_scale` and `wm density` for the theme and size
   checks (restore all of them). A `fastboot flash*` is the owner's action.
+- Device checks on the emulator (`DRW-012` to `DRW-020`, `[measured: 2026-11-24]`; the test apps and the accessibility
+  service are in the build notes): the pref `idp_grid_name` in
+  `shared_prefs/com.android.launcher3.prefs.xml` (as root, launcher stopped, written with `cat >` to keep owner and
+  SELinux label) picks a grid of `res-stock/xml/device_profiles.xml`: `medium` has 4 all-apps columns, `small` 5,
+  `large` and `xl` 4, the tablet grids 6; a name of the unused `res/xml/device_profiles.xml` (`5_by_5`) is written back
+  as `medium` at the next start. The width of an icon cell in the search results reads the column count: 255 px at 4
+  columns, 204 px at 5. `wm density` 400 and 360 left it at 255 px; at 320 and 280 the search page did not open in the
+  loop and nothing was read. `cmd locale set-app-locales com.android.launcher3 --locales es` (`ar` for RTL, `""` to
+  reset) takes effect without a restart; the launcher's own strings follow it and the group names do not. Every
+  preinstalled app is in System (`AppGrouper`), so a second group needs a user app with a category.
 
 ## Process
 
