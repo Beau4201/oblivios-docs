@@ -24,7 +24,7 @@ bf661d7f8c2d15702fdc13d84990b36f7fb0939f932967a5167066b298a772cc  oblivios-platf
 a3e8a04d65f75a49f49fd80873d43adba6638632be78db2c65f9b879c25cb484  oblivios-platform/CODE_OF_CONDUCT.md
 3f1b94c11eb7370ec0865577be7befbac370cd69c372089e34eb432f1eefb7f9  oblivios-platform/CONTRIBUTING.md
 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  oblivios-platform/LICENSE
-106ea25509d27a30b852cb5de9c91e5a3742194de3c961b87894fe32e48ecea9  oblivios-platform/NOTICE
+72fff7f4011954a3b8fe0c31088f513f0c37da37b7c727d52bd4e46a4b568e61  oblivios-platform/NOTICE
 b9bea7852fc4712422f94f9f70f86281141e63f45350af955666184b8a7c94a6  oblivios-platform/README.md
 b90288c12b8181253026301f05c273a066c383f3e8fdbcef872aab607f7ca116  oblivios-platform/SECURITY.md
 4591474e9d8c86b21f94c14a24665c11b3983fa71f546eee4333a5dd65995d63  oblivios-platform/airpods/README.md
@@ -204,7 +204,7 @@ ab0e9004300f364a2f103fdcb345f092e13854cc9cb3a2152140aca44f3e051f  oblivios-platf
 afcfa5b79211fefa97a0c34d4aa65644c6cebf5822f9248b2b3afb0737dd6380  oblivios-platform/branding/boot/tools/make_sources.py
 8fd962d13759ff3da0cd08e566e96b7c74474d0fb58aec808eed39f1b75490c1  oblivios-platform/credential/duress-unlock-decoy/HISTORY.md
 0b3a6d56977aa55417bd099a735acfd8a1cdd7983683818cff4923bb90b54df5  oblivios-platform/credential/duress-unlock-decoy/README.md
-b25ac2f800eeda4796f2d0cc903243a549879d0d4da7c8cc3379f18f5ace056f  oblivios-platform/credential/duress-unlock-decoy/SOURCE.md
+5c7937f1e8827e9f4ad006681531f483504035356ffac66c76e8b949e54b2f31  oblivios-platform/credential/duress-unlock-decoy/SOURCE.md
 2b57614126e729bb3820d684223aa73959bf4b1a88f8f1dad6c3baa95df69565  oblivios-platform/credential/duress-unlock-decoy/patches/build-release/0001-oblivios-squash-credential_capture-enable-relocate-pe.patch
 68eb9199fcc5347b2c3e59e34b3afc4bc22becf33625b58839785db1df005e3c  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0001-oblivios-the-duress-decoy-user-type-its-routing-the-.patch
 7392b8c99e957494c7a842d5a04269cc5bf26cd2bda51da4b249db02401470f7  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0002-oblivios-the-duress-finger-link-the-decoy-administra.patch
@@ -250,6 +250,13 @@ f151d672b3cfb401d74c7241fe85f6dbf6363f2262dcf605879b612d31aab16c  oblivios-platf
 79b0b32e2539a33a9840eb12aac03e343991aa415c36ebcc2fa0d6bc1731e670  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0042-oblivios-let-SystemUI-take-in-a-user-change-after-th.patch
 a50f9e931c8a695c2eaba86f28c0eb43f1ee9ab941557d8b28438fb167cfb103  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0043-oblivios-sample-regions-as-upstream-again-DUR-057.patch
 5146ef66bb43da4f074d298f4155f44e267bfdb80fe9ac76be07b2334643a447  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0044-oblivios-hold-only-onUserSwitching-during-the-pad-fl.patch
+f5d40548be98f5ec3bcfbb91b969a28466b6d674cb93531b90371490adc4736a  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0045-oblivios-fixes-of-the-Duress-Unlock-forensic-review-.patch
+9513d8828f99c3d470b1e90d9422becef2975323da1bf1de1d4c56dc55fb1d60  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0046-oblivios-the-Duress-finger-and-the-switch-leave-fewe.patch
+f406420454004a42a87d5d94a5aa18c0dda42abb6befebb4083b328c752b17f5  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0047-oblivios-start-the-fingerprint-operation-again-after.patch
+ec6687dbfbc3fbab2e5477889d8e0a94d14f3b0e378bc6c5704b2b3dfd98eb8b  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0048-oblivios-write-the-failure-counter-at-every-successf.patch
+f64bd63de4f812105c9f2c5e7c15886e0255651ec20a8eed6b11380c995eba0a  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0049-oblivios-a-switch-to-or-from-the-Duress-decoy-leaves.patch
+865c157550007b5f77e097c646616cc0d19e83c14199d059008fb8eef2e33bab  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0050-oblivios-stop-the-decoy-that-a-refused-duress-route-.patch
+4cd4dc2d65f9e8a97f6f019a6d89dcf8384ec1c299801e8715dc0d4815ec3edc  oblivios-platform/credential/duress-unlock-decoy/patches/frameworks-base/0051-oblivios-draw-a-wallpaper-copy-of-its-own-on-the-swi.patch
 0c4fe29fbc69ed7520db5bce88dfe930e1e57a1d35a30ccef3c7c6f1e20e0ab5  oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-multiuser/0001-oblivios-hide-real-user-identity-from-the-Multius.patch
 c30c027381350897c51910ae6159089d96d945e7361d1d4f907ea6b941abee08  oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0001-oblivios-hide-real-user-identity-from-Settings-an.patch
 a25a4cf723d6a9afc3570f644723da0e65f80f66d205ec1d6d82b8ef798ec992  oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0002-oblivios-add-the-Duress-Unlock-set-up-flow-main-a.patch
@@ -258,6 +265,8 @@ a25a4cf723d6a9afc3570f644723da0e65f80f66d205ec1d6d82b8ef798ec992  oblivios-platf
 f61079870b85fcb386998cc0cea6570a4929c1b2179449942bde992b1c77cb44  oblivios-platform/credential/duress-unlock-decoy/patches/packages-apps-settings/0005-oblivios-Duress-Unlock-warns-when-a-decoy-PIN-no-lon.patch
 07b9b6e1613ddd93ba15e285174fc01bf9534895adb21ce7fd123f086cbb3637  oblivios-platform/credential/duress-unlock-decoy/patches/packages-modules-wifi/0001-oblivios-a-switch-between-the-owner-and-the-Duress-d.patch
 e0ab78f3844578d124b63070014e0c8e6f9c9311f109ece098f1a629dc663fca  oblivios-platform/credential/duress-unlock-decoy/patches/packages-modules-wifi/0002-oblivios-read-the-decoy-type-with-UserManager-isUser.patch
+1ae471a64dd8d9c45ca9fb20a608ad769331631627287798cc88bf24a67675e3  oblivios-platform/credential/duress-unlock-decoy/patches/packages-modules-wifi/0003-oblivios-the-Wi-Fi-config-store-is-not-rewritten-wit.patch
+b6f08c7f47851608a157d8d8e2ac56e195f3659d045d9baba095df2a85f919e9  oblivios-platform/credential/duress-unlock-decoy/patches/packages-services-telecomm/0001-oblivios-the-phone-account-registrar-is-not-rewritte.patch
 8a6b05ef6735b0941c74be128fa3f67be87a9241e7a352f11f361494b64308de  oblivios-platform/credential/duress-unlock-dummy/README.md
 61ebea0e94662158583856ff37db160cbc00405a3c8f92d95f17fe92e5c32cc7  oblivios-platform/credential/duress-unlock-dummy/SOURCE.md
 a2831d3297b6d8a45855ae5cd39ccf8f09e656374903f2f8f2d20126e9c5ca4f  oblivios-platform/credential/duress-unlock-dummy/patches/frameworks-base/0001-oblivios-add-hardware-backed-duress-dummy-cost-cr.patch
@@ -1517,14 +1526,14 @@ b90288c12b8181253026301f05c273a066c383f3e8fdbcef872aab607f7ca116  oblivios-docs/
 2e37174c0c5ead6e0ae527f32dc88b6b91d23a4abb864f74a7d9e4a33edb583c  oblivios-docs/docs/architecture/app-drawer-engineering-notes.md
 be0c23072089e4de74a7d6148b2efe48fea09855798189c3b9dfb4b1de0e5d10  oblivios-docs/docs/architecture/boot-engineering-notes.md
 180f410e13612d57172f5b7fb6a93390e8f9ebb557e1dab279dc91531154fae0  oblivios-docs/docs/architecture/datamap-engineering-notes.md
-1f12cafbc58ab5877051486c9633172e9455199fcadad51fd435f0f61b6cac85  oblivios-docs/docs/architecture/duress-engineering-notes.md
+dcdcccad73c2f28b6efb928917a15f3ce5926ae667f5ed05c54ba9f2824a0cb3  oblivios-docs/docs/architecture/duress-engineering-notes.md
 743d8016d24cb1eb3a8ff256d7a4a7b087571f6d06fe36ead610876179ce4c87  oblivios-docs/docs/architecture/duress-picture-engineering-notes.md
 31ddbfd1150f7d2441d2c54031c8ef368ea6a881086a30659690e6043debc4e8  oblivios-docs/docs/architecture/grab-detection-engineering-notes.md
 01a9202714e9cae15d28e72ebe072e7fc67e16deed2d6f145f5371ad3be241db  oblivios-docs/docs/architecture/keyboard-engineering-notes.md
-94c759e5cd400c8ce1bba7bded4ee6fd956d0cee04bc7cad28079a910f2b5156  oblivios-docs/docs/architecture/site-engineering-notes.md
+1aee83b95f8139e72b5b6edea93532df5a55d001f8da48ef5d670554da23e81a  oblivios-docs/docs/architecture/site-engineering-notes.md
 7ccc6231768485ade77ace0b0e0c9c1ce5bad74e12815710fb556ad2f3a0f325  oblivios-docs/docs/devices/support-policy.md
 d8f678869992c2a521a0ceb0478c1f8c4068f719cac0bfb7b6da723ad8fee8b5  oblivios-docs/docs/documentation-standard.md
-99030292ac10a03f2696630d2dcc9b4b9609396ca8f1b7b7dddad99bc78e747f  oblivios-docs/docs/governance/decision-log.md
+76fbcf5b4934c795497661c12630c11cbd1d95f0282685e912af88c4d3f3f2ee  oblivios-docs/docs/governance/decision-log.md
 d9e5d17e2006365c90e702ca2c79d2e87c7a04607c4ff8fcfdf12b5d68a40a31  oblivios-docs/docs/guides/ai-questions.md
 6e6c4b5e24d3d8be44635b659c0d29a0575d86bbd53ef0e482f24c9392c693b4  oblivios-docs/docs/guides/ai.md
 9f1be4c27b2f7a22cf013d784580930ecdef00fafbef281faa3d67ac2e06d571  oblivios-docs/docs/guides/build.md
@@ -1558,7 +1567,7 @@ e277b801a406fa99ab450405da208f2950a665e771a5099b44420c8a855c879f  oblivios-docs/
 e53235c7ade089cd7e6fb177db77f2719efe8cd9b6910a338b47e5a9308b67a3  oblivios-docs/site/dev/src/components/Flow.astro
 3013dcef073bdbdc0ba3d58e6a9cb556d69dffc23c45d4826ff8a7db22351393  oblivios-docs/site/dev/src/components/Ph.astro
 7759595d7426968020616070c458a012462412fa7dc0553f71ade04e16d71972  oblivios-docs/site/dev/src/components/SubNav.astro
-416df45c1950fb6d5df2458283f07df455b4dfeebaa98499058a73e1b69f1056  oblivios-docs/site/dev/src/data/changelog.json
+4f35dac020187e409417b9aeaee56bdbb6ae55390a8a5322dbb49eb21310a0c9  oblivios-docs/site/dev/src/data/changelog.json
 4fe0a1453b45b241e564358f9df08f0b618fc8bed5caef7712b34a82758022c0  oblivios-docs/site/dev/src/layouts/DocPage.astro
 e4c199f140b6427ab90b36c20d9eaf3576a12e405c4bd42441248c8d390a4846  oblivios-docs/site/dev/src/layouts/Page.astro
 cc0a7c267c15a8804e24e936d40705a9671804dcfb0afdd162fc39a8984efe2e  oblivios-docs/site/dev/src/lib/atom.mjs

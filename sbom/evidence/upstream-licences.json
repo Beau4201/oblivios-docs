@@ -1,6 +1,6 @@
 {
  "manifest": "upstream-2026100600.xml",
- "retrieved": "2026-11-22",
+ "retrieved": "2026-11-25",
  "projects": {
   "build/make": {
    "name": "platform_build",
@@ -48,6 +48,7 @@
     "core/java/android/os/UserManager.java": "Apache-2.0",
     "core/java/android/os/VibratorInfo.java": "Apache-2.0",
     "core/java/android/provider/Settings.java": "Apache-2.0",
+    "core/java/com/android/internal/os/BatteryStatsHistory.java": "Apache-2.0",
     "core/java/com/android/internal/widget/ILockSettings.aidl": "Apache-2.0",
     "core/java/com/android/internal/widget/LockPatternUtils.java": "Apache-2.0",
     "core/res/AndroidManifest.xml": "Apache-2.0",
@@ -58,6 +59,7 @@
     "core/res/res/values/strings.xml": "Apache-2.0",
     "data/etc/com.android.settings.xml": "Apache-2.0",
     "data/etc/privapp-permissions-platform.xml": "Apache-2.0",
+    "libs/WindowManager/Shell/shared/src/com/android/wm/shell/shared/handles/RegionSamplingHelper.java": "Apache-2.0",
     "packages/PackageInstaller/src/com/android/packageinstaller/handheld/UninstallAlertDialogFragment.java": "Apache-2.0",
     "packages/PackageInstaller/src/com/android/packageinstaller/television/UninstallAlertFragment.java": "Apache-2.0",
     "packages/PackageInstaller/src/com/android/packageinstaller/v2/model/UninstallRepository.kt": "Apache-2.0",
@@ -86,8 +88,10 @@
     "packages/SystemUI/src/com/android/systemui/keyguard/ui/viewmodel/AlternateBouncerToGoneTransitionViewModel.kt": "Apache-2.0",
     "packages/SystemUI/src/com/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel.kt": "Apache-2.0",
     "packages/SystemUI/src/com/android/systemui/qs/tiles/QuickAccessWalletTile.java": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/settings/UserTrackerImpl.kt": "Apache-2.0",
     "packages/SystemUI/src/com/android/systemui/statusbar/NotificationShadeDepthController.kt": "Apache-2.0",
     "packages/SystemUI/src/com/android/systemui/statusbar/phone/KeyguardStatusBarView.java": "Apache-2.0",
+    "packages/SystemUI/src/com/android/systemui/statusbar/pipeline/wifi/data/repository/prod/WifiRepositoryImpl.kt": "Apache-2.0",
     "packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityControllerImpl.java": "Apache-2.0",
     "packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java": "Apache-2.0",
     "packages/SystemUI/src/com/android/systemui/user/data/repository/UserIconProvider.kt": "Apache-2.0",
@@ -99,13 +103,17 @@
     "services/core/java/com/android/server/StorageManagerService.java": "Apache-2.0",
     "services/core/java/com/android/server/TelephonyRegistry.java": "Apache-2.0",
     "services/core/java/com/android/server/am/ActivityManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/am/AppExitInfoTracker.java": "Apache-2.0",
+    "services/core/java/com/android/server/am/AppStartInfoTracker.java": "Apache-2.0",
     "services/core/java/com/android/server/am/UserController.java": "Apache-2.0",
     "services/core/java/com/android/server/am/UserState.java": "Apache-2.0",
     "services/core/java/com/android/server/biometrics/sensors/AuthenticationClient.java": "Apache-2.0",
     "services/core/java/com/android/server/biometrics/sensors/fingerprint/FingerprintUtils.java": "Apache-2.0",
+    "services/core/java/com/android/server/biometrics/sensors/fingerprint/aidl/FingerprintAuthenticationClient.java": "Apache-2.0",
     "services/core/java/com/android/server/clipboard/ClipboardAccess.java": "no header",
     "services/core/java/com/android/server/clipboard/ClipboardService.java": "Apache-2.0",
     "services/core/java/com/android/server/connectivity/NetdEventListenerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/inputmethod/AdditionalSubtypeUtils.java": "Apache-2.0",
     "services/core/java/com/android/server/location/gnss/GnssListenerMultiplexer.java": "Apache-2.0",
     "services/core/java/com/android/server/location/gnss/GnssManagerService.java": "Apache-2.0",
     "services/core/java/com/android/server/location/provider/LocationProviderManager.java": "Apache-2.0",
@@ -114,14 +122,19 @@
     "services/core/java/com/android/server/locksettings/LockSettingsService.java": "Apache-2.0",
     "services/core/java/com/android/server/locksettings/LockSettingsShellCommand.java": "Apache-2.0",
     "services/core/java/com/android/server/locksettings/LockSettingsStorage.java": "Apache-2.0",
+    "services/core/java/com/android/server/locksettings/SoftwareRateLimiter.java": "Apache-2.0",
     "services/core/java/com/android/server/locksettings/SyntheticPasswordManager.java": "Apache-2.0",
     "services/core/java/com/android/server/notification/NotificationManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/notification/ZenModeHelper.java": "Apache-2.0",
+    "services/core/java/com/android/server/om/OverlayManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/om/OverlayManagerSettings.java": "Apache-2.0",
     "services/core/java/com/android/server/pm/UserManagerService.java": "Apache-2.0",
     "services/core/java/com/android/server/pm/UserTypeFactory.java": "Apache-2.0",
     "services/core/java/com/android/server/policy/LegacyGlobalActions.java": "Apache-2.0",
     "services/core/java/com/android/server/policy/keyguard/KeyguardServiceDelegate.java": "no header",
     "services/core/java/com/android/server/storage/StorageSessionController.java": "Apache-2.0",
     "services/core/java/com/android/server/vibrator/VibratorManagerService.java": "Apache-2.0",
+    "services/core/java/com/android/server/wallpaper/WallpaperDataParser.java": "Apache-2.0",
     "services/core/java/com/android/server/wm/ActivityTaskManagerService.java": "Apache-2.0",
     "services/core/java/com/android/server/wm/RootWindowContainer.java": "Apache-2.0",
     "services/core/java/com/android/server/wm/ScreenRecordingCallbackController.java": "Apache-2.0",
@@ -134,6 +147,7 @@
     "services/tests/servicestests/src/com/android/server/locksettings/FakeStorageManager.java": "Apache-2.0",
     "services/tests/servicestests/src/com/android/server/locksettings/LockSettingsServiceTests.java": "Apache-2.0",
     "services/tests/servicestests/src/com/android/server/locksettings/LockSettingsShellCommandTest.java": "Apache-2.0",
+    "services/tests/servicestests/src/com/android/server/locksettings/SoftwareRateLimiterTest.java": "Apache-2.0",
     "services/tests/servicestests/src/com/android/server/pm/UserManagerServiceTest.java": "Apache-2.0",
     "telephony/java/android/telephony/NetworkRegistrationInfo.java": "Apache-2.0",
     "telephony/java/android/telephony/ServiceState.java": "Apache-2.0",
@@ -362,6 +376,7 @@
    "files": {},
    "modified_file_headers": {
     "service/java/com/android/server/wifi/ClientModeImpl.java": "Apache-2.0",
+    "service/java/com/android/server/wifi/WifiConfigStore.java": "Apache-2.0",
     "service/java/com/android/server/wifi/WifiServiceImpl.java": "Apache-2.0",
     "service/java/com/android/server/wifi/util/WifiPermissionsUtil.java": "Apache-2.0"
    }
@@ -373,6 +388,15 @@
    "files": {},
    "modified_file_headers": {
     "src/com/android/providers/media/MediaProvider.java": "Apache-2.0"
+   }
+  },
+  "packages/services/Telecomm": {
+   "name": "platform_packages_services_Telecomm",
+   "revision": "21585d350141ccae06e0a85703290f1e06730831",
+   "remote": "https://github.com/GrapheneOS/",
+   "files": {},
+   "modified_file_headers": {
+    "src/com/android/server/telecom/PhoneAccountRegistrar.java": "Apache-2.0"
    }
   },
   "packages/services/Telephony": {

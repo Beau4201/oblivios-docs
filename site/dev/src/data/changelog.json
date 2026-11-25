@@ -2,6 +2,10 @@
   "about": "One line for every publication of the snapshot: the time of the run (UTC) and what changed. Newest first. tools/docs/sync-site.py adds a line at every publication; the first 49 are the snapshot commits of oblivios-docs before it did.",
   "entries": [
     {
+      "t": "2026-11-25T02:46:41Z",
+      "text": "forensic round: nine patches landed, build 1 results, ADR-314, licence evidence"
+    },
+    {
       "t": "2026-11-25T00:02:21Z",
       "text": "Duress forensic round: ADR-310 fixes run on the emulator, DUR-116 to DUR-119, ADR-312"
     },
