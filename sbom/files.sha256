@@ -1550,7 +1550,7 @@ a3bc7f2e70029260edd33e4bb065ef14944d0ddf2b3bff1d2a3962a78f69845e  oblivios-servi
 9b0544d41e6547c79f6624264ad12e0e6f1a12e855aa462b3a731984971eadc0  oblivios-services/decoy-content-core/src/main/resources/org/oblivios/decoy/content/data/lang/nl.properties
 0dca7e3ad36e40273db9956839301841ee4674d4f642f14de44093ba4a36e680  oblivios-services/decoy-content-core/src/main/resources/org/oblivios/decoy/content/data/names/NL.tsv
 68fb99919f395cc9b27b5479794e647cd07877e48b95f6cc4a33d46f896db745  oblivios-services/decoy-content-core/src/main/resources/org/oblivios/decoy/content/data/names/index.properties
-cc40d48178776a4b54a8611b40052209661a7ffa33aa28d4f83c614ad1199673  oblivios-services/decoy-content-core/src/main/resources/org/oblivios/decoy/content/data/places/NL/cities.tsv
+0498904855c9d9cf1feb31d5045060c5149508c46a72a28a1ba249ae3824f28d  oblivios-services/decoy-content-core/src/main/resources/org/oblivios/decoy/content/data/places/NL/cities.tsv
 0816da8f2ca984641aeb8371625786d2752971793e880707f2239ca589fa0f33  oblivios-services/decoy-content-core/src/main/resources/org/oblivios/decoy/content/data/places/NL/points.tsv.gz
 49339b2538ac4ae26da050b38876c20c154addfe894986123c8aa31143f7087d  oblivios-services/decoy-content-core/src/main/resources/org/oblivios/decoy/content/data/places/NL/venues.tsv.gz
 5c75c33f0fe4ec17ada548619efa63103dc42a9c07df7214a0b09fe15c0e4f20  oblivios-services/decoy-content-core/src/main/resources/org/oblivios/decoy/content/data/population/NL.tsv.gz
@@ -1571,7 +1571,7 @@ d42de01cd9352c05376c208ab09e733993eb2227ea5c91afa4eca057d547b9b4  oblivios-servi
 44cb4907ed76c96488382890541eea2ca4d91c84e9d2d8a24a60c5010623f68f  oblivios-services/decoy-content-core/src/test/java/org/oblivios/decoy/content/data/FamilyRulesTest.java
 11e38574d2a103521ecaca89866846554d30b80528a9e49c3f650a308e75e770  oblivios-services/decoy-content-core/src/test/java/org/oblivios/decoy/content/data/HolidayDataTest.java
 4995a7a3da54ee8e4755a51951a2b9ca2e3dcb6a3255efcfaa1f2289776bf4c9  oblivios-services/decoy-content-core/src/test/java/org/oblivios/decoy/content/data/NameDataTest.java
-b12d7251f3286969d386c1e80d9c9eb52538599b1ad4d9ada1f0a87807817f24  oblivios-services/decoy-content-core/src/test/java/org/oblivios/decoy/content/data/PlaceDataTest.java
+56e48d866f7b77e658a4b22624a8d5590ab7bdf53b9e1cfe16f022364b05645e  oblivios-services/decoy-content-core/src/test/java/org/oblivios/decoy/content/data/PlaceDataTest.java
 dd329cbf7225a29194d930c310a1679e9eefa9a9e365139877d26d0bc836c4fe  oblivios-services/decoy-content-core/src/test/java/org/oblivios/decoy/content/data/PopulationDataTest.java
 1e7fe81a810d3059be8ca66b4605f54ac8665292861421b24627d5b2e2782ff7  oblivios-services/decoy-content-core/src/test/java/org/oblivios/decoy/content/harness/HarnessTest.java
 da882c60e046ad9e0264c93511a56ecdb74af5b4ee4748ee4bddbb1eae26e970  oblivios-services/decoy-content-core/src/test/java/org/oblivios/decoy/content/harness/PersonaClass.java
@@ -1758,7 +1758,7 @@ c3b78d04946677fa2e1cced9b693280a99c9b49f9375622b988cc9a67693b3d8  oblivios-docs/
 f4ac9da642b7026e61b411afac033941ea269905fd91cc8e45fec10e8b9eba8e  oblivios-docs/docs/architecture/site-engineering-notes.md
 7ccc6231768485ade77ace0b0e0c9c1ce5bad74e12815710fb556ad2f3a0f325  oblivios-docs/docs/devices/support-policy.md
 d8f678869992c2a521a0ceb0478c1f8c4068f719cac0bfb7b6da723ad8fee8b5  oblivios-docs/docs/documentation-standard.md
-aa80715ba00ef454e343ccac3d3997570bb769ef10e74b794ca80e964a02aaad  oblivios-docs/docs/governance/decision-log.md
+dd96a2709f39254ed55558d29b4408b6c114c1c966c0b094f2be68e9843f672e  oblivios-docs/docs/governance/decision-log.md
 d9e5d17e2006365c90e702ca2c79d2e87c7a04607c4ff8fcfdf12b5d68a40a31  oblivios-docs/docs/guides/ai-questions.md
 6e6c4b5e24d3d8be44635b659c0d29a0575d86bbd53ef0e482f24c9392c693b4  oblivios-docs/docs/guides/ai.md
 9f1be4c27b2f7a22cf013d784580930ecdef00fafbef281faa3d67ac2e06d571  oblivios-docs/docs/guides/build.md
@@ -1792,7 +1792,7 @@ e277b801a406fa99ab450405da208f2950a665e771a5099b44420c8a855c879f  oblivios-docs/
 e53235c7ade089cd7e6fb177db77f2719efe8cd9b6910a338b47e5a9308b67a3  oblivios-docs/site/dev/src/components/Flow.astro
 3013dcef073bdbdc0ba3d58e6a9cb556d69dffc23c45d4826ff8a7db22351393  oblivios-docs/site/dev/src/components/Ph.astro
 7759595d7426968020616070c458a012462412fa7dc0553f71ade04e16d71972  oblivios-docs/site/dev/src/components/SubNav.astro
-cb7ce31696334f58d0ef63ec3107cf605907ca23aec21720de1c07c8a7691227  oblivios-docs/site/dev/src/data/changelog.json
+63dc200fe496ecdeb39a00088b99634cb3ec8b46731456e7509ab59b89645f1c  oblivios-docs/site/dev/src/data/changelog.json
 4fe0a1453b45b241e564358f9df08f0b618fc8bed5caef7712b34a82758022c0  oblivios-docs/site/dev/src/layouts/DocPage.astro
 e4c199f140b6427ab90b36c20d9eaf3576a12e405c4bd42441248c8d390a4846  oblivios-docs/site/dev/src/layouts/Page.astro
 cc0a7c267c15a8804e24e936d40705a9671804dcfb0afdd162fc39a8984efe2e  oblivios-docs/site/dev/src/lib/atom.mjs

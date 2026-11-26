@@ -29591,7 +29591,7 @@
     }
    ],
    "type": "data",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "data:datamap-logos",
@@ -29758,7 +29758,7 @@
     }
    ],
    "type": "data",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "data:ipmap-anchors",
@@ -29989,7 +29989,7 @@
     }
    ],
    "type": "data",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "manifest:2026071500",
@@ -47485,7 +47485,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0001-onion-tunnel-drop-the-optional-turn-client-dependency.patch",
    "type": "file",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0002-onion-tunnel-answer-servfail-when-the-owner-lookup-fails.patch",
@@ -47503,7 +47503,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0002-onion-tunnel-answer-servfail-when-the-owner-lookup-fails.patch",
    "type": "file",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0003-onion-tunnel-embed-a-constant-instead-of-the-enclosing-git-hash.patch",
@@ -47521,7 +47521,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0003-onion-tunnel-embed-a-constant-instead-of-the-enclosing-git-hash.patch",
    "type": "file",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0004-onion-tunnel-split-dns-by-policy-and-use-private-fake-ranges.patch",
@@ -47539,7 +47539,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0004-onion-tunnel-split-dns-by-policy-and-use-private-fake-ranges.patch",
    "type": "file",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0005-onion-tunnel-admit-a-dns-query-through-one-testable-function.patch",
@@ -47557,7 +47557,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0005-onion-tunnel-admit-a-dns-query-through-one-testable-function.patch",
    "type": "file",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "patch:services/exit-daemon/third_party/patches/0006-onion-tunnel-count-the-bytes-of-a-flow-per-destination.patch",
@@ -47575,7 +47575,7 @@
    ],
    "name": "oblivios-services/exit-daemon/third_party/patches/0006-onion-tunnel-count-the-bytes-of-a-flow-per-destination.patch",
    "type": "file",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "pkg:airpods",
@@ -48115,7 +48115,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "c30f757111cfbb12096de46490063a81d0ff2e4a4c1d8e313587472fe7db001e"
+     "content": "5550bd0e082c695e4d9d1d189fc33084959484d64425e988efcd87520b7d6479"
     }
    ],
    "licenses": [
@@ -48232,7 +48232,7 @@
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "44b86c9f0792d53c4762f6a143db6275920c3657976d21a405a465ce00331ac8"
+     "content": "81352de9dcec0bbe741758d24933f5e4b415b46eba58c92e7fd04dd0723e59fd"
     }
    ],
    "licenses": [
@@ -48248,15 +48248,15 @@
     },
     {
      "name": "oblivios:git-tree",
-     "value": "72f8579e6e8a83ba3e86b91f43f63635b2f360f4"
+     "value": "9c65e6b8e13b35d706ed4dc6d54ebb00b1b9c6b5"
     }
    ],
-   "purl": "pkg:github/Beau4201/oblivios-services@eead3c880094eedea577c9ddcad116d1cb69f816",
+   "purl": "pkg:github/Beau4201/oblivios-services@6b3017e68801078963f879093cfcda57a356ab87",
    "supplier": {
     "name": "Beau ten Berge"
    },
    "type": "application",
-   "version": "eead3c880094eedea577c9ddcad116d1cb69f816"
+   "version": "6b3017e68801078963f879093cfcda57a356ab87"
   },
   {
    "bom-ref": "src:adguard-companiesdb",
@@ -61366,7 +61366,7 @@
   "supplier": {
    "name": "Beau ten Berge"
   },
-  "timestamp": "2026-11-26T20:45:32Z",
+  "timestamp": "2026-11-26T21:08:34Z",
   "tools": {
    "components": [
     {
@@ -61386,7 +61386,7 @@
    ]
   }
  },
- "serialNumber": "urn:uuid:d11bb69a-c0a1-5c57-b894-dbfa246f2310",
+ "serialNumber": "urn:uuid:f8c957ed-93ac-5c62-9b14-334374f4b892",
  "specVersion": "1.6",
  "version": 1,
  "vulnerabilities": [
