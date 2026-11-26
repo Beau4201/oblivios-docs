@@ -728,7 +728,12 @@ Quirks of the workstation tools met while building them:
 
 - A `claude -p` started from a session of the desktop app was refused with `Authentication required · Sign in again to
   continue` at 0 tokens: the session hands no sign-in to a child command, and its config folder holds no sign-in file.
-  `tools/decoy-pool/run.sh` is started from a signed-in terminal; that route is not tried yet.
+  `tools/decoy-pool/run.sh` is started from a signed-in terminal, which worked on 2026-11-25. The workstation's
+  terminal has no `claude` on its `PATH`; the only one is the desktop app's, at
+  `<home>/.config/Claude/claude-code/<version>/<hash>/claude`, a path that changes with an update of the app. Its
+  `auth status` read `"loggedIn": false` until the owner signed in with `claude auth login --claudeai` through that
+  binary; `run.sh` then takes it as `CLAUDE=<path>`. With `--safe-mode` and `--setting-sources ""` the call still found
+  that sign-in (`apiKeySource` `none`). `run.sh` is not executable in git (mode `100644`) and is started with `bash`.
 - With `--safe-mode` alone the start report of such a call still listed 11 plugins, the user's among them, 21 skills
   and 54 slash commands, with no hook event. With `--disable-slash-commands` and `--setting-sources ""` it listed the 4
   plugins built into the program, no skill and no slash command.
@@ -741,7 +746,14 @@ Quirks of the workstation tools met while building them:
 - Gradle of `oblivios-services` runs from another folder as `"$S/gradlew" -p "$S" <task>`. A pipe into `tail` hides its
   exit code without `set -o pipefail`, and an `UP-TO-DATE` test task ran no test: `--rerun` runs it.
 - The Serena hook refuses a Bash redirect into a path held in a shell variable, because it reads it as a repository
-  file; a scratch file is written with the Write tool.
+  file; a scratch file is written with the Write tool. It also refuses `grep -c . <file>` run from the repository,
+  because it reads the pattern `.` as a path there; `wc -l` counts the lines instead (2026-11-26).
+- `generate.py` reads a call's answer from `out/log/<batch>.write.jsonl` when that file exists, so another writer's
+  answer runs through the same steps as Claude's: copy the round's briefs into a new folder and write one line
+  `{"type": "result", "subtype": "success", "result": "<answer>"}` per batch; `run.sh` then makes no writer call and
+  only the judge calls. This ran ChatGPT's answers on 2026-11-26 (`decoy-pool-generation.md`).
+  An answer copied from a chat page carries markdown escapes (`\#`, a `\` at each line end) that have to be undone
+  first.
 - Reading sources for ADR-324: the browser pane refused `https://old.reddit.com` (`not allowed due to safety
   restrictions`), which was not worked around; a DANS file download answered 0 bytes without `curl -L`; fetching
   several raw GitHub files from a page's script answered `Failed to fetch`, while single files were read.
