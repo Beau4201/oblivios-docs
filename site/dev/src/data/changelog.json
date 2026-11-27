@@ -2,6 +2,10 @@
   "about": "One line for every publication of the snapshot: the time of the run (UTC) and what changed. Newest first. tools/docs/sync-site.py adds a line at every publication; the first 49 are the snapshot commits of oblivios-docs before it did.",
   "entries": [
     {
+      "t": "2026-11-27T00:41:07Z",
+      "text": "decoy phone numbers and persona spreads, ADR-351 and ADR-352"
+    },
+    {
       "t": "2026-11-26T21:09:46Z",
       "text": "Den Bosch accepted in the decoy setup, ADR-350"
     },
