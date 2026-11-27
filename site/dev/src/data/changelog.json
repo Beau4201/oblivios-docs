@@ -2,6 +2,10 @@
   "about": "One line for every publication of the snapshot: the time of the run (UTC) and what changed. Newest first. tools/docs/sync-site.py adds a line at every publication; the first 49 are the snapshot commits of oblivios-docs before it did.",
   "entries": [
     {
+      "t": "2026-11-27T17:58:52Z",
+      "text": "photo findability test of the decoy"
+    },
+    {
       "t": "2026-11-27T17:22:19Z",
       "text": "small events and traces of the decoy chronicle"
     },
