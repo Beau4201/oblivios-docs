@@ -1,14 +1,14 @@
 {
  "SPDXID": "SPDXRef-DOCUMENT",
  "creationInfo": {
-  "created": "2026-11-27T01:36:44Z",
+  "created": "2026-11-27T15:23:29Z",
   "creators": [
    "Tool: build-sbom.py",
    "Organization: Beau ten Berge"
   ]
  },
  "dataLicense": "CC0-1.0",
- "documentNamespace": "https://spdx.org/spdxdocs/oblivios-source-stage-4f9aee0f-9cf3-5de3-8b09-1ff00565d14f",
+ "documentNamespace": "https://spdx.org/spdxdocs/oblivios-source-stage-6f516212-0212-5a1b-a0a8-a4962c1cb9a5",
  "name": "ObliviOS source-only publication",
  "packages": [
   {
@@ -14117,7 +14117,7 @@
    "licenseDeclared": "MIT",
    "name": "Common-password list of vault-core",
    "supplier": "NOASSERTION",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-data-datamap-logos",
@@ -14202,7 +14202,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "Gradle wrapper files",
    "supplier": "NOASSERTION",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-data-ipmap-anchors",
@@ -14321,7 +14321,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "Vendored Onionmasq crates",
    "supplier": "NOASSERTION",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-manifest-2026071500",
@@ -27476,7 +27476,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0001-onion-tunnel-drop-the-optional-turn-client-dependency.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0002-onion-tunnel-answer-servfail-when-the-owner-lookup-fails.patch",
@@ -27493,7 +27493,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0002-onion-tunnel-answer-servfail-when-the-owner-lookup-fails.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0003-onion-tunnel-embed-a-constant-instead-of-the-enclosing-git-hash.patch",
@@ -27510,7 +27510,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0003-onion-tunnel-embed-a-constant-instead-of-the-enclosing-git-hash.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0004-onion-tunnel-split-dns-by-policy-and-use-private-fake-ranges.patch",
@@ -27527,7 +27527,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0004-onion-tunnel-split-dns-by-policy-and-use-private-fake-ranges.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0005-onion-tunnel-admit-a-dns-query-through-one-testable-function.patch",
@@ -27544,7 +27544,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0005-onion-tunnel-admit-a-dns-query-through-one-testable-function.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-patch-services-exit-daemon-third-party-patches-0006-onion-tunnel-count-the-bytes-of-a-flow-per-destination.patch",
@@ -27561,7 +27561,7 @@
    "licenseDeclared": "MIT OR Apache-2.0",
    "name": "oblivios-services/exit-daemon/third_party/patches/0006-onion-tunnel-count-the-bytes-of-a-flow-per-destination.patch",
    "supplier": "NOASSERTION",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-pkg-airpods",
@@ -27891,7 +27891,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "25443e0f3acf30e16c6b32de71c6da2715045a46892c3fa64b730d1a49777bb5"
+     "checksumValue": "bc169a5e6c2a43e1fef1352bfde639acaa9091fcddc9e6829ae7e19e01a213aa"
     }
    ],
    "copyrightText": "NOASSERTION",
@@ -27956,7 +27956,7 @@
    "checksums": [
     {
      "algorithm": "SHA256",
-     "checksumValue": "40d6d775581f5126bebf91b4e6a7a4db292880a535366e0dad967a4cf0b43a6d"
+     "checksumValue": "94965c34dbf82173aa43c96c197ef8211ade6ba2aec1cd62e2a08ce7c6a808b5"
     }
    ],
    "copyrightText": "NOASSERTION",
@@ -27964,7 +27964,7 @@
    "externalRefs": [
     {
      "referenceCategory": "PACKAGE-MANAGER",
-     "referenceLocator": "pkg:github/Beau4201/oblivios-services@75912761e57a0312d7068a4a60424ebcc8ee0c8a",
+     "referenceLocator": "pkg:github/Beau4201/oblivios-services@a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4",
      "referenceType": "purl"
     }
    ],
@@ -27973,7 +27973,7 @@
    "licenseDeclared": "Apache-2.0",
    "name": "oblivios-services",
    "supplier": "Organization: Beau ten Berge",
-   "versionInfo": "75912761e57a0312d7068a4a60424ebcc8ee0c8a"
+   "versionInfo": "a7a9728b8ea73ca5efb81de454201d5c3e5cd0d4"
   },
   {
    "SPDXID": "SPDXRef-src-adguard-companiesdb",

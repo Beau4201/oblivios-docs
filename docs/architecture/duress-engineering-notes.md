@@ -700,6 +700,15 @@ through series 13, the design of ADR-296 and the automated security review of se
 
 ## The decoy content generator (2026-11-25, plan tasks 6 to 14, ADR-315, ADR-318)
 
+- **A loader reads its file once (2026-11-27).** A world asks the name backgrounds and the call shape many times.
+  With `NameData.backgrounds()` and `CallShape.load()` reading their files at each call, `WorldBuilderTest` took
+  290 s `[measured 2026-11-27, the JUnit XML]`; with both cached one world took 8.8 ms `[measured 2026-11-27, 400
+  worlds in one temporary test]` and the class 122 s. With the world, both test modules took 4 min 41 s, against
+  2 min 40 s before it `[measured 2026-11-27, Gradle]`: run them with `run_in_background`.
+- **A changed draw moves test seeds (2026-11-27).** A test that needs a plan with conversations and a reserve holds
+  a seed (`ContentPlanValidatorTest.WITH_CONVERSATIONS`). When other contacts leave that seed without a reserve, the
+  test fails with `Index 0 out of bounds for length 0`; choose a new seed by counting both over a range of seeds in
+  a temporary test, which is deleted afterwards.
 - **Run.** `<services>/gradlew -p <services> :decoy-content-core:test --offline`, with absolute paths: there is no
   `gradlew` in foundation, and a `cd` in front is not used. The counts come from
   `decoy-content-core/build/test-results/test/*.xml` (`tests`, `failures`, `errors` per class).
